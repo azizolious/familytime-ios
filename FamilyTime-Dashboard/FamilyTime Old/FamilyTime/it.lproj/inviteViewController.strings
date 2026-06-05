@@ -1,0 +1,12 @@
+
+/* Class = "UITextField"; placeholder = "NAME"; ObjectID = "3V7-hr-JQV"; */
+"3V7-hr-JQV.placeholder" = "NAME";
+
+/* Class = "UIButton"; normalTitle = "Send Invitation"; ObjectID = "GYN-su-7Vi"; */
+"GYN-su-7Vi.normalTitle" = "Send Invitation";
+
+/* Class = "UILabel"; text = "Invite another parent or guardian to access your FamilyTime account from their own device."; ObjectID = "rI0-Nj-mTv"; */
+"rI0-Nj-mTv.text" = "Invite another parent or guardian to access your FamilyTime account from their own device.";
+
+/* Class = "UITextField"; placeholder = "EMAIL"; ObjectID = "wEf-td-A2k"; */
+"wEf-td-A2k.placeholder" = "EMAIL";

@@ -1,0 +1,507 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="22522" systemVersion="23C71" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="AccountData" representedClassName="AccountData" syncable="YES" codeGenerationType="class">
+        <attribute name="created_at" optional="YES" attributeType="String"/>
+        <attribute name="email" optional="YES" attributeType="String"/>
+        <attribute name="email_bounce_AccountData" optional="YES" attributeType="String"/>
+        <attribute name="email_complaint_AccountData" optional="YES" attributeType="String"/>
+        <attribute name="email_verified_at_AccountData" optional="YES" attributeType="String"/>
+        <attribute name="gender" optional="YES" attributeType="String"/>
+        <attribute name="id" optional="YES" attributeType="String"/>
+        <attribute name="language" optional="YES" attributeType="String"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="package" optional="YES" attributeType="String"/>
+        <attribute name="phone" optional="YES" attributeType="String"/>
+        <attribute name="super_user_id" optional="YES" attributeType="String"/>
+        <attribute name="type" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="AppUsageCore" representedClassName="AppUsageCore" syncable="YES" codeGenerationType="class">
+        <attribute name="appCategory" optional="YES" attributeType="String"/>
+        <attribute name="appName" optional="YES" attributeType="String"/>
+        <attribute name="appUsage" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="childID" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="dateUsage" optional="YES" attributeType="String"/>
+        <attribute name="packageName" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="BillingSubscription" representedClassName="BillingSubscription" syncable="YES" codeGenerationType="class">
+        <attribute name="created_at" optional="YES" attributeType="String"/>
+        <attribute name="end_date" optional="YES" attributeType="String"/>
+        <attribute name="id" optional="YES" attributeType="String"/>
+        <attribute name="plan" optional="YES" attributeType="String"/>
+        <attribute name="product" optional="YES" attributeType="String"/>
+        <attribute name="psp" optional="YES" attributeType="String"/>
+        <attribute name="start_date" optional="YES" attributeType="String"/>
+        <attribute name="status" optional="YES" attributeType="String"/>
+        <attribute name="subscription_id" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="Calls" representedClassName="Calls" syncable="YES" codeGenerationType="class">
+        <attribute name="callID" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="callTime" optional="YES" attributeType="String"/>
+        <attribute name="childID" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="contactID" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="dateCreated" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="dateModified" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="deleteds" optional="YES" attributeType="Integer 64" usesScalarValueType="YES"/>
+        <attribute name="duration" optional="YES" attributeType="String"/>
+        <attribute name="durationInSeconds" optional="YES" attributeType="String"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="number" optional="YES" attributeType="String"/>
+        <attribute name="superUserID" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="type" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="Child_Info_Dashboard" representedClassName="Child_Info_Dashboard" syncable="YES" codeGenerationType="class">
+        <attribute name="activation_code_DASHBOARD" optional="YES" attributeType="String"/>
+        <attribute name="activation_date_DASHBOARD" optional="YES" attributeType="String"/>
+        <attribute name="active_DASHBOARD" optional="YES" attributeType="String"/>
+        <attribute name="agent_DASHBOARD" optional="YES" attributeType="String"/>
+        <attribute name="api_token_DASHBOARD" optional="YES" attributeType="String"/>
+        <attribute name="app_build_DASHBOARD" optional="YES" attributeType="String"/>
+        <attribute name="app_version_DASHBOARD" optional="YES" attributeType="String"/>
+        <attribute name="battery_remaining_DASHBOARD" optional="YES" attributeType="String"/>
+        <attribute name="birthday_DASHBOARD" optional="YES" attributeType="String"/>
+        <attribute name="campus_id_DASHBOARD" optional="YES" attributeType="String"/>
+        <attribute name="child_enrolled_DASHBOARD" optional="YES" attributeType="String"/>
+        <attribute name="child_id_DASHBOARD" optional="YES" attributeType="String"/>
+        <attribute name="child_mdm_hash_DASHBOARD" optional="YES" attributeType="String"/>
+        <attribute name="class_id_DASHBOARD" optional="YES" attributeType="String"/>
+        <attribute name="color_DASHBOARD" optional="YES" attributeType="String"/>
+        <attribute name="cover_img_src_DASHBOARD" optional="YES" attributeType="String"/>
+        <attribute name="created_at_DASHBOARD" optional="YES" attributeType="String"/>
+        <attribute name="date_created_DASHBOARD" optional="YES" attributeType="String"/>
+        <attribute name="date_modified_DASHBOARD" optional="YES" attributeType="String"/>
+        <attribute name="deleted_by_DASHBOARD" optional="YES" attributeType="String"/>
+        <attribute name="deleted_DASHBOARD" optional="YES" attributeType="String"/>
+        <attribute name="device_DASHBOARD" optional="YES" attributeType="String"/>
+        <attribute name="device_id_DASHBOARD" optional="YES" attributeType="String"/>
+        <attribute name="device_imei_DASHBOARD" optional="YES" attributeType="String"/>
+        <attribute name="device_language_DASHBOARD" optional="YES" attributeType="String"/>
+        <attribute name="device_manufacturer_DASHBOARD" optional="YES" attributeType="String"/>
+        <attribute name="device_model_DASHBOARD" optional="YES" attributeType="String"/>
+        <attribute name="device_name_DASHBOARD" optional="YES" attributeType="String"/>
+        <attribute name="device_os_DASHBOARD" optional="YES" attributeType="String"/>
+        <attribute name="device_timezone_DASHBOARD" optional="YES" attributeType="String"/>
+        <attribute name="duration_DASHBOARD" optional="YES" attributeType="String"/>
+        <attribute name="email_DASHBOARD" optional="YES" attributeType="String"/>
+        <attribute name="expiry_date_DASHBOARD" optional="YES" attributeType="String"/>
+        <attribute name="gender_DASHBOARD" optional="YES" attributeType="String"/>
+        <attribute name="is_forget_me_DASHBOARD" optional="YES" attributeType="String"/>
+        <attribute name="is_production_build_DASHBOARD" optional="YES" attributeType="String"/>
+        <attribute name="name_DASHBOARD" optional="YES" attributeType="String"/>
+        <attribute name="new_subscription_id_DASHBOARD" optional="YES" attributeType="String"/>
+        <attribute name="package_DASHBOARD" optional="YES" attributeType="String"/>
+        <attribute name="package_id_DASHBOARD" optional="YES" attributeType="String"/>
+        <attribute name="phone_DASHBOARD" optional="YES" attributeType="String"/>
+        <attribute name="phonelock_status_DASHBOARD" optional="YES" attributeType="String"/>
+        <attribute name="plan_id_DASHBOARD" optional="YES" attributeType="String"/>
+        <attribute name="plateform_id_DASHBOARD" optional="YES" attributeType="String"/>
+        <attribute name="priority_DASHBOARD" optional="YES" attributeType="String"/>
+        <attribute name="profile_img_src_DASHBOARD" optional="YES" attributeType="String"/>
+        <attribute name="push_token_DASHBOARD" optional="YES" attributeType="String"/>
+        <attribute name="relationship_DASHBOARD" optional="YES" attributeType="String"/>
+        <attribute name="remaining_days_DASHBOARD" optional="YES" attributeType="String"/>
+        <attribute name="reseller_id_DASHBOARD" optional="YES" attributeType="String"/>
+        <attribute name="school_id_DASHBOARD" optional="YES" attributeType="String"/>
+        <attribute name="subscription_id_DASHBOARD" optional="YES" attributeType="String"/>
+        <attribute name="super_user_id_DASHBOARD" optional="YES" attributeType="String"/>
+        <attribute name="time_zone_DASHBOARD" optional="YES" attributeType="String"/>
+        <attribute name="unique_device_id_DASHBOARD" optional="YES" attributeType="String"/>
+        <attribute name="updated_at_DASHBOARD" optional="YES" attributeType="String"/>
+        <attribute name="version_code_DASHBOARD" optional="YES" attributeType="String"/>
+        <attribute name="version_number_DASHBOARD" optional="YES" attributeType="String"/>
+        <attribute name="wifi_name_DASHBOARD" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="Child_Preferences" representedClassName="Child_Preferences" syncable="YES" codeGenerationType="class">
+        <attribute name="child_id_pref" optional="YES" attributeType="String"/>
+        <attribute name="name_pref" optional="YES" attributeType="String"/>
+        <attribute name="status_pref" optional="YES" attributeType="String"/>
+        <attribute name="value_pref" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="Children_Info" representedClassName="Children_Info" syncable="YES" codeGenerationType="class">
+        <attribute name="activation_code_child_info" optional="YES" attributeType="String"/>
+        <attribute name="activation_date_child_info" optional="YES" attributeType="String"/>
+        <attribute name="active_child_info" optional="YES" attributeType="String"/>
+        <attribute name="agent_child_info" optional="YES" attributeType="String"/>
+        <attribute name="api_token_child_info" optional="YES" attributeType="String"/>
+        <attribute name="app_build_child_info" optional="YES" attributeType="String"/>
+        <attribute name="app_version_child_info" optional="YES" attributeType="String"/>
+        <attribute name="battery_remaining_child_info" optional="YES" attributeType="String"/>
+        <attribute name="birthday_child_info" optional="YES" attributeType="String"/>
+        <attribute name="campus_id_child_info" optional="YES" attributeType="String"/>
+        <attribute name="child_enrolled_child_info" optional="YES" attributeType="String"/>
+        <attribute name="child_id_child_info" optional="YES" attributeType="String"/>
+        <attribute name="child_mdm_hash_child_info" optional="YES" attributeType="String"/>
+        <attribute name="class_id_child_info" optional="YES" attributeType="String"/>
+        <attribute name="color_child_info" optional="YES" attributeType="String"/>
+        <attribute name="cover_img_src_child_info" optional="YES" attributeType="String"/>
+        <attribute name="created_at_child_info" optional="YES" attributeType="String"/>
+        <attribute name="date_created_child_info" optional="YES" attributeType="String"/>
+        <attribute name="date_modified_child_info" optional="YES" attributeType="String"/>
+        <attribute name="deleted_by_child_info" optional="YES" attributeType="String"/>
+        <attribute name="deleted_child_info" optional="YES" attributeType="String"/>
+        <attribute name="device_child_info" optional="YES" attributeType="String"/>
+        <attribute name="device_id_child_info" optional="YES" attributeType="String"/>
+        <attribute name="device_imei_child_info" optional="YES" attributeType="String"/>
+        <attribute name="device_language_child_info" optional="YES" attributeType="String"/>
+        <attribute name="device_manufacturer_child_info" optional="YES" attributeType="String"/>
+        <attribute name="device_model_child_info" optional="YES" attributeType="String"/>
+        <attribute name="device_name_child_info" optional="YES" attributeType="String"/>
+        <attribute name="device_os_child_info" optional="YES" attributeType="String"/>
+        <attribute name="device_timezone_child_info" optional="YES" attributeType="String"/>
+        <attribute name="duration_child_info" optional="YES" attributeType="String"/>
+        <attribute name="email_child_info" optional="YES" attributeType="String"/>
+        <attribute name="expiry_date_child_info" optional="YES" attributeType="String"/>
+        <attribute name="gender_child_info" optional="YES" attributeType="String"/>
+        <attribute name="is_forget_me_child_info" optional="YES" attributeType="String"/>
+        <attribute name="is_production_build_child_info" optional="YES" attributeType="String"/>
+        <attribute name="name_child_info" optional="YES" attributeType="String"/>
+        <attribute name="new_subscription_id_child_info" optional="YES" attributeType="String"/>
+        <attribute name="package_child_info" optional="YES" attributeType="String"/>
+        <attribute name="package_id_child_info" optional="YES" attributeType="String"/>
+        <attribute name="phone_child_info" optional="YES" attributeType="String"/>
+        <attribute name="phonelock_status_child_info" optional="YES" attributeType="String"/>
+        <attribute name="plan_id_child_info" optional="YES" attributeType="String"/>
+        <attribute name="plateform_id_child_info" optional="YES" attributeType="String"/>
+        <attribute name="priority_child_info" optional="YES" attributeType="String"/>
+        <attribute name="profile_img_src_child_info" optional="YES" attributeType="String"/>
+        <attribute name="push_token_child_info" optional="YES" attributeType="String"/>
+        <attribute name="relationship_child_info" optional="YES" attributeType="String"/>
+        <attribute name="remaining_days_child_info" optional="YES" attributeType="String"/>
+        <attribute name="reseller_id_child_info" optional="YES" attributeType="String"/>
+        <attribute name="school_id_child_info" optional="YES" attributeType="String"/>
+        <attribute name="subscription_id_child_info" optional="YES" attributeType="String"/>
+        <attribute name="super_user_id_child_info" optional="YES" attributeType="String"/>
+        <attribute name="time_zone_child_info" optional="YES" attributeType="String"/>
+        <attribute name="unique_device_id_child_info" optional="YES" attributeType="String"/>
+        <attribute name="updated_at_child_info" optional="YES" attributeType="String"/>
+        <attribute name="version_code_child_info" optional="YES" attributeType="String"/>
+        <attribute name="version_number_child_info" optional="YES" attributeType="String"/>
+        <attribute name="wifi_name_child_info" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="ChildrenEntity" representedClassName="ChildrenEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="activationDate" optional="YES" attributeType="String"/>
+        <attribute name="active" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="age" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="agent" optional="YES" attributeType="String"/>
+        <attribute name="appBuild" optional="YES" attributeType="String"/>
+        <attribute name="appVersion" optional="YES" attributeType="String"/>
+        <attribute name="avatarID" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="batteryRemaining" optional="YES" attributeType="String"/>
+        <attribute name="birthday" optional="YES" attributeType="String"/>
+        <attribute name="childEnrolled" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="childID" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="color" optional="YES" attributeType="String"/>
+        <attribute name="createdAt" optional="YES" attributeType="String"/>
+        <attribute name="deletedAt" optional="YES" attributeType="String"/>
+        <attribute name="deletedss" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="device" optional="YES" attributeType="String"/>
+        <attribute name="deviceID" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="deviceImei" optional="YES" attributeType="String"/>
+        <attribute name="deviceLanguage" optional="YES" attributeType="String"/>
+        <attribute name="deviceManufacturer" optional="YES" attributeType="String"/>
+        <attribute name="deviceModel" optional="YES" attributeType="String"/>
+        <attribute name="deviceName" optional="YES" attributeType="String"/>
+        <attribute name="deviceOS" optional="YES" attributeType="String"/>
+        <attribute name="deviceTimezone" optional="YES" attributeType="String"/>
+        <attribute name="email" optional="YES" attributeType="String"/>
+        <attribute name="gender" optional="YES" attributeType="String"/>
+        <attribute name="lastActivity" optional="YES" attributeType="String"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="package" optional="YES" attributeType="String"/>
+        <attribute name="packageID" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="phone" optional="YES" attributeType="String"/>
+        <attribute name="planID" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="relationship" optional="YES" attributeType="String"/>
+        <attribute name="superUserID" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="timeZone" optional="YES" attributeType="String"/>
+        <attribute name="updatedAt" optional="YES" attributeType="String"/>
+        <attribute name="versionCode" optional="YES" attributeType="String"/>
+        <attribute name="versionNumber" optional="YES" attributeType="String"/>
+        <attribute name="wifiName" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="Co_Parent" representedClassName="Co_Parent" syncable="YES" codeGenerationType="class">
+        <attribute name="active_co_parent" optional="YES" attributeType="String"/>
+        <attribute name="color_co_parent" optional="YES" attributeType="String"/>
+        <attribute name="deleted_co_parent" optional="YES" attributeType="String"/>
+        <attribute name="email_co_parent" optional="YES" attributeType="String"/>
+        <attribute name="gender_co_parent" optional="YES" attributeType="String"/>
+        <attribute name="is_joined_co_parent" optional="YES" attributeType="String"/>
+        <attribute name="is_super_parent_co_parent" optional="YES" attributeType="String"/>
+        <attribute name="language_co_parent" optional="YES" attributeType="String"/>
+        <attribute name="name_co_parent" optional="YES" attributeType="String"/>
+        <attribute name="relationship_co_parent" optional="YES" attributeType="String"/>
+        <attribute name="type_co_parent" optional="YES" attributeType="String"/>
+        <attribute name="user_id_co_parent" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="Co_Parent_Settings" representedClassName="Co_Parent_Settings" syncable="YES" codeGenerationType="class">
+        <attribute name="display_name_cp_settings" optional="YES" attributeType="String"/>
+        <attribute name="id_cp_settings" optional="YES" attributeType="String"/>
+        <attribute name="status_cp_settings" optional="YES" attributeType="String"/>
+        <attribute name="type_cp_settings" optional="YES" attributeType="String"/>
+        <attribute name="user_id_cp_settings" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="Configuration_DB" representedClassName="Configuration_DB" syncable="YES" codeGenerationType="class">
+        <attribute name="active" optional="YES" attributeType="String"/>
+        <attribute name="configName" optional="YES" attributeType="String"/>
+        <attribute name="configValue" optional="YES" attributeType="String"/>
+        <attribute name="createdAt" optional="YES" attributeType="String"/>
+        <attribute name="id" optional="YES" attributeType="String"/>
+        <attribute name="keyValue" optional="YES" attributeType="String"/>
+        <attribute name="plateform" optional="YES" attributeType="String"/>
+        <attribute name="plateformID" optional="YES" attributeType="String"/>
+        <attribute name="updatedAt" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="ContactsTable" representedClassName="ContactsTable" syncable="YES" codeGenerationType="class">
+        <attribute name="childID" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="contactID" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="contactTime" optional="YES" attributeType="String"/>
+        <attribute name="createdAt" optional="YES" attributeType="String"/>
+        <attribute name="email" optional="YES" attributeType="String"/>
+        <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="isWatched" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="phoneMobile" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="ContentFilterEntity" representedClassName="ContentFilterEntity" syncable="YES" codeGenerationType="class"/>
+    <entity name="ContentFilters" representedClassName="ContentFilters" syncable="YES" codeGenerationType="class">
+        <attribute name="apps" optional="YES" attributeType="String"/>
+        <attribute name="bookstoreErotica" optional="YES" attributeType="String"/>
+        <attribute name="childID" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="explicitContent" optional="YES" attributeType="String"/>
+        <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="movies" optional="YES" attributeType="String"/>
+        <attribute name="tvshows" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="Control_Model_DB" representedClassName="Control_Model_DB" syncable="YES" codeGenerationType="class">
+        <attribute name="control" optional="YES" attributeType="Binary"/>
+    </entity>
+    <entity name="ControlAppList" representedClassName="ControlAppList" syncable="YES" codeGenerationType="class">
+        <attribute name="aapList" optional="YES" attributeType="Binary"/>
+    </entity>
+    <entity name="ControlListApps" representedClassName="ControlListApps" syncable="YES" codeGenerationType="class">
+        <attribute name="appCategory" optional="YES" attributeType="String"/>
+        <attribute name="appLimit" optional="YES" attributeType="String"/>
+        <attribute name="appName" optional="YES" attributeType="String"/>
+        <attribute name="appPackageName" optional="YES" attributeType="String"/>
+        <attribute name="appsTime" optional="YES" attributeType="String"/>
+        <attribute name="childID" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="dateCreated" optional="YES" attributeType="String"/>
+        <attribute name="dateModified" optional="YES" attributeType="String"/>
+        <attribute name="deletedm" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="friday" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="inDailyLimit" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="installedappID" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="isBlacklisted" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="isMonitor" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="monday" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="saturday" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="size" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="sunday" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="thursday" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="tuesday" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="uninstalled" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="wednesday" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+    </entity>
+    <entity name="ControlsMainList" representedClassName="ControlsMainList" syncable="YES" codeGenerationType="class">
+        <attribute name="childID" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="featureID" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="identifier" optional="YES" attributeType="String"/>
+        <attribute name="state" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="value" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="CoParents" representedClassName="CoParents" syncable="YES" codeGenerationType="class">
+        <attribute name="active" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="birthday" optional="YES" attributeType="String"/>
+        <attribute name="color" optional="YES" attributeType="String"/>
+        <attribute name="cover_img_src" optional="YES" attributeType="String"/>
+        <attribute name="created_at" optional="YES" attributeType="String"/>
+        <attribute name="deletedpp" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="email" optional="YES" attributeType="String"/>
+        <attribute name="email_bounce" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="email_complaints" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="email_verified_at" optional="YES" attributeType="String"/>
+        <attribute name="gender" optional="YES" attributeType="String"/>
+        <attribute name="language" optional="YES" attributeType="String"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="phone" optional="YES" attributeType="String"/>
+        <attribute name="profile_img_src" optional="YES" attributeType="String"/>
+        <attribute name="relationship" optional="YES" attributeType="String"/>
+        <attribute name="super_user_id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="type" optional="YES" attributeType="String"/>
+        <attribute name="updated_at" optional="YES" attributeType="String"/>
+        <attribute name="user_id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+    </entity>
+    <entity name="Daily_Limit" representedClassName="Daily_Limit" syncable="YES" codeGenerationType="class">
+        <attribute name="auto_add_dailyLimit" optional="YES" attributeType="String"/>
+        <attribute name="child_id_dailyLimit" optional="YES" attributeType="String"/>
+        <attribute name="duration_dailyLimit" optional="YES" attributeType="String"/>
+        <attribute name="is_active_dailyLimit" optional="YES" attributeType="String"/>
+        <attribute name="remaining_dailyLimit" optional="YES" attributeType="String"/>
+        <attribute name="remaining_limit_dailyLimit" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="DailyLimitTable" representedClassName="DailyLimitTable" syncable="YES" codeGenerationType="class">
+        <attribute name="childID" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="duration" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="remainingLimit" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+    </entity>
+    <entity name="FamilyFeed" representedClassName="FamilyFeed" syncable="YES" codeGenerationType="class">
+        <attribute name="child_id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="created_at" optional="YES" attributeType="String"/>
+        <attribute name="data" optional="YES" attributeType="String"/>
+        <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="requested_time" optional="YES" attributeType="String"/>
+        <attribute name="type" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="History_Data" representedClassName="History_Data" syncable="YES" codeGenerationType="class">
+        <attribute name="browsinghistory_id" optional="YES" attributeType="String"/>
+        <attribute name="child_id" optional="YES" attributeType="String"/>
+        <attribute name="created_at" optional="YES" attributeType="String"/>
+        <attribute name="deleteds" optional="YES" attributeType="String"/>
+        <attribute name="domain" optional="YES" attributeType="String"/>
+        <attribute name="number_visits" optional="YES" attributeType="String"/>
+        <attribute name="super_user_id" optional="YES" attributeType="String"/>
+        <attribute name="time_visits" optional="YES" attributeType="String"/>
+        <attribute name="title" optional="YES" attributeType="String"/>
+        <attribute name="updated_at" optional="YES" attributeType="String"/>
+        <attribute name="url" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="LocationsHistory" representedClassName="LocationsHistory" syncable="YES" codeGenerationType="class">
+        <attribute name="accuracy" optional="YES" attributeType="String"/>
+        <attribute name="address" optional="YES" attributeType="String"/>
+        <attribute name="childID" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="createdAt" optional="YES" attributeType="String"/>
+        <attribute name="distance" optional="YES" attributeType="String"/>
+        <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="latitude" optional="YES" attributeType="String"/>
+        <attribute name="longitude" optional="YES" attributeType="String"/>
+        <attribute name="speed" optional="YES" attributeType="String"/>
+        <attribute name="timeIn" optional="YES" attributeType="String"/>
+        <attribute name="type" optional="YES" attributeType="String"/>
+        <attribute name="userID" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+    </entity>
+    <entity name="Notifaction_Feeds_DB" representedClassName="Notifaction_Feeds_DB" syncable="YES" codeGenerationType="class">
+        <attribute name="event" optional="YES" attributeType="String"/>
+        <attribute name="id" optional="YES" attributeType="String"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="news_feeds_id" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="Package" representedClassName="Package" syncable="YES" codeGenerationType="class">
+        <attribute name="child_id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="device" optional="YES" attributeType="String"/>
+        <attribute name="package_name" optional="YES" attributeType="String"/>
+        <attribute name="plan_id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+    </entity>
+    <entity name="PlacesDB" representedClassName="PlacesDB" syncable="YES" codeGenerationType="class">
+        <attribute name="address" optional="YES" attributeType="String"/>
+        <attribute name="checkinAlert" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="childID" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="function" optional="YES" attributeType="String"/>
+        <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="isActive" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="isdeleted" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="latitude" optional="YES" attributeType="String"/>
+        <attribute name="longitude" optional="YES" attributeType="String"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="predefined" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="radius" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="status" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="type" optional="YES" attributeType="String"/>
+        <attribute name="userID" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+    </entity>
+    <entity name="PlanEntity" representedClassName="PlanEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="androidReleased" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="forAndroid" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="forIos" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="identifier" optional="YES" attributeType="String"/>
+        <attribute name="iosReleased" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="planID" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="status" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="value" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="Schedules" representedClassName="Schedules" syncable="YES" codeGenerationType="class">
+        <attribute name="childID" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="endTime" optional="YES" attributeType="String"/>
+        <attribute name="functionss" optional="YES" attributeType="String"/>
+        <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="isPredefined" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="onFriday" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="onMonday" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="onSaturday" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="onSunday" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="onThursday" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="onTuesday" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="onWednesday" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="startTime" optional="YES" attributeType="String"/>
+        <attribute name="status" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="type" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="Social_History" representedClassName="Social_History" syncable="YES" codeGenerationType="class">
+        <attribute name="app_name" optional="YES" attributeType="String"/>
+        <attribute name="app_package" optional="YES" attributeType="String"/>
+        <attribute name="body" optional="YES" attributeType="String"/>
+        <attribute name="child_id" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="contact_name" optional="YES" attributeType="String"/>
+        <attribute name="content_type" optional="YES" attributeType="String"/>
+        <attribute name="date" optional="YES" attributeType="String"/>
+        <attribute name="from_me" optional="YES" attributeType="String"/>
+        <attribute name="isRead" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="url" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="TextMessages" representedClassName="TextMessages" syncable="YES" codeGenerationType="class">
+        <attribute name="body" optional="YES" attributeType="String"/>
+        <attribute name="child_id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="contact_name" optional="YES" attributeType="String"/>
+        <attribute name="created_at" optional="YES" attributeType="String"/>
+        <attribute name="isRead" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="sms_id" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="sms_time" optional="YES" attributeType="String"/>
+        <attribute name="thread_id" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="type" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="Tiktok_History" representedClassName="Tiktok_History" syncable="YES" codeGenerationType="class">
+        <attribute name="child_id" optional="YES" attributeType="String"/>
+        <attribute name="created_at" optional="YES" attributeType="String"/>
+        <attribute name="deleteds" optional="YES" attributeType="String"/>
+        <attribute name="domain" optional="YES" attributeType="String"/>
+        <attribute name="id" optional="YES" attributeType="String"/>
+        <attribute name="number_visits" optional="YES" attributeType="String"/>
+        <attribute name="super_user_id" optional="YES" attributeType="String"/>
+        <attribute name="time_visit" optional="YES" attributeType="String"/>
+        <attribute name="title" optional="YES" attributeType="String"/>
+        <attribute name="updated_at" optional="YES" attributeType="String"/>
+        <attribute name="url" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="TimeBank" representedClassName="TimeBank" syncable="YES" codeGenerationType="class">
+        <attribute name="childID" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="timeBank" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+    </entity>
+    <entity name="V1AppUsage" representedClassName="V1AppUsage" syncable="YES" codeGenerationType="class">
+        <attribute name="appCategory" optional="YES" attributeType="String"/>
+        <attribute name="appName" optional="YES" attributeType="String"/>
+        <attribute name="appUsage" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="childID" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="dateUsage" optional="YES" attributeType="String"/>
+        <attribute name="packageName" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="WebBlocker" representedClassName="WebBlocker" syncable="YES" codeGenerationType="class">
+        <attribute name="child_id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="id" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="isBlocked" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="superUserID" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="type" optional="YES" attributeType="String"/>
+        <attribute name="url" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="Youtube_History" representedClassName="Youtube_History" syncable="YES" codeGenerationType="class">
+        <attribute name="child_id" optional="YES" attributeType="String"/>
+        <attribute name="created_at" optional="YES" attributeType="String"/>
+        <attribute name="deleteds" optional="YES" attributeType="String"/>
+        <attribute name="domain" optional="YES" attributeType="String"/>
+        <attribute name="id" optional="YES" attributeType="String"/>
+        <attribute name="number_visits" optional="YES" attributeType="String"/>
+        <attribute name="super_user_id" optional="YES" attributeType="String"/>
+        <attribute name="time_visit" optional="YES" attributeType="String"/>
+        <attribute name="title" optional="YES" attributeType="String"/>
+        <attribute name="updated_at" optional="YES" attributeType="String"/>
+        <attribute name="url" optional="YES" attributeType="String"/>
+    </entity>
+</model>

@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SF-Pro-Display-Regular.otf">
+            <string>SFProDisplay-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="upgradeCell" rowHeight="307" id="KGk-i7-Jjw" customClass="UpgradeTableViewCell" customModule="FamilyTime" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="608" height="307"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="608" height="307"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zO0-vi-aXr">
+                        <rect key="frame" x="10" y="10" width="588" height="287"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8re-Nk-t6e">
+                                <rect key="frame" x="0.0" y="0.0" width="588" height="287"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="eIg-pP-VfU">
+                                <rect key="frame" x="269" y="118.5" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="2Wt-QM-YmY"/>
+                                    <constraint firstAttribute="height" constant="50" id="LmG-9N-IvW"/>
+                                </constraints>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="8re-Nk-t6e" secondAttribute="trailing" id="3nW-yz-i4h"/>
+                            <constraint firstItem="eIg-pP-VfU" firstAttribute="centerY" secondItem="8re-Nk-t6e" secondAttribute="centerY" id="5ok-CD-eFg"/>
+                            <constraint firstItem="8re-Nk-t6e" firstAttribute="leading" secondItem="zO0-vi-aXr" secondAttribute="leading" id="5w4-cZ-QPG"/>
+                            <constraint firstAttribute="bottom" secondItem="8re-Nk-t6e" secondAttribute="bottom" id="iog-fq-sko"/>
+                            <constraint firstItem="8re-Nk-t6e" firstAttribute="top" secondItem="zO0-vi-aXr" secondAttribute="top" id="ofD-Hm-Hhu"/>
+                            <constraint firstItem="eIg-pP-VfU" firstAttribute="centerX" secondItem="8re-Nk-t6e" secondAttribute="centerX" id="rkh-A6-C9T"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xf4-uc-g3f" userLabel="upgradeView">
+                        <rect key="frame" x="10" y="6" width="588" height="295"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cbS-HP-cBW" userLabel="subscriptionView">
+                                <rect key="frame" x="269" y="21" width="50" height="50"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_subscription_expired" translatesAutoresizingMaskIntoConstraints="NO" id="7nH-Z3-rPi">
+                                        <rect key="frame" x="11" y="11" width="28" height="28"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.19968439569999999" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="7nH-Z3-rPi" secondAttribute="trailing" constant="11" id="0Vz-gc-Dew"/>
+                                    <constraint firstItem="7nH-Z3-rPi" firstAttribute="top" secondItem="cbS-HP-cBW" secondAttribute="top" constant="11" id="GJa-IA-blq"/>
+                                    <constraint firstAttribute="bottom" secondItem="7nH-Z3-rPi" secondAttribute="bottom" constant="11" id="Jug-X3-vud"/>
+                                    <constraint firstAttribute="width" constant="50" id="eR3-33-23v"/>
+                                    <constraint firstItem="7nH-Z3-rPi" firstAttribute="leading" secondItem="cbS-HP-cBW" secondAttribute="leading" constant="11" id="fcg-SS-ob7"/>
+                                    <constraint firstAttribute="height" constant="50" id="kDH-Gk-dul"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Limited Time Offer! Enjoy " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7k4-ou-QGw">
+                                <rect key="frame" x="40" y="81" width="508" height="26.5"/>
+                                <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="22"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="localizedStr" value="limited_offer"/>
+                                </userDefinedRuntimeAttributes>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="26"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Flat 30% Off " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X9n-ap-L4i">
+                                <rect key="frame" x="222.5" y="113.5" width="143" height="31.5"/>
+                                <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="26"/>
+                                <color key="textColor" red="1" green="0.89019607840000003" blue="0.28627450980000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="localizedStr" value="flat_off"/>
+                                </userDefinedRuntimeAttributes>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="30"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="on FamilyTime Premium Hurry up, this offer ends soon!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="roj-BE-RVt">
+                                <rect key="frame" x="20" y="151" width="548" height="18"/>
+                                <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="15"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="localizedStr" value="offer_end_soon"/>
+                                </userDefinedRuntimeAttributes>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="19"/>
+                                </variation>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XhF-4m-Exr">
+                                <rect key="frame" x="10" y="250" width="568" height="35"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="X3O-Cu-8Ar"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="16"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Upgrade Now ">
+                                    <color key="titleColor" red="0.44705882349999998" green="0.40000000000000002" blue="0.72941176470000002" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="localizedStr" value="upgradeNow"/>
+                                </userDefinedRuntimeAttributes>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="20"/>
+                                </variation>
+                                <connections>
+                                    <action selector="upgradeButtonPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="RnX-7H-DC8"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.44705882352941173" green="0.40000000000000002" blue="0.72941176470588232" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="cbS-HP-cBW" firstAttribute="top" secondItem="xf4-uc-g3f" secondAttribute="top" constant="21" id="2ta-7y-7mS"/>
+                            <constraint firstItem="X9n-ap-L4i" firstAttribute="centerX" secondItem="xf4-uc-g3f" secondAttribute="centerX" id="6nM-YU-2h7"/>
+                            <constraint firstAttribute="trailing" secondItem="roj-BE-RVt" secondAttribute="trailing" constant="20" id="80s-NL-Ku9"/>
+                            <constraint firstItem="roj-BE-RVt" firstAttribute="top" secondItem="X9n-ap-L4i" secondAttribute="bottom" constant="6" id="8wG-Ss-9p8"/>
+                            <constraint firstAttribute="bottom" secondItem="XhF-4m-Exr" secondAttribute="bottom" constant="10" id="Et8-sT-25C"/>
+                            <constraint firstAttribute="trailing" secondItem="XhF-4m-Exr" secondAttribute="trailing" constant="10" id="JgK-Ua-lDW"/>
+                            <constraint firstItem="XhF-4m-Exr" firstAttribute="leading" secondItem="xf4-uc-g3f" secondAttribute="leading" constant="10" id="Oa6-sz-vhu"/>
+                            <constraint firstItem="7k4-ou-QGw" firstAttribute="leading" secondItem="xf4-uc-g3f" secondAttribute="leading" constant="40" id="eIw-Ea-LAU"/>
+                            <constraint firstItem="roj-BE-RVt" firstAttribute="leading" secondItem="xf4-uc-g3f" secondAttribute="leading" constant="20" id="f8g-3E-UZk"/>
+                            <constraint firstItem="cbS-HP-cBW" firstAttribute="centerX" secondItem="xf4-uc-g3f" secondAttribute="centerX" id="m7R-KB-MQ1"/>
+                            <constraint firstItem="roj-BE-RVt" firstAttribute="centerX" secondItem="xf4-uc-g3f" secondAttribute="centerX" id="rSK-pm-0UY"/>
+                            <constraint firstItem="X9n-ap-L4i" firstAttribute="top" secondItem="7k4-ou-QGw" secondAttribute="bottom" constant="6" id="saX-qS-ict"/>
+                            <constraint firstItem="7k4-ou-QGw" firstAttribute="top" secondItem="cbS-HP-cBW" secondAttribute="bottom" constant="10" id="scm-D9-63V"/>
+                            <constraint firstAttribute="trailing" secondItem="7k4-ou-QGw" secondAttribute="trailing" constant="40" id="uh0-qY-5wt"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="zO0-vi-aXr" secondAttribute="bottom" constant="10" id="54e-mq-wBL"/>
+                    <constraint firstAttribute="bottom" secondItem="xf4-uc-g3f" secondAttribute="bottom" constant="6" id="FAJ-yk-ECi"/>
+                    <constraint firstAttribute="trailing" secondItem="zO0-vi-aXr" secondAttribute="trailing" constant="10" id="Wte-u6-p5K"/>
+                    <constraint firstItem="xf4-uc-g3f" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="6" id="Zed-ya-m42"/>
+                    <constraint firstItem="xf4-uc-g3f" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="aqt-UQ-pop"/>
+                    <constraint firstItem="zO0-vi-aXr" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="grr-4x-m73"/>
+                    <constraint firstAttribute="trailing" secondItem="xf4-uc-g3f" secondAttribute="trailing" constant="10" id="tC5-yS-ZEK"/>
+                    <constraint firstItem="zO0-vi-aXr" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="xDE-Ya-49b"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="flatDiscountLabel" destination="X9n-ap-L4i" id="vqJ-QK-rak"/>
+                <outlet property="limitedTimeLabel" destination="7k4-ou-QGw" id="b79-zc-Bvu"/>
+                <outlet property="onFamilyTimeLabel" destination="roj-BE-RVt" id="7jy-xD-3aP"/>
+                <outlet property="proActivity" destination="eIg-pP-VfU" id="ACb-cV-SoH"/>
+                <outlet property="promotionView" destination="zO0-vi-aXr" id="fab-T9-gd4"/>
+                <outlet property="promotionalNotificationImgView" destination="8re-Nk-t6e" id="Zqi-fW-Zct"/>
+                <outlet property="subcriptionImageView" destination="7nH-Z3-rPi" id="2eV-N3-q7B"/>
+                <outlet property="subscriptionView" destination="cbS-HP-cBW" id="lqj-Ff-A2P"/>
+                <outlet property="upgradeNowButtonOutlet" destination="XhF-4m-Exr" id="cHa-9l-QWy"/>
+                <outlet property="upgradeView" destination="xf4-uc-g3f" id="OpH-Y3-u40"/>
+            </connections>
+            <point key="canvasLocation" x="179.71014492753625" y="72.65625"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="ic_subscription_expired" width="80" height="80"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

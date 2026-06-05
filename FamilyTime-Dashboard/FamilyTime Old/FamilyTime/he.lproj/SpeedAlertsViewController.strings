@@ -1,0 +1,30 @@
+
+/* Class = "UILabel"; text = "Current Speed"; ObjectID = "3xw-yJ-9wY"; */
+"3xw-yJ-9wY.text" = "Current Speed";
+
+/* Class = "UILabel"; text = "Kurts Spare"; ObjectID = "8Vl-3F-ZTm"; */
+"8Vl-3F-ZTm.text" = "Kurts Spare";
+
+/* Class = "UIButton"; normalTitle = "OK"; ObjectID = "8ZZ-qo-1S8"; */
+"8ZZ-qo-1S8.normalTitle" = "OK";
+
+/* Class = "UILabel"; text = "getting address"; ObjectID = "Da1-0s-NRV"; */
+"Da1-0s-NRV.text" = "getting address";
+
+/* Class = "UILabel"; text = "Kurts Spare is over her speed limit"; ObjectID = "FfW-Yz-5Ye"; */
+"FfW-Yz-5Ye.text" = "Kurts Spare is over her speed limit";
+
+/* Class = "UILabel"; text = "30 kph"; ObjectID = "KUL-A2-1YY"; */
+"KUL-A2-1YY.text" = "30 kph";
+
+/* Class = "UILabel"; text = "Speed Limit"; ObjectID = "ZwC-KX-6Cg"; */
+"ZwC-KX-6Cg.text" = "Speed Limit";
+
+/* Class = "UILabel"; text = "30 kph"; ObjectID = "aSY-vH-2lR"; */
+"aSY-vH-2lR.text" = "30 kph";
+
+/* Class = "UILabel"; text = "11:30 AM"; ObjectID = "iTf-14-P34"; */
+"iTf-14-P34.text" = "11:30 AM";
+
+/* Class = "UILabel"; text = "Accuracy: 20ft"; ObjectID = "lR6-e7-nE9"; */
+"lR6-e7-nE9.text" = "Accuracy: 20ft";

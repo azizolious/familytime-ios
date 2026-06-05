@@ -1,0 +1,13 @@
+{"aps": {
+    "alert": {
+        "title": "New message from Sara",
+        "body": "Hi! How can I help you today?"
+    },
+    "sound": "default",
+    "badge": 1
+},
+    "type": "agent_message",
+    "conversation_id": "15954",
+    "visitor_id": "3",
+    "Simulator Target Bundle": "io.familytime.dashboard"
+}

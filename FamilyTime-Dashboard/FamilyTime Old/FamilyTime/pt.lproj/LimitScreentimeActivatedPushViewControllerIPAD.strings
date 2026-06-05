@@ -1,0 +1,9 @@
+
+/* Class = "UILabel"; text = "FamilyTime is paused on LG 10. this device remain unavailable unless you lock it."; ObjectID = "23P-Dg-HgL"; */
+"23P-Dg-HgL.text" = "FamilyTime is paused on LG 10. this device remain unavailable unless you lock it.";
+
+/* Class = "UILabel"; text = "Limit ScreenTime is activate"; ObjectID = "3wQ-Km-8na"; */
+"3wQ-Km-8na.text" = "Limit ScreenTime is activate";
+
+/* Class = "UIButton"; normalTitle = "OK"; ObjectID = "Xik-9Q-Scf"; */
+"Xik-9Q-Scf.normalTitle" = "OK";

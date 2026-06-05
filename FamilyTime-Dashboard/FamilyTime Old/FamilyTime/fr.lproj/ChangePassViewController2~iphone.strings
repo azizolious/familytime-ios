@@ -1,0 +1,12 @@
+
+/* Class = "UITextField"; placeholder = "OLD PASSWORD"; ObjectID = "8Wi-9n-LmC"; */
+"8Wi-9n-LmC.placeholder" = "OLD PASSWORD";
+
+/* Class = "UIButton"; normalTitle = "RESEST MY PASSWORD"; ObjectID = "JuB-nN-Ziy"; */
+"JuB-nN-Ziy.normalTitle" = "RESEST MY PASSWORD";
+
+/* Class = "UITextField"; placeholder = "CONFIRM PASSWORD"; ObjectID = "e1Z-6H-hBz"; */
+"e1Z-6H-hBz.placeholder" = "CONFIRM PASSWORD";
+
+/* Class = "UITextField"; placeholder = "NEW PASSWORD"; ObjectID = "goY-ik-IbD"; */
+"goY-ik-IbD.placeholder" = "NEW PASSWORD";

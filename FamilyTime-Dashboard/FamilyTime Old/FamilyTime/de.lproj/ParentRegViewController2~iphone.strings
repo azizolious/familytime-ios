@@ -1,0 +1,15 @@
+
+/* Class = "UITextField"; placeholder = "FULL NAME"; ObjectID = "1mm-ie-GpZ"; */
+"1mm-ie-GpZ.placeholder" = "FULL NAME";
+
+/* Class = "UITextField"; placeholder = "EMAIL"; ObjectID = "YfM-uf-xzW"; */
+"YfM-uf-xzW.placeholder" = "EMAIL";
+
+/* Class = "UILabel"; text = "Have an account?"; ObjectID = "aTH-BT-cdb"; */
+"aTH-BT-cdb.text" = "Have an account?";
+
+/* Class = "UIButton"; normalTitle = "SIGN IN"; ObjectID = "tV1-2N-Toq"; */
+"tV1-2N-Toq.normalTitle" = "SIGN IN";
+
+/* Class = "UIButton"; normalTitle = "CREATE FREE ACCOUNT"; ObjectID = "yh5-VG-acZ"; */
+"yh5-VG-acZ.normalTitle" = "CREATE FREE ACCOUNT";

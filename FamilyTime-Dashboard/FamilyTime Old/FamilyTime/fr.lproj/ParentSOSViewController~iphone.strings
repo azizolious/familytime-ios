@@ -1,0 +1,12 @@
+
+/* Class = "UIButton"; normalTitle = "Got it, on my way!"; ObjectID = "3a7-qG-v9z"; */
+"3a7-qG-v9z.normalTitle" = "Got it, on my way!";
+
+/* Class = "UILabel"; text = "5 MINUTES AGO"; ObjectID = "CJH-Bd-hy2"; */
+"CJH-Bd-hy2.text" = "5 MINUTES AGO";
+
+/* Class = "UILabel"; text = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."; ObjectID = "E0N-ov-nkW"; */
+"E0N-ov-nkW.text" = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.";
+
+/* Class = "UILabel"; text = "SEND CUSTOM MESSAGE"; ObjectID = "xpQ-jH-867"; */
+"xpQ-jH-867.text" = "SEND CUSTOM MESSAGE";

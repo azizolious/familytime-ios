@@ -1,0 +1,15 @@
+
+/* Class = "UIButton"; normalTitle = "Yes"; ObjectID = "18N-bF-ldY"; */
+"18N-bF-ldY.normalTitle" = "Yes";
+
+/* Class = "UILabel"; text = "FamilyTime Dashboard"; ObjectID = "60h-w4-PFy"; */
+"60h-w4-PFy.text" = "FamilyTime Dashboard";
+
+/* Class = "UIButton"; normalTitle = "No"; ObjectID = "XPP-4H-6pO"; */
+"XPP-4H-6pO.normalTitle" = "No";
+
+/* Class = "UILabel"; text = "Do you wish to log out?"; ObjectID = "n5f-G0-jKF"; */
+"n5f-G0-jKF.text" = "Do you wish to log out?";
+
+/* Class = "UILabel"; text = "Rob's Family"; ObjectID = "rU3-5W-9as"; */
+"rU3-5W-9as.text" = "Rob's Family";

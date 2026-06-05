@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SetLimitVC" customModule="FamilyTime" customModuleProvider="target">
+            <connections>
+                <outlet property="segmentControl" destination="ebm-v2-1xW" id="sYw-ej-5YL"/>
+                <outlet property="tblVu" destination="q6l-wK-0yD" id="UQN-ep-jpV"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mmG-YW-Eju">
+                    <rect key="frame" x="16" y="75" width="361" height="42"/>
+                    <subviews>
+                        <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="ebm-v2-1xW" customClass="OYSegmentControl" customModule="FamilyTime" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="361" height="43"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="42" id="yau-wu-jUJ"/>
+                            </constraints>
+                            <segments>
+                                <segment title="Everyday"/>
+                                <segment title="Custom"/>
+                            </segments>
+                            <connections>
+                                <action selector="segmentChange:" destination="-1" eventType="valueChanged" id="mr8-pJ-rXb"/>
+                            </connections>
+                        </segmentedControl>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="ebm-v2-1xW" firstAttribute="top" secondItem="mmG-YW-Eju" secondAttribute="top" id="AwO-c0-QwH"/>
+                        <constraint firstItem="ebm-v2-1xW" firstAttribute="leading" secondItem="mmG-YW-Eju" secondAttribute="leading" id="cdS-hb-J9k"/>
+                        <constraint firstAttribute="trailing" secondItem="ebm-v2-1xW" secondAttribute="trailing" id="g6V-i6-x6Z"/>
+                        <constraint firstAttribute="bottom" secondItem="ebm-v2-1xW" secondAttribute="bottom" id="nLn-8c-lJB"/>
+                    </constraints>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="insetGrouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="q6l-wK-0yD">
+                    <rect key="frame" x="0.0" y="117" width="393" height="631"/>
+                    <color key="backgroundColor" red="0.97254901960784312" green="0.97254901960784312" blue="0.97254901960784312" alpha="1" colorSpace="calibratedRGB"/>
+                </tableView>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="fsu-Jl-VCF">
+                    <rect key="frame" x="16" y="764" width="361" height="44"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JrH-Hc-rsI">
+                            <rect key="frame" x="0.0" y="0.0" width="361" height="44"/>
+                            <color key="backgroundColor" red="0.08235294118" green="0.42352941179999998" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="44" id="HPc-YP-NLe"/>
+                            </constraints>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="Apply">
+                                <color key="baseForegroundColor" red="0.97254901959999995" green="0.97254901959999995" blue="0.97254901959999995" alpha="1" colorSpace="calibratedRGB"/>
+                            </buttonConfiguration>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="22"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="string" keyPath="localizedStr" value="apply"/>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="applyBtnTapped:" destination="-1" eventType="touchUpInside" id="WdH-RA-2Zy"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="q6l-wK-0yD" firstAttribute="top" secondItem="mmG-YW-Eju" secondAttribute="bottom" id="CM7-pj-Qbh"/>
+                <constraint firstItem="fsu-Jl-VCF" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="KBH-ek-ZHZ"/>
+                <constraint firstItem="mmG-YW-Eju" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="N2L-EB-myM"/>
+                <constraint firstItem="fsu-Jl-VCF" firstAttribute="top" secondItem="q6l-wK-0yD" secondAttribute="bottom" constant="16" id="PLz-Ez-OmJ"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="fsu-Jl-VCF" secondAttribute="trailing" constant="16" id="TGe-xr-Evn"/>
+                <constraint firstItem="mmG-YW-Eju" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="16" id="XSF-43-6c4"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="fsu-Jl-VCF" secondAttribute="bottom" constant="10" id="fqx-w2-UbT"/>
+                <constraint firstItem="q6l-wK-0yD" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="gbe-Tf-lNf"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="mmG-YW-Eju" secondAttribute="trailing" constant="16" id="hfu-WB-Xt8"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="q6l-wK-0yD" secondAttribute="trailing" id="jMW-ma-FLr"/>
+            </constraints>
+            <point key="canvasLocation" x="40" y="-32"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

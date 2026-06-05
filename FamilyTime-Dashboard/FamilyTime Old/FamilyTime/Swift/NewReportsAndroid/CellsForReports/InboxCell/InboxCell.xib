@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SF-Pro-Display-Regular.otf">
+            <string>SFProDisplay-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="73" id="KGk-i7-Jjw" customClass="InboxCell" customModule="FamilyTime" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="73"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="73"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Guc-eJ-ryM">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="73"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="con" translatesAutoresizingMaskIntoConstraints="NO" id="ynj-vB-JVN">
+                                <rect key="frame" x="16" y="14.666666666666664" width="44" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="N42-cM-Ey7"/>
+                                    <constraint firstAttribute="width" constant="44" id="uzy-0p-GkJ"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="NbU-nI-Ec8">
+                                <rect key="frame" x="76" y="8" width="188" height="57"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zubair" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kz7-KF-fUf">
+                                        <rect key="frame" x="0.0" y="0.0" width="188" height="19.333333333333332"/>
+                                        <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="16"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Child Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yyb-vP-t6M">
+                                        <rect key="frame" x="0.0" y="24.333333333333336" width="188" height="14.333333333333336"/>
+                                        <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="12"/>
+                                        <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10:31 am" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bLx-Lc-qOs">
+                                        <rect key="frame" x="0.0" y="43.666666666666664" width="188" height="13.333333333333336"/>
+                                        <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="12"/>
+                                        <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1175" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9bX-mP-QLO">
+                                <rect key="frame" x="274" y="21.666666666666671" width="30" height="30"/>
+                                <color key="backgroundColor" red="0.070588235294117646" green="0.5490196078431373" blue="0.49411764705882355" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="LyW-Om-tL2"/>
+                                    <constraint firstAttribute="height" constant="30" id="bFq-Fd-1MH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="12"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="NbU-nI-Ec8" firstAttribute="top" secondItem="Guc-eJ-ryM" secondAttribute="top" constant="8" id="MjE-2B-7wq"/>
+                            <constraint firstItem="9bX-mP-QLO" firstAttribute="centerY" secondItem="Guc-eJ-ryM" secondAttribute="centerY" id="UJP-WR-ymX"/>
+                            <constraint firstAttribute="bottom" secondItem="NbU-nI-Ec8" secondAttribute="bottom" constant="8" id="WIE-gm-y7B"/>
+                            <constraint firstItem="ynj-vB-JVN" firstAttribute="centerY" secondItem="Guc-eJ-ryM" secondAttribute="centerY" id="YdU-8O-GTo"/>
+                            <constraint firstItem="9bX-mP-QLO" firstAttribute="leading" secondItem="NbU-nI-Ec8" secondAttribute="trailing" constant="10" id="io3-Bp-ka5"/>
+                            <constraint firstAttribute="trailing" secondItem="9bX-mP-QLO" secondAttribute="trailing" constant="16" id="ko1-ns-Ktb"/>
+                            <constraint firstItem="NbU-nI-Ec8" firstAttribute="leading" secondItem="ynj-vB-JVN" secondAttribute="trailing" constant="16" id="lvX-Ii-KmN"/>
+                            <constraint firstItem="ynj-vB-JVN" firstAttribute="leading" secondItem="Guc-eJ-ryM" secondAttribute="leading" constant="16" id="wVe-eQ-AZ6"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="Guc-eJ-ryM" secondAttribute="trailing" id="AYn-vv-Hdg"/>
+                    <constraint firstAttribute="bottom" secondItem="Guc-eJ-ryM" secondAttribute="bottom" id="TBZ-iH-HVZ"/>
+                    <constraint firstItem="Guc-eJ-ryM" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="UGA-5b-VqJ"/>
+                    <constraint firstItem="Guc-eJ-ryM" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="ZOV-9i-YHQ"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="countLbl" destination="9bX-mP-QLO" id="wef-Gg-Ujx"/>
+                <outlet property="img" destination="ynj-vB-JVN" id="v12-6i-pRf"/>
+                <outlet property="msgLbl" destination="Yyb-vP-t6M" id="JSj-Fc-GRR"/>
+                <outlet property="nameLbl" destination="kz7-KF-fUf" id="KnT-2O-6YR"/>
+                <outlet property="timeLbl" destination="bLx-Lc-qOs" id="Cuy-Kb-TKe"/>
+            </connections>
+            <point key="canvasLocation" x="48.854961832061065" y="-15.140845070422536"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="con" width="44" height="44"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

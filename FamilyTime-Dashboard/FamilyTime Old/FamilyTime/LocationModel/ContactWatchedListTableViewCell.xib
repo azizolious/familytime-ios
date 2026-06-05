@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="OpenSans-Regular.ttf">
+            <string>OpenSans</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" restorationIdentifier="contactCell22" selectionStyle="default" indentationWidth="10" reuseIdentifier="contactCell22" rowHeight="90" id="KGk-i7-Jjw" customClass="SwiftContactWatchedListTableViewCell" customModule="FamilyTime" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="363" height="83"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="363" height="83"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vvt-na-leV">
+                        <rect key="frame" x="16" y="10" width="60" height="60"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="60" id="6Si-yG-CBd"/>
+                            <constraint firstAttribute="height" constant="60" id="Q61-Sb-AJu"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QO8-NX-qOR">
+                        <rect key="frame" x="91" y="39.5" width="35.5" height="14"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="14" id="zIb-yS-OPh"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="14"/>
+                        <color key="textColor" red="0.66666666669999997" green="0.66666666669999997" blue="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ohR-U4-QNA">
+                        <rect key="frame" x="91" y="57.5" width="35.5" height="15"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="15" id="6Pl-kn-etA"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="14"/>
+                        <color key="textColor" red="0.66666666669999997" green="0.66666666669999997" blue="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NnO-CP-ktz">
+                        <rect key="frame" x="91" y="10" width="43" height="23.5"/>
+                        <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="17"/>
+                        <color key="textColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PSI-EM-hJv">
+                        <rect key="frame" x="302" y="24" width="51" height="31"/>
+                    </switch>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="vvt-na-leV" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="1xi-Hs-meq"/>
+                    <constraint firstItem="ohR-U4-QNA" firstAttribute="top" secondItem="QO8-NX-qOR" secondAttribute="bottom" constant="4" id="3TQ-lp-u6p"/>
+                    <constraint firstItem="PSI-EM-hJv" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="13" id="5vd-x5-uf6"/>
+                    <constraint firstItem="QO8-NX-qOR" firstAttribute="top" secondItem="NnO-CP-ktz" secondAttribute="bottom" constant="6" id="9H3-Iz-fr2"/>
+                    <constraint firstItem="NnO-CP-ktz" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="AkJ-4E-CO3"/>
+                    <constraint firstItem="vvt-na-leV" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="B4I-VH-gNn"/>
+                    <constraint firstItem="NnO-CP-ktz" firstAttribute="leading" secondItem="vvt-na-leV" secondAttribute="trailing" constant="15" id="Fgs-gp-xyb"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="PSI-EM-hJv" secondAttribute="trailing" constant="-4" id="Myj-DK-3rg"/>
+                    <constraint firstItem="NnO-CP-ktz" firstAttribute="leading" secondItem="QO8-NX-qOR" secondAttribute="leading" id="Uls-sZ-njP"/>
+                    <constraint firstItem="QO8-NX-qOR" firstAttribute="leading" secondItem="ohR-U4-QNA" secondAttribute="leading" id="tx3-PU-18q"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="contactImage" destination="vvt-na-leV" id="rK7-ZF-rnG"/>
+                <outlet property="email" destination="ohR-U4-QNA" id="4qq-IV-tRa"/>
+                <outlet property="mobile" destination="QO8-NX-qOR" id="ivm-Dn-VpH"/>
+                <outlet property="name" destination="NnO-CP-ktz" id="YaD-OZ-I2W"/>
+                <outlet property="sw11" destination="PSI-EM-hJv" id="R78-VE-yUL"/>
+            </connections>
+            <point key="canvasLocation" x="143" y="116"/>
+        </tableViewCell>
+    </objects>
+</document>

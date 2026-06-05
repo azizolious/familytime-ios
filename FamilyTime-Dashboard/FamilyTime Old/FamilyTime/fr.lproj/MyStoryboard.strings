@@ -1,0 +1,210 @@
+
+/* Class = "UIButton"; normalTitle = "Sign out"; ObjectID = "0We-vi-siX"; */
+"0We-vi-siX.normalTitle" = "Sign out";
+
+/* Class = "UILabel"; text = "Free"; ObjectID = "10G-Bi-dOZ"; */
+"10G-Bi-dOZ.text" = "Free";
+
+/* Class = "UILabel"; text = "12:00 AM"; ObjectID = "2XP-MH-w6E"; */
+"2XP-MH-w6E.text" = "12:00 AM";
+
+/* Class = "UINavigationItem"; title = "FunTime"; ObjectID = "4D2-x3-oxC"; */
+"4D2-x3-oxC.title" = "FunTime";
+
+/* Class = "UILabel"; text = "Nice and easy, you will be up and running in no time."; ObjectID = "4U9-wO-27O"; */
+"4U9-wO-27O.text" = "Nice and easy, you will be up and running in no time.";
+
+/* Class = "UILabel"; text = "Loading . . ."; ObjectID = "5jv-U4-O80"; */
+"5jv-U4-O80.text" = "Loading . . .";
+
+/* Class = "UILabel"; text = "1.     Open get.familytime.io in Browser, on your {'Device Name'} device.\n2.     Download FamilyTime for Kids app on your child's device \n3.     When the app opens, log in with your account information.\n4.     Select 'Activate this device' and follow the on-screen instructions.\n5.     Finish the set up on {'Device Name'} device\n6.     Log back on this page after you are done there"; ObjectID = "64J-jQ-xW2"; */
+"64J-jQ-xW2.text" = "1.     Open get.familytime.io in Browser, on your {'Device Name'} device.\n2.     Download FamilyTime for Kids app on your child's device \n3.     When the app opens, log in with your account information.\n4.     Select 'Activate this device' and follow the on-screen instructions.\n5.     Finish the set up on {'Device Name'} device\n6.     Log back on this page after you are done there";
+
+/* Class = "UILabel"; text = "ghghjghjg@hjgjhg.com"; ObjectID = "7Wh-Jj-Nya"; */
+"7Wh-Jj-Nya.text" = "ghghjghjg@hjgjhg.com";
+
+/* Class = "UILabel"; text = "Free"; ObjectID = "7je-FS-5UI"; */
+"7je-FS-5UI.text" = "Free";
+
+/* Class = "UIButton"; normalTitle = "Next"; ObjectID = "8sa-pF-tgD"; */
+"8sa-pF-tgD.normalTitle" = "Next";
+
+/* Class = "UILabel"; text = "Set FunTime"; ObjectID = "CLz-S7-l9h"; */
+"CLz-S7-l9h.text" = "Set FunTime";
+
+/* Class = "UIButton"; normalTitle = "Revoke invitation"; ObjectID = "Crc-j6-3kj"; */
+"Crc-j6-3kj.normalTitle" = "Revoke invitation";
+
+/* Class = "UIButton"; normalTitle = "Go Premium"; ObjectID = "FaV-a9-ee8"; */
+"FaV-a9-ee8.normalTitle" = "Go Premium";
+
+/* Class = "UILabel"; text = "Enable FunTime"; ObjectID = "Fif-Jo-zSZ"; */
+"Fif-Jo-zSZ.text" = "Enable FunTime";
+
+/* Class = "UILabel"; text = "How can we help you?"; ObjectID = "Gc8-IZ-s1c"; */
+"Gc8-IZ-s1c.text" = "How can we help you?";
+
+/* Class = "UILabel"; text = "Product Updates"; ObjectID = "IIk-Ey-3ck"; */
+"IIk-Ey-3ck.text" = "Product Updates";
+
+/* Class = "UILabel"; text = "Choose the device Nicolar Barkley has to see setup instructions."; ObjectID = "IXG-wj-Ech"; */
+"IXG-wj-Ech.text" = "Choose the device Nicolar Barkley has to see setup instructions.";
+
+/* Class = "UIBarButtonItem"; title = "Save"; ObjectID = "IYE-Yh-eqL"; */
+"IYE-Yh-eqL.title" = "Save";
+
+/* Class = "UILabel"; text = "Allow to add devices"; ObjectID = "JLr-uL-JTD"; */
+"JLr-uL-JTD.text" = "Allow to add devices";
+
+/* Class = "UILabel"; text = "Allow to add devices"; ObjectID = "JXV-pz-f45"; */
+"JXV-pz-f45.text" = "Allow to add devices";
+
+/* Class = "UILabel"; text = "Google"; ObjectID = "JZ1-bQ-yu8"; */
+"JZ1-bQ-yu8.text" = "Google";
+
+/* Class = "UITextField"; placeholder = "Relationship"; ObjectID = "Jkz-BW-Xbl"; */
+"Jkz-BW-Xbl.placeholder" = "Relationship";
+
+/* Class = "UILabel"; text = "0:41"; ObjectID = "Kfx-9b-RR7"; */
+"Kfx-9b-RR7.text" = "0:41";
+
+/* Class = "UILabel"; text = "Email Notification"; ObjectID = "L55-PQ-LT0"; */
+"L55-PQ-LT0.text" = "Email Notification";
+
+/* Class = "UILabel"; text = "START TIME"; ObjectID = "NZh-I6-xwj"; */
+"NZh-I6-xwj.text" = "START TIME";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "OPD-ea-JHU"; */
+"OPD-ea-JHU.normalTitle" = "Button";
+
+/* Class = "UIButton"; normalTitle = "Remove From Family"; ObjectID = "PLF-8z-eRJ"; */
+"PLF-8z-eRJ.normalTitle" = "Remove From Family";
+
+/* Class = "UILabel"; text = "Android"; ObjectID = "Pa2-nh-iwV"; */
+"Pa2-nh-iwV.text" = "Android";
+
+/* Class = "UITextField"; text = "kaka"; ObjectID = "Pbl-eY-Awe"; */
+"Pbl-eY-Awe.text" = "kaka";
+
+/* Class = "UILabel"; text = "END TIME"; ObjectID = "Pwd-CR-gMe"; */
+"Pwd-CR-gMe.text" = "END TIME";
+
+/* Class = "UILabel"; text = "Please enter the device name in the given field. You cab chnage the name afterword from the Profile Screen."; ObjectID = "Qtw-ah-1pN"; */
+"Qtw-ah-1pN.text" = "Please enter the device name in the given field. You cab chnage the name afterword from the Profile Screen.";
+
+/* Class = "UIButton"; normalTitle = "Yes i have done it"; ObjectID = "R8L-bN-Ubz"; */
+"R8L-bN-Ubz.normalTitle" = "Yes i have done it";
+
+/* Class = "UILabel"; text = "iOS"; ObjectID = "R9J-oc-z48"; */
+"R9J-oc-z48.text" = "iOS";
+
+/* Class = "UILabel"; text = "ghghjghjg@hjgjhg.com"; ObjectID = "UCX-Tu-H7F"; */
+"UCX-Tu-H7F.text" = "ghghjghjg@hjgjhg.com";
+
+/* Class = "UILabel"; text = "Push Notification"; ObjectID = "VUs-1P-grz"; */
+"VUs-1P-grz.text" = "Push Notification";
+
+/* Class = "UIButton"; normalTitle = "Help Centre"; ObjectID = "WwP-D7-2nM"; */
+"WwP-D7-2nM.normalTitle" = "Help Centre";
+
+/* Class = "UIButton"; normalTitle = "My Tickets"; ObjectID = "ZZp-K0-nZV"; */
+"ZZp-K0-nZV.normalTitle" = "My Tickets";
+
+/* Class = "UILabel"; text = "Free"; ObjectID = "c0Q-s5-eSU"; */
+"c0Q-s5-eSU.text" = "Free";
+
+/* Class = "UILabel"; text = "Abc Michealll"; ObjectID = "ca7-Zv-YxS"; */
+"ca7-Zv-YxS.text" = "Abc Michealll";
+
+/* Class = "UILabel"; text = "Languages"; ObjectID = "cf2-uv-yxd"; */
+"cf2-uv-yxd.text" = "Languages";
+
+/* Class = "UILabel"; text = "Product Updates"; ObjectID = "cgn-gO-Rgp"; */
+"cgn-gO-Rgp.text" = "Product Updates";
+
+/* Class = "UILabel"; text = "Mon, Mar 9, 2017"; ObjectID = "cjk-md-5Sf"; */
+"cjk-md-5Sf.text" = "Mon, Mar 9, 2017";
+
+/* Class = "UILabel"; text = "Let's get started!"; ObjectID = "dGK-4V-8Lw"; */
+"dGK-4V-8Lw.text" = "Let's get started!";
+
+/* Class = "UIButton"; normalTitle = "Live Chat"; ObjectID = "dqA-5p-IDa"; */
+"dqA-5p-IDa.normalTitle" = "Live Chat";
+
+/* Class = "UILabel"; text = "Abc Michealll"; ObjectID = "dsN-PK-la6"; */
+"dsN-PK-la6.text" = "Abc Michealll";
+
+/* Class = "UILabel"; text = "Push Notification"; ObjectID = "eyW-yh-1sO"; */
+"eyW-yh-1sO.text" = "Push Notification";
+
+/* Class = "UILabel"; text = "12:00 AM"; ObjectID = "fHj-DU-eWK"; */
+"fHj-DU-eWK.text" = "12:00 AM";
+
+/* Class = "UIButton"; normalTitle = "Re-Send Invitation"; ObjectID = "g1X-Rd-XRF"; */
+"g1X-Rd-XRF.normalTitle" = "Re-Send Invitation";
+
+/* Class = "UILabel"; text = "Next add a device for \"Nicolas Barkley\""; ObjectID = "g5T-YX-6VF"; */
+"g5T-YX-6VF.text" = "Next add a device for \"Nicolas Barkley\"";
+
+/* Class = "UIButton"; normalTitle = "Invite Parent"; ObjectID = "iML-Z6-dsf"; */
+"iML-Z6-dsf.normalTitle" = "Invite Parent";
+
+/* Class = "UILabel"; text = "ghghjghjg@hjgjhg.com"; ObjectID = "ikf-vS-pCU"; */
+"ikf-vS-pCU.text" = "ghghjghjg@hjgjhg.com";
+
+/* Class = "UILabel"; text = "I'm not sure"; ObjectID = "j3s-9q-qvC"; */
+"j3s-9q-qvC.text" = "I'm not sure";
+
+/* Class = "UILabel"; text = "0 Minutes"; ObjectID = "k2G-Pp-vzD"; */
+"k2G-Pp-vzD.text" = "0 Minutes";
+
+/* Class = "UILabel"; text = "0%"; ObjectID = "lrp-a0-Uzp"; */
+"lrp-a0-Uzp.text" = "0%";
+
+/* Class = "UILabel"; text = "Select Day"; ObjectID = "nva-AN-ayf"; */
+"nva-AN-ayf.text" = "Select Day";
+
+/* Class = "UITextView"; text = "Loading..."; ObjectID = "pAy-cU-8Yg"; */
+"pAy-cU-8Yg.text" = "Loading...";
+
+/* Class = "UILabel"; text = "Abc Michealll"; ObjectID = "pNk-7p-iXW"; */
+"pNk-7p-iXW.text" = "Abc Michealll";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "qda-9T-47V"; */
+"qda-9T-47V.text" = "Label";
+
+/* Class = "UILabel"; text = "Free"; ObjectID = "rDY-2P-neh"; */
+"rDY-2P-neh.text" = "Free";
+
+/* Class = "UIButton"; normalTitle = "Disconnect"; ObjectID = "sg7-as-TAI"; */
+"sg7-as-TAI.normalTitle" = "Disconnect";
+
+/* Class = "UIButton"; normalTitle = "Change Password"; ObjectID = "t3l-v4-kaa"; */
+"t3l-v4-kaa.normalTitle" = "Changer le mot de passe";
+
+/* Class = "UILabel"; text = "Email Notification"; ObjectID = "tTM-DC-yce"; */
+"tTM-DC-yce.text" = "Email Notification";
+
+/* Class = "UILabel"; text = "Setup instructions"; ObjectID = "tbw-SJ-uks"; */
+"tbw-SJ-uks.text" = "Setup instructions";
+
+/* Class = "UITextField"; placeholder = "Child's Name"; ObjectID = "tdu-Ul-3JV"; */
+"tdu-Ul-3JV.placeholder" = "Child's Name";
+
+/* Class = "UILabel"; text = "Google Sign in iOS Demo"; ObjectID = "vAF-bH-E12"; */
+"vAF-bH-E12.text" = "Google Sign in iOS Demo";
+
+/* Class = "UITabBarItem"; title = "Clock"; ObjectID = "wRS-dK-E7K"; */
+"wRS-dK-E7K.title" = "Clock";
+
+/* Class = "UILabel"; text = "12:00 PM"; ObjectID = "x9j-og-hpN"; */
+"x9j-og-hpN.text" = "12:00 PM";
+
+/* Class = "UIButton"; normalTitle = "Give Feedback"; ObjectID = "xCS-Fp-0EU"; */
+"xCS-Fp-0EU.normalTitle" = "Give Feedback";
+
+/* Class = "UILabel"; text = "Total Device Usage: "; ObjectID = "yrB-DQ-YNj"; */
+"yrB-DQ-YNj.text" = "Total Device Usage: ";
+
+/* Class = "UIButton"; normalTitle = "Next"; ObjectID = "yyD-XD-Srh"; */
+"yyD-XD-Srh.normalTitle" = "Next";

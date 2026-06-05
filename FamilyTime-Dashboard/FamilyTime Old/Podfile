@@ -1,0 +1,53 @@
+# Uncomment this line to define a global platform for your project
+platform :ios, '14.0'
+use_frameworks!
+
+target 'FamilyTime' do
+    
+
+
+pod 'GoogleMaps', '~> 8.4'
+pod 'MBProgressHUD', '~> 0.9.2'
+pod 'CCMPopup'
+pod 'MSCellAccessory'
+pod 'IQKeyboardManager'
+
+
+
+pod 'HGCircularSlider', '~> 2.0.0'
+pod 'Motis', '~>1.4.0'
+pod 'ZendeskSupportSDK', '9.0.0'
+pod 'GoogleSignIn', '~>3.0.0'
+pod 'ZendeskChatSDK'
+pod 'SwiftyJSON'
+pod 'ZendeskSDKMessaging'
+
+#---SANA PODS---//
+
+pod 'MBCircularProgressBar'
+pod 'Toast-Swift', '~> 4.0.0'
+
+pod 'ActiveLabel'
+pod 'SwiftyStoreKit'
+
+
+
+pod 'NewPopMenu', '~> 2.0'
+
+pod 'DropDown'
+pod 'RangeSeekSlider'
+
+#---REALM CRASH FIXING ON XCODE 11---#
+
+#pod 'RealmSwift', '~> 3.20.0'
+
+#---REALM CRASH FIXING ON XCODE 11---//
+
+
+
+end
+
+target 'FamilyTimeTests' do
+
+end
+

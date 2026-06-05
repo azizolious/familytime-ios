@@ -1,0 +1,15 @@
+
+/* Class = "UILabel"; text = "Don't have an account?"; ObjectID = "3DQ-kS-3tm"; */
+"3DQ-kS-3tm.text" = "Don't have an account?";
+
+/* Class = "UIButton"; normalTitle = "SIGN UP"; ObjectID = "ZXm-PJ-Msg"; */
+"ZXm-PJ-Msg.normalTitle" = "SIGN UP";
+
+/* Class = "UITextField"; placeholder = "Email Address"; ObjectID = "gpL-Ix-qOz"; */
+"gpL-Ix-qOz.placeholder" = "Email Address";
+
+/* Class = "UIButton"; normalTitle = "Activate Parent Account"; ObjectID = "sRO-Gp-VgC"; */
+"sRO-Gp-VgC.normalTitle" = "Activate Parent Account";
+
+/* Class = "UITextField"; placeholder = "Activation Code"; ObjectID = "sX2-Pi-eO2"; */
+"sX2-Pi-eO2.placeholder" = "Activation Code";

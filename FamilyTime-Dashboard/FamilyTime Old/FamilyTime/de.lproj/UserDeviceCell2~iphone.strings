@@ -1,0 +1,42 @@
+
+/* Class = "UILabel"; text = "Battery"; ObjectID = "1FS-MA-RYb"; */
+"1FS-MA-RYb.text" = "Battery";
+
+/* Class = "UILabel"; text = "Signal"; ObjectID = "1a9-PY-Iib"; */
+"1a9-PY-Iib.text" = "Signal";
+
+/* Class = "UILabel"; text = "WiFi"; ObjectID = "7Jf-ak-gk9"; */
+"7Jf-ak-gk9.text" = "WiFi";
+
+/* Class = "UILabel"; text = "Signal"; ObjectID = "JIQ-1p-FPy"; */
+"JIQ-1p-FPy.text" = "Signal";
+
+/* Class = "UILabel"; text = "Signal"; ObjectID = "OXs-RF-3PX"; */
+"OXs-RF-3PX.text" = "Signal";
+
+/* Class = "UILabel"; text = "Signal Status"; ObjectID = "ZRL-D9-xbe"; */
+"ZRL-D9-xbe.text" = "Signal Status";
+
+/* Class = "UILabel"; text = "Signal"; ObjectID = "bt1-5Y-t02"; */
+"bt1-5Y-t02.text" = "Signal";
+
+/* Class = "UILabel"; text = "Signal"; ObjectID = "cZk-S6-kh7"; */
+"cZk-S6-kh7.text" = "Signal";
+
+/* Class = "UILabel"; text = "Address"; ObjectID = "h6l-Pm-Et0"; */
+"h6l-Pm-Et0.text" = "Address";
+
+/* Class = "UILabel"; text = "Longitude"; ObjectID = "lFY-Bp-6Px"; */
+"lFY-Bp-6Px.text" = "Longitude";
+
+/* Class = "UILabel"; text = "Latitude"; ObjectID = "pHE-ke-aVP"; */
+"pHE-ke-aVP.text" = "Latitude";
+
+/* Class = "UILabel"; text = "Signal"; ObjectID = "u2g-xY-rDr"; */
+"u2g-xY-rDr.text" = "Signal";
+
+/* Class = "UILabel"; text = "Signal"; ObjectID = "uJz-Qc-NKZ"; */
+"uJz-Qc-NKZ.text" = "Signal";
+
+/* Class = "UILabel"; text = "Accuracy"; ObjectID = "xSP-Z9-pC7"; */
+"xSP-Z9-pC7.text" = "Accuracy";

@@ -1,0 +1,13 @@
+
+/* Class = "UITextField"; placeholder = "NAME"; ObjectID = "QTM-OS-0mg"; */
+"QTM-OS-0mg.placeholder" = "NOMBRE";
+
+/* Class = "UILabel"; text = "Invite another parent or guardian to access your FamilyTime account from their own device."; ObjectID = "THE-61-1qJ"; */
+"THE-61-1qJ.text" = "Invite a otro padre o tutor para que acceda a su cuenta de FamilyTime desde su propio dispositivo.";
+
+/* Class = "UITextField"; placeholder = "EMAIL"; ObjectID = "WED-Je-xA4"; */
+"WED-Je-xA4.placeholder" = "INGRESE CORREO ELECTRÓNICO";
+
+/* Class = "UIButton"; normalTitle = "SEND INVITATION"; ObjectID = "fIU-6l-nlU"; */
+"fIU-6l-nlU.normalTitle" = "ENVIAR INVITACION";
+

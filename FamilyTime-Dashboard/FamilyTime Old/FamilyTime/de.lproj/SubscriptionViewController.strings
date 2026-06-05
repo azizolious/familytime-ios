@@ -1,0 +1,24 @@
+
+/* Class = "UILabel"; text = "Subscription"; ObjectID = "5eK-r6-S2q"; */
+"5eK-r6-S2q.text" = "Subscription";
+
+/* Class = "UILabel"; text = "Subscription"; ObjectID = "9no-pS-sSI"; */
+"9no-pS-sSI.text" = "Subscription";
+
+/* Class = "UILabel"; text = "Expires in"; ObjectID = "BZM-Ui-Tje"; */
+"BZM-Ui-Tje.text" = "Expires in";
+
+/* Class = "UILabel"; text = "Status"; ObjectID = "DHN-gN-0Ee"; */
+"DHN-gN-0Ee.text" = "Status";
+
+/* Class = "UILabel"; text = "Status"; ObjectID = "V1J-xO-q4h"; */
+"V1J-xO-q4h.text" = "Status";
+
+/* Class = "UILabel"; text = "Subscription information "; ObjectID = "bP8-D3-yTK"; */
+"bP8-D3-yTK.text" = "Subscription information ";
+
+/* Class = "UILabel"; text = "Expires in"; ObjectID = "dbF-Ji-0BI"; */
+"dbF-Ji-0BI.text" = "Expires in";
+
+/* Class = "UILabel"; text = "Renew Subscription"; ObjectID = "fmJ-de-oSZ"; */
+"fmJ-de-oSZ.text" = "Renew Subscription";

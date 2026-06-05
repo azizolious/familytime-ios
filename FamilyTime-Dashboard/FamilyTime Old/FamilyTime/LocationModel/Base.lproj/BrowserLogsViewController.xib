@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BrowserLogsViewController">
+            <connections>
+                <outlet property="contactImage" destination="rJJ-NL-i5g" id="2Oy-7U-zD3"/>
+                <outlet property="lblText" destination="aQr-n4-MrG" id="qRw-CB-tQ3"/>
+                <outlet property="tableView" destination="gik-1W-LFV" id="kg1-gx-EHw"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="gik-1W-LFV">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="UR5-DO-EiD"/>
+                        <outlet property="delegate" destination="-1" id="eZs-zK-ggR"/>
+                    </connections>
+                </tableView>
+                <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_empty.png" translatesAutoresizingMaskIntoConstraints="NO" id="rJJ-NL-i5g">
+                    <rect key="frame" x="40" y="98" width="240" height="151"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="151" id="cbL-jg-eKU"/>
+                        <constraint firstAttribute="width" constant="206" id="kNr-SZ-tny"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="kNr-SZ-tny"/>
+                        </mask>
+                    </variation>
+                </imageView>
+                <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="It seems like there is no record to display." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aQr-n4-MrG">
+                    <rect key="frame" x="0.0" y="277.5" width="320" height="20.5"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="320" id="a5C-6x-5E7"/>
+                        <constraint firstAttribute="height" constant="21" id="oN4-1s-eXm"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="oN4-1s-eXm"/>
+                        </mask>
+                    </variation>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="rJJ-NL-i5g" secondAttribute="trailing" constant="40" id="BQh-HV-WDO"/>
+                <constraint firstItem="rJJ-NL-i5g" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="98" id="LQY-yA-R1H"/>
+                <constraint firstItem="gik-1W-LFV" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="W3d-Il-UWf"/>
+                <constraint firstItem="gik-1W-LFV" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Xf1-um-HLH"/>
+                <constraint firstAttribute="trailing" secondItem="gik-1W-LFV" secondAttribute="trailing" id="hhI-F0-yiB"/>
+                <constraint firstAttribute="bottom" secondItem="gik-1W-LFV" secondAttribute="bottom" id="nTm-v2-JxF"/>
+                <constraint firstAttribute="centerY" secondItem="aQr-n4-MrG" secondAttribute="centerY" constant="-35.5" id="nfH-4e-rRg"/>
+                <constraint firstItem="rJJ-NL-i5g" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="40" id="vH0-ra-boM"/>
+                <constraint firstAttribute="centerX" secondItem="aQr-n4-MrG" secondAttribute="centerX" id="w96-qn-rjy"/>
+                <constraint firstAttribute="bottom" secondItem="rJJ-NL-i5g" secondAttribute="bottom" constant="255" id="xqx-lv-NpH"/>
+            </constraints>
+            <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="xqx-lv-NpH"/>
+                </mask>
+            </variation>
+        </view>
+    </objects>
+    <resources>
+        <image name="ic_empty.png" width="225" height="101"/>
+    </resources>
+</document>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Reports</key>
+	<array>
+		<dict>
+			<key>lefticon</key>
+			<string>report-contacts.png</string>
+			<key>label</key>
+			<string>Contacts</string>
+			<key>righticon</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>lefticon</key>
+			<string>bookmarks.png</string>
+			<key>label</key>
+			<string>Bookmarks</string>
+			<key>righticon</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>lefticon</key>
+			<string>report-browser.png</string>
+			<key>label</key>
+			<string>Browser History</string>
+			<key>righticon</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>lefticon</key>
+			<string>report-call.png</string>
+			<key>label</key>
+			<string>Call History</string>
+			<key>righticon</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>lefticon</key>
+			<string>report-geo.png</string>
+			<key>label</key>
+			<string>Geo Tracking</string>
+			<key>righticon</key>
+			<string></string>
+		</dict>
+	</array>
+	<key>Other</key>
+	<array>
+		<dict>
+			<key>lefticon</key>
+			<string>settings-icon.png</string>
+			<key>label</key>
+			<string>Settings</string>
+			<key>righticon</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>lefticon</key>
+			<string>update-profile.png</string>
+			<key>label</key>
+			<string>Profile</string>
+			<key>righticon</key>
+			<string></string>
+		</dict>
+	</array>
+</dict>
+</plist>

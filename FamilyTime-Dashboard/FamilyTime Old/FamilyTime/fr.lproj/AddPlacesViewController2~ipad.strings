@@ -1,0 +1,33 @@
+
+/* Class = "UILabel"; text = "Place Name"; ObjectID = "0dL-So-3yw"; */
+"0dL-So-3yw.text" = "Place Name";
+
+/* Class = "UILabel"; text = "Send me Checkin/Checkout alerts"; ObjectID = "2E9-tw-733"; */
+"2E9-tw-733.text" = "Send me Checkin/Checkout alerts";
+
+/* Class = "UITextField"; placeholder = "Address"; ObjectID = "JAr-TU-XnC"; */
+"JAr-TU-XnC.placeholder" = "Address";
+
+/* Class = "UITextField"; placeholder = "House,School,Work"; ObjectID = "QCO-mJ-BNq"; */
+"QCO-mJ-BNq.placeholder" = "House,School,Work";
+
+/* Class = "UILabel"; text = "Enter the address OR drag map to find your location"; ObjectID = "ZuC-d7-LFb"; */
+"ZuC-d7-LFb.text" = "Enter the address OR drag map to find your location";
+
+/* Class = "UISegmentedControl"; eDG-eH-10e.segmentTitles[0] = "150 m"; ObjectID = "eDG-eH-10e"; */
+"eDG-eH-10e.segmentTitles[0]" = "150 m";
+
+/* Class = "UISegmentedControl"; eDG-eH-10e.segmentTitles[1] = "300 m"; ObjectID = "eDG-eH-10e"; */
+"eDG-eH-10e.segmentTitles[1]" = "300 m";
+
+/* Class = "UISegmentedControl"; eDG-eH-10e.segmentTitles[2] = "500 m"; ObjectID = "eDG-eH-10e"; */
+"eDG-eH-10e.segmentTitles[2]" = "500 m";
+
+/* Class = "UISegmentedControl"; eDG-eH-10e.segmentTitles[3] = "1 km"; ObjectID = "eDG-eH-10e"; */
+"eDG-eH-10e.segmentTitles[3]" = "1 km";
+
+/* Class = "UIButton"; normalTitle = "Add Place"; ObjectID = "hWH-Gi-eeH"; */
+"hWH-Gi-eeH.normalTitle" = "Add Place";
+
+/* Class = "UILabel"; text = "Street address"; ObjectID = "wV5-lm-OGr"; */
+"wV5-lm-OGr.text" = "Street address";

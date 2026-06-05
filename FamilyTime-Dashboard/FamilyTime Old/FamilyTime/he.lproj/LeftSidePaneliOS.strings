@@ -1,0 +1,12 @@
+
+/* Class = "UILabel"; text = "Settings"; ObjectID = "4Ze-vh-GiG"; */
+"4Ze-vh-GiG.text" = "Settings";
+
+/* Class = "UIButton"; normalTitle = "CLOSE"; ObjectID = "ECF-Sz-tLD"; */
+"ECF-Sz-tLD.normalTitle" = "CLOSE";
+
+/* Class = "UILabel"; text = "This feature is not available due to Apple Restrictions."; ObjectID = "VnN-hT-u1W"; */
+"VnN-hT-u1W.text" = "This feature is not available due to Apple Restrictions.";
+
+/* Class = "UILabel"; text = "Feature Update"; ObjectID = "ph8-8k-LFn"; */
+"ph8-8k-LFn.text" = "Feature Update";

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="ipad12_9" orientation="portrait" layout="fullscreen" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SwiftLimitScreentimeActivatedPushViewController" customModule="FamilyTime" customModuleProvider="target">
+            <connections>
+                <outlet property="lblSubTitle" destination="23P-Dg-HgL" id="rg3-KP-dpU"/>
+                <outlet property="lblTitle" destination="3wQ-Km-8na" id="8Mn-i0-MAq"/>
+                <outlet property="submitbutton" destination="Xik-9Q-Scf" id="K2k-3M-hZk"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backgroundLimitScreen" translatesAutoresizingMaskIntoConstraints="NO" id="B1Y-wI-jcw">
+                    <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Limit ScreenTime is activate" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3wQ-Km-8na">
+                    <rect key="frame" x="339.5" y="643" width="345" height="46"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="46" id="byO-FM-vEb"/>
+                        <constraint firstAttribute="width" constant="345" id="kay-zM-i5c"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FamilyTime is paused on LG 10. this device remain unavailable unless you lock it." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="23P-Dg-HgL">
+                    <rect key="frame" x="339.5" y="682" width="345" height="92"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="92" id="ltr-n9-Ijn"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xik-9Q-Scf">
+                    <rect key="frame" x="339.5" y="817" width="345" height="49"/>
+                    <color key="backgroundColor" red="0.1137254902" green="0.65098039220000004" blue="0.81568627449999997" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="49" id="4Be-eG-sEg"/>
+                    </constraints>
+                    <state key="normal" title="OK">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="okButton:" destination="-1" eventType="touchUpInside" id="9ld-26-DKc"/>
+                    </connections>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lst_icon" translatesAutoresizingMaskIntoConstraints="NO" id="94A-39-H9L">
+                    <rect key="frame" x="387" y="385" width="250" height="250"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="250" id="rF4-3b-1rz"/>
+                        <constraint firstAttribute="width" constant="250" id="uOA-so-hCm"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="B1Y-wI-jcw" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="0SI-gE-DHY"/>
+                <constraint firstItem="B1Y-wI-jcw" firstAttribute="centerX" secondItem="Xik-9Q-Scf" secondAttribute="centerX" id="11a-Fi-7hu"/>
+                <constraint firstItem="94A-39-H9L" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="385" id="13h-BI-g1f"/>
+                <constraint firstItem="Xik-9Q-Scf" firstAttribute="top" secondItem="23P-Dg-HgL" secondAttribute="bottom" constant="43" id="1oc-i4-xVw"/>
+                <constraint firstItem="3wQ-Km-8na" firstAttribute="leading" secondItem="23P-Dg-HgL" secondAttribute="leading" id="Bk0-gL-9oo"/>
+                <constraint firstItem="23P-Dg-HgL" firstAttribute="trailing" secondItem="Xik-9Q-Scf" secondAttribute="trailing" id="EiR-5R-QWl"/>
+                <constraint firstItem="94A-39-H9L" firstAttribute="centerX" secondItem="3wQ-Km-8na" secondAttribute="centerX" id="LXj-uR-QUq"/>
+                <constraint firstAttribute="trailing" secondItem="B1Y-wI-jcw" secondAttribute="trailing" id="V8v-cf-8Ew"/>
+                <constraint firstAttribute="bottom" secondItem="B1Y-wI-jcw" secondAttribute="bottom" id="e3e-pF-z19"/>
+                <constraint firstItem="3wQ-Km-8na" firstAttribute="top" secondItem="94A-39-H9L" secondAttribute="bottom" constant="8" symbolic="YES" id="fkb-zj-HwJ"/>
+                <constraint firstItem="23P-Dg-HgL" firstAttribute="top" secondItem="94A-39-H9L" secondAttribute="bottom" constant="47" id="hdx-ae-URm"/>
+                <constraint firstItem="3wQ-Km-8na" firstAttribute="trailing" secondItem="23P-Dg-HgL" secondAttribute="trailing" id="mZ8-BY-wtm"/>
+                <constraint firstItem="23P-Dg-HgL" firstAttribute="leading" secondItem="Xik-9Q-Scf" secondAttribute="leading" id="qJD-se-971"/>
+                <constraint firstItem="B1Y-wI-jcw" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="sgg-b4-E58"/>
+            </constraints>
+            <point key="canvasLocation" x="32" y="92"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="backgroundLimitScreen" width="768" height="1024"/>
+        <image name="lst_icon" width="288" height="288"/>
+    </resources>
+</document>

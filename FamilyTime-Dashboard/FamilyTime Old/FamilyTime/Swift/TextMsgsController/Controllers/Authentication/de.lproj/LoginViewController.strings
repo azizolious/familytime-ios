@@ -1,0 +1,24 @@
+
+/* Class = "UIButton"; normalTitle = "Login With Facebook"; ObjectID = "8LH-u6-k1L"; */
+"8LH-u6-k1L.normalTitle" = "Login With Facebook";
+
+/* Class = "UILabel"; text = "Google Sign in iOS Demo"; ObjectID = "8fl-Lz-8PF"; */
+"8fl-Lz-8PF.text" = "Google Sign in iOS Demo";
+
+/* Class = "UIButton"; normalTitle = "Sign out"; ObjectID = "CXr-mu-Tq2"; */
+"CXr-mu-Tq2.normalTitle" = "Sign out";
+
+/* Class = "UIButton"; normalTitle = "Login"; ObjectID = "Nef-8L-gKd"; */
+"Nef-8L-gKd.normalTitle" = "Login";
+
+/* Class = "UIButton"; normalTitle = "Don't have an Account? SIGN UP"; ObjectID = "PxJ-Eb-ii6"; */
+"PxJ-Eb-ii6.normalTitle" = "Don't have an Account? SIGN UP";
+
+/* Class = "UIButton"; normalTitle = "Disconnect"; ObjectID = "eNP-lx-TaT"; */
+"eNP-lx-TaT.normalTitle" = "Disconnect";
+
+/* Class = "UILabel"; text = "OR"; ObjectID = "ilL-Aj-gAH"; */
+"ilL-Aj-gAH.text" = "OR";
+
+/* Class = "UIButton"; normalTitle = "Forgot Password?"; ObjectID = "vUI-XE-lCf"; */
+"vUI-XE-lCf.normalTitle" = "Forgot Password?";

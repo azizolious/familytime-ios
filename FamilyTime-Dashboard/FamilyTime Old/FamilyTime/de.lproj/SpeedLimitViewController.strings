@@ -1,0 +1,15 @@
+
+/* Class = "UILabel"; text = "You will get Notification of Over-Speed when your child breach this limit."; ObjectID = "Eqq-Zv-Ond"; */
+"Eqq-Zv-Ond.text" = "You will get Notification of Over-Speed when your child breach this limit.";
+
+/* Class = "UILabel"; text = " KPH"; ObjectID = "LIq-rv-kjW"; */
+"LIq-rv-kjW.text" = " KPH";
+
+/* Class = "UILabel"; text = "Set Speed Limit"; ObjectID = "Mae-5j-R2Y"; */
+"Mae-5j-R2Y.text" = "Set Speed Limit";
+
+/* Class = "UITextField"; text = "99"; ObjectID = "Nu4-Uu-AzB"; */
+"Nu4-Uu-AzB.text" = "99";
+
+/* Class = "UILabel"; text = "Enable Speed Limit"; ObjectID = "pBR-Nb-BZu"; */
+"pBR-Nb-BZu.text" = "Enable Speed Limit";
