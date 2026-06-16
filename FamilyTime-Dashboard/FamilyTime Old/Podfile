@@ -16,11 +16,8 @@ pod 'IQKeyboardManager'
 
 pod 'HGCircularSlider', '~> 2.0.0'
 pod 'Motis', '~>1.4.0'
-pod 'ZendeskSupportSDK', '9.0.0'
 pod 'GoogleSignIn', '~>3.0.0'
-pod 'ZendeskChatSDK'
 pod 'SwiftyJSON'
-pod 'ZendeskSDKMessaging'
 
 #---SANA PODS---//
 

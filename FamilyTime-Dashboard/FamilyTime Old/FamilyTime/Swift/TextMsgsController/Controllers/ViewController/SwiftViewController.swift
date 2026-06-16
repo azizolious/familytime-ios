@@ -30,7 +30,7 @@ class SwiftViewController: UIViewController, UIAlertViewDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        ZendeskChatManager.initializeChat()
+//        ZendeskChatManager.initializeChat()
         title = "Chat SDK Sample"
         view.backgroundColor = UIColor(white: 0.94, alpha: 1.0)
         
@@ -46,7 +46,7 @@ class SwiftViewController: UIViewController, UIAlertViewDelegate {
         
         var button = buildButton(withFrame: buttonFrame, andTitle: "Chat (all fields optional)")
         button?.accessibilityIdentifier = "ModalChatAllFieldsOptional"
-        button?.addTarget(self, action: #selector(allPreChatFieldsOptional), for: .touchUpInside)
+//        button?.addTarget(self, action: #selector(allPreChatFieldsOptional), for: .touchUpInside)
         if let button = button {
             scrollView.addSubview(button)
         }
@@ -57,7 +57,7 @@ class SwiftViewController: UIViewController, UIAlertViewDelegate {
             height: CHAT_BUTTON_HEIGHT)
         button = buildButton(withFrame: buttonFrame, andTitle: "Chat (all fields required)")
         button?.accessibilityIdentifier = "PushedChatAllFieldsRequired"
-        button?.addTarget(self, action: #selector(allPreChatFieldsRequired), for: .touchUpInside)
+//        button?.addTarget(self, action: #selector(allPreChatFieldsRequired), for: .touchUpInside)
         scrollView.addSubview(button!)
         
         buttonFrame = CGRect(
@@ -67,7 +67,7 @@ class SwiftViewController: UIViewController, UIAlertViewDelegate {
             height: CHAT_BUTTON_HEIGHT)
         button = buildButton(withFrame: buttonFrame, andTitle: "Chat (no pre-chat form)")
         button?.accessibilityIdentifier = "PushedChatNoPreChatForm"
-        button?.addTarget(self, action: #selector(noPreChatForm), for: .touchUpInside)
+//        button?.addTarget(self, action: #selector(noPreChatForm), for: .touchUpInside)
         scrollView.addSubview(button!)
         
         buttonFrame = CGRect(
@@ -77,7 +77,7 @@ class SwiftViewController: UIViewController, UIAlertViewDelegate {
             height: CHAT_BUTTON_HEIGHT)
         button = buildButton(withFrame: buttonFrame, andTitle: "Chat (pre-set data)")
         button?.accessibilityIdentifier = "PushedChatPreSetData"
-        button?.addTarget(self, action: #selector(presetData), for: .touchUpInside)
+//        button?.addTarget(self, action: #selector(presetData), for: .touchUpInside)
         scrollView.addSubview(button!)
         
         buttonFrame = CGRect(
@@ -137,42 +137,42 @@ class SwiftViewController: UIViewController, UIAlertViewDelegate {
         return button
     }
     
-    @objc func allPreChatFieldsOptional() {
-
-        ZendeskChatManager.trackEvent("Chat button pressed: (all fields optional)")
-        ZendeskChatManager.startChat(on: navigationController, event: "Help Chat Started", preChatFormEnabled: true)
-        // start a chat in a new modal
-        ZendeskChatManager.startChat(on: navigationController, event: "Help Chat Started")
-    }
+//    @objc func allPreChatFieldsOptional() {
+//
+//        ZendeskChatManager.trackEvent("Chat button pressed: (all fields optional)")
+//        ZendeskChatManager.startChat(on: navigationController, event: "Help Chat Started", preChatFormEnabled: true)
+//        // start a chat in a new modal
+//        ZendeskChatManager.startChat(on: navigationController, event: "Help Chat Started")
+//    }
     
-    @objc func allPreChatFieldsRequired() {
-        // track the event
-        ZendeskChatManager.trackEvent("Chat button pressed: (all fields required)")
-        // Start a chat pushed on to the current navigation controller
-        ZendeskChatManager.startChat(on: navigationController, event: "Help Chat Started")
-    }
+//    @objc func allPreChatFieldsRequired() {
+//        // track the event
+//        ZendeskChatManager.trackEvent("Chat button pressed: (all fields required)")
+//        // Start a chat pushed on to the current navigation controller
+//        ZendeskChatManager.startChat(on: navigationController, event: "Help Chat Started")
+//    }
     
-    @objc func noPreChatForm() {
-        // track the event
-        ZendeskChatManager.trackEvent("Chat button pressed: (no pre-chat form)")
-        // start a chat pushed on to the current navigation controller
-        // with session config setting all pre-chat fields as not required
-        ZendeskChatManager.startChat(on: navigationController, event: "Help Chat Started")
-    }
+//    @objc func noPreChatForm() {
+//        // track the event
+//        ZendeskChatManager.trackEvent("Chat button pressed: (no pre-chat form)")
+//        // start a chat pushed on to the current navigation controller
+//        // with session config setting all pre-chat fields as not required
+//        ZendeskChatManager.startChat(on: navigationController, event: "Help Chat Started")
+//    }
     
-    @objc func presetData() {
-        // track the event
-        ZendeskChatManager.trackEvent("Chat button pressed: (pre-set data)")
-        // before starting the chat set the visitor data
-        ZendeskChatManager.updateVisitor(name: nil, email: nil, phoneNumber: nil, note: nil)
-        // start a chat pushed on to the current navigation controller
-        // with a session config requiring all pre-chat fields and setting tags and department
-        ZendeskChatManager.startChat(on: navigationController, event: "Help Chat Started")
-    }
+//    @objc func presetData() {
+//        // track the event
+//        ZendeskChatManager.trackEvent("Chat button pressed: (pre-set data)")
+//        // before starting the chat set the visitor data
+//        ZendeskChatManager.updateVisitor(name: nil, email: nil, phoneNumber: nil, note: nil)
+//        // start a chat pushed on to the current navigation controller
+//        // with a session config requiring all pre-chat fields and setting tags and department
+//        ZendeskChatManager.startChat(on: navigationController, event: "Help Chat Started")
+//    }
     
     @objc func openModalViewController() {
         // track the event
-        ZendeskChatManager.trackEvent("Modal View Controller opened")
+//        ZendeskChatManager.trackEvent("Modal View Controller opened")
         // simple app navigation simulation
         let vc = SwiftViewController(nibName: nil, bundle: nil)
         vc.modal = true
@@ -190,7 +190,7 @@ class SwiftViewController: UIViewController, UIAlertViewDelegate {
     
     @objc func pushViewController() {
         // track the event
-        ZendeskChatManager.trackEvent("View Controller pushed")
+//        ZendeskChatManager.trackEvent("View Controller pushed")
         // simple app navigation simulation
         let vc = SwiftViewController(nibName: nil, bundle: nil)
         vc.nested = true
@@ -221,7 +221,7 @@ class SwiftViewController: UIViewController, UIAlertViewDelegate {
             let textField = alertView.textField(at: 0)
 
             if (textField?.text?.count ?? 0) > 0 {
-                ZendeskChatManager.initializeChat(accountKey: textField?.text ?? "")
+//                ZendeskChatManager.initializeChat(accountKey: textField?.text ?? "")
             }
         }
     }

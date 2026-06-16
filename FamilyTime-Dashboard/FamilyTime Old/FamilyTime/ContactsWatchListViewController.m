@@ -52,7 +52,7 @@ UIRefreshControl *refreshCont;
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:YES];
-    [ZendeskChatManager trackEvent:@"Enable/Disable Watchlist"];
+//    [ZendeskChatManager trackEvent:@"Enable/Disable Watchlist"];
     
     
     DashboardChildPackageFeature *contactsWatchlistPackageFeature = [delegate.selectedDashboardChild getPackageFeatureWithName:@"contactwatchlist"];

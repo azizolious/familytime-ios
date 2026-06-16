@@ -78,7 +78,7 @@ class AddRuleVC: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        ZendeskChatManager.trackEvent("Add Rule")
+//        ZendeskChatManager.trackEvent("Add Rule")
     }
     
     func initialization(){

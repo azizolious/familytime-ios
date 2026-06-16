@@ -45,7 +45,7 @@ class SettingViewController: BaseViewController, UITableViewDataSource, UITableV
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        ZendeskChatManager.trackEvent("Settings android device")
+//        ZendeskChatManager.trackEvent("Settings android device")
         let filePath = Bundle.main.path(forResource: "settings", ofType: "plist")
         if let data = NSDictionary(contentsOfFile: filePath ?? "") {
             self.dataSource = data

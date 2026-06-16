@@ -10,7 +10,7 @@
 #import "FTUtils.h"
 #import "NSString+LockMustafa.h"
 
-#import <ZendeskCoreSDK/ZendeskCoreSDK.h>
+//#import <ZendeskCoreSDK/ZendeskCoreSDK.h>
 #import "Constant.h"
 #import "AppDelegate.h"
 #import "NSString+LockMustafa.h"
@@ -54,8 +54,8 @@ AppDelegate *delegate;
     NSString *timestamp = [NSString stringWithFormat:@"%ld", (long)[[NSDate date] timeIntervalSince1970]];
     NSString *name = [NSString stringWithFormat:@"Preconfig %@", timestamp];
 
-    [ZendeskChatManager updateVisitorWithName:name email:strUserEmail phoneNumber:timestamp note:@"This is another note"];
-    [ZendeskChatManager startChatOn:self.navigationController event:@"Chat button pressed: (pre-set data)" preChatFormEnabled:YES];
+//    [ZendeskChatManager updateVisitorWithName:name email:strUserEmail phoneNumber:timestamp note:@"This is another note"];
+//    [ZendeskChatManager startChatOn:self.navigationController event:@"Chat button pressed: (pre-set data)" preChatFormEnabled:YES];
 }
 
 - (void)viewDidLoad
@@ -72,8 +72,8 @@ AppDelegate *delegate;
 //    identity.email = strUserEmail;
 //    [ZDKConfig instance].userIdentity = identity;
     
-    [ZendeskChatManager initializeChat];
-    [ZendeskChatManager updateVisitorWithName:delegate.parent.name email:strUserEmail phoneNumber:@"" note:nil];
+//    [ZendeskChatManager initializeChat];
+//    [ZendeskChatManager updateVisitorWithName:delegate.parent.name email:strUserEmail phoneNumber:@"" note:nil];
     
 
     
@@ -88,7 +88,7 @@ AppDelegate *delegate;
 {
     [super viewWillAppear:animated];
 
-    [ZendeskChatManager trackEvent:@"Help Screen"];
+//    [ZendeskChatManager trackEvent:@"Help Screen"];
     
     [[IQKeyboardManager sharedManager] setEnable:true];
 
@@ -315,13 +315,13 @@ AppDelegate *delegate;
 - (void) allPreChatFieldsOptional
 {
     [[IQKeyboardManager sharedManager] setEnable:false];
-    [ZendeskChatManager startChatOn:self.navigationController event:@"Chat button pressed: (all fields optional)" preChatFormEnabled:YES];
+//    [ZendeskChatManager startChatOn:self.navigationController event:@"Chat button pressed: (all fields optional)" preChatFormEnabled:YES];
 }
 
 
 - (void) allPreChatFieldsRequired
 {
-    [ZendeskChatManager startChatOn:self.navigationController event:@"Chat button pressed: (all fields required)" preChatFormEnabled:YES];
+//    [ZendeskChatManager startChatOn:self.navigationController event:@"Chat button pressed: (all fields required)" preChatFormEnabled:YES];
 }
 
 
@@ -330,13 +330,13 @@ AppDelegate *delegate;
     
     [[IQKeyboardManager sharedManager] setEnable:false];
 
-    [ZendeskChatManager startChatOn:self.navigationController event:@"Help Chat Started"];
+//    [ZendeskChatManager startChatOn:self.navigationController event:@"Help Chat Started"];
 }
 
 
 - (void) openModalViewController
 {
-    [ZendeskChatManager trackEvent:@"Modal View Controller opened"];
+//    [ZendeskChatManager trackEvent:@"Modal View Controller opened"];
     
     // simple app navigation simulation
     ViewController *vc = [[ViewController alloc] initWithNibName:nil bundle:nil];
@@ -356,7 +356,7 @@ AppDelegate *delegate;
 
 - (void) pushViewController
 {
-    [ZendeskChatManager trackEvent:@"View Controller pushed"];
+//    [ZendeskChatManager trackEvent:@"View Controller pushed"];
     
     // simple app navigation simulation
     ViewController *vc = [[ViewController alloc] initWithNibName:nil bundle:nil];
@@ -427,7 +427,7 @@ AppDelegate *delegate;
             
             if (textField.text.length > 0) {
                 
-                [ZendeskChatManager initializeChatWithAccountKey:textField.text];
+//                [ZendeskChatManager initializeChatWithAccountKey:textField.text];
             }
             break;
         }

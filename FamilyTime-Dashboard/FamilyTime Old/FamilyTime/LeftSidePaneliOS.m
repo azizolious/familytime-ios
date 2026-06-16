@@ -42,7 +42,7 @@ AppDelegate *delegate;
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:YES];
-    [ZendeskChatManager trackEvent:@"Settings ios device"];
+//    [ZendeskChatManager trackEvent:@"Settings ios device"];
 
     NSString *filePath = [[NSBundle mainBundle] pathForResource:@"settingsiOS" ofType:@"plist"];
     self.dataSource = [NSDictionary dictionaryWithContentsOfFile:filePath];

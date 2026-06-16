@@ -42,7 +42,7 @@ AppDelegate *delegate;
     _imgviewNew.hidden=YES;
     
     
-    [ZendeskChatManager trackEvent:@"Invite Coparent Screen"];
+//    [ZendeskChatManager trackEvent:@"Invite Coparent Screen"];
     
     //    _lblSubtitle.adjustsFontSizeToFitWidth=YES;
     

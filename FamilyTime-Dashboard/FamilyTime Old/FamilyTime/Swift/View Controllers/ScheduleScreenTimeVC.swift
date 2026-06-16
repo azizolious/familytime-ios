@@ -28,7 +28,7 @@ class ScheduleScreenTimeVC: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        ZendeskChatManager.trackEvent("Anroid App Blocker Screen")
+//        ZendeskChatManager.trackEvent("Anroid App Blocker Screen")
         
         let packageFeature = SwiftCommonUtility.shared.getPackageFeature(withName: "access_control")
         isCountBased = packageFeature?.is_count_based == 0 ? false : true

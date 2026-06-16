@@ -19,7 +19,7 @@ static const float CHAT_CONTENT_HEIGHT = 410.0f;
 {
     [super viewDidLoad];
 
-    [ZendeskChatManager initializeChat];
+//    [ZendeskChatManager initializeChat];
 
     self.title = @"Chat SDK Sample";
     self.view.backgroundColor = [UIColor colorWithWhite:0.94f alpha:1.0f];
@@ -87,33 +87,33 @@ static const float CHAT_CONTENT_HEIGHT = 410.0f;
     self.scrollView.contentInset = UIEdgeInsetsZero;
 }
 
-- (void)allPreChatFieldsOptional
-{
-    [ZendeskChatManager startChatOn:self.navigationController event:@"Chat button pressed: (all fields optional)" preChatFormEnabled:YES];
-}
-
-- (void)allPreChatFieldsRequired
-{
-    [ZendeskChatManager startChatOn:self.navigationController event:@"Chat button pressed: (all fields required)"];
-}
-
-- (void)noPreChatForm
-{
-    [ZendeskChatManager startChatOn:self.navigationController event:@"Chat button pressed: (no pre-chat form)"];
-}
+//- (void)allPreChatFieldsOptional
+//{
+//    [ZendeskChatManager startChatOn:self.navigationController event:@"Chat button pressed: (all fields optional)" preChatFormEnabled:YES];
+//}
+//
+//- (void)allPreChatFieldsRequired
+//{
+//    [ZendeskChatManager startChatOn:self.navigationController event:@"Chat button pressed: (all fields required)"];
+//}
+//
+//- (void)noPreChatForm
+//{
+//    [ZendeskChatManager startChatOn:self.navigationController event:@"Chat button pressed: (no pre-chat form)"];
+//}
 
 - (void)presetData
 {
     NSString *timestamp = [NSString stringWithFormat:@"%ld", (long)[[NSDate date] timeIntervalSince1970]];
     NSString *name = [NSString stringWithFormat:@"Preconfig %@", timestamp];
     NSString *email = [NSString stringWithFormat:@"chattest+%@@test.com", timestamp];
-    [ZendeskChatManager updateVisitorWithName:name email:email phoneNumber:timestamp note:@"This is another note"];
-    [ZendeskChatManager startChatOn:self.navigationController event:@"Chat button pressed: (pre-set data)" preChatFormEnabled:YES];
+//    [ZendeskChatManager updateVisitorWithName:name email:email phoneNumber:timestamp note:@"This is another note"];
+//    [ZendeskChatManager startChatOn:self.navigationController event:@"Chat button pressed: (pre-set data)" preChatFormEnabled:YES];
 }
 
 - (void)openModalViewController
 {
-    [ZendeskChatManager trackEvent:@"Modal View Controller opened"];
+//    [ZendeskChatManager trackEvent:@"Modal View Controller opened"];
 
     ViewController *vc = [[ViewController alloc] initWithNibName:nil bundle:nil];
     vc.modal = YES;
@@ -132,7 +132,7 @@ static const float CHAT_CONTENT_HEIGHT = 410.0f;
 
 - (void)pushViewController
 {
-    [ZendeskChatManager trackEvent:@"View Controller pushed"];
+//    [ZendeskChatManager trackEvent:@"View Controller pushed"];
 
     ViewController *vc = [[ViewController alloc] initWithNibName:nil bundle:nil];
     vc.nested = YES;
@@ -185,7 +185,7 @@ static const float CHAT_CONTENT_HEIGHT = 410.0f;
 
     UITextField *textField = [alertView textFieldAtIndex:0];
     if (textField.text.length > 0) {
-        [ZendeskChatManager initializeChatWithAccountKey:textField.text];
+//        [ZendeskChatManager initializeChatWithAccountKey:textField.text];
     }
 }
 

@@ -44,7 +44,7 @@ class AppUsageVC: UIViewController {
         
         self.title = "app_usage_title".localized
         self.mostUsedLabel.text = "app_usage_content_1".localized
-        ZendeskChatManager.trackEvent("App Usage Screen")
+//        ZendeskChatManager.trackEvent("App Usage Screen")
         itSeemsLikeLbl.text = "app_usage_content_2".localized
         self.oopsLabel.text = "oops_title".localized
         delegate = AppDelegate.getSharedAppDelegateForSwift()

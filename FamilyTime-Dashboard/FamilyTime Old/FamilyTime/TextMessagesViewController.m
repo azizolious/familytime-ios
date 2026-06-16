@@ -39,7 +39,7 @@ NSString *text_device = @"";
     [super viewDidLoad];
     
     [self.navigationItem setTitle:[@"Text Messages" myModification]];
-    [ZendeskChatManager trackEvent:@"text Messages"];
+//    [ZendeskChatManager trackEvent:@"text Messages"];
 
     self.view.backgroundColor = [UIColor whiteColor];
     delegate = [AppDelegate appDelegate];

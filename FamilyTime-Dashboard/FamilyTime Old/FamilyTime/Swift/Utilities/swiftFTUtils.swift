@@ -10,9 +10,9 @@ import UIKit
 import MBProgressHUD
 import MBCircularProgressBar
 import CCMPopup
-import ChatSDK
-import ChatProvidersSDK
-import MessagingSDK
+//import ChatSDK
+//import ChatProvidersSDK
+//import MessagingSDK
 
 class SwiftFTUtils: NSObject {
     
@@ -450,80 +450,80 @@ func IS_IPHONE_12_PRO_MAX() -> Bool {
     return fabs(Double(UIScreen.main.bounds.size.height) - Double(926.0)) < Double.ulpOfOne
 }
 
-@objcMembers
-class ZendeskChatManager: NSObject {
-    private static let defaultAccountKey = "3SFP4o0ZGIlzTBHUuO2gfu8Sy4YiwlPp"
-    private static let defaultAppId = "754abc37f24b4e7447f58b3d3269f5c15a2c0c2dac8b4327"
-
-    class func initializeChat() {
-        Chat.initialize(accountKey: defaultAccountKey, appId: defaultAppId)
-    }
-
-    class func initializeChat(accountKey: String) {
-        Chat.initialize(accountKey: accountKey, appId: defaultAppId)
-    }
-
-    class func trackEvent(_ title: String) {
-        let path = VisitorPath(title: title)
-        Chat.profileProvider?.trackVisitorPath(path)
-    }
-
-    class func updateVisitor(name: String?, email: String?, phoneNumber: String?, note: String?) {
-        let visitorInfo = VisitorInfo(
-            name: name ?? "",
-            email: email ?? "",
-            phoneNumber: phoneNumber ?? ""
-        )
-        let configuration = ChatAPIConfiguration()
-        configuration.visitorInfo = visitorInfo
-        Chat.instance?.configuration = configuration
-
-        if let note = note, !note.isEmpty {
-            Chat.profileProvider?.appendNote(note)
-        }
-    }
-
-    class func startChat(on navigationController: UINavigationController?) {
-        startChat(on: navigationController, event: "Live Chat", preChatFormEnabled: false)
-    }
-
-    class func startChat(on navigationController: UINavigationController?, event: String) {
-        startChat(on: navigationController, event: event, preChatFormEnabled: false)
-    }
-
-    class func startChat(on navigationController: UINavigationController?, event: String, preChatFormEnabled: Bool) {
-        initializeChat()
-        applyStoredVisitor()
-        trackEvent(event)
-
-        let messagingConfiguration = MessagingConfiguration()
-        messagingConfiguration.name = "Help Desk"
-
-        let chatConfiguration = ChatConfiguration()
-        chatConfiguration.isPreChatFormEnabled = preChatFormEnabled
-        chatConfiguration.isChatTranscriptPromptEnabled = false
-        chatConfiguration.preChatFormConfiguration = ChatFormConfiguration(
-            name: .optional,
-            email: .optional,
-            phoneNumber: .optional,
-            department: .optional
-        )
-
-        do {
-            let chatEngine = try ChatEngine.engine()
-            let viewController = try Messaging.instance.buildUI(
-                engines: [chatEngine],
-                configs: [messagingConfiguration, chatConfiguration]
-            )
-            navigationController?.pushViewController(viewController, animated: true)
-        } catch {
-            print("Unable to start Zendesk chat: \(error.localizedDescription)")
-        }
-    }
-
-    private class func applyStoredVisitor() {
-        let email = UserDefaults.standard.object(forKey: kUserEmail) as? String
-        let userName = UserDefaults.standard.string(forKey: "userName")
-        updateVisitor(name: userName, email: email, phoneNumber: "", note: nil)
-    }
-}
+//@objcMembers
+//class ZendeskChatManager: NSObject {
+//    private static let defaultAccountKey = "3SFP4o0ZGIlzTBHUuO2gfu8Sy4YiwlPp"
+//    private static let defaultAppId = "754abc37f24b4e7447f58b3d3269f5c15a2c0c2dac8b4327"
+//
+//    class func initializeChat() {
+//        Chat.initialize(accountKey: defaultAccountKey, appId: defaultAppId)
+//    }
+//
+//    class func initializeChat(accountKey: String) {
+//        Chat.initialize(accountKey: accountKey, appId: defaultAppId)
+//    }
+//
+//    class func trackEvent(_ title: String) {
+//        let path = VisitorPath(title: title)
+//        Chat.profileProvider?.trackVisitorPath(path)
+//    }
+//
+//    class func updateVisitor(name: String?, email: String?, phoneNumber: String?, note: String?) {
+//        let visitorInfo = VisitorInfo(
+//            name: name ?? "",
+//            email: email ?? "",
+//            phoneNumber: phoneNumber ?? ""
+//        )
+//        let configuration = ChatAPIConfiguration()
+//        configuration.visitorInfo = visitorInfo
+//        Chat.instance?.configuration = configuration
+//
+//        if let note = note, !note.isEmpty {
+//            Chat.profileProvider?.appendNote(note)
+//        }
+//    }
+//
+//    class func startChat(on navigationController: UINavigationController?) {
+//        startChat(on: navigationController, event: "Live Chat", preChatFormEnabled: false)
+//    }
+//
+//    class func startChat(on navigationController: UINavigationController?, event: String) {
+//        startChat(on: navigationController, event: event, preChatFormEnabled: false)
+//    }
+//
+//    class func startChat(on navigationController: UINavigationController?, event: String, preChatFormEnabled: Bool) {
+//        initializeChat()
+//        applyStoredVisitor()
+//        trackEvent(event)
+//
+//        let messagingConfiguration = MessagingConfiguration()
+//        messagingConfiguration.name = "Help Desk"
+//
+//        let chatConfiguration = ChatConfiguration()
+//        chatConfiguration.isPreChatFormEnabled = preChatFormEnabled
+//        chatConfiguration.isChatTranscriptPromptEnabled = false
+//        chatConfiguration.preChatFormConfiguration = ChatFormConfiguration(
+//            name: .optional,
+//            email: .optional,
+//            phoneNumber: .optional,
+//            department: .optional
+//        )
+//
+//        do {
+//            let chatEngine = try ChatEngine.engine()
+//            let viewController = try Messaging.instance.buildUI(
+//                engines: [chatEngine],
+//                configs: [messagingConfiguration, chatConfiguration]
+//            )
+//            navigationController?.pushViewController(viewController, animated: true)
+//        } catch {
+//            print("Unable to start Zendesk chat: \(error.localizedDescription)")
+//        }
+//    }
+//
+//    private class func applyStoredVisitor() {
+//        let email = UserDefaults.standard.object(forKey: kUserEmail) as? String
+//        let userName = UserDefaults.standard.string(forKey: "userName")
+//        updateVisitor(name: userName, email: email, phoneNumber: "", note: nil)
+//    }
+//}

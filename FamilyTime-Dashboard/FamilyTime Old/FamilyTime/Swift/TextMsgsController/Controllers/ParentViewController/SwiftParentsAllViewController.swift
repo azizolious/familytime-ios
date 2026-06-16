@@ -99,7 +99,7 @@ class SwiftParentsAllViewController: BaseViewController, UIAlertViewDelegate, UI
         LiveVisitorManager.shared.updateScreen(
             "Co-Parent"
         )
-        ZendeskChatManager.trackEvent("Parents Screen")
+//        ZendeskChatManager.trackEvent("Parents Screen")
         arrOfBasicInfoImages = [AnyHashable]()
         arrOfBasicInfoData = [AnyHashable]()
         arrOfBasicInfoImages.append("p_name")

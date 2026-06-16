@@ -45,7 +45,7 @@ UIRefreshControl *refreshCont;
         self.tableView.rowHeight = 100;
     [self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
     [self.navigationItem setTitle:[[@"Add Blacklist Apps" myModification] myModification]];
-    [ZendeskChatManager trackEvent:@"Ad Blacklist Apps"];
+//    [ZendeskChatManager trackEvent:@"Ad Blacklist Apps"];
 
 }
 

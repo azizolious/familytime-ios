@@ -87,9 +87,9 @@ class SelectDeviceViewController: UIViewController, UITableViewDelegate, UITable
     
    @objc func talkToParentButtonAction(_ sender: Any) {
        IQKeyboardManager.shared().isEnabled = false
-       ZendeskChatManager.trackEvent("Help Chat Started")
-       
-       ZendeskChatManager.startChat(on: navigationController, event: "Help Chat Started")
+//       ZendeskChatManager.trackEvent("Help Chat Started")
+//       
+//       ZendeskChatManager.startChat(on: navigationController, event: "Help Chat Started")
     }
     
 //    func getDashboard2ApiCall() {

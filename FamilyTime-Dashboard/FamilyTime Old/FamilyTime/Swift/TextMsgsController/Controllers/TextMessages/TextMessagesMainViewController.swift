@@ -33,7 +33,7 @@ class TextMessagesMainViewController: BaseViewController,UITableViewDelegate,UIT
         super.viewDidLoad()
         navigationController?.isNavigationBarHidden = true
         self.title = "text_messages_title".localized
-        ZendeskChatManager.trackEvent("text Messages")
+//        ZendeskChatManager.trackEvent("text Messages")
         
         view.backgroundColor = UIColor.white
         delegate = AppDelegate.getSharedAppDelegateForSwift()

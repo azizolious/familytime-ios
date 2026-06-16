@@ -46,7 +46,7 @@ class SwiftInviteCoparentViewController: BaseViewController, UITextFieldDelegate
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        ZendeskChatManager.trackEvent("Invite Coparent Screen")
+//        ZendeskChatManager.trackEvent("Invite Coparent Screen")
         navigationController?.navigationBar.isHidden = false
         self.lblSubtitle.text = "invite_parent_text_content_1".localized
     }

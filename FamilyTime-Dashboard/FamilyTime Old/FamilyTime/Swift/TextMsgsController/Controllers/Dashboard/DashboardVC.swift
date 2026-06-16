@@ -1117,7 +1117,7 @@ class DashboardVC: BaseViewController, SwiftDashboardActiveCellDelegate {
         if((UserDefaults.standard.string(forKey: UserDefaultsConstants.USER_LANGUAGE)) == nil){
             UserDefaults.standard.set(NSLocale.current.languageCode, forKey: UserDefaultsConstants.USER_LANGUAGE)
         }
-        ZendeskChatManager.trackEvent("Mykids Dashboard")
+//        ZendeskChatManager.trackEvent("Mykids Dashboard")
         var editImage = UIImage()
         if #available(iOS 13.0, *) {
             editImage = UIImage(systemName: "plus")!

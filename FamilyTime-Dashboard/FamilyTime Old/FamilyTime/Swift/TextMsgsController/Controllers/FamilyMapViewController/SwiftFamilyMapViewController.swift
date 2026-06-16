@@ -56,7 +56,7 @@ class SwiftFamilyMapViewController: BaseViewController, CLLocationManagerDelegat
 //            lblTitle.text = "child_locator_title".localized
 //        }
         mapView.isHidden = false
-        ZendeskChatManager.trackEvent("Family Locator")
+//        ZendeskChatManager.trackEvent("Family Locator")
         if locationManager == nil {
             locationManager = CLLocationManager()
         }

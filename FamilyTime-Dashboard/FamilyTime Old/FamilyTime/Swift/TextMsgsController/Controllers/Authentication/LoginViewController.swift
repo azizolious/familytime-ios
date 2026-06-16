@@ -120,7 +120,7 @@ class LoginViewController: UIViewController  {
             hidesAllControls()
         }
         
-        ZendeskChatManager.trackEvent("Login Screen")
+//        ZendeskChatManager.trackEvent("Login Screen")
         txtFldEmail.placeholder = "login_email_input_email".localized
         txtFldPassword.placeholder = "login_email_input_password".localized
         btnBack.isHidden = true

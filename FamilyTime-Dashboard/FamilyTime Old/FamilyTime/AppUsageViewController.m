@@ -50,7 +50,7 @@ AppDelegate *delegate;
 
     _lblTotalDeviceusage1.text=[NSString stringWithFormat:@"%@:",[@"Total Device Usage" myModification]];
     
-    [ZendeskChatManager trackEvent:@"App Usage Screen"];
+//    [ZendeskChatManager trackEvent:@"App Usage Screen"];
 
     self.tableView.hidden=YES;
  //   self.tableView.layer

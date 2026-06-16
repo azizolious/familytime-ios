@@ -166,7 +166,7 @@ class PlacesHistoryViewController: UIViewController,UITableViewDelegate,UITableV
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-        ZendeskChatManager.trackEvent("Places history")
+//        ZendeskChatManager.trackEvent("Places history")
         let packageId = self.package_id
         if (packageId == "1") {
             imgView.isHidden = false

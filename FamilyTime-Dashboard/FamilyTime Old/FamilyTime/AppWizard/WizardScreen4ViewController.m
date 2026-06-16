@@ -110,7 +110,7 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];    
-    [ZendeskChatManager trackEvent:@"Add Child Screen 2"];
+//    [ZendeskChatManager trackEvent:@"Add Child Screen 2"];
 
     
     [self setupUI];

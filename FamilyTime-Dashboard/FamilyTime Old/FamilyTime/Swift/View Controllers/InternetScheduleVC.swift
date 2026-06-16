@@ -26,7 +26,7 @@ class InternetScheduleVC: UIViewController {
         LiveVisitorManager.shared.updateScreen(
             "Internet Schedule"
         )
-        ZendeskChatManager.trackEvent("Anroid Internet Schedule Screen")
+//        ZendeskChatManager.trackEvent("Anroid Internet Schedule Screen")
         let childID = Int(child_Id ?? "0")
         let sched = DBManager.shared.getSchedules(identifier: "internet_schedule", childID: childID ?? 0)
         if sched.count == 0 {

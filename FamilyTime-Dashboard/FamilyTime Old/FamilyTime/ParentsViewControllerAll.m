@@ -47,7 +47,7 @@ BOOL canRefresh = TRUE;
     [super viewWillAppear:YES];
     
     
-    [ZendeskChatManager trackEvent:@"Parents Screen"];
+//    [ZendeskChatManager trackEvent:@"Parents Screen"];
     
     
     _rowDic=[NSMutableDictionary new];

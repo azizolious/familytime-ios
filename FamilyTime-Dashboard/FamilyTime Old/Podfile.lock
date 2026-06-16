@@ -33,55 +33,6 @@ PODS:
   - SwiftyJSON (5.0.2)
   - SwiftyStoreKit (0.16.1)
   - Toast-Swift (4.0.1)
-  - Zendesk (3.5.0):
-    - ZendeskSDKConversationKit (~> 9.0.0)
-    - ZendeskSDKCoreUtilities (~> 4.0.0)
-  - ZendeskChatProvidersSDK (5.0.5)
-  - ZendeskChatSDK (5.0.5):
-    - ZendeskChatProvidersSDK (~> 5.0.5)
-    - ZendeskMessagingSDK (~> 6.0.3)
-  - ZendeskCommonUISDK (9.0.3)
-  - ZendeskCoreSDK (5.0.5)
-  - ZendeskMessagingAPISDK (6.0.2):
-    - ZendeskSDKConfigurationsSDK (~> 4.0.1)
-  - ZendeskMessagingSDK (6.0.3):
-    - ZendeskCommonUISDK (~> 9.0.3)
-    - ZendeskMessagingAPISDK (~> 6.0.2)
-  - ZendeskSDKConfigurationsSDK (4.0.1)
-  - ZendeskSDKConversationKit (9.0.0):
-    - ZendeskSDKCoreUtilities (~> 4.0.0)
-    - ZendeskSDKFayeClient (~> 1.10.0)
-    - ZendeskSDKHTTPClient (~> 0.17.0)
-    - ZendeskSDKStorage (~> 1.1.0)
-  - ZendeskSDKCoreUtilities (4.0.0)
-  - ZendeskSDKFayeClient (1.10.0):
-    - ZendeskSDKLogger (~> 0.10.0)
-    - ZendeskSDKSocketClient (~> 1.9.0)
-  - ZendeskSDKGuideKit (2.0.0):
-    - ZendeskSDKCoreUtilities (~> 4.0.0)
-    - ZendeskSDKHTTPClient (~> 0.17.0)
-    - ZendeskSDKLogger (~> 0.10.0)
-    - ZendeskSDKStorage (~> 1.1.0)
-  - ZendeskSDKHTTPClient (0.17.0):
-    - ZendeskSDKLogger (~> 0.10.0)
-  - ZendeskSDKLogger (0.10.0)
-  - ZendeskSDKMessaging (2.27.0):
-    - Zendesk (~> 3.5.0)
-    - ZendeskSDKConversationKit (~> 9.0.0)
-    - ZendeskSDKCoreUtilities (~> 4.0.0)
-    - ZendeskSDKGuideKit (~> 2.0.0)
-    - ZendeskSDKUIComponents (~> 11.0.0)
-  - ZendeskSDKSocketClient (1.9.0):
-    - ZendeskSDKLogger (~> 0.10.0)
-  - ZendeskSDKStorage (1.1.0):
-    - ZendeskSDKLogger (~> 0.10.0)
-  - ZendeskSDKUIComponents (11.0.0):
-    - ZendeskSDKCoreUtilities (~> 4.0.0)
-  - ZendeskSupportProvidersSDK (9.0.0):
-    - ZendeskCoreSDK (~> 5.0.5)
-  - ZendeskSupportSDK (9.0.0):
-    - ZendeskMessagingSDK (~> 6.0.3)
-    - ZendeskSupportProvidersSDK (~> 9.0.0)
 
 DEPENDENCIES:
   - ActiveLabel
@@ -100,9 +51,6 @@ DEPENDENCIES:
   - SwiftyJSON
   - SwiftyStoreKit
   - Toast-Swift (~> 4.0.0)
-  - ZendeskChatSDK
-  - ZendeskSDKMessaging
-  - ZendeskSupportSDK (= 9.0.0)
 
 SPEC REPOS:
   trunk:
@@ -127,26 +75,6 @@ SPEC REPOS:
     - SwiftyJSON
     - SwiftyStoreKit
     - Toast-Swift
-    - Zendesk
-    - ZendeskChatProvidersSDK
-    - ZendeskChatSDK
-    - ZendeskCommonUISDK
-    - ZendeskCoreSDK
-    - ZendeskMessagingAPISDK
-    - ZendeskMessagingSDK
-    - ZendeskSDKConfigurationsSDK
-    - ZendeskSDKConversationKit
-    - ZendeskSDKCoreUtilities
-    - ZendeskSDKFayeClient
-    - ZendeskSDKGuideKit
-    - ZendeskSDKHTTPClient
-    - ZendeskSDKLogger
-    - ZendeskSDKMessaging
-    - ZendeskSDKSocketClient
-    - ZendeskSDKStorage
-    - ZendeskSDKUIComponents
-    - ZendeskSupportProvidersSDK
-    - ZendeskSupportSDK
 
 SPEC CHECKSUMS:
   ActiveLabel: 5e3f4de79a1952d4604b845a0610d4776e4b82b3
@@ -170,27 +98,7 @@ SPEC CHECKSUMS:
   SwiftyJSON: f5b1bf1cd8dd53cd25887ac0eabcfd92301c6a5a
   SwiftyStoreKit: 6b9c08810269f030586dac1fae8e75871a82e84a
   Toast-Swift: e42a638589a2f95036b4bb7626cfbdde7daf0393
-  Zendesk: d2a84248fe0a818804a54c24412ac628b26d27b7
-  ZendeskChatProvidersSDK: 5cfc4a3dee03317ba54920e3258edda52ff9a329
-  ZendeskChatSDK: 8e0041101a89c8fed51dadb14697bbb4bb4700fd
-  ZendeskCommonUISDK: f3ce3e7a1bd7762550a78dbaff57509f3112c22b
-  ZendeskCoreSDK: c542b3f82abc3ee52e1291c6fb3436515e098806
-  ZendeskMessagingAPISDK: 5b3a9d16f2f4d8b3c07b4ca0451a7cf9bfd8107d
-  ZendeskMessagingSDK: 3915f0647246f079dd20bf2fd85084f495598fde
-  ZendeskSDKConfigurationsSDK: d0b28eeb9c3d88191cfd2c7f246b2522c8c357f4
-  ZendeskSDKConversationKit: c2d3faa846407c7832d78fca12a51fd78f9a15fe
-  ZendeskSDKCoreUtilities: 0a8a35fa952adf427606f027737f31123b963e58
-  ZendeskSDKFayeClient: 7d4936f5c4f46f5ec98bfc5ea71864d571c2ca22
-  ZendeskSDKGuideKit: ce338bcae371d8c576d2edffe3d381deff555726
-  ZendeskSDKHTTPClient: d28570175ef3d727643bd2a703c1bccf14ce0401
-  ZendeskSDKLogger: fe3963f7a9c3cc28d3337ce4a4f66efdfc65563c
-  ZendeskSDKMessaging: a5464159906e5a8dc6c4755eff5a5ccef8784d00
-  ZendeskSDKSocketClient: 08c89487d1bad9c31b19adc23e5e9f904a5328c9
-  ZendeskSDKStorage: 601155a625e2cb720e43c4a37aaaa644c0e2b94e
-  ZendeskSDKUIComponents: 02111c88cbf066f7ce901ba46b013ad51f1b7a98
-  ZendeskSupportProvidersSDK: 281acf2bb731d2a67f913cfe653ed0da9f5b2f42
-  ZendeskSupportSDK: b512cfc74b6bf8490e589f02cf52e27ed4f2bebe
 
-PODFILE CHECKSUM: e0803214ccf2cf07e5bf58729adda3fb21014dff
+PODFILE CHECKSUM: a9b0847dc3129e17aee97e96b4c0124ab6e566cd
 
 COCOAPODS: 1.16.2

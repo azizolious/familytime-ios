@@ -35,7 +35,7 @@ class SwiftAppDelegate: UIResponder {
         FirebaseApp.configure()
         
         ChatStyling.apply()
-        ZendeskChatManager.initializeChat()
+//        ZendeskChatManager.initializeChat()
         
         //NSSetUncaughtExceptionHandler(<#T##((NSException) -> Void)?##((NSException) -> Void)?##(NSException) -> Void#>)
         

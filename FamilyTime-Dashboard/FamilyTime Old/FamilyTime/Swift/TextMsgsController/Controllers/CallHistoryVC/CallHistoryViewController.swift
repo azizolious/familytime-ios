@@ -78,7 +78,7 @@ class CallHistoryViewController: BaseViewController, UITableViewDataSource, UITa
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-        ZendeskChatManager.trackEvent("Call History")
+//        ZendeskChatManager.trackEvent("Call History")
         if day_count == 1 {
             self.lastDayLabel.text = "date_drop_down_2".localized
             self.updateDateLabel(isToday: false)

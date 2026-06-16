@@ -42,7 +42,7 @@ UIRefreshControl *  refreshControl;
 -(void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:YES];
-    [ZendeskChatManager trackEvent:@"Places history"];
+//    [ZendeskChatManager trackEvent:@"Places history"];
     
    
     if (([place_device isEqualToString:@"iphone"] && ([place_package_id isEqualToString:@"6"])) || ([place_device isEqualToString:@"android"] && ([place_package_id isEqualToString:@"1"])))

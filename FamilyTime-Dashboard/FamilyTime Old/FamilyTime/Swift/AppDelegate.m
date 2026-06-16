@@ -14,7 +14,7 @@
 //#import "ParentPickupViewController.h"
 //#import "ParentSOSViewController.h"
 //#import "WizardScreen4ViewController.h"
-#import <ZendeskCoreSDK/ZendeskCoreSDK.h>
+//#import <ZendeskCoreSDK/ZendeskCoreSDK.h>
 #import "FTUtils.h"
 #import <CoreLocation/CoreLocation.h>
 #import <AddressBookUI/AddressBookUI.h>
@@ -34,8 +34,8 @@
 #import <GoogleSignIn/GoogleSignIn.h>
 #import "SwiftyStoreKit-Swift.h"
 #import "FamilyTime-Swift.h"
-#import <ChatSDK/ChatSDK.h>
-#import <ChatProvidersSDK/ChatProvidersSDK.h>
+//#import <ChatSDK/ChatSDK.h>
+//#import <ChatProvidersSDK/ChatProvidersSDK.h>
 //@import GoogleSignIn;
 
 @class IAPUtility;
@@ -91,18 +91,18 @@ AppDelegate *delegate;
     // apply appearance styling first if you want to customise the look of the chat
     [ChatStyling applyStyling];
     
-    [ZDKChat initializeWithAccountKey:@"3SFP4o0ZGIlzTBHUuO2gfu8Sy4YiwlPp" appId:@"754abc37f24b4e7447f58b3d3269f5c15a2c0c2dac8b4327" queue:dispatch_get_main_queue()];
+//    [ZDKChat initializeWithAccountKey:@"3SFP4o0ZGIlzTBHUuO2gfu8Sy4YiwlPp" appId:@"754abc37f24b4e7447f58b3d3269f5c15a2c0c2dac8b4327" queue:dispatch_get_main_queue()];
     
     // configure account key and pre-chat form
     // remember to switch off debug logging before app store submission!
-    ZDKChatLogger.isEnabled = YES;
-    ZDKChatLogger.defaultLevel = ZDKChatLogLevelVerbose;
+//    ZDKChatLogger.isEnabled = YES;
+//    ZDKChatLogger.defaultLevel = ZDKChatLogLevelVerbose;
     NSSetUncaughtExceptionHandler(&uncaughtExceptionHandler);
     [GIDSignIn sharedInstance].clientID = @"181235234645-bfr0co1kg4bn179g0rgec24tk1374v1t.apps.googleusercontent.com";
     [GIDSignIn sharedInstance].delegate = self;
     
-    ZDKChatLogger.isEnabled = YES;
-    ZDKChatLogger.defaultLevel = ZDKChatLogLevelVerbose;
+//    ZDKChatLogger.isEnabled = YES;
+//    ZDKChatLogger.defaultLevel = ZDKChatLogLevelVerbose;
     
 //    [IQKeyboardManager sharedManager].enable = YES;
     // Override point for customization after application launch.

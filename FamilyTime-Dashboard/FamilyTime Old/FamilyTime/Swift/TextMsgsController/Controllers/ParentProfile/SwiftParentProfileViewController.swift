@@ -134,7 +134,7 @@ class SwiftParentProfileViewController: BaseViewController, UITextFieldDelegate 
         LiveVisitorManager.shared.updateScreen(
             "Profile"
         )
-        ZendeskChatManager.trackEvent("Account Screen")
+//        ZendeskChatManager.trackEvent("Account Screen")
         self.txtName.placeholder = "account_input_content_1".localized
         self.txtPhone.placeholder = "account_input_content_2".localized
         //[_txtPhone setKeyboardType:UIKeyboardTypeNumberPad];

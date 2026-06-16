@@ -60,7 +60,7 @@ class SwiftContactsWatchListViewController: BaseViewController, UITableViewDataS
             "Contact Watchlist"
         )
         
-        ZendeskChatManager.trackEvent("Enable/Disable Watchlist")
+//        ZendeskChatManager.trackEvent("Enable/Disable Watchlist")
         let contactsWatchlistPackageFeature = SwiftCommonUtility.shared.getPackageFeature(withName: "contactwatchlist")
         //delegate?.selectedDashboardChild.getPackageFeature(withName: "contactwatchlist")
         self.isCountBased = false

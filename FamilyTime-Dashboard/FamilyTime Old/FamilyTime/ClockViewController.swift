@@ -68,7 +68,7 @@ class ClockViewController: UIViewController {
         btnSavetopp.title = "save_button".localized
         lblEnableFunTime.text = "fun_time_content_1".localized
         lblEnableFunTime11.text = "fun_time_switch_1".localized
-        ZendeskChatManager.trackEvent("Fun Time Screen")
+//        ZendeskChatManager.trackEvent("Fun Time Screen")
         //        lblStartTime1.adjustsFontSizeToFitWidth=true
         //        lblEndTime1.adjustsFontSizeToFitWidth=true
         lblStartTime1.text = "fun_time_content_2".localized

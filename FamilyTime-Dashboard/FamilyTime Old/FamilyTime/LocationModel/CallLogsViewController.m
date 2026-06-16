@@ -31,7 +31,7 @@ UIRefreshControl *  refreshControl;
 -(void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:YES];
-    [ZendeskChatManager trackEvent:@"Call History"];
+//    [ZendeskChatManager trackEvent:@"Call History"];
     _lblText.text=[_lblText.text myModification];
 
 }

@@ -120,8 +120,8 @@ import IQKeyboardManager
             //            ZDKHelpCenter.pushOverview(navigationController, with: helpCenterContentModel)
             
             IQKeyboardManager.shared().isEnabled = false
-            ZendeskChatManager.trackEvent("Help Chat Started")
-            ZendeskChatManager.startChat(on: navigationController, event: "Help Chat Started")
+//            ZendeskChatManager.trackEvent("Help Chat Started")
+//            ZendeskChatManager.startChat(on: navigationController, event: "Help Chat Started")
         } else {
             let shoppingFunnel = UserDefaults.standard.bool(forKey: "shopping_funnel")
             if shoppingFunnel {
@@ -134,12 +134,12 @@ import IQKeyboardManager
                     let childPackage = UserDefaults.standard.string(forKey: UserDefaultsConstants.SELECTED_CHILD_PACKAGE) ?? ""
                     if childPackage == "FREE" || childPackage == "free" || childPackage == "TRIAL" || childPackage == "trial" {
                         IQKeyboardManager.shared().isEnabled = false
-                        ZendeskChatManager.trackEvent("Help Chat Started")
-                        ZendeskChatManager.startChat(on: navigationController, event: "Help Chat Started")
+//                        ZendeskChatManager.trackEvent("Help Chat Started")
+//                        ZendeskChatManager.startChat(on: navigationController, event: "Help Chat Started")
                     } else {
                         IQKeyboardManager.shared().isEnabled = false
-                        ZendeskChatManager.trackEvent("Help Chat Started")
-                        ZendeskChatManager.startChat(on: navigationController, event: "Help Chat Started")
+//                        ZendeskChatManager.trackEvent("Help Chat Started")
+//                        ZendeskChatManager.startChat(on: navigationController, event: "Help Chat Started")
                     }
                 }
             }

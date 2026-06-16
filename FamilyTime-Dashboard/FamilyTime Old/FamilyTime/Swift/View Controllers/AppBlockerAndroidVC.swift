@@ -48,7 +48,7 @@ class AppBlockerAndroidVC: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        ZendeskChatManager.trackEvent("Anroid App Blocker Screen")
+//        ZendeskChatManager.trackEvent("Anroid App Blocker Screen")
         control = DBManager.shared.fetchAppBlockControl(identifier: "app_blocker")
         setToggles()
         edgesForExtendedLayout = []

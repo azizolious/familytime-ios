@@ -303,7 +303,7 @@ class AndroidDailyLimitVC: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-        ZendeskChatManager.trackEvent("Daily Limit Screen")
+//        ZendeskChatManager.trackEvent("Daily Limit Screen")
     }
     
     override func viewDidDisappear(_ animated: Bool) {

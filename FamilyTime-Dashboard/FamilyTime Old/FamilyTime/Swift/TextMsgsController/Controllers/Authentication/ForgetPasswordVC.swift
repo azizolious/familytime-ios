@@ -33,7 +33,7 @@ class ForgetPasswordVC: UIViewController {
         self.lblForgotPassword.text = "forgot_password_title".localized
         self.descForgotPassword.text = "forgot_pasword_content".localized
         self.emailField.placeholder = "login_email_input_email".localized
-        ZendeskChatManager.trackEvent("Forget Passward")
+//        ZendeskChatManager.trackEvent("Forget Passward")
     }
     
     override func viewDidLayoutSubviews() {

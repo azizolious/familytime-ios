@@ -81,7 +81,7 @@ class AddInternetScheduleVC: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        ZendeskChatManager.trackEvent("Add Internet Schedule")
+//        ZendeskChatManager.trackEvent("Add Internet Schedule")
         
     }
     

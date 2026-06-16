@@ -48,7 +48,7 @@ NSString *map_device = @"";
     self.title = [@"FamilyLocator" myModification];
     self.mapView.hidden=NO;
     
-    [ZendeskChatManager trackEvent:@"Family Locator"];
+//    [ZendeskChatManager trackEvent:@"Family Locator"];
     
     NSInteger child_id = delegate.selectedDashboardChild.child_id;
     int convertedChild_id = (int) child_id;

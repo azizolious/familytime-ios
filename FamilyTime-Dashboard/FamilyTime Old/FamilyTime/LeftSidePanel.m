@@ -40,7 +40,7 @@ AppDelegate *delegate;
 {
     [super viewWillAppear:YES];
     
-    [ZendeskChatManager trackEvent:@"Settings android device"];
+//    [ZendeskChatManager trackEvent:@"Settings android device"];
     
     NSString *filePath = [[NSBundle mainBundle] pathForResource:@"settings" ofType:@"plist"];
     self.dataSource = [NSDictionary dictionaryWithContentsOfFile:filePath];

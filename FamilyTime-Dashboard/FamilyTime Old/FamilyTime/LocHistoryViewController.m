@@ -38,7 +38,7 @@ UIRefreshControl *  refreshControl;
 {
     [super viewWillAppear:YES];
     
-    [ZendeskChatManager trackEvent:@"Location History"];
+//    [ZendeskChatManager trackEvent:@"Location History"];
 
     
     NSLog(@"here 1=%@",delegate.selectedChild.child_id);

@@ -61,7 +61,7 @@ UIRefreshControl *  refreshControl;
     // [[IQKeyboardManager sharedManager]setEnableAutoToolbar:NO];
     
     
-    [ZendeskChatManager trackEvent:@"Account Screen"];
+//    [ZendeskChatManager trackEvent:@"Account Screen"];
     
     //[_txtPhone setKeyboardType:UIKeyboardTypeNumberPad];
     _txtPhone.keyboardType = UIKeyboardTypeNamePhonePad;

@@ -187,10 +187,10 @@ class DeviceVC: UIViewController {
     
     
     @IBAction func helpAction(_ sender: Any) {
-        let storyboard = UIStoryboard(name: "MyStoryboard", bundle: Bundle.main)
-        guard let vc = storyboard.instantiateViewController(withIdentifier: "SwiftHelpViewController") as? SwiftHelpViewController else { return }
+//        let storyboard = UIStoryboard(name: "MyStoryboard", bundle: Bundle.main)
+//        guard let vc = storyboard.instantiateViewController(withIdentifier: "SwiftHelpViewController") as? SwiftHelpViewController else { return }
         
-        navigationController?.pushViewController(vc, animated: true)
+//        navigationController?.pushViewController(vc, animated: true)
     }
     
     

@@ -90,7 +90,7 @@ class LocationHistoryViewController: UIViewController,UITableViewDelegate,UITabl
             "Location History"
         )
         //navigationController?.isNavigationBarHidden = true
-        ZendeskChatManager.trackEvent("Location History")
+//        ZendeskChatManager.trackEvent("Location History")
         let packageId = self.package_id
         if (packageId == "1") {
             imgView.isHidden = false
