@@ -6,37 +6,13 @@ target 'FamilyTime' do
     
 
 
+# P4 (June 2026): pod set reduced to the two still used after the P3 legacy
+# teardown — GoogleMaps (AppDelegate) + SwiftyJSON (UserProfile model).
+# GoogleSignIn is now SPM 7.x. The 11 removed pods (MBProgressHUD, CCMPopup,
+# IQKeyboardManager, HGCircularSlider, Motis, MBCircularProgressBar, Toast-Swift,
+# ActiveLabel, NewPopMenu, DropDown, RangeSeekSlider) had zero callers.
 pod 'GoogleMaps', '~> 8.4'
-pod 'MBProgressHUD', '~> 0.9.2'
-pod 'CCMPopup'
-pod 'IQKeyboardManager'
-
-
-
-pod 'HGCircularSlider', '~> 2.0.0'
-pod 'Motis', '~>1.4.0'
-# pod 'GoogleSignIn', '~>3.0.0'  # disabled — replace w/ 7.x SPM when legacy Auth VCs removed
 pod 'SwiftyJSON'
-
-#---SANA PODS---//
-
-pod 'MBCircularProgressBar'
-pod 'Toast-Swift', '~> 4.0.0'
-
-pod 'ActiveLabel'
-
-
-
-pod 'NewPopMenu', '~> 2.0'
-
-pod 'DropDown'
-pod 'RangeSeekSlider'
-
-#---REALM CRASH FIXING ON XCODE 11---#
-
-#pod 'RealmSwift', '~> 3.20.0'
-
-#---REALM CRASH FIXING ON XCODE 11---//
 
 
 
