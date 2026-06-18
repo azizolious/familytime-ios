@@ -708,9 +708,7 @@
 		C5DF63002451D45200FB5739 /* DataUseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5DF627D2451D45100FB5739 /* DataUseVC.swift */; };
 		C5DF63012451D45200FB5739 /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5DF627F2451D45100FB5739 /* UserProfile.swift */; };
 		C5DF63022451D45200FB5739 /* CommonStructs.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5DF62812451D45100FB5739 /* CommonStructs.swift */; };
-		C5DF63032451D45200FB5739 /* DataBaseUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5DF62822451D45100FB5739 /* DataBaseUtility.swift */; };
 		C5DF63042451D45200FB5739 /* HLConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5DF62832451D45100FB5739 /* HLConstants.swift */; };
-		C5DF63052451D45200FB5739 /* IPadUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5DF62842451D45100FB5739 /* IPadUtility.swift */; };
 		C5DF63062451D45200FB5739 /* NetworkActivityIndicatorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5DF62852451D45100FB5739 /* NetworkActivityIndicatorManager.swift */; };
 		C5DF63072451D45200FB5739 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5DF62862451D45100FB5739 /* Extensions.swift */; };
 		C5DF63082451D45200FB5739 /* MultilingualUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5DF62872451D45100FB5739 /* MultilingualUtility.swift */; };
@@ -2106,9 +2104,7 @@
 		C5DF627D2451D45100FB5739 /* DataUseVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataUseVC.swift; sourceTree = "<group>"; };
 		C5DF627F2451D45100FB5739 /* UserProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
 		C5DF62812451D45100FB5739 /* CommonStructs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonStructs.swift; sourceTree = "<group>"; };
-		C5DF62822451D45100FB5739 /* DataBaseUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataBaseUtility.swift; sourceTree = "<group>"; };
 		C5DF62832451D45100FB5739 /* HLConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HLConstants.swift; sourceTree = "<group>"; };
-		C5DF62842451D45100FB5739 /* IPadUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IPadUtility.swift; sourceTree = "<group>"; };
 		C5DF62852451D45100FB5739 /* NetworkActivityIndicatorManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkActivityIndicatorManager.swift; sourceTree = "<group>"; };
 		C5DF62862451D45100FB5739 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		C5DF62872451D45100FB5739 /* MultilingualUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultilingualUtility.swift; sourceTree = "<group>"; };
@@ -5012,9 +5008,7 @@
 				EB6E96662735621F00C6FC38 /* swiftFTUtils.swift */,
 				EB6349E7271427390010EDF4 /* SwiftCommonModel.swift */,
 				C5DF62812451D45100FB5739 /* CommonStructs.swift */,
-				C5DF62822451D45100FB5739 /* DataBaseUtility.swift */,
 				C5DF62832451D45100FB5739 /* HLConstants.swift */,
-				C5DF62842451D45100FB5739 /* IPadUtility.swift */,
 				C5DF62852451D45100FB5739 /* NetworkActivityIndicatorManager.swift */,
 				C5DF62862451D45100FB5739 /* Extensions.swift */,
 				C5DF62872451D45100FB5739 /* MultilingualUtility.swift */,
@@ -6684,7 +6678,6 @@
 				EBDECC1228C8BED60086C10E /* PremiumPackageCell.swift in Sources */,
 				4B3D738B1A1604DC006F8F8F /* CommonModel.m in Sources */,
 				0A04B68D2B551C9000D6D14C /* WebBlockerModel.swift in Sources */,
-				C5DF63052451D45200FB5739 /* IPadUtility.swift in Sources */,
 				C5DF62F32451D45200FB5739 /* InternetScheduleVC.swift in Sources */,
 				C5DF633D2451D45300FB5739 /* LoginViewController.swift in Sources */,
 				0A96258B293DDB48002C59BE /* TikTokAppHistoryVc.swift in Sources */,
@@ -6821,7 +6814,6 @@
 				FA1100000000000000000415 /* ScreenTimeView.swift in Sources */,
 				FA1100000000000000000416 /* SubscriptionView.swift in Sources */,
 				A1F70A5B1ECE083D00DB00FF /* AvoidingSubviewScrollViewDelegate.swift in Sources */,
-				C5DF63032451D45200FB5739 /* DataBaseUtility.swift in Sources */,
 				EB77DE2928D06CD300C3C125 /* UserDefaultsConstants.swift in Sources */,
 				D26A334C2FBC780A0011E840 /* APIEnvelope.swift in Sources */,
 				A15299E01D64C6C7000B4DCD /* GMTTimezone.m in Sources */,
