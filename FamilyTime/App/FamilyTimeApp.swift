@@ -1,9 +1,11 @@
 import SwiftUI
 
-// NOTE: `@main` is intentionally NOT applied here. `main` is a live UIKit app
-// (entry point is `main.m` → UIApplicationMain → AppDelegate). This SwiftUI App
-// is compiled but dormant; the entry point will be flipped to SwiftUI only once
-// the SwiftUI screens fully replace the UIKit launch flow (later modernization step).
+// FamilyTime is a SwiftUI app: `FamilyTimeApp` is the permanent entry point (the
+// legacy UIKit `main.m`/`UIApplicationMain` was removed June 2026). The UIKit
+// `AppDelegate` is retained via `@UIApplicationDelegateAdaptor` so push
+// notifications, Firebase, and legacy VC hosting keep working while the remaining
+// UIKit screens are deleted one by one.
+@main
 struct FamilyTimeApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
 

@@ -255,7 +255,6 @@
 		4B99BBC81AF75E5C0008836D /* Package_icon_up.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B99BBC71AF75E5C0008836D /* Package_icon_up.png */; };
 		4B99BBCC1AF7759F0008836D /* Package_icon_up@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B99BBC91AF7759F0008836D /* Package_icon_up@3x.png */; };
 		4B99BBCE1AF7759F0008836D /* Package_icon_up@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B99BBCB1AF7759F0008836D /* Package_icon_up@2x.png */; };
-		4BBF20071A11F6E8000E4829 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BBF20061A11F6E8000E4829 /* main.m */; };
 		4BBF200D1A11F6E8000E4829 /* FamilyTime.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4BBF200B1A11F6E8000E4829 /* FamilyTime.xcdatamodeld */; };
 		4BBF20181A11F6E8000E4829 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4BBF20161A11F6E8000E4829 /* LaunchScreen.xib */; };
 		4BBF20241A11F6E9000E4829 /* FamilyTimeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BBF20231A11F6E9000E4829 /* FamilyTimeTests.m */; };
@@ -1524,7 +1523,6 @@
 		4B99BBCB1AF7759F0008836D /* Package_icon_up@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Package_icon_up@2x.png"; sourceTree = "<group>"; };
 		4BBF20011A11F6E8000E4829 /* FamilyTime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FamilyTime.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BBF20051A11F6E8000E4829 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4BBF20061A11F6E8000E4829 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4BBF200C1A11F6E8000E4829 /* FamilyTime.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FamilyTime.xcdatamodel; sourceTree = "<group>"; };
 		4BBF20171A11F6E8000E4829 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		4BBF201D1A11F6E9000E4829 /* FamilyTimeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FamilyTimeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -3966,7 +3964,6 @@
 				E0355A051F67D36700DED982 /* Localizable.strings */,
 				A1D3C02A1D3E6E0800AAD966 /* Open 24 Display St.ttf */,
 				4BBF20051A11F6E8000E4829 /* Info.plist */,
-				4BBF20061A11F6E8000E4829 /* main.m */,
 				A150C4511C8836230084E414 /* settingsiOS.plist */,
 				4B1076FA1A1CCACD001E321F /* settings.plist */,
 				4B5543331A51542A007F3587 /* reports.plist */,
@@ -6965,7 +6962,6 @@
 				4BF01C341AEFAB4000D4CCCD /* ContactCells.m in Sources */,
 				0A9D25632AD910BD00E72FF8 /* ControlTableCell.swift in Sources */,
 				96F7006B219DAEAC00ED8987 /* AuthenticationService.m in Sources */,
-				4BBF20071A11F6E8000E4829 /* main.m in Sources */,
 				EB82F38C278DAB76003610C4 /* Global.swift in Sources */,
 				EB9630122941FCB4008739D4 /* HomeDatabaseResponse.swift in Sources */,
 				A18D86711EE570E300AF4C7B /* SyncSettingsPopupController.m in Sources */,
