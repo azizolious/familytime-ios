@@ -1,0 +1,9 @@
+// Template for Config.xcconfig — COMMITTED. Copy to `Config.xcconfig` (gitignored)
+// and fill in real (rotated) values. Consumed via Info.plist:
+//   APP_STORE_SHARED_SECRET = $(APP_STORE_SHARED_SECRET)
+//   GOOGLE_MAPS_API_KEY      = $(GOOGLE_MAPS_API_KEY)
+// then read at runtime via Bundle.main.object(forInfoDictionaryKey:).
+// NOTE: to take effect, set this file as the target's baseConfigurationReference,
+// having it #include the matching Pods-FamilyTime.<config>.xcconfig (Phase 3).
+APP_STORE_SHARED_SECRET = YOUR_SECRET_HERE
+GOOGLE_MAPS_API_KEY = YOUR_GOOGLE_MAPS_KEY_HERE

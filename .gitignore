@@ -1,3 +1,4 @@
+# macOS
 .DS_Store
 
 # CocoaPods
@@ -11,8 +12,16 @@ xcuserdata/
 *.xcscmblueprint
 *.moved-aside
 
+# Swift Package Manager
+.build/
+.swiftpm/
+
 # Misc
 *.hmap
 *.ipa
 *.dSYM.zip
 *.dSYM
+*.apns
+
+# Secrets (inject at build time)
+Config.xcconfig

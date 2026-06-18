@@ -1,0 +1,53 @@
+# FamilyTime iOS — SwiftLint (Phase 1)
+# Only NEW code under FamilyTime/Core, FamilyTime/Models, FamilyTime/ViewModels,
+# FamilyTime/Views, FamilyTime/Services, and FamilyTime/Utilities is linted strictly.
+# Legacy code remains excluded below until Phase 2 migrates it.
+
+opt_in_rules:
+  - force_unwrapping
+  - implicitly_unwrapped_optional
+  - empty_count
+  - unused_import
+  - private_outlet
+  - weak_delegate
+  - class_delegate_protocol
+  - redundant_optional_initialization
+
+# Per-rule severity overrides.
+# force_cast and force_try default to "warning" in SwiftLint, so raise to error.
+force_unwrapping:
+  severity: error
+force_cast:
+  severity: error
+force_try:
+  severity: error
+weak_delegate:
+  severity: error
+class_delegate_protocol:
+  severity: error
+
+implicitly_unwrapped_optional:
+  severity: warning
+private_outlet:
+  severity: warning
+redundant_optional_initialization:
+  severity: warning
+unused_import:
+  severity: warning
+vertical_whitespace:
+  severity: warning
+trailing_whitespace:
+  severity: warning
+empty_count:
+  severity: warning
+shorthand_operator:
+  severity: warning
+unused_closure_parameter:
+  severity: warning
+
+excluded:
+  - Pods
+  - "FamilyTime - Dashboard"
+  - FamilyTime/NetworkLayer
+  - FamilyTime/Swift/Controllers
+  - FamilyTime/Swift/Managers
