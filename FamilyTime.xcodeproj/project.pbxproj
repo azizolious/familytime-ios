@@ -21,6 +21,7 @@
 		FA1100000000000000002332 /* AppBlockingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1100000000000000001F4A /* AppBlockingViewModel.swift */; };
 		FA1100000000000000002333 /* AppBlockingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1100000000000000001F4B /* AppBlockingView.swift */; };
 		FA1100000000000000002334 /* AppCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1100000000000000001F4C /* AppCategoryView.swift */; };
+		FA1100000000000000000B03 /* WebBlockerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1100000000000000000B04 /* WebBlockerView.swift */; };
 		FA1100000000000000002335 /* ContentFilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1100000000000000001F4D /* ContentFilterView.swift */; };
 		0A04B68D2B551C9000D6D14C /* WebBlockerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A04B68C2B551C9000D6D14C /* WebBlockerModel.swift */; };
 		0A04B68F2B55220B00D6D14C /* WebBlockerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A04B68E2B55220B00D6D14C /* WebBlockerViewModel.swift */; };
@@ -58,18 +59,12 @@
 		0A53165B2ADEA60600C4F781 /* CustomDayLimitCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A5316592ADEA60600C4F781 /* CustomDayLimitCell.xib */; };
 		0A53165E2ADEB25400C4F781 /* AppLimitPickerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A53165C2ADEB25400C4F781 /* AppLimitPickerVC.swift */; };
 		0A53165F2ADEB25400C4F781 /* AppLimitPickerVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A53165D2ADEB25400C4F781 /* AppLimitPickerVC.xib */; };
-		0A58FC012B5650ED00EFB950 /* AddURLViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A58FC002B5650ED00EFB950 /* AddURLViewModel.swift */; };
 		0A5A831F2A82368E0045DBE2 /* FIRAppCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5A831E2A82368E0045DBE2 /* FIRAppCheck.swift */; };
 		0A5D175F26F9F3C500793717 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 0A5D175E26F9F3C500793717 /* Alamofire */; };
 		0A5D178926F9F60C00793717 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 0A5D178826F9F60C00793717 /* SDWebImage */; };
 		0A5D178B26F9F60C00793717 /* SDWebImageMapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 0A5D178A26F9F60C00793717 /* SDWebImageMapKit */; };
 		0A5D178F26FA145A00793717 /* NotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5D178E26FA145A00793717 /* NotificationsViewController.swift */; };
 		0A5D179326FA152700793717 /* FeedDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5D179226FA152700793717 /* FeedDetailCell.swift */; };
-		0A5FEEB42B57A99F00F5C613 /* RemoveURLVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5FEEB22B57A99F00F5C613 /* RemoveURLVC.swift */; };
-		0A5FEEB52B57A99F00F5C613 /* RemoveURLVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A5FEEB32B57A99F00F5C613 /* RemoveURLVC.xib */; };
-		0A5FEEB72B57B11E00F5C613 /* RemoveURLVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5FEEB62B57B11E00F5C613 /* RemoveURLVM.swift */; };
-		0A5FEEBB2B57B94500F5C613 /* WebBlockerPopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5FEEB92B57B94500F5C613 /* WebBlockerPopUp.swift */; };
-		0A5FEEBC2B57B94500F5C613 /* WebBlockerPopUp.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A5FEEBA2B57B94500F5C613 /* WebBlockerPopUp.xib */; };
 		0A5FEEBE2B57E79F00F5C613 /* WbSearchHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5FEEBD2B57E79F00F5C613 /* WbSearchHandler.swift */; };
 		0A6F9FE42B342070002ED75A /* WhatsappHistoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6F9FE22B342070002ED75A /* WhatsappHistoryVC.swift */; };
 		0A6F9FE52B342070002ED75A /* WhatsappHistoryVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A6F9FE32B342070002ED75A /* WhatsappHistoryVC.xib */; };
@@ -97,8 +92,6 @@
 		0A9037292C50E72800914854 /* FamilyFeedTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A9037272C50E72800914854 /* FamilyFeedTableViewCell.xib */; };
 		0A904F462C2E85F0001C730C /* SuccessPopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A904F452C2E85F0001C730C /* SuccessPopViewController.swift */; };
 		0A90A8612C2D3A8200119B3B /* premiumImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A90A8602C2D3A8200119B3B /* premiumImage.swift */; };
-		0A91A56E2B5506BB00205753 /* AddURLVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A91A56C2B5506BB00205753 /* AddURLVC.swift */; };
-		0A91A56F2B5506BB00205753 /* AddURLVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A91A56D2B5506BB00205753 /* AddURLVC.xib */; };
 		0A931DC22C4E99D400D8910A /* FamilyFeedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A931DC12C4E99D400D8910A /* FamilyFeedModel.swift */; };
 		0A96258B293DDB48002C59BE /* TikTokAppHistoryVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A96258A293DDB48002C59BE /* TikTokAppHistoryVc.swift */; };
 		0A96258D293DDCD1002C59BE /* TikTokCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A96258C293DDCD1002C59BE /* TikTokCell.swift */; };
@@ -130,8 +123,6 @@
 		0AB1789B2ADE942400557DF8 /* SetLimitVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AB178992ADE942400557DF8 /* SetLimitVC.xib */; };
 		0AB1C4682B4E6E89003EBACA /* SpeedLimitNewPopUP.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AB1C4662B4E6E89003EBACA /* SpeedLimitNewPopUP.xib */; };
 		0AB8E3FB2C09D23A0014A6A8 /* HomePlansModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB8E3FA2C09D23A0014A6A8 /* HomePlansModel.swift */; };
-		0AC996AE2B510B9F0074A27E /* WebBlockerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC996AC2B510B9F0074A27E /* WebBlockerVC.swift */; };
-		0AC996AF2B510B9F0074A27E /* WebBlockerVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AC996AD2B510B9F0074A27E /* WebBlockerVC.xib */; };
 		0AC996B42B510E950074A27E /* ToggleWebBlockerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC996B22B510E950074A27E /* ToggleWebBlockerCell.swift */; };
 		0AC996B52B510E950074A27E /* ToggleWebBlockerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AC996B32B510E950074A27E /* ToggleWebBlockerCell.xib */; };
 		0AC996B82B5115200074A27E /* AddSiteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC996B62B5115200074A27E /* AddSiteCell.swift */; };
@@ -1061,6 +1052,7 @@
 		FA1100000000000000001F4A /* AppBlockingViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "AppBlockingViewModel.swift"; path = "FamilyTime/ViewModels/AppBlockingViewModel.swift"; sourceTree = SOURCE_ROOT; };
 		FA1100000000000000001F4B /* AppBlockingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "AppBlockingView.swift"; path = "FamilyTime/Views/AppBlocking/AppBlockingView.swift"; sourceTree = SOURCE_ROOT; };
 		FA1100000000000000001F4C /* AppCategoryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "AppCategoryView.swift"; path = "FamilyTime/Views/AppBlocking/AppCategoryView.swift"; sourceTree = SOURCE_ROOT; };
+		FA1100000000000000000B04 /* WebBlockerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "WebBlockerView.swift"; path = "FamilyTime/Views/AppBlocking/WebBlockerView.swift"; sourceTree = SOURCE_ROOT; };
 		FA1100000000000000001F4D /* ContentFilterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "ContentFilterView.swift"; path = "FamilyTime/Views/AppBlocking/ContentFilterView.swift"; sourceTree = SOURCE_ROOT; };
 		0A04B68C2B551C9000D6D14C /* WebBlockerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebBlockerModel.swift; sourceTree = "<group>"; };
 		0A04B68E2B55220B00D6D14C /* WebBlockerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebBlockerViewModel.swift; sourceTree = "<group>"; };
@@ -1098,15 +1090,9 @@
 		0A5316592ADEA60600C4F781 /* CustomDayLimitCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomDayLimitCell.xib; sourceTree = "<group>"; };
 		0A53165C2ADEB25400C4F781 /* AppLimitPickerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLimitPickerVC.swift; sourceTree = "<group>"; };
 		0A53165D2ADEB25400C4F781 /* AppLimitPickerVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AppLimitPickerVC.xib; sourceTree = "<group>"; };
-		0A58FC002B5650ED00EFB950 /* AddURLViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddURLViewModel.swift; sourceTree = "<group>"; };
 		0A5A831E2A82368E0045DBE2 /* FIRAppCheck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FIRAppCheck.swift; sourceTree = "<group>"; };
 		0A5D178E26FA145A00793717 /* NotificationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsViewController.swift; sourceTree = "<group>"; };
 		0A5D179226FA152700793717 /* FeedDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedDetailCell.swift; sourceTree = "<group>"; };
-		0A5FEEB22B57A99F00F5C613 /* RemoveURLVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveURLVC.swift; sourceTree = "<group>"; };
-		0A5FEEB32B57A99F00F5C613 /* RemoveURLVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RemoveURLVC.xib; sourceTree = "<group>"; };
-		0A5FEEB62B57B11E00F5C613 /* RemoveURLVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveURLVM.swift; sourceTree = "<group>"; };
-		0A5FEEB92B57B94500F5C613 /* WebBlockerPopUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebBlockerPopUp.swift; sourceTree = "<group>"; };
-		0A5FEEBA2B57B94500F5C613 /* WebBlockerPopUp.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WebBlockerPopUp.xib; sourceTree = "<group>"; };
 		0A5FEEBD2B57E79F00F5C613 /* WbSearchHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WbSearchHandler.swift; sourceTree = "<group>"; };
 		0A6F9FE22B342070002ED75A /* WhatsappHistoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatsappHistoryVC.swift; sourceTree = "<group>"; };
 		0A6F9FE32B342070002ED75A /* WhatsappHistoryVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WhatsappHistoryVC.xib; sourceTree = "<group>"; };
@@ -1128,8 +1114,6 @@
 		0A9037272C50E72800914854 /* FamilyFeedTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FamilyFeedTableViewCell.xib; sourceTree = "<group>"; };
 		0A904F452C2E85F0001C730C /* SuccessPopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessPopViewController.swift; sourceTree = "<group>"; };
 		0A90A8602C2D3A8200119B3B /* premiumImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = premiumImage.swift; sourceTree = "<group>"; };
-		0A91A56C2B5506BB00205753 /* AddURLVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddURLVC.swift; sourceTree = "<group>"; };
-		0A91A56D2B5506BB00205753 /* AddURLVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddURLVC.xib; sourceTree = "<group>"; };
 		0A931DC12C4E99D400D8910A /* FamilyFeedModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyFeedModel.swift; sourceTree = "<group>"; };
 		0A96258A293DDB48002C59BE /* TikTokAppHistoryVc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TikTokAppHistoryVc.swift; sourceTree = "<group>"; };
 		0A96258C293DDCD1002C59BE /* TikTokCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TikTokCell.swift; sourceTree = "<group>"; };
@@ -1161,8 +1145,6 @@
 		0AB178992ADE942400557DF8 /* SetLimitVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SetLimitVC.xib; sourceTree = "<group>"; };
 		0AB1C4662B4E6E89003EBACA /* SpeedLimitNewPopUP.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SpeedLimitNewPopUP.xib; sourceTree = "<group>"; };
 		0AB8E3FA2C09D23A0014A6A8 /* HomePlansModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePlansModel.swift; sourceTree = "<group>"; };
-		0AC996AC2B510B9F0074A27E /* WebBlockerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebBlockerVC.swift; sourceTree = "<group>"; };
-		0AC996AD2B510B9F0074A27E /* WebBlockerVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WebBlockerVC.xib; sourceTree = "<group>"; };
 		0AC996B22B510E950074A27E /* ToggleWebBlockerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleWebBlockerCell.swift; sourceTree = "<group>"; };
 		0AC996B32B510E950074A27E /* ToggleWebBlockerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ToggleWebBlockerCell.xib; sourceTree = "<group>"; };
 		0AC996B62B5115200074A27E /* AddSiteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSiteCell.swift; sourceTree = "<group>"; };
@@ -2899,9 +2881,6 @@
 		0A5FEEB12B57A97F00F5C613 /* RemoveUrlVC */ = {
 			isa = PBXGroup;
 			children = (
-				0A5FEEB22B57A99F00F5C613 /* RemoveURLVC.swift */,
-				0A5FEEB32B57A99F00F5C613 /* RemoveURLVC.xib */,
-				0A5FEEB62B57B11E00F5C613 /* RemoveURLVM.swift */,
 			);
 			name = RemoveUrlVC;
 			sourceTree = "<group>";
@@ -2909,8 +2888,6 @@
 		0A5FEEB82B57B92700F5C613 /* WebBlockerPopUp */ = {
 			isa = PBXGroup;
 			children = (
-				0A5FEEB92B57B94500F5C613 /* WebBlockerPopUp.swift */,
-				0A5FEEBA2B57B94500F5C613 /* WebBlockerPopUp.xib */,
 			);
 			name = WebBlockerPopUp;
 			sourceTree = "<group>";
@@ -2978,9 +2955,6 @@
 		0A91A56B2B55068500205753 /* AdUrlVC */ = {
 			isa = PBXGroup;
 			children = (
-				0A91A56C2B5506BB00205753 /* AddURLVC.swift */,
-				0A91A56D2B5506BB00205753 /* AddURLVC.xib */,
-				0A58FC002B5650ED00EFB950 /* AddURLViewModel.swift */,
 			);
 			name = AdUrlVC;
 			sourceTree = "<group>";
@@ -3125,7 +3099,6 @@
 		0AC996B02B510E540074A27E /* WebBlockerVC */ = {
 			isa = PBXGroup;
 			children = (
-				0AC996AC2B510B9F0074A27E /* WebBlockerVC.swift */,
 				FA11000000000000000E0E00 /* Localizable.xcstrings */,
 				FA110000000000000000A001 /* LocaleMapper.swift */,
 				FA1100000000000000001F41 /* OnboardingRepository.swift */,
@@ -3140,6 +3113,7 @@
 				FA1100000000000000001F4A /* AppBlockingViewModel.swift */,
 				FA1100000000000000001F4B /* AppBlockingView.swift */,
 				FA1100000000000000001F4C /* AppCategoryView.swift */,
+				FA1100000000000000000B04 /* WebBlockerView.swift */,
 				FA1100000000000000001F4D /* ContentFilterView.swift */,
 				FA1100000000000000001771 /* AppNavigationView.swift */,
 				FA1100000000000000001772 /* SupportView.swift */,
@@ -3210,7 +3184,6 @@
 				FA110000000000000000002C /* RuleEditorView.swift */,
 				FA110000000000000000002D /* ScreenTimeView.swift */,
 				FA110000000000000000002E /* SubscriptionView.swift */,
-				0AC996AD2B510B9F0074A27E /* WebBlockerVC.xib */,
 				0A04B68E2B55220B00D6D14C /* WebBlockerViewModel.swift */,
 				0A5FEEBD2B57E79F00F5C613 /* WbSearchHandler.swift */,
 			);
@@ -5914,7 +5887,6 @@
 				A1EFA0801CFDD8B000AA0B94 /* ibook.png in Resources */,
 				A1C928F11C1EE3B0004C62EF /* ic_plus_ipad.png in Resources */,
 				0A3199C62B624366004CA0C2 /* InternetFilterCell.xib in Resources */,
-				0A5FEEBC2B57B94500F5C613 /* WebBlockerPopUp.xib in Resources */,
 				A1FBEA731D806ADD004ECE4E /* ic_empty@2x.png in Resources */,
 				A150C3CD1C85D4E90084E414 /* appleMusicConnect.png in Resources */,
 				A1EDA95F1C49521D00540151 /* ic_place2.png in Resources */,
@@ -6078,7 +6050,6 @@
 				0AB1788D2ADE5CE700557DF8 /* AppLimitTableCell.xib in Resources */,
 				A1E95DC71CA002ED0089AE09 /* profile_about@3x.png in Resources */,
 				E03559131F67D14C00DED982 /* inviteViewController.xib in Resources */,
-				0A91A56F2B5506BB00205753 /* AddURLVC.xib in Resources */,
 				A1CE878D1CAECF36000FF1CD /* popup_app_blocker.png in Resources */,
 				A1E95DAE1CA002960089AE09 /* profile_network_cell@3x.png in Resources */,
 				4BF3EFAC1AD7D1750090E922 /* 16-3x.png in Resources */,
@@ -6158,7 +6129,6 @@
 				E03559CD1F67D2F700DED982 /* PlacesReportViewController~iphone.xib in Resources */,
 				A1D3C0D01D49161100AAD966 /* red_speed_pin@3x.png in Resources */,
 				4BDA2AD11AA6DC01009DBEF3 /* addProfile_field.png in Resources */,
-				0A5FEEB52B57A99F00F5C613 /* RemoveURLVC.xib in Resources */,
 				4BD519FE1A8C7D4600C38D6A /* locations.plist in Resources */,
 				A1E640EB1C469AE3005E0184 /* lock.png in Resources */,
 				A1B4F3551C185F520025F11F /* ic_email_ipad@2x.png in Resources */,
@@ -6186,7 +6156,6 @@
 				A1E640FB1C480478005E0184 /* Menu_icon@2x.png in Resources */,
 				A1E95DC61CA002ED0089AE09 /* profile_edit@3x.png in Resources */,
 				A150C3D51C85D4E90084E414 /* safari.png in Resources */,
-				0AC996AF2B510B9F0074A27E /* WebBlockerVC.xib in Resources */,
 				A1B4F35C1C186C820025F11F /* ic_device_ipad@2x.png in Resources */,
 				C5DF63302451D45300FB5739 /* OpenSans-CondBold.ttf in Resources */,
 				4B7247E31AB707BE00844D4E /* about_btn_0.png in Resources */,
@@ -6590,7 +6559,6 @@
 				0A5A831F2A82368E0045DBE2 /* FIRAppCheck.swift in Sources */,
 				A128913F1D70938E0052DD4A /* MessageCell.m in Sources */,
 				0AC996B42B510E950074A27E /* ToggleWebBlockerCell.swift in Sources */,
-				0A5FEEB72B57B11E00F5C613 /* RemoveURLVM.swift in Sources */,
 				E02919981F46F59F00200F87 /* FamilyMapViewController.m in Sources */,
 				EB6518672718421C001CD21C /* PlacesCell.swift in Sources */,
 				C5DF63152451D45200FB5739 /* Info_DB.swift in Sources */,
@@ -6658,7 +6626,6 @@
 				4B8AC6651A2F2C84007FCA0B /* NetworkModel.m in Sources */,
 				A1EFA0A11CFF245500AA0B94 /* ContentFilterDetailsViewController.m in Sources */,
 				4BCE07B51A80F664007905AD /* ActivityAlertView.m in Sources */,
-				0AC996AE2B510B9F0074A27E /* WebBlockerVC.swift in Sources */,
 				FA110000000000000000B001 /* LocaleMapper.swift in Sources */,
 				FA1100000000000000002329 /* OnboardingRepository.swift in Sources */,
 				FA110000000000000000232A /* OnboardingViewModel.swift in Sources */,
@@ -6672,6 +6639,7 @@
 				FA1100000000000000002332 /* AppBlockingViewModel.swift in Sources */,
 				FA1100000000000000002333 /* AppBlockingView.swift in Sources */,
 				FA1100000000000000002334 /* AppCategoryView.swift in Sources */,
+				FA1100000000000000000B03 /* WebBlockerView.swift in Sources */,
 				FA1100000000000000002335 /* ContentFilterView.swift in Sources */,
 				FA1100000000000000001B59 /* AppNavigationView.swift in Sources */,
 				FA1100000000000000001B5A /* SupportView.swift in Sources */,
@@ -6835,7 +6803,6 @@
 				4B4D923C1A42F3E200316D13 /* ContactViewController.m in Sources */,
 				EB66BC09272A694C0011896D /* SwiftTextMessageDetailsViewController.swift in Sources */,
 				0A9037282C50E72800914854 /* FamilyFeedTableViewCell.swift in Sources */,
-				0A5FEEB42B57A99F00F5C613 /* RemoveURLVC.swift in Sources */,
 				C5DF62FD2451D45200FB5739 /* CommonPopupVC.swift in Sources */,
 				C5DF63342451D45300FB5739 /* DashboardVC.swift in Sources */,
 				EBE227CB2806A15C00DB9A39 /* ActivateFamilyTimeAlert.swift in Sources */,
@@ -6855,7 +6822,6 @@
 				EB22FA04273BA94400363D6A /* SwiftLimitScreenCell.swift in Sources */,
 				EB090C7E289934E40071869A /* CoreDataUtility.swift in Sources */,
 				EB98BFEA2758D8840043A4B2 /* PasscodePopUpViewController.swift in Sources */,
-				0A58FC012B5650ED00EFB950 /* AddURLViewModel.swift in Sources */,
 				0AC996BC2B513F2B0074A27E /* WebBlockerCell.swift in Sources */,
 				EB6F5A92273164E400AEA39E /* SwiftContactWatchedListTableViewCell.swift in Sources */,
 				A1F234431DB90D340093A360 /* DashboardActiveCell.m in Sources */,
@@ -6971,7 +6937,6 @@
 				0A97A669293F24B00001FA32 /* AppHistoryModel.swift in Sources */,
 				C5DF63142451D45200FB5739 /* Notifications_DB.swift in Sources */,
 				D26A33552FBC78560011E840 /* LiveChatService.swift in Sources */,
-				0A5FEEBB2B57B94500F5C613 /* WebBlockerPopUp.swift in Sources */,
 				EBBF514528925F3B005B2C42 /* Enums.swift in Sources */,
 				0A9D25672AD91BEF00E72FF8 /* ControlViewController.swift in Sources */,
 				0A39B3192B3C3C9E008C060E /* TextMsgsViewController.swift in Sources */,
@@ -6979,7 +6944,6 @@
 				C5DF631C2451D45300FB5739 /* Children_Model.swift in Sources */,
 				C5DF63192451D45200FB5739 /* Info.swift in Sources */,
 				C5DF63332451D45300FB5739 /* ContentFiltersVC.swift in Sources */,
-				0A91A56E2B5506BB00205753 /* AddURLVC.swift in Sources */,
 				4B3D737F1A15E447006F8F8F /* JSONAPI.m in Sources */,
 				D2DFA9482FD16A3700073494 /* CancelSubscriptionView.swift in Sources */,
 				EB557526291CE37C00E57149 /* QRCodeCell.swift in Sources */,

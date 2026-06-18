@@ -5,93 +5,114 @@
 //  Created by Sufyan on 15/01/2024.
 //  Copyright © 2024 YumyApps. All rights reserved.
 //
-//  Tier 1 migration (June 2026): legacy infra removed from this view model.
-//  - CoreManager.patchWebBlocker / DBManager  → WebBlockerRepository (async APIClient)
-//  - DBManager.getWebBlocker / fetchAppBlockControl → repo.fetchWebBlockers / fetchWebBlockerControl
-//  - UserDefaultsConstants.SELECTED_CHILD_ID → SelectedChildStore.shared
-//  - CommonModel.showAlert → log (the SwiftUI shell in Tier 2 surfaces user errors)
-//  Public method signatures are unchanged so the (Tier 2) UIKit WebBlockerVC still compiles.
+//  Tier 2 migration (June 2026): now an @Observable view model for the SwiftUI
+//  WebBlockerView. Backed entirely by WebBlockerRepository (async APIClient).
+//  No legacy infra (CommonModel / CoreManager / DBManager / UserDefaultsManager).
 //
 
 import Foundation
+import Observation
 
-class WebBlockerViewModel {
-    var webBlockerArr = [WebBlockerObj]()
+@MainActor
+@Observable
+final class WebBlockerViewModel {
+    private let repo: WebBlockerRepositoryProtocol
+    private let selectedChild = SelectedChildStore.shared
+
+    var webBlockerArr: [WebBlockerObj] = []
     var control = Control()
-    var selectedAll = false
-    var reload: () -> () = {}
+    var isLoading = false
+    var isSaving = false
+    var alertMessage: String?
 
-    private let repo: WebBlockerRepositoryProtocol = WebBlockerRepository()
+    init(repo: WebBlockerRepositoryProtocol = WebBlockerRepository()) {
+        self.repo = repo
+    }
 
-    func initMethod() {
-        Task { @MainActor in
-            do {
-                self.control = try await repo.fetchWebBlockerControl()
-                self.webBlockerArr = try await repo.fetchWebBlockers()
-            } catch {
-                print("❌ WebBlocker load failed: \(error)")
-            }
-            self.selectAllTogle()
-            self.reload()
+    var isEnabled: Bool { control.state == 1 }
+
+    var allBlocked: Bool {
+        !webBlockerArr.isEmpty && webBlockerArr.allSatisfy { $0.isBlocked == 1 }
+    }
+
+    func load() async {
+        isLoading = true
+        defer { isLoading = false }
+        do {
+            control = try await repo.fetchWebBlockerControl()
+            webBlockerArr = try await repo.fetchWebBlockers()
+        } catch {
+            alertMessage = String(localized: "alert_something_wrong_again")
         }
     }
 
-    func selectAllTogle() {
-        selectedAll = !webBlockerArr.isEmpty && webBlockerArr.allSatisfy { $0.isBlocked == 1 }
-    }
-
-    func fetchControl() {
-        Task { @MainActor in
-            if let c = try? await repo.fetchWebBlockerControl() {
-                self.control = c
-                self.reload()
-            }
+    func setEnabled(_ enabled: Bool) async {
+        guard let childIdStr = selectedChild.selectedChildID,
+              let childId = Int(childIdStr),
+              let featureId = control.featureID,
+              let identifier = control.identifier else {
+            alertMessage = String(localized: "alert_something_wrong_again")
+            return
+        }
+        let newState = enabled ? 1 : 0
+        do {
+            let _: EmptyDecodableResponse = try await APIClient.shared.request(
+                FamilyTimeEndpoint.updateControl(
+                    childId: childId, featureId: featureId, state: newState, identifier: identifier))
+            control.state = newState
+        } catch {
+            alertMessage = String(localized: "alert_something_wrong_again")
         }
     }
 
-    func changeControl(state: Int, callBack: @escaping () -> ()) {
-        Task { @MainActor in
-            guard let childIdStr = SelectedChildStore.shared.selectedChildID,
-                  let childId = Int(childIdStr),
-                  let featureId = control.featureID,
-                  let identifier = control.identifier else {
-                print("❌ Missing required params (childId / featureId / identifier)")
-                callBack()
-                return
-            }
-            do {
-                let _: EmptyDecodableResponse = try await APIClient.shared.request(
-                    FamilyTimeEndpoint.updateControl(
-                        childId: childId,
-                        featureId: featureId,
-                        state: state,
-                        identifier: identifier))
-                callBack()
-                self.control.state = state
-                self.reload()
-            } catch {
-                callBack()
-                print("❌ updateControl failed: \(error)")
-            }
+    func setBlocked(_ app: WebBlockerObj, blocked: Bool) {
+        guard let idx = webBlockerArr.firstIndex(where: { $0.id == app.id }) else { return }
+        webBlockerArr[idx].isBlocked = blocked ? 1 : 0
+    }
+
+    func setAll(_ blocked: Bool) {
+        for i in webBlockerArr.indices { webBlockerArr[i].isBlocked = blocked ? 1 : 0 }
+    }
+
+    func save() async {
+        isSaving = true
+        defer { isSaving = false }
+        do {
+            try await repo.save(webBlockerArr)
+        } catch {
+            alertMessage = String(localized: "alert_something_wrong_again")
         }
     }
 
-    func patchData(callback: @escaping () -> ()) {
-        Task { @MainActor in
-            do {
-                try await repo.save(self.webBlockerArr)
-            } catch {
-                print("❌ WebBlocker save failed: \(error)")
-            }
-            callback()
+    func addURL(_ url: String) async {
+        let trimmed = url.trimmingCharacters(in: .whitespacesAndNewlines)
+        guard !trimmed.isEmpty else { return }
+        guard let childIdStr = selectedChild.selectedChildID, let childId = Int(childIdStr) else {
+            alertMessage = String(localized: "alert_something_wrong_again")
+            return
+        }
+        let newObj = WebBlockerObj(
+            id: nil, superUserID: nil, childID: childId,
+            url: trimmed, type: "custom", isBlocked: 1)
+        isSaving = true
+        defer { isSaving = false }
+        do {
+            try await repo.add([newObj])
+            await load()
+        } catch {
+            alertMessage = String(localized: "alert_something_wrong_again")
         }
     }
 
-    func selection() {
-        webBlockerArr = webBlockerArr.map { value in
-            var obj = value
-            obj.isBlocked = selectedAll ? 1 : 0
-            return obj
+    func remove(_ apps: [WebBlockerObj]) async {
+        guard !apps.isEmpty else { return }
+        isSaving = true
+        defer { isSaving = false }
+        do {
+            try await repo.remove(apps)
+            await load()
+        } catch {
+            alertMessage = String(localized: "alert_something_wrong_again")
         }
     }
 }

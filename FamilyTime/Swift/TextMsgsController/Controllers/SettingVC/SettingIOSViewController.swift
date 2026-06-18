@@ -221,9 +221,9 @@ extension SettingIOSViewController: UITableViewDelegate, UITableViewDataSource {
             navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
             navigationController?.pushViewController(controller, animated: true)
         case "web_blocker":
-            let webCon = WebBlockerVC()
-            navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
-            navigationController?.pushViewController(webCon, animated: true)
+            // [WebBlocker Tier 2] UIKit WebBlockerVC removed; web blocker is now SwiftUI
+            // (Views/AppBlocking/WebBlockerView). This legacy entry is dead at runtime.
+            break
         default:
             break
         }

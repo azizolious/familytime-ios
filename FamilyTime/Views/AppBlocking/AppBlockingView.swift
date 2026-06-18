@@ -26,6 +26,14 @@ struct AppBlockingView: View {
                             systemImage: "shield.lefthalf.filled"
                         )
                     }
+                    NavigationLink {
+                        WebBlockerView()
+                    } label: {
+                        Label(
+                            String(localized: "web_blocker"),
+                            systemImage: "globe"
+                        )
+                    }
                 }
 
                 if viewModel.apps.isEmpty && !viewModel.isLoading {
