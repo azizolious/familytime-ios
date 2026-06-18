@@ -72,6 +72,13 @@ enum FamilyTimeEndpoint: EndpointProtocol {
     /// `{child_id, feature_id, state, identifier}`.
     case updateControl(childId: Int, featureId: Int, state: Int, identifier: String)
 
+    // MARK: - Web Blocker
+    case webBlockerList
+    case controlsList
+    case updateWebBlocker(body: WebBlockerListBody)
+    case addWebBlocker(body: WebBlockerListBody)
+    case deleteWebBlocker(body: WebBlockerListBody)
+
     // MARK: - Hosts
 
     private enum Host {
@@ -120,7 +127,9 @@ enum FamilyTimeEndpoint: EndpointProtocol {
         case .installedApps(let childId):  return "/devices/\(childId)/apps"
         case .setAppBlocked:               return "/controls/app-blocker"
         case .contentFilters, .updateContentFilters: return "/controls/content-filters"
-        case .updateControl:               return "/controls"
+        case .updateControl, .controlsList: return "/controls"
+        case .webBlockerList, .addWebBlocker, .deleteWebBlocker: return "/web-blocker"
+        case .updateWebBlocker:            return "/controls/web-blocker"
         }
     }
 
@@ -128,19 +137,21 @@ enum FamilyTimeEndpoint: EndpointProtocol {
         switch self {
         case .login, .forgotPassword, .logout, .validateReceipt,
              .coParentInvite, .removeCoParent, .generateQRCode,
-             .createScreenTimeRule, .createPlace, .setAppBlocked:
+             .createScreenTimeRule, .createPlace, .setAppBlocked, .addWebBlocker:
             return .post
         case .updateProfile, .updateDailyLimit, .updateScreenTimeRule,
              .updatePlace, .updateContentFilters, .changePassword, .updateControl:
             return .put
-        case .deleteChild, .deleteScreenTimeRule, .deletePlace:
+        case .updateWebBlocker:
+            return .patch
+        case .deleteChild, .deleteScreenTimeRule, .deletePlace, .deleteWebBlocker:
             return .delete
         case .verifyEmail, .home, .notificationFeed, .accountInfo, .devices,
              .coParentList, .notifications, .dailyLimit, .screenTimeRules,
              .familyMap, .locationHistory, .places, .placeHistory,
              .webHistory, .youtubeHistory, .tikTokHistory, .socialMonitoring,
              .callHistory, .contacts, .smsHistory, .appUsage,
-             .installedApps, .contentFilters:
+             .installedApps, .contentFilters, .webBlockerList, .controlsList:
             return .get
         }
     }
@@ -197,6 +208,8 @@ enum FamilyTimeEndpoint: EndpointProtocol {
             return body
         case .updateControl(let childId, let featureId, let state, let identifier):
             return ControlUpdateBody(childId: childId, featureId: featureId, state: state, identifier: identifier)
+        case .updateWebBlocker(let body), .addWebBlocker(let body), .deleteWebBlocker(let body):
+            return body
         default:
             return nil
         }
@@ -383,4 +396,11 @@ struct ControlUpdateBody: Encodable {
         case state
         case identifier
     }
+}
+
+/// Body for the web-blocker list endpoints (POST /web-blocker, PATCH
+/// /controls/web-blocker, DELETE /web-blocker). `WebBlockerObj` is the existing
+/// Codable model and encodes to `{id, super_user_id, child_id, url, type, is_blocked}`.
+struct WebBlockerListBody: Encodable {
+    let data: [WebBlockerObj]
 }

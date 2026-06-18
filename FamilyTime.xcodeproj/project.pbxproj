@@ -978,6 +978,7 @@
 		FA11000000000000000003F3 /* LocationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA110000000000000000000B /* LocationRepository.swift */; };
 		FA11000000000000000003F4 /* NotificationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA110000000000000000000C /* NotificationRepository.swift */; };
 		FA11000000000000000003F5 /* ScreenTimeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA110000000000000000000D /* ScreenTimeRepository.swift */; };
+		FA1100000000000000000B01 /* WebBlockerRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1100000000000000000B02 /* WebBlockerRepository.swift */; };
 		FA11000000000000000003F6 /* SelectedChildStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA110000000000000000000E /* SelectedChildStore.swift */; };
 		FA11000000000000000003F7 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA110000000000000000000F /* SessionManager.swift */; };
 		FA11000000000000000003F8 /* SessionManaging.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1100000000000000000010 /* SessionManaging.swift */; };
@@ -2733,6 +2734,7 @@
 		FA110000000000000000000B /* LocationRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocationRepository.swift; path = FamilyTime/Core/Persistence/LocationRepository.swift; sourceTree = SOURCE_ROOT; };
 		FA110000000000000000000C /* NotificationRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NotificationRepository.swift; path = FamilyTime/Core/Persistence/NotificationRepository.swift; sourceTree = SOURCE_ROOT; };
 		FA110000000000000000000D /* ScreenTimeRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ScreenTimeRepository.swift; path = FamilyTime/Core/Persistence/ScreenTimeRepository.swift; sourceTree = SOURCE_ROOT; };
+		FA1100000000000000000B02 /* WebBlockerRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WebBlockerRepository.swift; path = FamilyTime/Core/Persistence/WebBlockerRepository.swift; sourceTree = SOURCE_ROOT; };
 		FA110000000000000000000E /* SelectedChildStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SelectedChildStore.swift; path = FamilyTime/Core/Session/SelectedChildStore.swift; sourceTree = SOURCE_ROOT; };
 		FA110000000000000000000F /* SessionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SessionManager.swift; path = FamilyTime/Core/Session/SessionManager.swift; sourceTree = SOURCE_ROOT; };
 		FA1100000000000000000010 /* SessionManaging.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SessionManaging.swift; path = FamilyTime/Core/Session/SessionManaging.swift; sourceTree = SOURCE_ROOT; };
@@ -3174,6 +3176,7 @@
 				FA110000000000000000000B /* LocationRepository.swift */,
 				FA110000000000000000000C /* NotificationRepository.swift */,
 				FA110000000000000000000D /* ScreenTimeRepository.swift */,
+				FA1100000000000000000B02 /* WebBlockerRepository.swift */,
 				FA110000000000000000000E /* SelectedChildStore.swift */,
 				FA110000000000000000000F /* SessionManager.swift */,
 				FA1100000000000000000010 /* SessionManaging.swift */,
@@ -6705,6 +6708,7 @@
 				FA11000000000000000003F3 /* LocationRepository.swift in Sources */,
 				FA11000000000000000003F4 /* NotificationRepository.swift in Sources */,
 				FA11000000000000000003F5 /* ScreenTimeRepository.swift in Sources */,
+				FA1100000000000000000B01 /* WebBlockerRepository.swift in Sources */,
 				FA11000000000000000003F6 /* SelectedChildStore.swift in Sources */,
 				FA11000000000000000003F7 /* SessionManager.swift in Sources */,
 				FA11000000000000000003F8 /* SessionManaging.swift in Sources */,
