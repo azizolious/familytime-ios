@@ -760,7 +760,7 @@
 "onboarding.qr.accessibilityLabel" = "Kopplungs-QR-Code";
 "onboarding.confirm.successTitle" = "Gerät gekoppelt";
 "onboarding.confirm.successSubtitle" = "Das Gerät Ihres Kindes ist jetzt verbunden.";
-"onboarding.confirm.pendingTitle" = "Warte auf Gerät";
+"onboarding.confirm.pendingTitle" = "Warten auf Gerät";
 "onboarding.confirm.pendingSubtitle" = "Schließen Sie die Einrichtung auf dem Gerät Ihres Kindes ab, um die Kopplung abzuschließen.";
 "onboarding.confirm.checkStatus" = "Status prüfen";
 "onboarding.confirm.goToDashboard" = "Zum Dashboard";
@@ -789,4 +789,4 @@
 "appblocking.filter.movies" = "Filme";
 "appblocking.filter.tvshows" = "TV-Sendungen";
 "appblocking.filter.explicit" = "Explizite Inhalte";
-"appblocking.filter.bookstore" = "Erotik im Buchladen";
+"appblocking.filter.bookstore" = "Erotik im Bücher-Store"; /* NEEDS NATIVE REVIEW: maps to Apple iOS "Bookstore Erotica" restriction category; verify Apple's exact localized term */

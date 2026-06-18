@@ -789,4 +789,4 @@
 "appblocking.filter.movies" = "Films";
 "appblocking.filter.tvshows" = "Séries TV";
 "appblocking.filter.explicit" = "Contenu explicite";
-"appblocking.filter.bookstore" = "Érotisme de la librairie";
+"appblocking.filter.bookstore" = "Contenu érotique (librairie)"; /* NEEDS NATIVE REVIEW: maps to Apple iOS "Bookstore Erotica" restriction category; verify Apple's exact localized term */

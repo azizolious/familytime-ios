@@ -785,4 +785,4 @@
 "appblocking.filter.movies" = "电影";
 "appblocking.filter.tvshows" = "电视节目";
 "appblocking.filter.explicit" = "成人内容";
-"appblocking.filter.bookstore" = "书店色情内容";
+"appblocking.filter.bookstore" = "色情书籍"; /* NEEDS NATIVE REVIEW: source key 'bookstore' = Apple Books explicit-content restriction; previous '书店色情内容' conflated store with content. Confirm intended UI label (色情书籍 vs 成人读物). */

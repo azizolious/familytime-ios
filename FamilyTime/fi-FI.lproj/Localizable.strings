@@ -789,5 +789,5 @@
 "appblocking.filter.apps" = "Sovellukset";
 "appblocking.filter.movies" = "Elokuvat";
 "appblocking.filter.tvshows" = "TV-ohjelmat";
-"appblocking.filter.explicit" = "Raju sisältö";
+"appblocking.filter.explicit" = "Eksplisiittinen sisältö";
 "appblocking.filter.bookstore" = "Kirjakaupan erotiikka";

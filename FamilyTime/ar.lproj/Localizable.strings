@@ -731,7 +731,7 @@
 
 /* ===== New SwiftUI keys (parity sprint) — MODEL-GENERATED, needs native QA ===== */
 "onboarding.welcome.title" = "مرحبًا بك في FamilyTime";
-"onboarding.welcome.subtitle" = "حافظ على أمان عائلتك على جميع أجهزتهم.";
+"onboarding.welcome.subtitle" = "حافظ على أمان عائلتك على جميع أجهزتها.";
 "onboarding.welcome.getStarted" = "ابدأ";
 "onboarding.addChild.title" = "إضافة طفل";
 "onboarding.addChild.subtitle" = "أخبرنا قليلاً عن طفلك.";
@@ -739,18 +739,18 @@
 "onboarding.addChild.namePlaceholder" = "الاسم";
 "onboarding.addChild.agePlaceholder" = "العمر";
 "onboarding.addChild.genderPlaceholder" = "الجنس";
-"onboarding.addChild.continue" = "متابعة";
+"onboarding.addChild.continue" = "تابِع";
 "onboarding.addChild.validation" = "يرجى إدخال اسم الطفل.";
 "onboarding.deviceSetup.title" = "إعداد الجهاز";
 "onboarding.deviceSetup.subtitle" = "ما الجهاز الذي سيستخدمه طفلك؟";
 "onboarding.deviceSetup.platformLabel" = "النظام الأساسي";
 "onboarding.deviceSetup.platform.ios" = "iPhone / iPad";
 "onboarding.deviceSetup.platform.android" = "Android";
-"onboarding.deviceSetup.continue" = "متابعة";
+"onboarding.deviceSetup.continue" = "تابِع";
 "onboarding.qr.title" = "إقران الجهاز";
 "onboarding.qr.instruction" = "امسح رمز QR هذا بجهاز طفلك لإقرانه.";
-"onboarding.qr.installGuide" = "عرض دليل التثبيت";
-"onboarding.qr.continue" = "متابعة";
+"onboarding.qr.installGuide" = "اعرض دليل التثبيت";
+"onboarding.qr.continue" = "تابِع";
 "onboarding.qr.retry" = "إعادة المحاولة";
 "onboarding.qr.missingChild" = "لم يتم اختيار طفل للإقران.";
 "onboarding.qr.accessibilityLabel" = "رمز QR للإقران";
@@ -758,8 +758,8 @@
 "onboarding.confirm.successSubtitle" = "جهاز طفلك متصل الآن.";
 "onboarding.confirm.pendingTitle" = "في انتظار الجهاز";
 "onboarding.confirm.pendingSubtitle" = "أكمل الإعداد على جهاز طفلك لإتمام الإقران.";
-"onboarding.confirm.checkStatus" = "التحقق من الحالة";
-"onboarding.confirm.goToDashboard" = "الانتقال إلى لوحة التحكم";
+"onboarding.confirm.checkStatus" = "تحقّق من الحالة";
+"onboarding.confirm.goToDashboard" = "انتقل إلى لوحة التحكم";
 "onboarding.common.back" = "رجوع";
 "appblocking.tab.title" = "حظر التطبيقات";
 "appblocking.title" = "حظر التطبيقات";
@@ -775,7 +775,7 @@
 "appblocking.category.system" = "النظام";
 "appblocking.category.important" = "مهم";
 "appblocking.category.app" = "التطبيقات";
-"appblocking.category.count" = "%d تطبيقات";
+"appblocking.category.count" = "%d تطبيق"; /* NEEDS NATIVE REVIEW: Arabic plural of عدد is context-dependent (3-10 use تطبيقات, 11+ use تطبيقًا); without .stringsdict pluralization the singular counted-noun form %d تطبيق is the safest single-form choice */
 "appblocking.categories.title" = "الحظر حسب الفئة";
 "appblocking.filter.title" = "فلاتر المحتوى";
 "appblocking.filter.section" = "الفلاتر";
@@ -785,4 +785,4 @@
 "appblocking.filter.movies" = "الأفلام";
 "appblocking.filter.tvshows" = "البرامج التلفزيونية";
 "appblocking.filter.explicit" = "محتوى صريح";
-"appblocking.filter.bookstore" = "المحتوى الإباحي في متجر الكتب";
+"appblocking.filter.bookstore" = "محتوى جنسي صريح في متجر الكتب"; /* NEEDS NATIVE REVIEW: aligned with Apple Screen Time wording (محتوى جنسي صريح) rather than الإباحي; confirm preferred term */
