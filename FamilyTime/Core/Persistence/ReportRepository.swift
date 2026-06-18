@@ -21,11 +21,10 @@ import Foundation
 /// Read access to the reporting endpoints. Protocol-based so view models can be
 /// driven by mocks in tests.
 protocol ReportRepositoryProtocol {
-    func fetchWebHistory(childId: String, date: String, page: Int) async throws -> [ReportEntry]
-    func fetchWebSearch(childId: String, date: String, page: Int) async throws -> [ReportEntry]
-    func fetchYouTube(childId: String, date: String, page: Int) async throws -> [ReportEntry]
-    func fetchTikTok(childId: String, date: String, page: Int) async throws -> [ReportEntry]
-    func fetchSocial(childId: String, date: String, appPackage: String, page: Int) async throws -> [SocialMessage]
+    func fetchWebHistory(childId: String, startDate: String) async throws -> [ReportEntry]
+    func fetchYouTube(childId: String, startDate: String) async throws -> [ReportEntry]
+    func fetchTikTok(childId: String, startDate: String) async throws -> [ReportEntry]
+    func fetchSocial(childId: String, startDate: String, appPackage: String) async throws -> [SocialMessage]
 }
 
 // MARK: - Implementation
@@ -39,38 +38,32 @@ final class ReportRepository: ReportRepositoryProtocol {
         self.apiClient = apiClient
     }
 
-    func fetchWebHistory(childId: String, date: String, page: Int) async throws -> [ReportEntry] {
+    func fetchWebHistory(childId: String, startDate: String) async throws -> [ReportEntry] {
         let resp: ReportResponse<[ReportEntry]> = try await apiClient.request(
-            FamilyTimeEndpoint.webHistory(childId: childId, date: date, page: page)
+            FamilyTimeEndpoint.webHistory(childId: childId, startDate: startDate)
         )
         return resp.data ?? []
     }
 
-    func fetchWebSearch(childId: String, date: String, page: Int) async throws -> [ReportEntry] {
+    func fetchYouTube(childId: String, startDate: String) async throws -> [ReportEntry] {
         let resp: ReportResponse<[ReportEntry]> = try await apiClient.request(
-            FamilyTimeEndpoint.webSearch(childId: childId, date: date, page: page)
+            FamilyTimeEndpoint.youtubeHistory(childId: childId, startDate: startDate)
         )
         return resp.data ?? []
     }
 
-    func fetchYouTube(childId: String, date: String, page: Int) async throws -> [ReportEntry] {
+    func fetchTikTok(childId: String, startDate: String) async throws -> [ReportEntry] {
         let resp: ReportResponse<[ReportEntry]> = try await apiClient.request(
-            FamilyTimeEndpoint.youtubeHistory(childId: childId, date: date, page: page)
+            FamilyTimeEndpoint.tikTokHistory(childId: childId, startDate: startDate)
         )
         return resp.data ?? []
     }
 
-    func fetchTikTok(childId: String, date: String, page: Int) async throws -> [ReportEntry] {
-        let resp: ReportResponse<[ReportEntry]> = try await apiClient.request(
-            FamilyTimeEndpoint.tikTokHistory(childId: childId, date: date, page: page)
-        )
-        return resp.data ?? []
-    }
-
-    func fetchSocial(childId: String, date: String, appPackage: String, page: Int) async throws -> [SocialMessage] {
+    func fetchSocial(childId: String, startDate: String, appPackage: String) async throws -> [SocialMessage] {
         let resp: ReportResponse<[SocialMessage]> = try await apiClient.request(
-            FamilyTimeEndpoint.socialMonitoring(childId: childId, date: date, appPackage: appPackage, page: page)
+            FamilyTimeEndpoint.socialMonitoring(childId: childId, startDate: startDate)
         )
-        return resp.data ?? []
+        // `app_package` is no longer a server-side filter; apply it client-side.
+        return (resp.data ?? []).filter { $0.appPackage == appPackage }
     }
 }

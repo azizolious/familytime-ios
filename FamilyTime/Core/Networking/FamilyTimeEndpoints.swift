@@ -1,287 +1,160 @@
 import Foundation
 
-/// All FamilyTime API endpoints used by the dashboard app.
+/// All FamilyTime API endpoints. Base host: https://core.familytime.io (no /dashboard or /api prefix).
+/// Paths confirmed against the backend spec (June 2026).
 enum FamilyTimeEndpoint: EndpointProtocol {
-    case login(email: String, password: String)
+    // MARK: - Authentication
+    case login(email: String, password: String, pushToken: String, deviceId: String)
     case forgotPassword(email: String)
-    case verifyEmail(params: [String: String])
-    case tokenRefresh
-    case dashboard(childId: String)
-    case dashboardCore2(childId: String)
-    case summaryData(childId: String)
-    case validateReceipt(receiptData: String)
-    case subscriptionProducts
-    case subscriptionCancelled(childId: String)
-    case notifications(childId: String)
-    /// Premium "at launch" notification feed (all children; no params).
-    /// Distinct from `notifications(childId:)`, which is per-child settings.
-    case notificationFeed // TODO confirm
+    case verifyEmail
+    case logout
+
+    // MARK: - Dashboard
+    case home
+    case notificationFeed
+
+    // MARK: - Account & Profile
     case accountInfo
     case updateProfile(params: [String: String])
-    case deleteChild(childId: String)
-    case logout
-    case generateQRCode(childId: String)
 
-    // MARK: - Settings & Account
-    // TODO confirm path/payload with backend (paths derived from a code audit, not backend docs).
-    case changePassword(currentPassword: String, newPassword: String)
-    case coParentInvite(email: String, name: String)
+    // MARK: - Child & Devices
+    case deleteChild(childId: String)
+    case generateQRCode
+    case devices
+
+    // MARK: - Co-Parenting
     case coParentList
+    case coParentInvite(email: String, name: String)
     case removeCoParent(coParentId: String)
 
+    // MARK: - Security
+    /// Path not yet confirmed by the backend team — de-prefixed placeholder.
+    case changePassword(currentPassword: String, newPassword: String)
+
+    // MARK: - Subscription / IAP
+    case validateReceipt(receiptData: String)
+    case notifications(childId: String)
+
     // MARK: - Screen Time
-    // TODO confirm path/payload with backend (paths derived from a code audit, not backend docs).
-    case dailyLimit(childId: String)
-    case updateDailyLimit(childId: String, body: DailyLimitUpdate)
+    case dailyLimit
+    case updateDailyLimit(body: DailyLimitUpdate)
     case screenTimeRules(childId: String)
     case createScreenTimeRule(childId: String, body: ScreenTimeRuleBody)
-    case updateScreenTimeRule(childId: String, ruleId: String, body: ScreenTimeRuleBody)
-    case deleteScreenTimeRule(childId: String, ruleId: String)
+    case updateScreenTimeRule(ruleId: String, body: ScreenTimeRuleBody)
+    case deleteScreenTimeRule(ruleId: String)
 
     // MARK: - Location & Maps
-    // TODO confirm path/payload with backend (paths derived from a code audit, not backend docs).
     case familyMap
-    case locationDates(childId: String)
-    case locationHistory(childId: String, date: String)
+    case locationHistory(childId: String, startDate: String)
     case places(childId: String)
-    case createPlace(childId: String, body: PlaceBody)
-    case updatePlace(childId: String, placeId: String, body: PlaceBody)
+    case createPlace(body: PlaceBody)
+    case updatePlace(body: UpdatePlaceBody)
     case deletePlace(childId: String, placeId: String)
     case placeHistory(childId: String)
 
     // MARK: - Reports & History
-    // TODO confirm path/payload with backend (paths derived from a code audit, not backend docs).
-    case webHistory(childId: String, date: String, page: Int)
-    case webSearch(childId: String, date: String, page: Int)
-    case youtubeHistory(childId: String, date: String, page: Int)
-    case tikTokHistory(childId: String, date: String, page: Int)
-    case socialMonitoring(childId: String, date: String, appPackage: String, page: Int)
-
-    // MARK: - Onboarding & Pairing
-    // TODO confirm path/payload with backend (paths derived from a code audit, not backend docs).
-    /// Legacy core2 QR generation (/generate-qr-code); distinct from `generateQRCode(childId:)`.
-    case pairingQRCode(childId: String)
-    case pairingStatus(childId: String)
-    case addChild(body: ChildCreateBody)
+    case webHistory(childId: String, startDate: String)
+    case youtubeHistory(childId: String, startDate: String)
+    case tikTokHistory(childId: String, startDate: String)
+    case socialMonitoring(childId: String, startDate: String)
+    case callHistory(childId: String, startDate: String)
+    case contacts(childId: String)
+    case smsHistory(childId: String, startDate: String)
+    case appUsage(childId: String, startDate: String)
 
     // MARK: - App Blocking & Content Filters
-    // TODO confirm path/payload with backend (paths derived from a code audit, not backend docs).
     case installedApps(childId: String)
-    case setAppBlocked(childId: String, appId: String, body: AppBlockBody)
+    case setAppBlocked(body: AppBlockBody)
     case contentFilters(childId: String)
     case updateContentFilters(body: ContentFilterBody)
 
     // MARK: - Hosts
 
     private enum Host {
-        /// Single base host for ALL endpoints. mesh/mesh2 are dead.
         static let core = "https://core.familytime.io"
     }
 
     // MARK: - EndpointProtocol
 
-    var baseURL: String {
-        // All endpoints resolve to the single core host.
-        return Host.core
-    }
+    var baseURL: String { Host.core }
 
     var path: String {
         switch self {
-        case .login:
-            // path derived for mesh2 (KPLoginUrl + /dashboard/signin)
-            return "/dashboard/signin" // TODO: confirm core path with backend team
-        case .forgotPassword:
-            // path derived for mesh2 (kForgot_password_mesh2 + /dashboard/forgotpassword)
-            return "/dashboard/forgotpassword" // TODO: confirm core path with backend team
-        case .verifyEmail:
-            // path derived for mesh2 (kVerifyEmail_mesh2 + /dashboard/verifyemail)
-            return "/dashboard/verifyemail" // TODO: confirm core path with backend team
-        case .tokenRefresh:
-            // path derived for mesh2 (KRefreshDashboard_mesh2 + /dashboard/home/refresh/)
-            return "/dashboard/token/refresh" // TODO: confirm core path with backend team
-        case .dashboard(let childId):
-            // path derived for mesh2 (KDashboard_home_mesh2 + /dashboard/home/)
-            return "/dashboard/home/\(childId)" // TODO: confirm core path with backend team
-        case .dashboardCore2(let childId):
-            return "/api/v1/dashboard/\(childId)" // TODO: confirm core path with backend team
-        case .summaryData(let childId):
-            return "/dashboard/summary/\(childId)" // TODO: confirm core path with backend team
-        case .validateReceipt:
-            // path derived for mesh2 (kValidateReceipt_mesh2 + /dashboard/ios/inapp/validatepurchase)
-            return "/dashboard/ios/inapp/validatepurchase" // TODO: confirm core path with backend team
-        case .subscriptionProducts:
-            // path derived for mesh2 (kIAP_Products_Mesh2 + /dashboard/ios/in-app/products/)
-            return "/dashboard/ios/in-app/products/" // TODO: confirm core path with backend team
-        case .subscriptionCancelled(let childId):
-            return "/dashboard/ios/inapp/cancelled/\(childId)" // TODO: confirm core path with backend team
-        case .notifications(let childId):
-            return "/dashboard/settings/ios/notifications/\(childId)" // TODO: confirm core path with backend team
-        case .notificationFeed:
-            return "/dashboard/notifications/feeds/atlaunch" // TODO: confirm core path with backend team
-        case .accountInfo:
-            return "/dashboard/parentdevice" // TODO: confirm core path with backend team
-        case .updateProfile:
-            // path derived for mesh2 (kUpdateParentInfo_mesh2 + /dashboard/parentdevice)
-            return "/dashboard/parentdevice" // TODO: confirm core path with backend team
-        case .deleteChild(let childId):
-            // path derived for mesh2 (/child/delete/{child_id})
-            return "/child/delete/\(childId)" // TODO: confirm core path with backend team
-        case .logout:
-            // path derived for mesh2 (kLogoutUrl_mesh2 + /dashboard/logout)
-            return "/dashboard/logout" // TODO: confirm core path with backend team
-        case .generateQRCode(let childId):
-            return "/dashboard/qrcode/\(childId)" // TODO: confirm core path with backend team
-        // MARK: - Settings & Account
-        case .changePassword:
-            return "/dashboard/changepassword" // TODO: confirm core path with backend team
-        case .coParentInvite:
-            return "/dashboard/coparent/invite" // TODO: confirm core path with backend team
-        case .coParentList:
-            return "/dashboard/coparents" // TODO: confirm core path with backend team
-        case .removeCoParent:
-            return "/dashboard/coparent" // TODO: confirm core path with backend team
-        // MARK: - Screen Time
-        // TODO confirm path/payload with backend
-        case .dailyLimit(let childId),
-             .updateDailyLimit(let childId, _):
-            return "/dashboard/settings/android/lst/dailylimit/\(childId)" // TODO: confirm core path with backend team
-        case .screenTimeRules(let childId):
-            return "/dashboard/settings/ios/lst/applock/\(childId)" // TODO: confirm core path with backend team
-        case .createScreenTimeRule(let childId, _):
-            return "/dashboard/settings/ios/lst/applock/rule/\(childId)" // TODO: confirm core path with backend team
-        case .updateScreenTimeRule(let childId, let ruleId, _),
-             .deleteScreenTimeRule(let childId, let ruleId):
-            return "/dashboard/settings/ios/lst/applock/rule/\(childId)/\(ruleId)" // TODO: confirm core path with backend team
-        // MARK: - Location & Maps
-        // TODO confirm path/payload with backend
-        case .familyMap:
-            // all children; no child param
-            return "/dashboard/notifications/familytimemap/1" // TODO: confirm core path with backend team
-        case .locationDates(let childId):
-            return "/dashboard/reports/ios/locations/checkindates/\(childId)" // TODO: confirm core path with backend team
-        case .locationHistory(_, let date):
-            // childId is passed as a query parameter (see queryParameters).
-            return "/dashboard/reports/ios/locations/\(date)" // TODO: confirm core path with backend team
-        case .places,
-             .createPlace:
-            // childId is passed as a query parameter for GET.
-            return "/dashboard/settings/places/" // TODO: confirm core path with backend team
-        case .updatePlace(_, let placeId, _),
-             .deletePlace(_, let placeId):
-            return "/dashboard/settings/places/\(placeId)" // TODO: confirm core path with backend team
-        case .placeHistory(let childId):
-            return "/dashboard/reports/ios/placevisit/\(childId)" // TODO: confirm core path with backend team
-        // MARK: - Reports & History
-        // childId/date/page are passed as query parameters (see queryParameters).
-        case .webHistory:
-            return "/reports/web-history" // TODO: confirm core path with backend team
-        case .webSearch:
-            return "/reports/web-search" // TODO: confirm core path with backend team
-        case .youtubeHistory:
-            return "/reports/youtube-history" // TODO: confirm core path with backend team
-        case .tikTokHistory:
-            return "/reports/tiktok-history" // TODO: confirm core path with backend team
-        case .socialMonitoring:
-            return "/reports/social-monitoring" // TODO: confirm core path with backend team
-        // MARK: - Onboarding & Pairing
-        case .pairingQRCode:
-            // Legacy core2 QR generation; childId is sent in the body, not the path.
-            return "/generate-qr-code" // TODO: confirm core path with backend team
-        case .pairingStatus(let childId):
-            return "/child/\(childId)/status" // TODO: confirm core path with backend team
-        case .addChild:
-            return "/child/add" // TODO: confirm core path with backend team
-        // MARK: - App Blocking & Content Filters
-        case .installedApps(let childId):
-            return "/dashboard/installed-apps/\(childId)" // TODO: confirm core path with backend team
-        case .setAppBlocked(let childId, let appId, _):
-            return "/dashboard/installed-apps/\(childId)/\(appId)" // TODO: confirm core path with backend team
-        case .contentFilters(let childId):
-            return "/dashboard/settings/ios/contentfilters/apps/\(childId)" // TODO: confirm core path with backend team
-        case .updateContentFilters:
-            return "/controls/content-filters" // TODO: confirm core path with backend team
+        case .login:                       return "/login"
+        case .forgotPassword:              return "/forget-password"
+        case .verifyEmail:                 return "/user/verify-email"
+        case .logout:                      return "/logout"
+        case .home:                        return "/v1/home"
+        case .notificationFeed:            return "/family-feed"
+        case .accountInfo, .updateProfile: return "/profile"
+        case .deleteChild(let childId):    return "/children/\(childId)"
+        case .generateQRCode:              return "/generate-qr-code"
+        case .devices:                     return "/devices"
+        case .coParentList:                return "/co-parents"
+        case .coParentInvite:              return "/invite-co-parent"
+        case .removeCoParent:              return "/cancel-co-parent-invitation"
+        case .changePassword:              return "/change-password" // TODO confirm with backend
+        case .validateReceipt:             return "/ipn"
+        case .notifications:               return "/v1/push-notifications"
+        case .dailyLimit, .updateDailyLimit: return "/controls/daily-limit"
+        case .screenTimeRules(let childId):  return "/controls/sst/\(childId)"
+        case .createScreenTimeRule(let childId, _): return "/controls/sst/store/\(childId)"
+        case .updateScreenTimeRule(let ruleId, _):  return "/controls/sst/update/\(ruleId)"
+        case .deleteScreenTimeRule(let ruleId):     return "/controls/sst/delete/\(ruleId)"
+        case .familyMap:                   return "/family-locator"
+        case .locationHistory:             return "/reports/locations"
+        case .places, .createPlace, .updatePlace, .deletePlace: return "/controls/places"
+        case .placeHistory(let childId):   return "/devices/\(childId)/visits"
+        case .webHistory:                  return "/reports/web-history"
+        case .youtubeHistory:              return "/reports/youtube-history"
+        case .tikTokHistory:               return "/reports/tiktok-history"
+        case .socialMonitoring:            return "/reports/social-monitoring"
+        case .callHistory:                 return "/reports/calls"
+        case .contacts:                    return "/reports/contacts"
+        case .smsHistory:                  return "/reports/sms"
+        case .appUsage:                    return "/reports/app-usage"
+        case .installedApps(let childId):  return "/devices/\(childId)/apps"
+        case .setAppBlocked:               return "/controls/app-blocker"
+        case .contentFilters, .updateContentFilters: return "/controls/content-filters"
         }
     }
 
     var method: HTTPVerb {
         switch self {
-        case .login,
-             .forgotPassword,
-             .verifyEmail,
-             .tokenRefresh,
-             .validateReceipt,
-             .logout,
-             .changePassword,
-             .coParentInvite,
-             .removeCoParent,
-             .pairingQRCode,
-             .addChild:
+        case .login, .forgotPassword, .logout, .validateReceipt,
+             .coParentInvite, .removeCoParent, .changePassword, .generateQRCode,
+             .createScreenTimeRule, .createPlace, .setAppBlocked:
             return .post
-        case .updateProfile,
-             .updateDailyLimit,
-             .updatePlace,
-             .setAppBlocked,
-             .updateContentFilters:
+        case .updateProfile, .updateDailyLimit, .updateScreenTimeRule,
+             .updatePlace, .updateContentFilters:
             return .put
-        case .deleteChild,
-             .deleteScreenTimeRule,
-             .deletePlace:
+        case .deleteChild, .deleteScreenTimeRule, .deletePlace:
             return .delete
-        case .createScreenTimeRule,
-             .createPlace:
-            return .post
-        case .updateScreenTimeRule:
-            return .patch
-        case .dashboard,
-             .dashboardCore2,
-             .summaryData,
-             .subscriptionProducts,
-             .subscriptionCancelled,
-             .notifications,
-             .notificationFeed,
-             .accountInfo,
-             .generateQRCode,
-             .coParentList,
-             .dailyLimit,
-             .screenTimeRules,
-             .familyMap,
-             .locationDates,
-             .locationHistory,
-             .places,
-             .placeHistory,
-             .webHistory,
-             .webSearch,
-             .youtubeHistory,
-             .tikTokHistory,
-             .socialMonitoring,
-             .pairingStatus,
-             .installedApps,
-             .contentFilters:
+        case .verifyEmail, .home, .notificationFeed, .accountInfo, .devices,
+             .coParentList, .notifications, .dailyLimit, .screenTimeRules,
+             .familyMap, .locationHistory, .places, .placeHistory,
+             .webHistory, .youtubeHistory, .tikTokHistory, .socialMonitoring,
+             .callHistory, .contacts, .smsHistory, .appUsage,
+             .installedApps, .contentFilters:
             return .get
         }
     }
 
-    var headers: [String: String]? {
-        // Auth header is injected by `urlRequest(authToken:)`; no per-endpoint headers needed.
-        return nil
-    }
+    var headers: [String: String]? { nil }
 
     var queryParameters: [String: String]? {
         switch self {
-        case .verifyEmail(let params):
-            return params
-        // TODO confirm childId is a query parameter (audit-derived).
-        case .locationHistory(let childId, _),
-             .places(let childId):
+        case .notifications(let childId), .places(let childId), .contentFilters(let childId), .contacts(let childId):
             return ["child_id": childId]
-        // TODO confirm reports pass childId/date/page as query parameters (audit-derived).
-        case .webHistory(let childId, let date, let page),
-             .webSearch(let childId, let date, let page),
-             .youtubeHistory(let childId, let date, let page),
-             .tikTokHistory(let childId, let date, let page):
-            return ["child_id": childId, "date": date, "page": String(page)]
-        case .socialMonitoring(let childId, let date, let appPackage, let page):
-            return ["child_id": childId, "date": date, "app_package": appPackage, "page": String(page)]
+        case .locationHistory(let childId, let startDate),
+             .webHistory(let childId, let startDate),
+             .youtubeHistory(let childId, let startDate),
+             .tikTokHistory(let childId, let startDate),
+             .socialMonitoring(let childId, let startDate),
+             .callHistory(let childId, let startDate),
+             .smsHistory(let childId, let startDate),
+             .appUsage(let childId, let startDate):
+            return ["device_id": childId, "start_date": startDate]
         default:
             return nil
         }
@@ -289,69 +162,35 @@ enum FamilyTimeEndpoint: EndpointProtocol {
 
     var body: (any Encodable)? {
         switch self {
-        case .login(let email, let password):
-            return LoginBody(email: email, password: password)
+        case .login(let email, let password, let pushToken, let deviceId):
+            return LoginBody(email: email, password: password, pushToken: pushToken, uniqueDeviceId: deviceId, agent: "ios")
         case .forgotPassword(let email):
             return ForgotPasswordBody(email: email)
         case .validateReceipt(let receiptData):
-            return ValidateReceiptBody(receiptData: receiptData)
+            return ValidateReceiptBody(signedPayload: receiptData)
         case .updateProfile(let params):
             return params
-        case .updateDailyLimit(_, let body):
-            return body
-        case .createScreenTimeRule(_, let body),
-             .updateScreenTimeRule(_, _, let body):
-            return body
-        case .createPlace(_, let body),
-             .updatePlace(_, _, let body):
-            return body
+        case .coParentInvite(let email, let name):
+            return CoParentInviteBody(name: name, email: email, type: "co_parent")
         case .changePassword(let currentPassword, let newPassword):
             return ChangePasswordBody(currentPassword: currentPassword, newPassword: newPassword)
-        case .coParentInvite(let email, let name):
-            return CoParentInviteBody(email: email, name: name)
         case .removeCoParent(let coParentId):
-            // Legacy uses POST + _method=DELETE hack.
-            // TODO confirm whether backend now accepts a real DELETE.
-            return CoParentRemoveBody(coParentUserId: coParentId, method: "DELETE")
-        case .pairingQRCode(let childId):
-            return QRRequestBody(childId: childId)
-        case .addChild(let body):
+            return CancelCoParentBody(userId: coParentId)
+        case .updateDailyLimit(let body):
             return body
-        case .setAppBlocked(_, _, let body):
+        case .createScreenTimeRule(_, let body), .updateScreenTimeRule(_, let body):
+            return body
+        case .createPlace(let body):
+            return body
+        case .updatePlace(let body):
+            return body
+        case .deletePlace(let childId, let placeId):
+            return DeletePlaceBody(data: [DeletePlaceItem(childId: childId, id: placeId)])
+        case .setAppBlocked(let body):
             return body
         case .updateContentFilters(let body):
             return body
-        case .verifyEmail,
-             .tokenRefresh,
-             .logout,
-             .dashboard,
-             .dashboardCore2,
-             .summaryData,
-             .subscriptionProducts,
-             .subscriptionCancelled,
-             .notifications,
-             .notificationFeed,
-             .accountInfo,
-             .deleteChild,
-             .generateQRCode,
-             .coParentList,
-             .dailyLimit,
-             .screenTimeRules,
-             .deleteScreenTimeRule,
-             .familyMap,
-             .locationDates,
-             .locationHistory,
-             .places,
-             .placeHistory,
-             .deletePlace,
-             .webHistory,
-             .webSearch,
-             .youtubeHistory,
-             .tikTokHistory,
-             .socialMonitoring,
-             .pairingStatus,
-             .installedApps,
-             .contentFilters:
+        default:
             return nil
         }
     }
@@ -362,6 +201,15 @@ enum FamilyTimeEndpoint: EndpointProtocol {
 private struct LoginBody: Encodable {
     let email: String
     let password: String
+    let pushToken: String
+    let uniqueDeviceId: String
+    let agent: String
+
+    enum CodingKeys: String, CodingKey {
+        case email, password, agent
+        case pushToken = "push_token"
+        case uniqueDeviceId = "unique_device_id"
+    }
 }
 
 private struct ForgotPasswordBody: Encodable {
@@ -369,12 +217,8 @@ private struct ForgotPasswordBody: Encodable {
 }
 
 private struct ValidateReceiptBody: Encodable {
-    let receiptData: String
+    let signedPayload: String
 }
-
-// MARK: - Settings & Account request bodies
-// TODO confirm payload with backend (derived from a code audit, not backend docs).
-// Non-private because they are associated values of the public `FamilyTimeEndpoint` enum.
 
 struct ChangePasswordBody: Encodable {
     let currentPassword: String
@@ -387,134 +231,132 @@ struct ChangePasswordBody: Encodable {
 }
 
 struct CoParentInviteBody: Encodable {
-    let email: String
     let name: String
+    let email: String
+    let type: String
 }
 
-struct CoParentRemoveBody: Encodable {
-    let coParentUserId: String
-    /// Legacy POST + `_method=DELETE` override hack.
-    let method: String
+struct CancelCoParentBody: Encodable {
+    let userId: String
 
     enum CodingKeys: String, CodingKey {
-        case coParentUserId = "co_parent_user_id"
-        case method = "_method"
+        case userId = "user_id"
     }
 }
 
-// MARK: - Screen Time request bodies
-// TODO confirm payload with backend (derived from a code audit, not backend docs).
+// MARK: - Screen Time bodies
 
 struct DailyLimitUpdate: Encodable {
+    let childId: String
     let duration: Int
-    let autoAdd: Bool
-    let isActive: Bool
-    let remaining: Int
-    let remainingLimit: Int
+    let apps: [String]
 
     enum CodingKeys: String, CodingKey {
+        case childId = "child_id"
         case duration
-        case autoAdd = "auto_add"
-        case isActive = "is_active"
-        case remaining
-        case remainingLimit = "remaining_limit"
+        case apps
     }
 }
 
 struct ScreenTimeRuleBody: Encodable {
-    let ruleName: String
-    let timeStart: String
-    let timeEnd: String
-    let isMon: Bool
-    let isTue: Bool
-    let isWed: Bool
-    let isThu: Bool
-    let isFri: Bool
-    let isSat: Bool
-    let isSun: Bool
-    let isActive: Bool
+    let name: String
+    let startTime: String   // "Y-m-d H:i:s"
+    let endTime: String     // "Y-m-d H:i:s"
+    let monday: Bool
+    let tuesday: Bool
+    let wednesday: Bool
+    let thursday: Bool
+    let friday: Bool
+    let saturday: Bool
+    let sunday: Bool
+    let active: Bool
 
     enum CodingKeys: String, CodingKey {
-        case ruleName = "rule_name"
-        case timeStart = "time_start"
-        case timeEnd = "time_end"
-        case isMon = "is_mon"
-        case isTue = "is_tue"
-        case isWed = "is_wed"
-        case isThu = "is_thu"
-        case isFri = "is_fri"
-        case isSat = "is_sat"
-        case isSun = "is_sun"
-        case isActive = "is_active"
+        case name, monday, tuesday, wednesday, thursday, friday, saturday, sunday, active
+        case startTime = "start_time"
+        case endTime = "end_time"
     }
 }
 
-// MARK: - Location request bodies
-// TODO confirm payload with backend (derived from a code audit, not backend docs).
+// MARK: - Location bodies
 
-/// Request body for creating/updating a saved place (geofence).
-/// The legacy API expects all numeric fields as strings. Non-private because it
-/// is an associated value of the public `FamilyTimeEndpoint` enum.
+/// Create-place payload (geofence). Numeric fields are strings per backend.
 struct PlaceBody: Encodable {
-    let location: String
-    let latitude: String
+    let childId: String
+    let name: String
     let longitude: String
+    let latitude: String
+    let address: String
     let radius: String
-    let checkinAlert: String
+    let status: String
+    let function: String
+    let icon: String
 
     enum CodingKeys: String, CodingKey {
-        case location
-        case latitude
-        case longitude
-        case radius
-        case checkinAlert = "checkin_alert"
+        case childId = "child_id"
+        case name, longitude, latitude, address, radius, status, function, icon
     }
 }
 
-// MARK: - Onboarding & Pairing request bodies
-// TODO confirm payload with backend (derived from a code audit, not backend docs).
-// Non-private because they are associated values of the public `FamilyTimeEndpoint` enum.
+/// Update-place payload — same as `PlaceBody` plus the place `id`.
+struct UpdatePlaceBody: Encodable {
+    let id: String
+    let childId: String
+    let name: String
+    let longitude: String
+    let latitude: String
+    let address: String
+    let radius: String
+    let status: String
+    let function: String
+    let icon: String
 
-/// Request body for the legacy core2 QR generation endpoint.
-struct QRRequestBody: Encodable {
+    enum CodingKeys: String, CodingKey {
+        case id
+        case childId = "child_id"
+        case name, longitude, latitude, address, radius, status, function, icon
+    }
+}
+
+struct DeletePlaceItem: Encodable {
+    let childId: String
+    let id: String
+
+    enum CodingKeys: String, CodingKey {
+        case childId = "child_id"
+        case id
+    }
+}
+
+struct DeletePlaceBody: Encodable {
+    let data: [DeletePlaceItem]
+}
+
+// MARK: - App Blocking & Content Filter bodies
+
+struct AppBlockItem: Encodable {
+    let appId: Int?
+    let appPackageName: String?
+    let blocked: Bool
     let childId: String
 
     enum CodingKeys: String, CodingKey {
+        case appId = "app_id"
+        case appPackageName = "app_package_name"
+        case blocked
         case childId = "child_id"
     }
 }
 
-/// Request body for creating a child profile.
-struct ChildCreateBody: Encodable {
-    let name: String
-    /// "ios" | "android"
-    let platform: String
-    let relationship: String?
-    let gender: String?
-    let age: String?
-}
-
-// MARK: - App Blocking & Content Filters request bodies
-// TODO confirm payload with backend (derived from a code audit, not backend docs).
-
-/// Request body for blocking/unblocking an installed app.
 struct AppBlockBody: Encodable {
-    /// 1 = blocked, 0 = unblocked.
-    let isBlacklisted: Int
-
-    enum CodingKeys: String, CodingKey {
-        case isBlacklisted = "is_blacklisted"
-    }
+    let apps: [AppBlockItem]
 }
 
-/// Request body for updating iOS content filters (MDM payload).
 struct ContentFilterBody: Encodable {
-    let id: Int
     let childId: String
     let mdmPayload: String
 
     enum CodingKeys: String, CodingKey {
-        case id
         case childId = "child_id"
         case mdmPayload = "mdm_payload"
     }

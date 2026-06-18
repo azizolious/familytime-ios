@@ -23,7 +23,11 @@ final class DashboardRepository: DashboardRepositoryProtocol {
     }
 
     func fetchHome(childId: String) async throws -> HomeResponse {
-        try await apiClient.request(FamilyTimeEndpoint.dashboardCore2(childId: childId))
+        // `/v1/home` returns the full children list regardless of child id, so the
+        // `childId` parameter is retained only for call-site parity (the caller may
+        // still use it to pick a default selection from the response).
+        _ = childId
+        return try await apiClient.request(FamilyTimeEndpoint.home)
     }
 
     func fetchAccount() async throws -> AccountModel {

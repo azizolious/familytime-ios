@@ -34,7 +34,7 @@ final class OnboardingViewModel {
         case confirm
     }
 
-    /// "ios" | "android" — matches `ChildCreateBody.platform`.
+    /// "ios" | "android" — the target platform for the child's device.
     enum Platform: String, CaseIterable, Identifiable {
         case iOS = "ios"
         case android = "android"
@@ -113,35 +113,21 @@ final class OnboardingViewModel {
 
     // MARK: Actions
 
-    /// Creates a child profile from the current form fields and stores the new id.
-    /// On success advances to the platform step.
+    /// Validates the add-child form, then advances to the platform / QR-pairing step.
+    ///
+    /// Children are no longer created via a dedicated API call: a child is brought
+    /// into the account by generating a pairing QR code and having the child's
+    /// device scan it, after which the child appears under `/devices`. This step
+    /// therefore only collects the form input and moves the flow forward; the
+    /// real "creation" happens during QR pairing.
     func createChild() async {
         guard canSubmitChild else {
             errorMessage = String(localized: "onboarding.addChild.validation")
             return
         }
-        isLoading = true
         errorMessage = nil
-        defer { isLoading = false }
-        do {
-            let trimmedName = childName.trimmingCharacters(in: .whitespacesAndNewlines)
-            let trimmedAge = age.trimmingCharacters(in: .whitespacesAndNewlines)
-            let trimmedGender = gender.trimmingCharacters(in: .whitespacesAndNewlines)
-            let newChildId = try await repository.addChild(
-                name: trimmedName,
-                platform: platform.rawValue,
-                relationship: nil, // TODO confirm relationship payload with backend
-                gender: trimmedGender.isEmpty ? nil : trimmedGender,
-                age: trimmedAge.isEmpty ? nil : trimmedAge
-            )
-            childId = newChildId
-            selectedChildStore.selectID(newChildId)
-            next()
-        } catch let error as NetworkError {
-            errorMessage = error.errorDescription
-        } catch {
-            errorMessage = error.localizedDescription
-        }
+        // No network call here anymore — proceed to platform/QR pairing.
+        next()
     }
 
     /// Generates the pairing QR payload for the active child.

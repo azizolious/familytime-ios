@@ -10,21 +10,18 @@
 //
 
 import Foundation
+import UIKit
 import AuthenticationServices
 
-/// Decoded shape of the `/dashboard/signin` (mesh2) login response.
+/// Decoded shape of the `/login` response.
 ///
-/// MAPPING NOTE — confirmed against the legacy `loginWithNewApiCore2`:
-///   • `token`         => `bearerTokenCore2` (the Core2 bearer / core token)
-///   • `passport_token` => `LoginApiToken`   (the mesh2 passport token)
-///
-/// `SessionManager` keys: `ft.session.token` holds the `LoginApiToken`,
-/// `ft.session.coreToken` holds `bearerTokenCore2`. Hence the login flow calls
-/// `saveSession(token: passportToken, coreToken: token)`.
+/// `token` is the bearer for core.familytime.io and is what we persist via
+/// `SessionManager.saveSession(token:)`. `passportToken` is the mesh2 passport
+/// token carried alongside it.
 struct LoginResponse: Decodable {
-    /// Core2 bearer token (`bearerTokenCore2`). JSON key: `token`.
+    /// Bearer token for core.familytime.io. JSON key: `token`.
     let token: String
-    /// Mesh2 passport token (`LoginApiToken`). JSON key: `passport_token`.
+    /// Mesh2 passport token. JSON key: `passport_token`.
     let passportToken: String
 
     private enum CodingKeys: String, CodingKey {
@@ -80,7 +77,10 @@ final class LoginViewModel {
 
         do {
             let response: LoginResponse = try await apiClient.request(
-                FamilyTimeEndpoint.login(email: email, password: password)
+                FamilyTimeEndpoint.login(email: email,
+                                         password: password,
+                                         pushToken: Self.currentPushToken(),
+                                         deviceId: Self.currentDeviceId())
             )
             persist(response)
             errorMessage = nil
@@ -138,7 +138,10 @@ final class LoginViewModel {
         do {
             // TODO replace with a dedicated Apple endpoint (see method docs).
             let response: LoginResponse = try await apiClient.request(
-                FamilyTimeEndpoint.login(email: "", password: identityToken)
+                FamilyTimeEndpoint.login(email: "",
+                                         password: identityToken,
+                                         pushToken: Self.currentPushToken(),
+                                         deviceId: Self.currentDeviceId())
             )
             persist(response)
             errorMessage = nil
@@ -154,15 +157,26 @@ final class LoginViewModel {
     /// Routes a successful login response into the session store.
     ///
     /// This is the canonical place the deferred Keychain flip completes for a
-    /// NEW login: `saveSession` persists both tokens through `KeychainService`
-    /// (no plaintext UserDefaults). Note that the ~18 legacy UserDefaults token
-    /// sites (`bearerTokenCore2`, `LoginApiToken`, `LoginAuthToken`, …) are
+    /// NEW login: `saveSession` persists the bearer token through
+    /// `KeychainService` (no plaintext UserDefaults). Note that the ~18 legacy
+    /// UserDefaults token sites (`LoginApiToken`, `LoginAuthToken`, …) are
     /// still being migrated per-screen across Phase 2.
     private func persist(_ response: LoginResponse) {
-        // token: passportToken (LoginApiToken) -> ft.session.token
-        // coreToken: token (bearerTokenCore2)  -> ft.session.coreToken
-        sessionManager.saveSession(token: response.passportToken,
-                                   coreToken: response.token)
+        // `token` is the bearer for core.familytime.io -> ft.session.token
+        sessionManager.saveSession(token: response.token)
         isAuthenticated = true
+    }
+
+    /// The current APNs push token, mirroring the legacy app which stores the
+    /// hex device token in UserDefaults under the `"deviceToken"` key (see
+    /// `SwiftAppDelegate.didRegisterForRemoteNotificationsWithDeviceToken`,
+    /// `kDeviceToken`). Falls back to an empty string before registration.
+    private static func currentPushToken() -> String {
+        UserDefaults.standard.string(forKey: "deviceToken") ?? ""
+    }
+
+    /// A stable per-install device identifier.
+    private static func currentDeviceId() -> String {
+        UIDevice.current.identifierForVendor?.uuidString ?? ""
     }
 }

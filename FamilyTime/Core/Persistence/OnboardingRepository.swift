@@ -22,15 +22,6 @@ protocol OnboardingRepositoryProtocol {
     /// Fetches the QR payload string used to pair the child's device.
     func fetchQRCode(childId: String) async throws -> String
 
-    /// Creates a child profile and returns the new child's id.
-    func addChild(
-        name: String,
-        platform: String,
-        relationship: String?,
-        gender: String?,
-        age: String?
-    ) async throws -> String
-
     /// Returns `true` once the child's device has completed pairing.
     func checkPairingStatus(childId: String) async throws -> Bool
 }
@@ -41,7 +32,7 @@ protocol OnboardingRepositoryProtocol {
 // each model declares explicit snake_case CodingKeys.
 // TODO confirm server JSON envelopes with backend (audit-derived).
 
-/// Response for the legacy core2 `/generate-qr-code` endpoint: `{ "qr_code": "..." }`.
+/// Response for the core2 `/generate-qr-code` endpoint: `{ "qr_code": "..." }`.
 struct QRCodeResponse: Decodable {
     let qrCode: String
 
@@ -50,44 +41,46 @@ struct QRCodeResponse: Decodable {
     }
 }
 
-/// Response for `/child/add`. The new child id may arrive at the top level or
-/// nested under a `data` envelope, so both are tolerated.
-/// TODO confirm child-create JSON envelope with backend.
-struct AddChildResponse: Decodable {
-    let childId: String
-
-    private struct DataEnvelope: Decodable {
-        let childId: String
-
-        enum CodingKeys: String, CodingKey {
-            case childId = "child_id"
-        }
-    }
+/// A single paired device as returned by `/devices`. We only need the child id
+/// to decide whether a given child has completed pairing; the id may arrive as a
+/// String or an Int depending on the writer, so decoding is tolerant.
+/// TODO confirm devices JSON shape with backend.
+struct PairedDevice: Decodable {
+    let childId: String?
 
     enum CodingKeys: String, CodingKey {
         case childId = "child_id"
-        case data
     }
 
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
-        if let topLevel = try container.decodeIfPresent(String.self, forKey: .childId) {
-            childId = topLevel
-        } else if let envelope = try container.decodeIfPresent(DataEnvelope.self, forKey: .data) {
-            childId = envelope.childId
+        if let intID = try? container.decode(Int.self, forKey: .childId) {
+            childId = String(intID)
         } else {
-            throw NetworkError.noData
+            childId = try container.decodeIfPresent(String.self, forKey: .childId)
         }
     }
 }
 
-/// Response for `/child/{id}/status`: `{ "paired": true }`.
-/// TODO confirm pairing-status JSON envelope with backend.
-struct PairingStatusResponse: Decodable {
-    let paired: Bool
+/// Response for `/devices`. The device list may arrive at the top level (a bare
+/// array) or nested under a `data` envelope, so both are tolerated.
+/// TODO confirm devices JSON envelope with backend.
+struct DevicesResponse: Decodable {
+    let devices: [PairedDevice]
 
-    enum CodingKeys: String, CodingKey {
-        case paired
+    private enum CodingKeys: String, CodingKey {
+        case data
+    }
+
+    init(from decoder: Decoder) throws {
+        if let array = try? decoder.singleValueContainer().decode([PairedDevice].self) {
+            devices = array
+        } else if let container = try? decoder.container(keyedBy: CodingKeys.self),
+                  let nested = try? container.decodeIfPresent([PairedDevice].self, forKey: .data) {
+            devices = nested
+        } else {
+            devices = []
+        }
     }
 }
 
@@ -103,37 +96,22 @@ final class OnboardingRepository: OnboardingRepositoryProtocol {
     }
 
     func fetchQRCode(childId: String) async throws -> String {
-        // POST /generate-qr-code with { "child_id": ... }; returns { "qr_code": ... }.
+        // POST /generate-qr-code (no child id); returns { "qr_code": ... }. The
+        // generated code is account-scoped — a child appears under /devices once
+        // its device scans the code and pairs.
         // TODO confirm server JSON shape with backend.
+        _ = childId
         let response: QRCodeResponse =
-            try await apiClient.request(FamilyTimeEndpoint.pairingQRCode(childId: childId))
+            try await apiClient.request(FamilyTimeEndpoint.generateQRCode)
         return response.qrCode
     }
 
-    func addChild(
-        name: String,
-        platform: String,
-        relationship: String?,
-        gender: String?,
-        age: String?
-    ) async throws -> String {
-        // TODO confirm server JSON shape with backend.
-        let body = ChildCreateBody(
-            name: name,
-            platform: platform,
-            relationship: relationship,
-            gender: gender,
-            age: age
-        )
-        let response: AddChildResponse =
-            try await apiClient.request(FamilyTimeEndpoint.addChild(body: body))
-        return response.childId
-    }
-
     func checkPairingStatus(childId: String) async throws -> Bool {
-        // TODO confirm server JSON shape with backend.
-        let response: PairingStatusResponse =
-            try await apiClient.request(FamilyTimeEndpoint.pairingStatus(childId: childId))
-        return response.paired
+        // Pairing is now derived from /devices: a child is "paired" once its
+        // device shows up in the account's device list.
+        // TODO confirm devices→pairing mapping with backend.
+        let response: DevicesResponse =
+            try await apiClient.request(FamilyTimeEndpoint.devices)
+        return response.devices.contains { $0.childId == childId }
     }
 }

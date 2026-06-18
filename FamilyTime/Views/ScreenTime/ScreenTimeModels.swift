@@ -113,18 +113,20 @@ struct ScreenTimeRule: Codable, Identifiable, Equatable {
 extension ScreenTimeRule {
     /// Maps this model to the request body used for create/update calls.
     var ruleBody: ScreenTimeRuleBody {
+        // TODO confirm format: timeStart/timeEnd are stored as "HH:mm" but the
+        // backend now expects start_time/end_time as "Y-m-d H:i:s".
         ScreenTimeRuleBody(
-            ruleName: ruleName,
-            timeStart: timeStart,
-            timeEnd: timeEnd,
-            isMon: isMon,
-            isTue: isTue,
-            isWed: isWed,
-            isThu: isThu,
-            isFri: isFri,
-            isSat: isSat,
-            isSun: isSun,
-            isActive: isActive
+            name: ruleName,
+            startTime: timeStart,
+            endTime: timeEnd,
+            monday: isMon,
+            tuesday: isTue,
+            wednesday: isWed,
+            thursday: isThu,
+            friday: isFri,
+            saturday: isSat,
+            sunday: isSun,
+            active: isActive
         )
     }
 }
@@ -186,13 +188,15 @@ struct ScreenTimeDailyLimit: Codable, Equatable {
 extension ScreenTimeDailyLimit {
     /// Maps this model to the request body used to update the daily limit.
     /// `DailyLimitUpdate` is owned by Core/Networking/FamilyTimeEndpoints.swift.
-    var updateBody: DailyLimitUpdate {
+    /// `childId` now travels in the body rather than the URL.
+    func updateBody(childId: String) -> DailyLimitUpdate {
+        // TODO: this model carries no per-app package list; the backend now
+        // expects `apps: [String]`. Sending [] until the app selection is wired
+        // through to ScreenTimeDailyLimit.
         DailyLimitUpdate(
+            childId: childId,
             duration: duration,
-            autoAdd: autoAdd,
-            isActive: isActive,
-            remaining: remaining,
-            remainingLimit: remainingLimit
+            apps: []
         )
     }
 }

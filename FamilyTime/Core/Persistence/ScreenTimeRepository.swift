@@ -58,7 +58,6 @@ final class ScreenTimeRepository: ScreenTimeRepositoryProtocol {
         // TODO confirm server JSON shape with backend.
         let _: EmptyDecodableResponse = try await apiClient.request(
             FamilyTimeEndpoint.updateScreenTimeRule(
-                childId: childId,
                 ruleId: String(id),
                 body: rule.ruleBody
             )
@@ -68,7 +67,7 @@ final class ScreenTimeRepository: ScreenTimeRepositoryProtocol {
     func deleteRule(childId: String, ruleId: String) async throws {
         // TODO confirm server JSON shape with backend.
         let _: EmptyDecodableResponse = try await apiClient.request(
-            FamilyTimeEndpoint.deleteScreenTimeRule(childId: childId, ruleId: ruleId)
+            FamilyTimeEndpoint.deleteScreenTimeRule(ruleId: ruleId)
         )
     }
 
@@ -76,8 +75,13 @@ final class ScreenTimeRepository: ScreenTimeRepositoryProtocol {
 
     func fetchDailyLimit(childId: String) async throws -> ScreenTimeDailyLimit {
         // TODO confirm server JSON shape with backend.
+        // TODO: the endpoint now returns the daily limit for ALL children and
+        // takes no childId. `ScreenTimeDailyLimit` carries no child identifier,
+        // so client-side filtering to `childId` isn't possible cleanly here —
+        // returning the decoded payload as-is until the response model exposes
+        // a child id to filter on.
         let response: ScreenTimeResponse<ScreenTimeDailyLimit> =
-            try await apiClient.request(FamilyTimeEndpoint.dailyLimit(childId: childId))
+            try await apiClient.request(FamilyTimeEndpoint.dailyLimit)
         guard let limit = response.data else {
             throw NetworkError.noData
         }
@@ -87,7 +91,7 @@ final class ScreenTimeRepository: ScreenTimeRepositoryProtocol {
     func updateDailyLimit(childId: String, limit: ScreenTimeDailyLimit) async throws {
         // TODO confirm server JSON shape with backend.
         let _: EmptyDecodableResponse = try await apiClient.request(
-            FamilyTimeEndpoint.updateDailyLimit(childId: childId, body: limit.updateBody)
+            FamilyTimeEndpoint.updateDailyLimit(body: limit.updateBody(childId: childId))
         )
     }
 }

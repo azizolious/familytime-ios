@@ -72,9 +72,8 @@ final class SocialReportViewModel {
         do {
             messages = try await repository.fetchSocial(
                 childId: cid,
-                date: dateStr,
-                appPackage: appPackage,
-                page: 1
+                startDate: dateStr,
+                appPackage: appPackage
             )
             errorMessage = nil
         } catch let error as NetworkError {

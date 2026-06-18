@@ -20,7 +20,7 @@ protocol SessionManaging: AnyObject {
     var isAuthenticated: Bool { get }
     var currentToken: String? { get }
     func restoreSession()
-    func saveSession(token: String, coreToken: String)
+    func saveSession(token: String)
     func clearSession()
     func handleAuthenticationFailure()
 }

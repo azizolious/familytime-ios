@@ -162,15 +162,42 @@ struct Geofence: Codable, Identifiable, Equatable {
         try container.encode(predefined, forKey: .predefined)
     }
 
-    /// Maps this model back to the endpoints' `PlaceBody` (numeric fields stringified).
-    /// `PlaceBody` is owned by Core/Networking/FamilyTimeEndpoints.swift.
-    func toBody() -> PlaceBody {
+    /// Maps this model to the endpoints' `PlaceBody` (numeric fields stringified).
+    /// `PlaceBody` is owned by FamilyTimeEndpoints.swift and now carries `childId`.
+    ///
+    /// Field mapping: model `location` -> `name`; `latitude/longitude/radius`
+    /// stringified. The model has no `address/status/function/icon` so we pass the
+    /// model's optional `address` (or "") and sensible defaults for the rest.
+    /// TODO confirm address/status/function/icon values with backend.
+    func toBody(childId: String) -> PlaceBody {
         PlaceBody(
-            location: location,
-            latitude: String(latitude),
+            childId: childId,
+            name: location,
             longitude: String(longitude),
+            latitude: String(latitude),
+            address: address ?? "",          // TODO confirm
             radius: String(radius),
-            checkinAlert: checkinAlert ? "1" : "0"
+            status: "1",                     // TODO confirm (assume "active")
+            function: "",                    // TODO confirm
+            icon: ""                         // TODO confirm
+        )
+    }
+
+    /// Maps this model to the endpoints' `UpdatePlaceBody` (== `PlaceBody` + `id`).
+    /// Same field mapping/defaults as `toBody(childId:)`.
+    /// TODO confirm address/status/function/icon values with backend.
+    func toUpdateBody(childId: String, placeId: String) -> UpdatePlaceBody {
+        UpdatePlaceBody(
+            id: placeId,
+            childId: childId,
+            name: location,
+            longitude: String(longitude),
+            latitude: String(latitude),
+            address: address ?? "",          // TODO confirm
+            radius: String(radius),
+            status: "1",                     // TODO confirm (assume "active")
+            function: "",                    // TODO confirm
+            icon: ""                         // TODO confirm
         )
     }
 }

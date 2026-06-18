@@ -41,11 +41,21 @@ final class AppBlockingRepository: AppBlockingRepositoryProtocol {
     }
 
     func setBlocked(childId: String, appId: String, blocked: Bool) async throws {
-        // Block = toggle `is_blacklisted` (1 = blocked, 0 = unblocked).
+        // New contract: POST /controls/app-blocker with a list of app-block items.
+        // `appId` here is the BlockableApp.id (legacy `installedapp_id`) which may be
+        // numeric — convert to Int? for `app_id`. We don't carry a package name at
+        // this call site, so `app_package_name` is left nil. `blocked` maps directly
+        // (replacing the old `is_blacklisted` 1/0 flag).
         // TODO confirm server JSON shape with backend.
-        let body = AppBlockBody(isBlacklisted: blocked ? 1 : 0)
+        let item = AppBlockItem(
+            appId: Int(appId),
+            appPackageName: nil,
+            blocked: blocked,
+            childId: childId
+        )
+        let body = AppBlockBody(apps: [item])
         let _: EmptyDecodableResponse = try await apiClient.request(
-            FamilyTimeEndpoint.setAppBlocked(childId: childId, appId: appId, body: body)
+            FamilyTimeEndpoint.setAppBlocked(body: body)
         )
     }
 
@@ -69,8 +79,11 @@ final class AppBlockingRepository: AppBlockingRepositoryProtocol {
     }
 
     func updateContentFilters(id: Int, childId: String, mdmPayload: String) async throws {
+        // The new ContentFilterBody no longer carries a record `id`; the protocol
+        // param is retained for call-site parity but is no longer sent.
         // TODO confirm server JSON shape with backend.
-        let body = ContentFilterBody(id: id, childId: childId, mdmPayload: mdmPayload)
+        _ = id
+        let body = ContentFilterBody(childId: childId, mdmPayload: mdmPayload)
         let _: EmptyDecodableResponse = try await apiClient.request(
             FamilyTimeEndpoint.updateContentFilters(body: body)
         )

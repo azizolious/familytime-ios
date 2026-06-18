@@ -21,8 +21,7 @@ protocol LocationRepositoryProtocol {
     func createPlace(childId: String, geofence: Geofence) async throws
     func updatePlace(childId: String, geofence: Geofence) async throws
     func deletePlace(childId: String, placeId: String) async throws
-    func fetchLocationDates(childId: String) async throws -> [String]
-    func fetchLocationHistory(childId: String, date: String) async throws -> [LocationRecord]
+    func fetchLocationHistory(childId: String, startDate: String) async throws -> [LocationRecord]
 }
 
 // MARK: - Implementation
@@ -59,7 +58,7 @@ final class LocationRepository: LocationRepositoryProtocol {
         // Response shape for writes is unknown; decode into a throwaway and discard.
         // TODO confirm server JSON envelope with backend.
         let _: EmptyDecodableResponse = try await apiClient.request(
-            FamilyTimeEndpoint.createPlace(childId: childId, body: geofence.toBody())
+            FamilyTimeEndpoint.createPlace(body: geofence.toBody(childId: childId))
         )
     }
 
@@ -67,9 +66,7 @@ final class LocationRepository: LocationRepositoryProtocol {
         // TODO confirm server JSON envelope with backend.
         let _: EmptyDecodableResponse = try await apiClient.request(
             FamilyTimeEndpoint.updatePlace(
-                childId: childId,
-                placeId: geofence.placeId,
-                body: geofence.toBody()
+                body: geofence.toUpdateBody(childId: childId, placeId: geofence.placeId)
             )
         )
     }
@@ -83,18 +80,14 @@ final class LocationRepository: LocationRepositoryProtocol {
 
     // MARK: Location history
 
-    func fetchLocationDates(childId: String) async throws -> [String] {
-        // TODO confirm server JSON envelope with backend.
-        let response: LocationResponse<[String]> =
-            try await apiClient.request(FamilyTimeEndpoint.locationDates(childId: childId))
-        return response.data ?? []
-    }
+    // NOTE: `fetchLocationDates` was removed — the `locationDates` endpoint no
+    // longer exists after the endpoint refactor. (Pre-release, was dormant.)
 
-    func fetchLocationHistory(childId: String, date: String) async throws -> [LocationRecord] {
+    func fetchLocationHistory(childId: String, startDate: String) async throws -> [LocationRecord] {
         // TODO confirm server JSON envelope with backend.
         let response: LocationResponse<[LocationRecord]> =
             try await apiClient.request(
-                FamilyTimeEndpoint.locationHistory(childId: childId, date: date)
+                FamilyTimeEndpoint.locationHistory(childId: childId, startDate: startDate)
             )
         return response.data ?? []
     }

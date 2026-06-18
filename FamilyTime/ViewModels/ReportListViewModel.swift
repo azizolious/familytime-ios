@@ -14,7 +14,6 @@ import Foundation
 /// The list-style report categories backed by `[ReportEntry]`.
 enum ReportKind: String, CaseIterable, Identifiable {
     case webHistory
-    case webSearch
     case youtube
     case tiktok
 
@@ -24,7 +23,6 @@ enum ReportKind: String, CaseIterable, Identifiable {
     var title: String {
         switch self {
         case .webHistory: return "Web History"
-        case .webSearch:  return "Web Search"
         case .youtube:    return "YouTube"
         case .tiktok:     return "TikTok"
         }
@@ -76,13 +74,11 @@ final class ReportListViewModel {
         do {
             switch kind {
             case .webHistory:
-                entries = try await repository.fetchWebHistory(childId: cid, date: dateStr, page: 1)
-            case .webSearch:
-                entries = try await repository.fetchWebSearch(childId: cid, date: dateStr, page: 1)
+                entries = try await repository.fetchWebHistory(childId: cid, startDate: dateStr)
             case .youtube:
-                entries = try await repository.fetchYouTube(childId: cid, date: dateStr, page: 1)
+                entries = try await repository.fetchYouTube(childId: cid, startDate: dateStr)
             case .tiktok:
-                entries = try await repository.fetchTikTok(childId: cid, date: dateStr, page: 1)
+                entries = try await repository.fetchTikTok(childId: cid, startDate: dateStr)
             }
             errorMessage = nil
         } catch let error as NetworkError {

@@ -10,8 +10,7 @@
 //  the existing eX00401 logout flow during Phase 2.
 //
 //  Token mapping:
-//    LoginApiToken    -> Keys.token     ("ft.session.token")
-//    bearerTokenCore2 -> Keys.coreToken ("ft.session.coreToken")
+//    token -> Keys.token ("ft.session.token")
 //
 
 import Foundation
@@ -24,11 +23,9 @@ final class SessionManager {
 
     private(set) var isAuthenticated: Bool = false
     private(set) var currentToken: String?
-    private(set) var coreToken: String?
 
     private enum Keys {
         static let token = "ft.session.token"
-        static let coreToken = "ft.session.coreToken"
     }
 
     static let sessionExpiredNotification = Notification.Name("ft.session.expired")
@@ -38,16 +35,13 @@ final class SessionManager {
     /// Rehydrate the in-memory session from the Keychain (e.g. on launch).
     func restoreSession() {
         currentToken = KeychainService.load(key: Keys.token)
-        coreToken = KeychainService.load(key: Keys.coreToken)
         isAuthenticated = (currentToken != nil)
     }
 
     /// Persist a freshly issued session and mark the user as authenticated.
-    func saveSession(token: String, coreToken: String) {
+    func saveSession(token: String) {
         KeychainService.save(key: Keys.token, value: token)
-        KeychainService.save(key: Keys.coreToken, value: coreToken)
         currentToken = token
-        self.coreToken = coreToken
         isAuthenticated = true
     }
 
@@ -55,9 +49,7 @@ final class SessionManager {
     /// expiry so legacy observers can perform their logout side effects.
     func clearSession() {
         KeychainService.delete(key: Keys.token)
-        KeychainService.delete(key: Keys.coreToken)
         currentToken = nil
-        coreToken = nil
         isAuthenticated = false
         NotificationCenter.default.post(name: Self.sessionExpiredNotification, object: nil)
     }
