@@ -57,6 +57,20 @@ enum FamilyTimeEndpoint: EndpointProtocol {
     case tikTokHistory(childId: String, date: String, page: Int)
     case socialMonitoring(childId: String, date: String, appPackage: String, page: Int)
 
+    // MARK: - Onboarding & Pairing
+    // TODO confirm path/payload with backend (paths derived from a code audit, not backend docs).
+    /// Legacy core2 QR generation (/generate-qr-code); distinct from `generateQRCode(childId:)`.
+    case pairingQRCode(childId: String)
+    case pairingStatus(childId: String)
+    case addChild(body: ChildCreateBody)
+
+    // MARK: - App Blocking & Content Filters
+    // TODO confirm path/payload with backend (paths derived from a code audit, not backend docs).
+    case installedApps(childId: String)
+    case setAppBlocked(childId: String, appId: String, body: AppBlockBody)
+    case contentFilters(childId: String)
+    case updateContentFilters(body: ContentFilterBody)
+
     // MARK: - Hosts
 
     private enum Host {
@@ -169,6 +183,23 @@ enum FamilyTimeEndpoint: EndpointProtocol {
             return "/reports/tiktok-history" // TODO: confirm core path with backend team
         case .socialMonitoring:
             return "/reports/social-monitoring" // TODO: confirm core path with backend team
+        // MARK: - Onboarding & Pairing
+        case .pairingQRCode:
+            // Legacy core2 QR generation; childId is sent in the body, not the path.
+            return "/generate-qr-code" // TODO: confirm core path with backend team
+        case .pairingStatus(let childId):
+            return "/child/\(childId)/status" // TODO: confirm core path with backend team
+        case .addChild:
+            return "/child/add" // TODO: confirm core path with backend team
+        // MARK: - App Blocking & Content Filters
+        case .installedApps(let childId):
+            return "/dashboard/installed-apps/\(childId)" // TODO: confirm core path with backend team
+        case .setAppBlocked(let childId, let appId, _):
+            return "/dashboard/installed-apps/\(childId)/\(appId)" // TODO: confirm core path with backend team
+        case .contentFilters(let childId):
+            return "/dashboard/settings/ios/contentfilters/apps/\(childId)" // TODO: confirm core path with backend team
+        case .updateContentFilters:
+            return "/controls/content-filters" // TODO: confirm core path with backend team
         }
     }
 
@@ -182,11 +213,15 @@ enum FamilyTimeEndpoint: EndpointProtocol {
              .logout,
              .changePassword,
              .coParentInvite,
-             .removeCoParent:
+             .removeCoParent,
+             .pairingQRCode,
+             .addChild:
             return .post
         case .updateProfile,
              .updateDailyLimit,
-             .updatePlace:
+             .updatePlace,
+             .setAppBlocked,
+             .updateContentFilters:
             return .put
         case .deleteChild,
              .deleteScreenTimeRule,
@@ -218,7 +253,10 @@ enum FamilyTimeEndpoint: EndpointProtocol {
              .webSearch,
              .youtubeHistory,
              .tikTokHistory,
-             .socialMonitoring:
+             .socialMonitoring,
+             .pairingStatus,
+             .installedApps,
+             .contentFilters:
             return .get
         }
     }
@@ -275,6 +313,14 @@ enum FamilyTimeEndpoint: EndpointProtocol {
             // Legacy uses POST + _method=DELETE hack.
             // TODO confirm whether backend now accepts a real DELETE.
             return CoParentRemoveBody(coParentUserId: coParentId, method: "DELETE")
+        case .pairingQRCode(let childId):
+            return QRRequestBody(childId: childId)
+        case .addChild(let body):
+            return body
+        case .setAppBlocked(_, _, let body):
+            return body
+        case .updateContentFilters(let body):
+            return body
         case .verifyEmail,
              .tokenRefresh,
              .logout,
@@ -302,7 +348,10 @@ enum FamilyTimeEndpoint: EndpointProtocol {
              .webSearch,
              .youtubeHistory,
              .tikTokHistory,
-             .socialMonitoring:
+             .socialMonitoring,
+             .pairingStatus,
+             .installedApps,
+             .contentFilters:
             return nil
         }
     }
@@ -419,5 +468,54 @@ struct PlaceBody: Encodable {
         case longitude
         case radius
         case checkinAlert = "checkin_alert"
+    }
+}
+
+// MARK: - Onboarding & Pairing request bodies
+// TODO confirm payload with backend (derived from a code audit, not backend docs).
+// Non-private because they are associated values of the public `FamilyTimeEndpoint` enum.
+
+/// Request body for the legacy core2 QR generation endpoint.
+struct QRRequestBody: Encodable {
+    let childId: String
+
+    enum CodingKeys: String, CodingKey {
+        case childId = "child_id"
+    }
+}
+
+/// Request body for creating a child profile.
+struct ChildCreateBody: Encodable {
+    let name: String
+    /// "ios" | "android"
+    let platform: String
+    let relationship: String?
+    let gender: String?
+    let age: String?
+}
+
+// MARK: - App Blocking & Content Filters request bodies
+// TODO confirm payload with backend (derived from a code audit, not backend docs).
+
+/// Request body for blocking/unblocking an installed app.
+struct AppBlockBody: Encodable {
+    /// 1 = blocked, 0 = unblocked.
+    let isBlacklisted: Int
+
+    enum CodingKeys: String, CodingKey {
+        case isBlacklisted = "is_blacklisted"
+    }
+}
+
+/// Request body for updating iOS content filters (MDM payload).
+struct ContentFilterBody: Encodable {
+    let id: Int
+    let childId: String
+    let mdmPayload: String
+
+    enum CodingKeys: String, CodingKey {
+        case id
+        case childId = "child_id"
+        case mdmPayload = "mdm_payload"
     }
 }

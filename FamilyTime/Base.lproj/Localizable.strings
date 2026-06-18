@@ -741,3 +741,65 @@
 "open_settings" = "Open Settings";
 "camera_access_restricted" = "Camera Access Restricted";
 "camera_access_restricted_device" = "Camera access is restricted on this device.";
+
+/* ===== Parity sprint: Onboarding + App Blocking (SwiftUI) ===== */
+
+/* Onboarding */
+"onboarding.welcome.title" = "Welcome to FamilyTime";
+"onboarding.welcome.subtitle" = "Keep your family safe across all their devices.";
+"onboarding.welcome.getStarted" = "Get Started";
+"onboarding.addChild.title" = "Add a Child";
+"onboarding.addChild.subtitle" = "Tell us a little about your child.";
+"onboarding.addChild.sectionHeader" = "Child Details";
+"onboarding.addChild.namePlaceholder" = "Name";
+"onboarding.addChild.agePlaceholder" = "Age";
+"onboarding.addChild.genderPlaceholder" = "Gender";
+"onboarding.addChild.continue" = "Continue";
+"onboarding.addChild.validation" = "Please enter the child's name.";
+"onboarding.deviceSetup.title" = "Set Up the Device";
+"onboarding.deviceSetup.subtitle" = "Which device will your child use?";
+"onboarding.deviceSetup.platformLabel" = "Platform";
+"onboarding.deviceSetup.platform.ios" = "iPhone / iPad";
+"onboarding.deviceSetup.platform.android" = "Android";
+"onboarding.deviceSetup.continue" = "Continue";
+"onboarding.qr.title" = "Pair the Device";
+"onboarding.qr.instruction" = "Scan this QR code with your child's device to pair it.";
+"onboarding.qr.installGuide" = "View installation guide";
+"onboarding.qr.continue" = "Continue";
+"onboarding.qr.retry" = "Retry";
+"onboarding.qr.missingChild" = "No child selected to pair.";
+"onboarding.qr.accessibilityLabel" = "Pairing QR code";
+"onboarding.confirm.successTitle" = "Device Paired";
+"onboarding.confirm.successSubtitle" = "Your child's device is now connected.";
+"onboarding.confirm.pendingTitle" = "Waiting for Device";
+"onboarding.confirm.pendingSubtitle" = "Finish setup on the child's device to complete pairing.";
+"onboarding.confirm.checkStatus" = "Check Status";
+"onboarding.confirm.goToDashboard" = "Go to Dashboard";
+"onboarding.common.back" = "Back";
+
+/* App Blocking */
+"appblocking.tab.title" = "App Blocker";
+"appblocking.title" = "App Blocker";
+"appblocking.link.categories" = "Block by Category";
+"appblocking.link.content_filters" = "Content Filters";
+"appblocking.apps.empty" = "No apps found";
+"appblocking.state.blocked" = "Blocked";
+"appblocking.state.allowed" = "Allowed";
+"appblocking.error.title" = "Error";
+"appblocking.action.ok" = "OK";
+"appblocking.error.no_child" = "No child selected";
+"appblocking.error.filter_unavailable" = "Content filters aren't available yet.";
+"appblocking.category.system" = "System";
+"appblocking.category.important" = "Important";
+"appblocking.category.app" = "Apps";
+"appblocking.category.count" = "%d apps";
+"appblocking.categories.title" = "Block by Category";
+"appblocking.filter.title" = "Content Filters";
+"appblocking.filter.section" = "Filters";
+"appblocking.filter.footer" = "Choose which content categories to restrict on this device.";
+"appblocking.filter.empty" = "No content filters available";
+"appblocking.filter.apps" = "Apps";
+"appblocking.filter.movies" = "Movies";
+"appblocking.filter.tvshows" = "TV Shows";
+"appblocking.filter.explicit" = "Explicit Content";
+"appblocking.filter.bookstore" = "Book Store Erotica";

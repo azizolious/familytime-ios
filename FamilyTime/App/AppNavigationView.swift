@@ -6,6 +6,7 @@ import SwiftUI
 /// entry point is not flipped yet — see `FamilyTimeApp`).
 enum AppTab: Hashable {
     case dashboard
+    case controls
     case reports
     case settings
     case support
@@ -19,6 +20,15 @@ struct AppNavigationView: View {
             DashboardView()
                 .tabItem { Label("Dashboard", systemImage: "house.fill") }
                 .tag(AppTab.dashboard)
+
+            AppBlockingView()
+                .tabItem {
+                    Label(
+                        String(localized: "appblocking.tab.title"),
+                        systemImage: "hand.raised.fill"
+                    )
+                }
+                .tag(AppTab.controls)
 
             ReportsView()
                 .tabItem { Label("Reports", systemImage: "chart.bar.fill") }
