@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A5D9000000000000000E15 /* CoreSmokeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5D9000000000000000E05 /* CoreSmokeTests.swift */; };
+		0A5D9000000000000000E14 /* MockOnboardingRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5D9000000000000000E04 /* MockOnboardingRepository.swift */; };
+		0A5D9000000000000000E13 /* OnboardingViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5D9000000000000000E03 /* OnboardingViewModelTests.swift */; };
+		0A5D9000000000000000E12 /* MockAppBlockingRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5D9000000000000000E02 /* MockAppBlockingRepository.swift */; };
+		0A5D9000000000000000E11 /* AppBlockingViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5D9000000000000000E01 /* AppBlockingViewModelTests.swift */; };
 		0A04B68D2B551C9000D6D14C /* WebBlockerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A04B68C2B551C9000D6D14C /* WebBlockerModel.swift */; };
 		0A04B68F2B55220B00D6D14C /* WebBlockerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A04B68E2B55220B00D6D14C /* WebBlockerViewModel.swift */; };
 		0A12EA8426942CFE00288B24 /* iappsFilled_4.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A12EA8026942CFD00288B24 /* iappsFilled_4.png */; };
@@ -656,6 +661,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0A5D9000000000000000E05 /* CoreSmokeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FamilyTimeTests/SmokeTests/CoreSmokeTests.swift"; sourceTree = SOURCE_ROOT; };
+		0A5D9000000000000000E04 /* MockOnboardingRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FamilyTimeTests/OnboardingTests/MockOnboardingRepository.swift"; sourceTree = SOURCE_ROOT; };
+		0A5D9000000000000000E03 /* OnboardingViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FamilyTimeTests/OnboardingTests/OnboardingViewModelTests.swift"; sourceTree = SOURCE_ROOT; };
+		0A5D9000000000000000E02 /* MockAppBlockingRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FamilyTimeTests/AppBlockingTests/MockAppBlockingRepository.swift"; sourceTree = SOURCE_ROOT; };
+		0A5D9000000000000000E01 /* AppBlockingViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FamilyTimeTests/AppBlockingTests/AppBlockingViewModelTests.swift"; sourceTree = SOURCE_ROOT; };
 		0A5D900000000000000000D1 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = SOURCE_ROOT; };
 		0A04B68C2B551C9000D6D14C /* WebBlockerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebBlockerModel.swift; sourceTree = "<group>"; };
 		0A04B68E2B55220B00D6D14C /* WebBlockerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebBlockerViewModel.swift; sourceTree = "<group>"; };
@@ -2755,6 +2765,11 @@
 			isa = PBXGroup;
 			children = (
 				4BBF20231A11F6E9000E4829 /* FamilyTimeTests.m */,
+				0A5D9000000000000000E05 /* CoreSmokeTests.swift */,
+				0A5D9000000000000000E04 /* MockOnboardingRepository.swift */,
+				0A5D9000000000000000E03 /* OnboardingViewModelTests.swift */,
+				0A5D9000000000000000E02 /* MockAppBlockingRepository.swift */,
+				0A5D9000000000000000E01 /* AppBlockingViewModelTests.swift */,
 				4BBF20211A11F6E9000E4829 /* Supporting Files */,
 			);
 			path = FamilyTimeTests;
@@ -5025,6 +5040,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				4BBF20241A11F6E9000E4829 /* FamilyTimeTests.m in Sources */,
+				0A5D9000000000000000E15 /* CoreSmokeTests.swift in Sources */,
+				0A5D9000000000000000E14 /* MockOnboardingRepository.swift in Sources */,
+				0A5D9000000000000000E13 /* OnboardingViewModelTests.swift in Sources */,
+				0A5D9000000000000000E12 /* MockAppBlockingRepository.swift in Sources */,
+				0A5D9000000000000000E11 /* AppBlockingViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -6110,6 +6130,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 0A5D900000000000000000D1 /* Config.xcconfig */;
 			buildSettings = {
+				ENABLE_TESTABILITY = YES;
 				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -6328,6 +6349,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 0A5D900000000000000000D1 /* Config.xcconfig */;
 			buildSettings = {
+				ENABLE_TESTABILITY = YES;
 				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;

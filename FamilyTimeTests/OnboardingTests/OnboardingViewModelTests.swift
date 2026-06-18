@@ -84,8 +84,10 @@ final class OnboardingViewModelTests: XCTestCase {
 
     // MARK: createChild
 
-    func test_createChild_onSuccess_advancesStepAndSelectsChild() async {
-        repository.addChildResult = .success("child-99")
+    // NOTE (P3/endpoint migration): createChild no longer hits the network —
+    // children are brought into the account via QR pairing, not an addChild API.
+    // createChild now just validates and advances welcome -> addChild.
+    func test_createChild_withValidName_advancesStepWithoutNetwork() async {
         let sut = makeSUT()
         sut.childName = "Mika"
         sut.age = "9"
@@ -93,32 +95,9 @@ final class OnboardingViewModelTests: XCTestCase {
 
         await sut.createChild()
 
-        XCTAssertEqual(repository.addChildCount, 1)
-        XCTAssertEqual(repository.lastAddChildName, "Mika")
-        XCTAssertEqual(repository.lastAddChildPlatform, OnboardingViewModel.Platform.iOS.rawValue)
-        XCTAssertEqual(repository.lastAddChildGender, "f")
-        XCTAssertEqual(repository.lastAddChildAge, "9")
-        // On success the new id is written to the shared store and the flow
-        // advances one step from the initial .welcome to .addChild.
-        XCTAssertEqual(SelectedChildStore.shared.selectedChildID, "child-99")
+        XCTAssertEqual(repository.addChildCount, 0)   // no network call
         XCTAssertEqual(sut.step, .addChild)
         XCTAssertNil(sut.errorMessage)
-        XCTAssertFalse(sut.isLoading)
-    }
-
-    func test_createChild_onFailure_setsErrorAndDoesNotAdvance() async {
-        repository.addChildResult = .failure(NetworkError.authenticationRequired)
-        let sut = makeSUT()
-        sut.childName = "Mika"
-
-        await sut.createChild()
-
-        XCTAssertEqual(repository.addChildCount, 1)
-        XCTAssertEqual(
-            sut.errorMessage,
-            NetworkError.authenticationRequired.errorDescription
-        )
-        XCTAssertEqual(sut.step, .welcome)
         XCTAssertFalse(sut.isLoading)
     }
 
