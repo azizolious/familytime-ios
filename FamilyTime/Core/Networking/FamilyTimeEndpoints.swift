@@ -67,6 +67,11 @@ enum FamilyTimeEndpoint: EndpointProtocol {
     case contentFilters(childId: String)
     case updateContentFilters(body: ContentFilterBody)
 
+    // MARK: - Feature controls
+    /// Legacy `/controls` feature toggle (e.g. WebBlocker on/off). PUT, body
+    /// `{child_id, feature_id, state, identifier}`.
+    case updateControl(childId: Int, featureId: Int, state: Int, identifier: String)
+
     // MARK: - Hosts
 
     private enum Host {
@@ -115,6 +120,7 @@ enum FamilyTimeEndpoint: EndpointProtocol {
         case .installedApps(let childId):  return "/devices/\(childId)/apps"
         case .setAppBlocked:               return "/controls/app-blocker"
         case .contentFilters, .updateContentFilters: return "/controls/content-filters"
+        case .updateControl:               return "/controls"
         }
     }
 
@@ -125,7 +131,7 @@ enum FamilyTimeEndpoint: EndpointProtocol {
              .createScreenTimeRule, .createPlace, .setAppBlocked:
             return .post
         case .updateProfile, .updateDailyLimit, .updateScreenTimeRule,
-             .updatePlace, .updateContentFilters, .changePassword:
+             .updatePlace, .updateContentFilters, .changePassword, .updateControl:
             return .put
         case .deleteChild, .deleteScreenTimeRule, .deletePlace:
             return .delete
@@ -189,6 +195,8 @@ enum FamilyTimeEndpoint: EndpointProtocol {
             return body
         case .updateContentFilters(let body):
             return body
+        case .updateControl(let childId, let featureId, let state, let identifier):
+            return ControlUpdateBody(childId: childId, featureId: featureId, state: state, identifier: identifier)
         default:
             return nil
         }
@@ -358,5 +366,21 @@ struct ContentFilterBody: Encodable {
     enum CodingKeys: String, CodingKey {
         case childId = "child_id"
         case mdmPayload = "mdm_payload"
+    }
+}
+
+/// Body for the legacy `/controls` feature toggle (PUT). Matches the legacy
+/// `HLApiManager.putControlApi` payload.
+struct ControlUpdateBody: Encodable {
+    let childId: Int
+    let featureId: Int
+    let state: Int
+    let identifier: String
+
+    enum CodingKeys: String, CodingKey {
+        case childId = "child_id"
+        case featureId = "feature_id"
+        case state
+        case identifier
     }
 }

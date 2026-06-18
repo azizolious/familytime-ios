@@ -39,13 +39,23 @@ class WebBlockerViewModel {
         
         if let featureId = control.featureID,
            let identifier = control.identifier {
-            
-            HLApiManager.putControlApi(childId: id, featureId: featureId, state: state, identifier: identifier) { err in
-                callBack()
-                if err == nil {
+
+            // Migrated off legacy HLApiManager.putControlApi → async APIClient (PUT /controls).
+            Task { @MainActor in
+                do {
+                    let _: EmptyDecodableResponse = try await APIClient.shared.request(
+                        FamilyTimeEndpoint.updateControl(
+                            childId: id,
+                            featureId: featureId,
+                            state: state,
+                            identifier: identifier))
+                    callBack()
                     DBManager.shared.fetchControlAndUpdate(identifier: "web_blocker", state: state)
                     self.fetchControl()
                     self.reload()
+                } catch {
+                    callBack()
+                    print("❌ updateControl failed: \(error)")
                 }
             }
         } else {
