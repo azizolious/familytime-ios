@@ -65,7 +65,6 @@
 		0A5D178B26F9F60C00793717 /* SDWebImageMapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 0A5D178A26F9F60C00793717 /* SDWebImageMapKit */; };
 		0A5D178F26FA145A00793717 /* NotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5D178E26FA145A00793717 /* NotificationsViewController.swift */; };
 		0A5D179326FA152700793717 /* FeedDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5D179226FA152700793717 /* FeedDetailCell.swift */; };
-		0A5FEEBE2B57E79F00F5C613 /* WbSearchHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5FEEBD2B57E79F00F5C613 /* WbSearchHandler.swift */; };
 		0A6F9FE42B342070002ED75A /* WhatsappHistoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6F9FE22B342070002ED75A /* WhatsappHistoryVC.swift */; };
 		0A6F9FE52B342070002ED75A /* WhatsappHistoryVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A6F9FE32B342070002ED75A /* WhatsappHistoryVC.xib */; };
 		0A6F9FE92B3420E2002ED75A /* InboxCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6F9FE72B3420E2002ED75A /* InboxCell.swift */; };
@@ -86,7 +85,6 @@
 		0A892DF32BE0C69C008BBB5C /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 0A892DF22BE0C69C008BBB5C /* FirebaseMessaging */; };
 		0A8D5B382BCFA04800A5C9F3 /* SyncSettingsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8D5B372BCFA04800A5C9F3 /* SyncSettingsCell.swift */; };
 		0A8D5B3A2BCFA0B500A5C9F3 /* SyncSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8D5B392BCFA0B500A5C9F3 /* SyncSettingsViewController.swift */; };
-		0A8F735C2B54FE510075F966 /* AddDomainCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8F735A2B54FE510075F966 /* AddDomainCell.swift */; };
 		0A8F735D2B54FE510075F966 /* AddDomainCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A8F735B2B54FE510075F966 /* AddDomainCell.xib */; };
 		0A9037282C50E72800914854 /* FamilyFeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9037262C50E72800914854 /* FamilyFeedTableViewCell.swift */; };
 		0A9037292C50E72800914854 /* FamilyFeedTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A9037272C50E72800914854 /* FamilyFeedTableViewCell.xib */; };
@@ -125,11 +123,9 @@
 		0AB8E3FB2C09D23A0014A6A8 /* HomePlansModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB8E3FA2C09D23A0014A6A8 /* HomePlansModel.swift */; };
 		0AC996B42B510E950074A27E /* ToggleWebBlockerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC996B22B510E950074A27E /* ToggleWebBlockerCell.swift */; };
 		0AC996B52B510E950074A27E /* ToggleWebBlockerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AC996B32B510E950074A27E /* ToggleWebBlockerCell.xib */; };
-		0AC996B82B5115200074A27E /* AddSiteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC996B62B5115200074A27E /* AddSiteCell.swift */; };
 		0AC996B92B5115200074A27E /* AddSiteCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AC996B72B5115200074A27E /* AddSiteCell.xib */; };
 		0AC996BC2B513F2B0074A27E /* WebBlockerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC996BA2B513F2B0074A27E /* WebBlockerCell.swift */; };
 		0AC996BD2B513F2B0074A27E /* WebBlockerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AC996BB2B513F2B0074A27E /* WebBlockerCell.xib */; };
-		0AC996C02B5143860074A27E /* AddOrRemoveUrlCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC996BE2B5143860074A27E /* AddOrRemoveUrlCell.swift */; };
 		0AC996C12B5143860074A27E /* AddOrRemoveUrlCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AC996BF2B5143860074A27E /* AddOrRemoveUrlCell.xib */; };
 		0ACE923A2B1468AE00BD8B75 /* YoutubeHistroyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACE92382B1468AE00BD8B75 /* YoutubeHistroyVC.swift */; };
 		0ACE923B2B1468AE00BD8B75 /* YoutubeHistroyVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0ACE92392B1468AE00BD8B75 /* YoutubeHistroyVC.xib */; };
@@ -160,7 +156,6 @@
 		4B3D737C1A15E447006F8F8F /* JSONModelClassProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B3D73671A15E446006F8F8F /* JSONModelClassProperty.m */; };
 		4B3D737D1A15E447006F8F8F /* JSONModelError.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B3D73691A15E446006F8F8F /* JSONModelError.m */; };
 		4B3D737E1A15E447006F8F8F /* NSArray+JSONModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B3D736C1A15E446006F8F8F /* NSArray+JSONModel.m */; };
-		4B3D737F1A15E447006F8F8F /* JSONAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B3D73701A15E447006F8F8F /* JSONAPI.m */; };
 		4B3D73801A15E447006F8F8F /* JSONHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B3D73721A15E447006F8F8F /* JSONHTTPClient.m */; };
 		4B3D73811A15E447006F8F8F /* JSONModel+networking.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B3D73741A15E447006F8F8F /* JSONModel+networking.m */; };
 		4B3D73821A15E447006F8F8F /* JSONKeyMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B3D73771A15E447006F8F8F /* JSONKeyMapper.m */; };
@@ -1093,7 +1088,6 @@
 		0A5A831E2A82368E0045DBE2 /* FIRAppCheck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FIRAppCheck.swift; sourceTree = "<group>"; };
 		0A5D178E26FA145A00793717 /* NotificationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsViewController.swift; sourceTree = "<group>"; };
 		0A5D179226FA152700793717 /* FeedDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedDetailCell.swift; sourceTree = "<group>"; };
-		0A5FEEBD2B57E79F00F5C613 /* WbSearchHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WbSearchHandler.swift; sourceTree = "<group>"; };
 		0A6F9FE22B342070002ED75A /* WhatsappHistoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatsappHistoryVC.swift; sourceTree = "<group>"; };
 		0A6F9FE32B342070002ED75A /* WhatsappHistoryVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WhatsappHistoryVC.xib; sourceTree = "<group>"; };
 		0A6F9FE72B3420E2002ED75A /* InboxCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InboxCell.swift; sourceTree = "<group>"; };
@@ -1108,7 +1102,6 @@
 		0A86CC852C5A129D00CC87F4 /* CommonModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonModel.swift; sourceTree = "<group>"; };
 		0A8D5B372BCFA04800A5C9F3 /* SyncSettingsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncSettingsCell.swift; sourceTree = "<group>"; };
 		0A8D5B392BCFA0B500A5C9F3 /* SyncSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncSettingsViewController.swift; sourceTree = "<group>"; };
-		0A8F735A2B54FE510075F966 /* AddDomainCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDomainCell.swift; sourceTree = "<group>"; };
 		0A8F735B2B54FE510075F966 /* AddDomainCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddDomainCell.xib; sourceTree = "<group>"; };
 		0A9037262C50E72800914854 /* FamilyFeedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyFeedTableViewCell.swift; sourceTree = "<group>"; };
 		0A9037272C50E72800914854 /* FamilyFeedTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FamilyFeedTableViewCell.xib; sourceTree = "<group>"; };
@@ -1147,11 +1140,9 @@
 		0AB8E3FA2C09D23A0014A6A8 /* HomePlansModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePlansModel.swift; sourceTree = "<group>"; };
 		0AC996B22B510E950074A27E /* ToggleWebBlockerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleWebBlockerCell.swift; sourceTree = "<group>"; };
 		0AC996B32B510E950074A27E /* ToggleWebBlockerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ToggleWebBlockerCell.xib; sourceTree = "<group>"; };
-		0AC996B62B5115200074A27E /* AddSiteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSiteCell.swift; sourceTree = "<group>"; };
 		0AC996B72B5115200074A27E /* AddSiteCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddSiteCell.xib; sourceTree = "<group>"; };
 		0AC996BA2B513F2B0074A27E /* WebBlockerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebBlockerCell.swift; sourceTree = "<group>"; };
 		0AC996BB2B513F2B0074A27E /* WebBlockerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WebBlockerCell.xib; sourceTree = "<group>"; };
-		0AC996BE2B5143860074A27E /* AddOrRemoveUrlCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddOrRemoveUrlCell.swift; sourceTree = "<group>"; };
 		0AC996BF2B5143860074A27E /* AddOrRemoveUrlCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddOrRemoveUrlCell.xib; sourceTree = "<group>"; };
 		0ACE92382B1468AE00BD8B75 /* YoutubeHistroyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoutubeHistroyVC.swift; sourceTree = "<group>"; };
 		0ACE92392B1468AE00BD8B75 /* YoutubeHistroyVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YoutubeHistroyVC.xib; sourceTree = "<group>"; };
@@ -1362,9 +1353,6 @@
 		4B3D73691A15E446006F8F8F /* JSONModelError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONModelError.m; sourceTree = "<group>"; };
 		4B3D736B1A15E446006F8F8F /* NSArray+JSONModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+JSONModel.h"; sourceTree = "<group>"; };
 		4B3D736C1A15E446006F8F8F /* NSArray+JSONModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+JSONModel.m"; sourceTree = "<group>"; };
-		4B3D736D1A15E447006F8F8F /* JSONModelLib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONModelLib.h; sourceTree = "<group>"; };
-		4B3D736F1A15E447006F8F8F /* JSONAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONAPI.h; sourceTree = "<group>"; };
-		4B3D73701A15E447006F8F8F /* JSONAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONAPI.m; sourceTree = "<group>"; };
 		4B3D73711A15E447006F8F8F /* JSONHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONHTTPClient.h; sourceTree = "<group>"; };
 		4B3D73721A15E447006F8F8F /* JSONHTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONHTTPClient.m; sourceTree = "<group>"; };
 		4B3D73731A15E447006F8F8F /* JSONModel+networking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "JSONModel+networking.h"; sourceTree = "<group>"; };
@@ -3185,7 +3173,6 @@
 				FA110000000000000000002D /* ScreenTimeView.swift */,
 				FA110000000000000000002E /* SubscriptionView.swift */,
 				0A04B68E2B55220B00D6D14C /* WebBlockerViewModel.swift */,
-				0A5FEEBD2B57E79F00F5C613 /* WbSearchHandler.swift */,
 			);
 			name = WebBlockerVC;
 			sourceTree = "<group>";
@@ -3195,13 +3182,10 @@
 			children = (
 				0AC996B22B510E950074A27E /* ToggleWebBlockerCell.swift */,
 				0AC996B32B510E950074A27E /* ToggleWebBlockerCell.xib */,
-				0AC996B62B5115200074A27E /* AddSiteCell.swift */,
 				0AC996B72B5115200074A27E /* AddSiteCell.xib */,
 				0AC996BA2B513F2B0074A27E /* WebBlockerCell.swift */,
 				0AC996BB2B513F2B0074A27E /* WebBlockerCell.xib */,
-				0AC996BE2B5143860074A27E /* AddOrRemoveUrlCell.swift */,
 				0AC996BF2B5143860074A27E /* AddOrRemoveUrlCell.xib */,
-				0A8F735A2B54FE510075F966 /* AddDomainCell.swift */,
 				0A8F735B2B54FE510075F966 /* AddDomainCell.xib */,
 			);
 			name = WebBlockerCells;
@@ -3288,7 +3272,6 @@
 			children = (
 				4B3D73611A15E446006F8F8F /* JSONModel */,
 				4B3D736A1A15E446006F8F8F /* JSONModelCategories */,
-				4B3D736D1A15E447006F8F8F /* JSONModelLib.h */,
 				4B3D736E1A15E447006F8F8F /* JSONModelNetworking */,
 				4B3D73751A15E447006F8F8F /* JSONModelTransformations */,
 			);
@@ -3322,8 +3305,6 @@
 		4B3D736E1A15E447006F8F8F /* JSONModelNetworking */ = {
 			isa = PBXGroup;
 			children = (
-				4B3D736F1A15E447006F8F8F /* JSONAPI.h */,
-				4B3D73701A15E447006F8F8F /* JSONAPI.m */,
 				4B3D73711A15E447006F8F8F /* JSONHTTPClient.h */,
 				4B3D73721A15E447006F8F8F /* JSONHTTPClient.m */,
 				4B3D73731A15E447006F8F8F /* JSONModel+networking.h */,
@@ -6536,7 +6517,6 @@
 				EB70390F2733A83A007E5CE2 /* SwiftAddLimitScreenRule.swift in Sources */,
 				A1FBEA5F1D80580E004ECE4E /* STBubbleTableViewCell.m in Sources */,
 				A1BDC4861EC8476F005A23D8 /* Alerts.swift in Sources */,
-				0A5FEEBE2B57E79F00F5C613 /* WbSearchHandler.swift in Sources */,
 				EB7ED7EE271D98D600980035 /* TextMessagesModels.swift in Sources */,
 				EB72764A2739356300206F6D /* SwiftTimeZonesViewController.swift in Sources */,
 				0A8D5B3A2BCFA0B500A5C9F3 /* SyncSettingsViewController.swift in Sources */,
@@ -6762,7 +6742,6 @@
 				A1D3C02F1D3FC37E00AAD966 /* SpeedAlertsViewController.m in Sources */,
 				D26A33502FBC78280011E840 /* Conversation.swift in Sources */,
 				EB6C169E2935DEDD00BD1EDD /* AppleInternalTrial.swift in Sources */,
-				0AC996C02B5143860074A27E /* AddOrRemoveUrlCell.swift in Sources */,
 				EB7AF49B297AC13200F5C904 /* BlockAppStatusVcPopUp.swift in Sources */,
 				E0D1CC901F8D074700769F34 /* IQDropDownTextField.m in Sources */,
 				EB65186F27185116001CD21C /* LocationHistoryViewController.swift in Sources */,
@@ -6818,7 +6797,6 @@
 				D2B44E9A2FBD8A9400A465A0 /* LiveChatConstants.swift in Sources */,
 				EB72765227395DBE00206F6D /* SwiftPasscodeViewController.swift in Sources */,
 				EB65186B27184882001CD21C /* ContactsTableViewCell.swift in Sources */,
-				0AC996B82B5115200074A27E /* AddSiteCell.swift in Sources */,
 				EB22FA04273BA94400363D6A /* SwiftLimitScreenCell.swift in Sources */,
 				EB090C7E289934E40071869A /* CoreDataUtility.swift in Sources */,
 				EB98BFEA2758D8840043A4B2 /* PasscodePopUpViewController.swift in Sources */,
@@ -6909,7 +6887,6 @@
 				4B57AC601A44074000F4232B /* BookmarksViewController.m in Sources */,
 				A1B4F3441C185C300025F11F /* WizardScreen3ViewController.m in Sources */,
 				4B3D73831A15E447006F8F8F /* JSONValueTransformer.m in Sources */,
-				0A8F735C2B54FE510075F966 /* AddDomainCell.swift in Sources */,
 				A1437A321ED48D820044AEB2 /* CircularSliderHelper.swift in Sources */,
 				EBC95FF2290BBD52004ED0E9 /* NetworkCallConstants.swift in Sources */,
 				0AE18F7126FB6179006409DE /* QRScanViewController.swift in Sources */,
@@ -6944,7 +6921,6 @@
 				C5DF631C2451D45300FB5739 /* Children_Model.swift in Sources */,
 				C5DF63192451D45200FB5739 /* Info.swift in Sources */,
 				C5DF63332451D45300FB5739 /* ContentFiltersVC.swift in Sources */,
-				4B3D737F1A15E447006F8F8F /* JSONAPI.m in Sources */,
 				D2DFA9482FD16A3700073494 /* CancelSubscriptionView.swift in Sources */,
 				EB557526291CE37C00E57149 /* QRCodeCell.swift in Sources */,
 				0AEC7951294219CA00C12190 /* HistoryBrowserVc.swift in Sources */,
