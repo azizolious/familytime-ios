@@ -1,9 +1,22 @@
 import SwiftUI
+import UIKit
 import AuthenticationServices
 
 struct LoginView: View {
     @State private var viewModel = LoginViewModel()
     @State private var sessionManager = SessionManager.shared
+
+    /// The frontmost UIViewController, used as the presenter for GoogleSignIn's
+    /// OAuth flow (GoogleSignIn 7.x requires a presenting UIViewController).
+    static func topViewController() -> UIViewController? {
+        let scene = UIApplication.shared.connectedScenes
+            .compactMap { $0 as? UIWindowScene }
+            .first { $0.activationState == .foregroundActive } ?? UIApplication.shared.connectedScenes.first as? UIWindowScene
+        var top = scene?.keyWindow?.rootViewController
+            ?? scene?.windows.first?.rootViewController
+        while let presented = top?.presentedViewController { top = presented }
+        return top
+    }
 
     var body: some View {
         VStack(spacing: 16) {
@@ -68,7 +81,8 @@ struct LoginView: View {
             .frame(height: 44)
 
             Button {
-                // TODO(Phase 2): GoogleSignIn is UIKit-based — wire via a SwiftUI bridge later
+                guard let presenter = Self.topViewController() else { return }
+                Task { await viewModel.signInWithGoogle(presenting: presenter) }
             } label: {
                 Text("Sign in with Google")
                     .frame(maxWidth: .infinity)

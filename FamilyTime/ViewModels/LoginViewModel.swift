@@ -12,6 +12,7 @@
 import Foundation
 import UIKit
 import AuthenticationServices
+import GoogleSignIn
 
 /// Decoded shape of the `/login` response.
 ///
@@ -79,6 +80,8 @@ final class LoginViewModel {
             let response: LoginResponse = try await apiClient.request(
                 FamilyTimeEndpoint.login(email: email,
                                          password: password,
+                                         socialToken: nil,
+                                         providerName: nil,
                                          pushToken: Self.currentPushToken(),
                                          deviceId: Self.currentDeviceId())
             )
@@ -136,10 +139,11 @@ final class LoginViewModel {
         defer { isLoading = false }
 
         do {
-            // TODO replace with a dedicated Apple endpoint (see method docs).
             let response: LoginResponse = try await apiClient.request(
-                FamilyTimeEndpoint.login(email: "",
-                                         password: identityToken,
+                FamilyTimeEndpoint.login(email: nil,
+                                         password: nil,
+                                         socialToken: identityToken,
+                                         providerName: "apple",
                                          pushToken: Self.currentPushToken(),
                                          deviceId: Self.currentDeviceId())
             )
@@ -148,6 +152,37 @@ final class LoginViewModel {
         } catch let error as NetworkError {
             errorMessage = error.errorDescription
         } catch {
+            errorMessage = error.localizedDescription
+        }
+    }
+
+    /// Sign in with Google (GoogleSignIn 7.x). Presents Google's OAuth flow from
+    /// `presenting`, then exchanges the Google ID token for a FamilyTime session
+    /// via the shared `/login` endpoint (provider = "google").
+    /// TODO confirm the backend social-login contract (social_token/provider).
+    func signInWithGoogle(presenting: UIViewController) async {
+        isLoading = true
+        defer { isLoading = false }
+        do {
+            let result = try await GIDSignIn.sharedInstance.signIn(withPresenting: presenting)
+            guard let idToken = result.user.idToken?.tokenString else {
+                errorMessage = "Could not read your Google credential. Please try again."
+                return
+            }
+            let response: LoginResponse = try await apiClient.request(
+                FamilyTimeEndpoint.login(email: nil,
+                                         password: nil,
+                                         socialToken: idToken,
+                                         providerName: "google",
+                                         pushToken: Self.currentPushToken(),
+                                         deviceId: Self.currentDeviceId())
+            )
+            persist(response)
+            errorMessage = nil
+        } catch let error as NetworkError {
+            errorMessage = error.errorDescription
+        } catch {
+            // GIDSignIn throws on user-cancel; surface only real failures.
             errorMessage = error.localizedDescription
         }
     }

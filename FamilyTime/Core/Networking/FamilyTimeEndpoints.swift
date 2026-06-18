@@ -4,7 +4,7 @@ import Foundation
 /// Paths confirmed against the backend spec (June 2026).
 enum FamilyTimeEndpoint: EndpointProtocol {
     // MARK: - Authentication
-    case login(email: String, password: String, pushToken: String, deviceId: String)
+    case login(email: String?, password: String?, socialToken: String?, providerName: String?, pushToken: String, deviceId: String)
     case forgotPassword(email: String)
     case verifyEmail
     case logout
@@ -178,8 +178,9 @@ enum FamilyTimeEndpoint: EndpointProtocol {
 
     var body: (any Encodable)? {
         switch self {
-        case .login(let email, let password, let pushToken, let deviceId):
-            return LoginBody(email: email, password: password, pushToken: pushToken, uniqueDeviceId: deviceId, agent: "ios")
+        case .login(let email, let password, let socialToken, let providerName, let pushToken, let deviceId):
+            return LoginBody(email: email, password: password, socialToken: socialToken, provider: providerName,
+                             pushToken: pushToken, uniqueDeviceId: deviceId, agent: "ios")
         case .forgotPassword(let email):
             return ForgotPasswordBody(email: email)
         case .validateReceipt(let receiptData):
@@ -219,14 +220,19 @@ enum FamilyTimeEndpoint: EndpointProtocol {
 // MARK: - Request bodies
 
 private struct LoginBody: Encodable {
-    let email: String
-    let password: String
+    let email: String?
+    let password: String?
+    let socialToken: String?   // OAuth identity token for social sign-in (Apple/Google)
+    let provider: String?      // "apple" | "google"
     let pushToken: String
     let uniqueDeviceId: String
     let agent: String
 
+    // nil optionals are omitted by the synthesized encoder, so email/password
+    // login and social login send only their relevant fields.
     enum CodingKeys: String, CodingKey {
-        case email, password, agent
+        case email, password, agent, provider
+        case socialToken = "social_token"   // TODO confirm social-login field names with backend
         case pushToken = "push_token"
         case uniqueDeviceId = "unique_device_id"
     }

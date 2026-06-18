@@ -7,3 +7,4 @@
 // having it #include the matching Pods-FamilyTime.<config>.xcconfig (Phase 3).
 APP_STORE_SHARED_SECRET = YOUR_SECRET_HERE
 GOOGLE_MAPS_API_KEY = YOUR_GOOGLE_MAPS_KEY_HERE
+GOOGLE_SIGN_IN_CLIENT_ID = YOUR_GOOGLE_SIGN_IN_CLIENT_ID

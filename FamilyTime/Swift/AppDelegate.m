@@ -11,6 +11,7 @@
 #import <GoogleMaps/GoogleMaps.h>
 #import <UserNotifications/UserNotifications.h>
 #import "FamilyTime-Swift.h"
+@import GoogleSignIn;
 
 @implementation AppDelegate
 
@@ -21,6 +22,12 @@
     // GoogleMaps key from Info.plist (-> Config.xcconfig); no key in source.
     NSString *googleMapsKey = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"GOOGLE_MAPS_API_KEY"] ?: @"";
     [GMSServices provideAPIKey:googleMapsKey];
+
+    // GoogleSignIn 7.x configuration (client ID from Info.plist -> Config.xcconfig).
+    NSString *gidClientId = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"GOOGLE_SIGN_IN_CLIENT_ID"];
+    if (gidClientId.length > 0) {
+        GIDSignIn.sharedInstance.configuration = [[GIDConfiguration alloc] initWithClientID:gidClientId];
+    }
 
     [self registerForRemoteNotifications:application];
 
@@ -103,6 +110,12 @@ didReceiveNotificationResponse:(UNNotificationResponse *)response
 // `ft.pushReceived`, parses it into a typed PushAlert, and routes every push type.
 - (void)handlePush:(NSDictionary *)userInfo {
     [[NSNotificationCenter defaultCenter] postNotificationName:@"ft.pushReceived" object:nil userInfo:userInfo];
+}
+
+#pragma mark - OAuth callback (GoogleSignIn)
+
+- (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey, id> *)options {
+    return [GIDSignIn.sharedInstance handleURL:url];
 }
 
 @end
