@@ -1,4 +1,5 @@
 import SwiftUI
+import GoogleMaps
 
 // FamilyTime is a SwiftUI app: `FamilyTimeApp` is the permanent entry point (the
 // legacy UIKit `main.m`/`UIApplicationMain` was removed June 2026). The UIKit
@@ -8,6 +9,13 @@ import SwiftUI
 @main
 struct FamilyTimeApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
+
+    init() {
+        // GoogleMaps key (SPM GoogleMaps; read in Swift to avoid an ObjC binary-
+        // framework import). Key from Info.plist -> Config.xcconfig; none in source.
+        let mapsKey = Bundle.main.object(forInfoDictionaryKey: "GOOGLE_MAPS_API_KEY") as? String ?? ""
+        if !mapsKey.isEmpty { GMSServices.provideAPIKey(mapsKey) }
+    }
 
     // Convention: process-wide services (SessionManager, EntitlementService,
     // SelectedChildStore) are observed directly via their `.shared` singletons in
