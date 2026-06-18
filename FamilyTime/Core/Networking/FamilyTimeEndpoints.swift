@@ -28,7 +28,6 @@ enum FamilyTimeEndpoint: EndpointProtocol {
     case removeCoParent(coParentId: String)
 
     // MARK: - Security
-    /// Path not yet confirmed by the backend team — de-prefixed placeholder.
     case changePassword(currentPassword: String, newPassword: String)
 
     // MARK: - Subscription / IAP
@@ -93,7 +92,7 @@ enum FamilyTimeEndpoint: EndpointProtocol {
         case .coParentList:                return "/co-parents"
         case .coParentInvite:              return "/invite-co-parent"
         case .removeCoParent:              return "/cancel-co-parent-invitation"
-        case .changePassword:              return "/change-password" // TODO confirm with backend
+        case .changePassword:              return "/change-password"
         case .validateReceipt:             return "/ipn"
         case .notifications:               return "/v1/push-notifications"
         case .dailyLimit, .updateDailyLimit: return "/controls/daily-limit"
@@ -122,11 +121,11 @@ enum FamilyTimeEndpoint: EndpointProtocol {
     var method: HTTPVerb {
         switch self {
         case .login, .forgotPassword, .logout, .validateReceipt,
-             .coParentInvite, .removeCoParent, .changePassword, .generateQRCode,
+             .coParentInvite, .removeCoParent, .generateQRCode,
              .createScreenTimeRule, .createPlace, .setAppBlocked:
             return .post
         case .updateProfile, .updateDailyLimit, .updateScreenTimeRule,
-             .updatePlace, .updateContentFilters:
+             .updatePlace, .updateContentFilters, .changePassword:
             return .put
         case .deleteChild, .deleteScreenTimeRule, .deletePlace:
             return .delete
