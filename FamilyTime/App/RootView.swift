@@ -1,7 +1,10 @@
 import SwiftUI
 
 struct RootView: View {
-    @Environment(SessionManager.self) private var sessionManager
+    // SessionManager is a process-wide singleton; observe it directly (matches the
+    // SelectedChildStore pattern below). Avoids relying on App-level environment
+    // injection reaching the WindowGroup content view.
+    @State private var sessionManager = SessionManager.shared
 
     // Observe the selected-child store so onboarding vs. dashboard routing updates
     // live when a child is selected (e.g. at the end of the onboarding flow).

@@ -6,16 +6,17 @@ import SwiftUI
 // the SwiftUI screens fully replace the UIKit launch flow (later modernization step).
 struct FamilyTimeApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
-    @State private var sessionManager = SessionManager.shared
-    @State private var entitlementService = EntitlementService.shared
 
+    // Convention: process-wide services (SessionManager, EntitlementService,
+    // SelectedChildStore) are observed directly via their `.shared` singletons in
+    // each View (e.g. RootView/LoginView). The runtime test showed App-level
+    // `.environment(...)` injection did NOT reach the WindowGroup content view, so
+    // there is no environment injection here — views read `.shared` directly.
     var body: some Scene {
         WindowGroup {
             RootView()
-                .environment(sessionManager)
-                .environment(entitlementService)
                 .task {
-                    await sessionManager.restoreSession()
+                    await SessionManager.shared.restoreSession()
                     StoreService.shared.start() // StoreKit 2 Transaction.updates listener (replaces legacy IAPUtility.setupIAP)
                 }
         }

@@ -118,14 +118,15 @@ AppDelegate *delegate;
     }
     [self registerForRemoteNotifications:application];
     self.shareModel = [LocationShareModel sharedModel];
-    //set Google map key
-    [GMSServices provideAPIKey:kGoogleMapKey];
+    //set Google map key (read from Info.plist -> Config.xcconfig; no key in source)
+    NSString *googleMapsKey = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"GOOGLE_MAPS_API_KEY"] ?: @"";
+    [GMSServices provideAPIKey:googleMapsKey];
     if(self.isUserExists){
         [self setNavigationbarAppearence:NO];
-        [self setupDrawer:0];
+        { /* Navigation owned by SwiftUI AppNavigationView — JASidePanel removed (Phase 2 Dashboard increment 2) */ }
     } else {
         [self setNavigationbarAppearence:YES];
-        [self setupDrawer:1];
+        { /* Navigation owned by SwiftUI AppNavigationView — JASidePanel removed (Phase 2 Dashboard increment 2) */ }
     }
     [IAPUtility.new setupIAP];
     [[NSUserDefaults standardUserDefaults] setObject: kYES forKey:kUpdateParentDataOnce];
@@ -572,7 +573,7 @@ AppDelegate *delegate;
             [[NSUserDefaults standardUserDefaults] setValue: body forKey:@"APPROVED_APP_BODY"];
         }
         if (!(state == UIApplicationStateBackground || state == UIApplicationStateInactive || state == UIApplicationStateActive))
-            [self setupDrawer:0];
+            { /* Navigation owned by SwiftUI AppNavigationView — JASidePanel removed (Phase 2 Dashboard increment 2) */ }
     });
     
     //MARK: Handling Notifications W.r.t Push Type
@@ -594,7 +595,7 @@ AppDelegate *delegate;
         }
         
     } else if ([[type lowercaseString]  isEqualToString: @"subscription_create"] || [[type lowercaseString]  isEqualToString: @"subscription_renew"] || [[type lowercaseString]  isEqualToString: @"subscription_refund"] || [[type lowercaseString]  isEqualToString: @"subscription_cancel"]) {
-        [self setupDrawer:0];
+        { /* Navigation owned by SwiftUI AppNavigationView — JASidePanel removed (Phase 2 Dashboard increment 2) */ }
         NSLog(@"Silent push notification received type: %@", type);
         [[NSUserDefaults standardUserDefaults] setBool:YES forKey: @"subscription_created_push"];
         id topVC = [[[UIApplication sharedApplication] keyWindow] rootViewController];
@@ -612,7 +613,7 @@ AppDelegate *delegate;
         return;
         
     } else if ([[pushtype lowercaseString]  isEqualToString: @"subscription_created"] || [[pushtype lowercaseString]  isEqualToString: @"subscription_updated"]) {
-        [self setupDrawer:0];
+        { /* Navigation owned by SwiftUI AppNavigationView — JASidePanel removed (Phase 2 Dashboard increment 2) */ }
         NSLog(@"Silent push notification received push type: %@", pushtype);
         [[NSUserDefaults standardUserDefaults] setBool:YES forKey: @"subscription_created_push"];
         id topVC = [[[UIApplication sharedApplication] keyWindow] rootViewController];
@@ -632,7 +633,7 @@ AppDelegate *delegate;
     } else if ([[type lowercaseString]  isEqualToString: @"email_verified"] || [[type lowercaseString]  isEqualToString: @"email_bounce_fixed"] || [[type lowercaseString]  isEqualToString: @"email_complaint_fixed"] || [[type lowercaseString]  isEqualToString: @"email_bounced"] || [[type lowercaseString]  isEqualToString: @"email_complaint"]) {
         [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"EMAIL_VERIFIED_PUSH"];
         [[NSUserDefaults standardUserDefaults] synchronize];
-        [self setupDrawer:0];
+        { /* Navigation owned by SwiftUI AppNavigationView — JASidePanel removed (Phase 2 Dashboard increment 2) */ }
         id topVC = [[[UIApplication sharedApplication] keyWindow] rootViewController];
         if ([topVC isKindOfClass: UINavigationController.class]) {
             UINavigationController *topNav = (UINavigationController *)topVC;
@@ -695,7 +696,7 @@ AppDelegate *delegate;
     else if ([[pushtype lowercaseString]  isEqualToString: @"new_child"] || [[pushtype lowercaseString]  isEqualToString: @"login"] || [[pushtype lowercaseString]  isEqualToString: @"profile_updated"] || [[pushtype lowercaseString]  isEqualToString: @"new_child_second_type"]) {
         [[NSNotificationCenter defaultCenter] postNotificationName:@"CHILD_CREATED_PUSH" object:nil userInfo:userInfo];
         [[NSUserDefaults standardUserDefaults] setBool:YES forKey: @"Update_Home"];
-        [self setupDrawer:0];
+        { /* Navigation owned by SwiftUI AppNavigationView — JASidePanel removed (Phase 2 Dashboard increment 2) */ }
         id topVC = [[[UIApplication sharedApplication] keyWindow] rootViewController];
         if ([topVC isKindOfClass: UINavigationController.class]) {
             UINavigationController *topNav = (UINavigationController *)topVC;

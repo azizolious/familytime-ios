@@ -10,5 +10,4 @@ struct AuthRootView: View {
 
 #Preview {
     AuthRootView()
-        .environment(SessionManager.shared)
 }

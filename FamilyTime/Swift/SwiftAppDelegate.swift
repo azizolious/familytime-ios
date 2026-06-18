@@ -61,15 +61,18 @@ class SwiftAppDelegate: UIResponder {
         
 //        register(forRemoteNotifications: application)
         shareModel = LocationShareModel.sharedModel() as! LocationShareModel
-        //set Google map key
-        GMSServices.provideAPIKey(kGoogleMapKey)
+        //set Google map key (read from Info.plist -> Config.xcconfig; no key in source)
+        let googleMapsKey = Bundle.main.object(forInfoDictionaryKey: "GOOGLE_MAPS_API_KEY") as? String ?? ""
+        GMSServices.provideAPIKey(googleMapsKey)
         
         if isUserExists() {
             self.setNavigationbarAppearence(false)
-            setupDrawer(0)
+            // Navigation owned by SwiftUI AppNavigationView
+            // JASidePanel removed — Phase 2 Dashboard increment 2
         } else {
             self.setNavigationbarAppearence(true)
-            setupDrawer(1)
+            // Navigation owned by SwiftUI AppNavigationView
+            // JASidePanel removed — Phase 2 Dashboard increment 2
         }
         
         IAPUtility().setupIAP()
@@ -324,7 +327,8 @@ extension SwiftAppDelegate: UNUserNotificationCenterDelegate, CLLocationManagerD
             
             let state = UIApplication.shared.applicationState
             if !(state == .background || state == .inactive || state == .active) {
-                self.setupDrawer(0)
+                // Navigation owned by SwiftUI AppNavigationView
+                // JASidePanel removed — Phase 2 Dashboard increment 2
             }
         }
         
@@ -504,7 +508,8 @@ extension SwiftAppDelegate {
                     initialNavigVC?.viewControllers = [vc].compactMap { $0 }
                     
                 } else if self.isUserExists() {
-                    self.setupDrawer(0)
+                    // Navigation owned by SwiftUI AppNavigationView
+                    // JASidePanel removed — Phase 2 Dashboard increment 2
                     return
                 }
                 self.window?.rootViewController = initialNavigVC

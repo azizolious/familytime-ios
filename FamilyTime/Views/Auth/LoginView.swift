@@ -3,7 +3,7 @@ import AuthenticationServices
 
 struct LoginView: View {
     @State private var viewModel = LoginViewModel()
-    @Environment(SessionManager.self) private var sessionManager
+    @State private var sessionManager = SessionManager.shared
 
     var body: some View {
         VStack(spacing: 16) {
@@ -94,6 +94,5 @@ struct LoginView: View {
 #Preview {
     NavigationStack {
         LoginView()
-            .environment(SessionManager.shared)
     }
 }
