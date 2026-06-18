@@ -36,7 +36,6 @@
 		0A22D0772B35633800A31917 /* DateHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A22D0762B35633800A31917 /* DateHeaderView.swift */; };
 		0A22D0792B35682E00A31917 /* SocialSearchHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A22D0782B35682E00A31917 /* SocialSearchHandler.swift */; };
 		0A236C0D2CCA21C700CFC8D9 /* QRCodeScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A236C0C2CCA21C700CFC8D9 /* QRCodeScannerViewController.swift */; };
-		0A288E332ADD0F9000B2A4D3 /* ChangePasscodeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A288E312ADD0F9000B2A4D3 /* ChangePasscodeVC.swift */; };
 		0A288E342ADD0F9000B2A4D3 /* ChangePasscodeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A288E322ADD0F9000B2A4D3 /* ChangePasscodeVC.xib */; };
 		0A288E392ADD460300B2A4D3 /* DeleteChildVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A288E372ADD460300B2A4D3 /* DeleteChildVC.swift */; };
 		0A288E3A2ADD460300B2A4D3 /* DeleteChildVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A288E382ADD460300B2A4D3 /* DeleteChildVC.xib */; };
@@ -53,7 +52,6 @@
 		0A4CA6BC268B0EF6007CC68C /* geo0_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A4CA6BB268B0EF6007CC68C /* geo0_2.png */; };
 		0A4CA6C1268B0F34007CC68C /* geo0_3.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A4CA6BF268B0F33007CC68C /* geo0_3.png */; };
 		0A4CA6C2268B0F34007CC68C /* geo0_4.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A4CA6C0268B0F34007CC68C /* geo0_4.png */; };
-		0A4D32AE2692D5A000579604 /* AddLimitScreenRuleiOS.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A4D32AD2692D5A000579604 /* AddLimitScreenRuleiOS.m */; };
 		0A5316562ADE96D700C4F781 /* SetLimitCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5316542ADE96D700C4F781 /* SetLimitCell.swift */; };
 		0A5316572ADE96D700C4F781 /* SetLimitCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A5316552ADE96D700C4F781 /* SetLimitCell.xib */; };
 		0A53165A2ADEA60600C4F781 /* CustomDayLimitCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5316582ADEA60600C4F781 /* CustomDayLimitCell.swift */; };
@@ -93,7 +91,6 @@
 		0A892DF32BE0C69C008BBB5C /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 0A892DF22BE0C69C008BBB5C /* FirebaseMessaging */; };
 		0A8D5B382BCFA04800A5C9F3 /* SyncSettingsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8D5B372BCFA04800A5C9F3 /* SyncSettingsCell.swift */; };
 		0A8D5B3A2BCFA0B500A5C9F3 /* SyncSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8D5B392BCFA0B500A5C9F3 /* SyncSettingsViewController.swift */; };
-		0A8E91F1299112CD00C3E269 /* ServiceConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8E91F0299112CD00C3E269 /* ServiceConfig.swift */; };
 		0A8F735C2B54FE510075F966 /* AddDomainCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8F735A2B54FE510075F966 /* AddDomainCell.swift */; };
 		0A8F735D2B54FE510075F966 /* AddDomainCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A8F735B2B54FE510075F966 /* AddDomainCell.xib */; };
 		0A9037282C50E72800914854 /* FamilyFeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9037262C50E72800914854 /* FamilyFeedTableViewCell.swift */; };
@@ -118,7 +115,6 @@
 		0AA4CCF82AF0C6DF00FEE93B /* SocialMediaCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AA4CCF62AF0C6DF00FEE93B /* SocialMediaCell.xib */; };
 		0AA5635B26F9E85600A4D1DD /* NotificationDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA5635A26F9E85600A4D1DD /* NotificationDetailViewController.swift */; };
 		0AA5639E26F9E8D200A4D1DD /* NotificationFeeds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA5639D26F9E8D200A4D1DD /* NotificationFeeds.swift */; };
-		0AA5FF6F2B2C557800BB9CEF /* BlockSuccesMessageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA5FF6D2B2C557800BB9CEF /* BlockSuccesMessageVC.swift */; };
 		0AA5FF702B2C557800BB9CEF /* BlockSuccesMessageVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AA5FF6E2B2C557800BB9CEF /* BlockSuccesMessageVC.xib */; };
 		0AAAC9B42B42A5CF00F049E9 /* ReportsApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AAAC9B32B42A5CF00F049E9 /* ReportsApiManager.swift */; };
 		0AABB69F2BFCAFE40034A513 /* ContentFiltersModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AABB69E2BFCAFE40034A513 /* ContentFiltersModel.swift */; };
@@ -132,11 +128,7 @@
 		0AB178972ADE69FB00557DF8 /* SearchTableHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB178962ADE69FB00557DF8 /* SearchTableHandler.swift */; };
 		0AB1789A2ADE942400557DF8 /* SetLimitVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB178982ADE942400557DF8 /* SetLimitVC.swift */; };
 		0AB1789B2ADE942400557DF8 /* SetLimitVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AB178992ADE942400557DF8 /* SetLimitVC.xib */; };
-		0AB1C4672B4E6E89003EBACA /* SpeedLimitNewPopUP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB1C4652B4E6E89003EBACA /* SpeedLimitNewPopUP.swift */; };
 		0AB1C4682B4E6E89003EBACA /* SpeedLimitNewPopUP.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AB1C4662B4E6E89003EBACA /* SpeedLimitNewPopUP.xib */; };
-		0AB7ADBE29360A6100A2510B /* TrialFirstvc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB7ADBD29360A6100A2510B /* TrialFirstvc.swift */; };
-		0AB7ADC029360A7100A2510B /* TrialSecondVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB7ADBF29360A7100A2510B /* TrialSecondVc.swift */; };
-		0AB7ADC229360AFA00A2510B /* TrialPageVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB7ADC129360AFA00A2510B /* TrialPageVc.swift */; };
 		0AB8E3FB2C09D23A0014A6A8 /* HomePlansModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB8E3FA2C09D23A0014A6A8 /* HomePlansModel.swift */; };
 		0AC996AE2B510B9F0074A27E /* WebBlockerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC996AC2B510B9F0074A27E /* WebBlockerVC.swift */; };
 		0AC996AF2B510B9F0074A27E /* WebBlockerVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AC996AD2B510B9F0074A27E /* WebBlockerVC.xib */; };
@@ -166,14 +158,12 @@
 		0AED58082B282DBB00B8A799 /* EmptyVu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AED58072B282DBB00B8A799 /* EmptyVu.swift */; };
 		0AF4C9C82AD6713B00B40A43 /* ControlModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF4C9C72AD6713B00B40A43 /* ControlModel.swift */; };
 		0AF4C9CA2AD6724800B40A43 /* DBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF4C9C92AD6724700B40A43 /* DBManager.swift */; };
-		0AF5A3D22AEF9D3C00E5A333 /* BatteryLowPopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF5A3D02AEF9D3C00E5A333 /* BatteryLowPopUp.swift */; };
 		0AF5A3D32AEF9D3C00E5A333 /* BatteryLowPopUp.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AF5A3D12AEF9D3C00E5A333 /* BatteryLowPopUp.xib */; };
 		18498B1126FC5F6400F800AA /* BrowserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18498B1026FC5F1A00F800AA /* BrowserViewController.swift */; };
 		46AFEC91EDC4B53FC5DB6B01 /* Pods_FamilyTime.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41101A94B9A2E739167B1635 /* Pods_FamilyTime.framework */; };
 		4B1076FB1A1CCACD001E321F /* settings.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4B1076FA1A1CCACD001E321F /* settings.plist */; };
 		4B2B05FF1AE7BC34004E593D /* logo_alert.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B2B05FE1AE7BC34004E593D /* logo_alert.png */; };
 		4B3D70AD1A4946B30087E796 /* CallCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B3D70AB1A4946B30087E796 /* CallCell.m */; };
-		4B3D70B21A494CB10087E796 /* GeoLocCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B3D70B01A494CB10087E796 /* GeoLocCell.m */; };
 		4B3D737A1A15E447006F8F8F /* JSONModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B3D73631A15E446006F8F8F /* JSONModel.m */; };
 		4B3D737B1A15E447006F8F8F /* JSONModelArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B3D73651A15E446006F8F8F /* JSONModelArray.m */; };
 		4B3D737C1A15E447006F8F8F /* JSONModelClassProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B3D73671A15E446006F8F8F /* JSONModelClassProperty.m */; };
@@ -243,7 +233,6 @@
 		4B7247ED1AB707BE00844D4E /* Subscription_0.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B7247E01AB707BE00844D4E /* Subscription_0.png */; };
 		4B7247EE1AB707BE00844D4E /* Subscription_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B7247E11AB707BE00844D4E /* Subscription_1.png */; };
 		4B7247EF1AB707BE00844D4E /* tab_line.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B7247E21AB707BE00844D4E /* tab_line.png */; };
-		4B8147C11A231D11001243A3 /* LeftSideTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B8147BF1A231D11001243A3 /* LeftSideTableViewCell.m */; };
 		4B8147CF1A233F64001243A3 /* NSData+AESCrypt.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B8147CC1A233F64001243A3 /* NSData+AESCrypt.m */; };
 		4B8147D01A233F64001243A3 /* NSString+AESCrypt.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B8147CE1A233F64001243A3 /* NSString+AESCrypt.m */; };
 		4B83F0D21A77C2E100B0FD45 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B83F0D11A77C2E100B0FD45 /* QuartzCore.framework */; };
@@ -680,7 +669,6 @@
 		A1FBEA741D806ADD004ECE4E /* ic_empty.png in Resources */ = {isa = PBXBuildFile; fileRef = A1FBEA6E1D806ADD004ECE4E /* ic_empty.png */; };
 		C5DF62E42451D45200FB5739 /* AppUsageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5DF625C2451D45000FB5739 /* AppUsageCell.swift */; };
 		C5DF62E52451D45200FB5739 /* ScheduleScreenCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5DF625D2451D45000FB5739 /* ScheduleScreenCell.swift */; };
-		C5DF62E62451D45200FB5739 /* IAPCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5DF625E2451D45000FB5739 /* IAPCell.swift */; };
 		C5DF62E72451D45200FB5739 /* logooooo.png in Resources */ = {isa = PBXBuildFile; fileRef = C5DF62612451D45100FB5739 /* logooooo.png */; };
 		C5DF62E82451D45200FB5739 /* Images-2.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C5DF62622451D45100FB5739 /* Images-2.xcassets */; };
 		C5DF62EA2451D45200FB5739 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5DF62652451D45100FB5739 /* UserDefaultsManager.swift */; };
@@ -786,8 +774,6 @@
 		E027D1061F83CF3F00FC7E85 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E027D1051F83CF3F00FC7E85 /* MobileCoreServices.framework */; };
 		E02919981F46F59F00200F87 /* FamilyMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E02919961F46F59F00200F87 /* FamilyMapViewController.m */; };
 		E03066771F7A9D4F0092A3EC /* kaka.png in Resources */ = {isa = PBXBuildFile; fileRef = E03066761F7A9D4F0092A3EC /* kaka.png */; };
-		E03320CB1F9739A0007E7819 /* AddDeviceNewViewController3.m in Sources */ = {isa = PBXBuildFile; fileRef = E03320CA1F9739A0007E7819 /* AddDeviceNewViewController3.m */; };
-		E034E7691F8F636900618DE6 /* InstructionToChildViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E034E7681F8F636900618DE6 /* InstructionToChildViewController.m */; };
 		E035590A1F67D13400DED982 /* LimitScreentimeActivatedPushViewController~iphone.xib in Resources */ = {isa = PBXBuildFile; fileRef = E035590C1F67D13400DED982 /* LimitScreentimeActivatedPushViewController~iphone.xib */; };
 		E035590D1F67D13C00DED982 /* LimitScreentimeActivatedPushViewControllerIPAD.xib in Resources */ = {isa = PBXBuildFile; fileRef = E035590F1F67D13C00DED982 /* LimitScreentimeActivatedPushViewControllerIPAD.xib */; };
 		E03559101F67D14700DED982 /* inviteViewControllerIPAD.xib in Resources */ = {isa = PBXBuildFile; fileRef = E03559121F67D14700DED982 /* inviteViewControllerIPAD.xib */; };
@@ -859,7 +845,6 @@
 		E080F3C82010EF310091BD31 /* Steps.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E080F3C72010EF310091BD31 /* Steps.storyboard */; };
 		E08980DE2029CAF2008D0ADD /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = E08980DD2029CAF2008D0ADD /* libz.tbd */; };
 		E08E7CF5201610E200D8AAC9 /* Blogggg.rtfd in Resources */ = {isa = PBXBuildFile; fileRef = E08E7CF4201610E200D8AAC9 /* Blogggg.rtfd */; };
-		E08E7CF92016117F00D8AAC9 /* NotSureAdddevice3ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E08E7CF82016117F00D8AAC9 /* NotSureAdddevice3ViewController.m */; };
 		E0D1CC901F8D074700769F34 /* IQDropDownTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = E0D1CC8F1F8D074700769F34 /* IQDropDownTextField.m */; };
 		E0FB6BE01F601A0A00FF8F47 /* SyncSettingsPopupController11.m in Sources */ = {isa = PBXBuildFile; fileRef = E0FB6BDF1F601A0A00FF8F47 /* SyncSettingsPopupController11.m */; };
 		E0FC83C41F56B1D300462747 /* LimitScreentimeActivatedPushViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E0FC83C21F56B1D300462747 /* LimitScreentimeActivatedPushViewController.m */; };
@@ -867,13 +852,11 @@
 		EB0A23C527F2D7BA00C365B2 /* DetailedInstructionsScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0A23C427F2D7BA00C365B2 /* DetailedInstructionsScreenController.swift */; };
 		EB0D1E2A293A049100A7D4CC /* ColorConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0D1E29293A049100A7D4CC /* ColorConstants.swift */; };
 		EB0D1E2C293A053A00A7D4CC /* FontConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0D1E2B293A053A00A7D4CC /* FontConstants.swift */; };
-		EB0E850D271990E800662783 /* AddDeviceNewViewController2.m in Sources */ = {isa = PBXBuildFile; fileRef = EB0E850C271990E700662783 /* AddDeviceNewViewController2.m */; };
 		EB15CF40295C5E8900797A46 /* DailyAppsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB15CF3F295C5E8900797A46 /* DailyAppsData.swift */; };
 		EB22FA04273BA94400363D6A /* SwiftLimitScreenCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB22FA03273BA94400363D6A /* SwiftLimitScreenCell.swift */; };
 		EB29194A29758C0E00799475 /* EmailVerficationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB29194829758C0D00799475 /* EmailVerficationCell.swift */; };
 		EB29194B29758C0E00799475 /* EmailVerficationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB29194929758C0E00799475 /* EmailVerficationCell.xib */; };
 		EB29194D29758CB800799475 /* ImageConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB29194C29758CB800799475 /* ImageConstants.swift */; };
-		EB2919512975992D00799475 /* AppStatusPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB29194F2975992C00799475 /* AppStatusPopup.swift */; };
 		EB2919522975992D00799475 /* ApprovedAppPopupVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2919502975992D00799475 /* ApprovedAppPopupVc.swift */; };
 		EB3422D528C9BD56003AAFF4 /* PremiumPackageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3422D428C9BD56003AAFF4 /* PremiumPackageVC.swift */; };
 		EB44ED1F29191D39000A6B57 /* UpgradeExternal.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB44ED1E29191D39000A6B57 /* UpgradeExternal.swift */; };
@@ -970,7 +953,6 @@
 		EBBF514528925F3B005B2C42 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBBF514428925F3B005B2C42 /* Enums.swift */; };
 		EBBFA76E28D883CD004D45E7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EBBFA76D28D883CC004D45E7 /* GoogleService-Info.plist */; };
 		EBBFA76F28D884BE004D45E7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EBBFA76D28D883CC004D45E7 /* GoogleService-Info.plist */; };
-		EBC7AEEC297936E600E37DAB /* ApproveAppNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC7AEEB297936E600E37DAB /* ApproveAppNotification.swift */; };
 		EBC95FF2290BBD52004ED0E9 /* NetworkCallConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC95FF1290BBD51004ED0E9 /* NetworkCallConstants.swift */; };
 		EBD7B5FF28CF25F600278F64 /* ConfigurationsDBModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD7B5FE28CF25F600278F64 /* ConfigurationsDBModel.swift */; };
 		EBD8FA6328D85F0A00DB8920 /* UpgradeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD8FA6128D85F0A00DB8920 /* UpgradeTableViewCell.swift */; };
@@ -982,7 +964,6 @@
 		EBDECC1328C8BED60086C10E /* PremiumPackageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBDECC1128C8BED60086C10E /* PremiumPackageCell.xib */; };
 		EBDF2BE9290F980C00F04422 /* HomeResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDF2BE8290F980C00F04422 /* HomeResponse.swift */; };
 		EBE227CB2806A15C00DB9A39 /* ActivateFamilyTimeAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE227CA2806A15C00DB9A39 /* ActivateFamilyTimeAlert.swift */; };
-		EBE812AD284F748F00B43E05 /* ThanksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE812AC284F748F00B43E05 /* ThanksViewController.swift */; };
 		EBF61E862934F0C4009BD598 /* AccountModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF61E852934F0C4009BD598 /* AccountModel.swift */; };
 		FA11000000000000000003E9 /* FamilyTimeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1100000000000000000001 /* FamilyTimeApp.swift */; };
 		FA11000000000000000003EA /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1100000000000000000002 /* RootView.swift */; };
@@ -1094,7 +1075,6 @@
 		0A22D0762B35633800A31917 /* DateHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateHeaderView.swift; sourceTree = "<group>"; };
 		0A22D0782B35682E00A31917 /* SocialSearchHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialSearchHandler.swift; sourceTree = "<group>"; };
 		0A236C0C2CCA21C700CFC8D9 /* QRCodeScannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeScannerViewController.swift; sourceTree = "<group>"; };
-		0A288E312ADD0F9000B2A4D3 /* ChangePasscodeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasscodeVC.swift; sourceTree = "<group>"; };
 		0A288E322ADD0F9000B2A4D3 /* ChangePasscodeVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChangePasscodeVC.xib; sourceTree = "<group>"; };
 		0A288E372ADD460300B2A4D3 /* DeleteChildVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteChildVC.swift; sourceTree = "<group>"; };
 		0A288E382ADD460300B2A4D3 /* DeleteChildVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DeleteChildVC.xib; sourceTree = "<group>"; };
@@ -1111,8 +1091,6 @@
 		0A4CA6BB268B0EF6007CC68C /* geo0_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = geo0_2.png; sourceTree = "<group>"; };
 		0A4CA6BF268B0F33007CC68C /* geo0_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = geo0_3.png; sourceTree = "<group>"; };
 		0A4CA6C0268B0F34007CC68C /* geo0_4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = geo0_4.png; sourceTree = "<group>"; };
-		0A4D32AC2692D54600579604 /* AddLimitScreenRuleiOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddLimitScreenRuleiOS.h; sourceTree = "<group>"; };
-		0A4D32AD2692D5A000579604 /* AddLimitScreenRuleiOS.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddLimitScreenRuleiOS.m; sourceTree = "<group>"; };
 		0A5316542ADE96D700C4F781 /* SetLimitCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetLimitCell.swift; sourceTree = "<group>"; };
 		0A5316552ADE96D700C4F781 /* SetLimitCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SetLimitCell.xib; sourceTree = "<group>"; };
 		0A5316582ADEA60600C4F781 /* CustomDayLimitCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDayLimitCell.swift; sourceTree = "<group>"; };
@@ -1143,7 +1121,6 @@
 		0A86CC852C5A129D00CC87F4 /* CommonModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonModel.swift; sourceTree = "<group>"; };
 		0A8D5B372BCFA04800A5C9F3 /* SyncSettingsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncSettingsCell.swift; sourceTree = "<group>"; };
 		0A8D5B392BCFA0B500A5C9F3 /* SyncSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncSettingsViewController.swift; sourceTree = "<group>"; };
-		0A8E91F0299112CD00C3E269 /* ServiceConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceConfig.swift; sourceTree = "<group>"; };
 		0A8F735A2B54FE510075F966 /* AddDomainCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDomainCell.swift; sourceTree = "<group>"; };
 		0A8F735B2B54FE510075F966 /* AddDomainCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddDomainCell.xib; sourceTree = "<group>"; };
 		0A9037262C50E72800914854 /* FamilyFeedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyFeedTableViewCell.swift; sourceTree = "<group>"; };
@@ -1168,7 +1145,6 @@
 		0AA4CCF62AF0C6DF00FEE93B /* SocialMediaCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SocialMediaCell.xib; sourceTree = "<group>"; };
 		0AA5635A26F9E85600A4D1DD /* NotificationDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationDetailViewController.swift; sourceTree = "<group>"; };
 		0AA5639D26F9E8D200A4D1DD /* NotificationFeeds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationFeeds.swift; sourceTree = "<group>"; };
-		0AA5FF6D2B2C557800BB9CEF /* BlockSuccesMessageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockSuccesMessageVC.swift; sourceTree = "<group>"; };
 		0AA5FF6E2B2C557800BB9CEF /* BlockSuccesMessageVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BlockSuccesMessageVC.xib; sourceTree = "<group>"; };
 		0AAAC9B32B42A5CF00F049E9 /* ReportsApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportsApiManager.swift; sourceTree = "<group>"; };
 		0AABB69E2BFCAFE40034A513 /* ContentFiltersModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentFiltersModel.swift; sourceTree = "<group>"; };
@@ -1182,11 +1158,7 @@
 		0AB178962ADE69FB00557DF8 /* SearchTableHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableHandler.swift; sourceTree = "<group>"; };
 		0AB178982ADE942400557DF8 /* SetLimitVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetLimitVC.swift; sourceTree = "<group>"; };
 		0AB178992ADE942400557DF8 /* SetLimitVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SetLimitVC.xib; sourceTree = "<group>"; };
-		0AB1C4652B4E6E89003EBACA /* SpeedLimitNewPopUP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeedLimitNewPopUP.swift; sourceTree = "<group>"; };
 		0AB1C4662B4E6E89003EBACA /* SpeedLimitNewPopUP.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SpeedLimitNewPopUP.xib; sourceTree = "<group>"; };
-		0AB7ADBD29360A6100A2510B /* TrialFirstvc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrialFirstvc.swift; sourceTree = "<group>"; };
-		0AB7ADBF29360A7100A2510B /* TrialSecondVc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrialSecondVc.swift; sourceTree = "<group>"; };
-		0AB7ADC129360AFA00A2510B /* TrialPageVc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrialPageVc.swift; sourceTree = "<group>"; };
 		0AB8E3FA2C09D23A0014A6A8 /* HomePlansModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePlansModel.swift; sourceTree = "<group>"; };
 		0AC996AC2B510B9F0074A27E /* WebBlockerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebBlockerVC.swift; sourceTree = "<group>"; };
 		0AC996AD2B510B9F0074A27E /* WebBlockerVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WebBlockerVC.xib; sourceTree = "<group>"; };
@@ -1217,7 +1189,6 @@
 		0AED58072B282DBB00B8A799 /* EmptyVu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyVu.swift; sourceTree = "<group>"; };
 		0AF4C9C72AD6713B00B40A43 /* ControlModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlModel.swift; sourceTree = "<group>"; };
 		0AF4C9C92AD6724700B40A43 /* DBManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBManager.swift; sourceTree = "<group>"; };
-		0AF5A3D02AEF9D3C00E5A333 /* BatteryLowPopUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BatteryLowPopUp.swift; sourceTree = "<group>"; };
 		0AF5A3D12AEF9D3C00E5A333 /* BatteryLowPopUp.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BatteryLowPopUp.xib; sourceTree = "<group>"; };
 		16655EB76363378EA0433006 /* Pods-FamilyTime.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FamilyTime.release.xcconfig"; path = "Target Support Files/Pods-FamilyTime/Pods-FamilyTime.release.xcconfig"; sourceTree = "<group>"; };
 		18498B1026FC5F1A00F800AA /* BrowserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowserViewController.swift; sourceTree = "<group>"; };
@@ -1398,8 +1369,6 @@
 		4B2B05FE1AE7BC34004E593D /* logo_alert.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo_alert.png; sourceTree = "<group>"; };
 		4B3D70AA1A4946B30087E796 /* CallCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CallCell.h; sourceTree = "<group>"; };
 		4B3D70AB1A4946B30087E796 /* CallCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CallCell.m; sourceTree = "<group>"; };
-		4B3D70AF1A494CB10087E796 /* GeoLocCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeoLocCell.h; sourceTree = "<group>"; };
-		4B3D70B01A494CB10087E796 /* GeoLocCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeoLocCell.m; sourceTree = "<group>"; };
 		4B3D73621A15E446006F8F8F /* JSONModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONModel.h; sourceTree = "<group>"; };
 		4B3D73631A15E446006F8F8F /* JSONModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONModel.m; sourceTree = "<group>"; };
 		4B3D73641A15E446006F8F8F /* JSONModelArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONModelArray.h; sourceTree = "<group>"; };
@@ -1500,8 +1469,6 @@
 		4B7247E01AB707BE00844D4E /* Subscription_0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Subscription_0.png; sourceTree = "<group>"; };
 		4B7247E11AB707BE00844D4E /* Subscription_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Subscription_1.png; sourceTree = "<group>"; };
 		4B7247E21AB707BE00844D4E /* tab_line.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tab_line.png; sourceTree = "<group>"; };
-		4B8147BE1A231D11001243A3 /* LeftSideTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftSideTableViewCell.h; sourceTree = "<group>"; };
-		4B8147BF1A231D11001243A3 /* LeftSideTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftSideTableViewCell.m; sourceTree = "<group>"; };
 		4B8147CB1A233F64001243A3 /* NSData+AESCrypt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+AESCrypt.h"; sourceTree = "<group>"; };
 		4B8147CC1A233F64001243A3 /* NSData+AESCrypt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+AESCrypt.m"; sourceTree = "<group>"; };
 		4B8147CD1A233F64001243A3 /* NSString+AESCrypt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+AESCrypt.h"; sourceTree = "<group>"; };
@@ -2075,7 +2042,6 @@
 		A1FBEA6E1D806ADD004ECE4E /* ic_empty.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ic_empty.png; path = EmptyScreens/ic_empty.png; sourceTree = "<group>"; };
 		C5DF625C2451D45000FB5739 /* AppUsageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppUsageCell.swift; sourceTree = "<group>"; };
 		C5DF625D2451D45000FB5739 /* ScheduleScreenCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleScreenCell.swift; sourceTree = "<group>"; };
-		C5DF625E2451D45000FB5739 /* IAPCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IAPCell.swift; sourceTree = "<group>"; };
 		C5DF625F2451D45000FB5739 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C5DF62612451D45100FB5739 /* logooooo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logooooo.png; sourceTree = "<group>"; };
 		C5DF62622451D45100FB5739 /* Images-2.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Images-2.xcassets"; sourceTree = "<group>"; };
@@ -2187,12 +2153,8 @@
 		E02919951F46F59F00200F87 /* FamilyMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FamilyMapViewController.h; sourceTree = "<group>"; };
 		E02919961F46F59F00200F87 /* FamilyMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FamilyMapViewController.m; sourceTree = "<group>"; };
 		E03066761F7A9D4F0092A3EC /* kaka.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kaka.png; sourceTree = "<group>"; };
-		E03320C91F9739A0007E7819 /* AddDeviceNewViewController3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddDeviceNewViewController3.h; sourceTree = "<group>"; };
-		E03320CA1F9739A0007E7819 /* AddDeviceNewViewController3.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddDeviceNewViewController3.m; sourceTree = "<group>"; };
 		E033C3841FA0BA2700815214 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/inviteViewController.strings; sourceTree = "<group>"; };
 		E033C3861FA0BC8E00815214 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/inviteViewControllerIPAD.strings; sourceTree = "<group>"; };
-		E034E7671F8F636900618DE6 /* InstructionToChildViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstructionToChildViewController.h; sourceTree = "<group>"; };
-		E034E7681F8F636900618DE6 /* InstructionToChildViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InstructionToChildViewController.m; sourceTree = "<group>"; };
 		E035590B1F67D13400DED982 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = "Base.lproj/LimitScreentimeActivatedPushViewController~iphone.xib"; sourceTree = "<group>"; };
 		E035590E1F67D13C00DED982 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LimitScreentimeActivatedPushViewControllerIPAD.xib; sourceTree = "<group>"; };
 		E03559111F67D14700DED982 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/inviteViewControllerIPAD.xib; sourceTree = "<group>"; };
@@ -2405,8 +2367,6 @@
 		E080F3C72010EF310091BD31 /* Steps.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Steps.storyboard; sourceTree = "<group>"; };
 		E08980DD2029CAF2008D0ADD /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		E08E7CF4201610E200D8AAC9 /* Blogggg.rtfd */ = {isa = PBXFileReference; lastKnownFileType = wrapper.rtfd; path = Blogggg.rtfd; sourceTree = "<group>"; };
-		E08E7CF72016117F00D8AAC9 /* NotSureAdddevice3ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotSureAdddevice3ViewController.h; sourceTree = "<group>"; };
-		E08E7CF82016117F00D8AAC9 /* NotSureAdddevice3ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotSureAdddevice3ViewController.m; sourceTree = "<group>"; };
 		E0BCEE191FCC5194004FFF61 /* fi-FI */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "fi-FI"; path = "fi-FI.lproj/LimitScreentimeActivatedPushViewController~iphone.strings"; sourceTree = "<group>"; };
 		E0BCEE1A1FCC5195004FFF61 /* fi-FI */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "fi-FI"; path = "fi-FI.lproj/LimitScreentimeActivatedPushViewControllerIPAD.strings"; sourceTree = "<group>"; };
 		E0BCEE1B1FCC5195004FFF61 /* fi-FI */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "fi-FI"; path = "fi-FI.lproj/inviteViewControllerIPAD.strings"; sourceTree = "<group>"; };
@@ -2533,14 +2493,11 @@
 		EB0A23C427F2D7BA00C365B2 /* DetailedInstructionsScreenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedInstructionsScreenController.swift; sourceTree = "<group>"; };
 		EB0D1E29293A049100A7D4CC /* ColorConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorConstants.swift; sourceTree = "<group>"; };
 		EB0D1E2B293A053A00A7D4CC /* FontConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontConstants.swift; sourceTree = "<group>"; };
-		EB0E850B271990E700662783 /* AddDeviceNewViewController2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddDeviceNewViewController2.h; sourceTree = "<group>"; };
-		EB0E850C271990E700662783 /* AddDeviceNewViewController2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddDeviceNewViewController2.m; sourceTree = "<group>"; };
 		EB15CF3F295C5E8900797A46 /* DailyAppsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyAppsData.swift; sourceTree = "<group>"; };
 		EB22FA03273BA94400363D6A /* SwiftLimitScreenCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftLimitScreenCell.swift; sourceTree = "<group>"; };
 		EB29194829758C0D00799475 /* EmailVerficationCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailVerficationCell.swift; sourceTree = "<group>"; };
 		EB29194929758C0E00799475 /* EmailVerficationCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EmailVerficationCell.xib; sourceTree = "<group>"; };
 		EB29194C29758CB800799475 /* ImageConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageConstants.swift; sourceTree = "<group>"; };
-		EB29194F2975992C00799475 /* AppStatusPopup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppStatusPopup.swift; sourceTree = "<group>"; };
 		EB2919502975992D00799475 /* ApprovedAppPopupVc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApprovedAppPopupVc.swift; sourceTree = "<group>"; };
 		EB3422D428C9BD56003AAFF4 /* PremiumPackageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PremiumPackageVC.swift; sourceTree = "<group>"; };
 		EB44ED1E29191D39000A6B57 /* UpgradeExternal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpgradeExternal.swift; sourceTree = "<group>"; };
@@ -2636,7 +2593,6 @@
 		EBB8507D28CB6BA400992F6D /* ConfigurationKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationKeys.swift; sourceTree = "<group>"; };
 		EBBF514428925F3B005B2C42 /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
 		EBBFA76D28D883CC004D45E7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		EBC7AEEB297936E600E37DAB /* ApproveAppNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApproveAppNotification.swift; sourceTree = "<group>"; };
 		EBC95FF1290BBD51004ED0E9 /* NetworkCallConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkCallConstants.swift; sourceTree = "<group>"; };
 		EBD7B5FE28CF25F600278F64 /* ConfigurationsDBModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationsDBModel.swift; sourceTree = "<group>"; };
 		EBD8FA6128D85F0A00DB8920 /* UpgradeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpgradeTableViewCell.swift; sourceTree = "<group>"; };
@@ -2648,7 +2604,6 @@
 		EBDECC1128C8BED60086C10E /* PremiumPackageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PremiumPackageCell.xib; sourceTree = "<group>"; };
 		EBDF2BE8290F980C00F04422 /* HomeResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeResponse.swift; sourceTree = "<group>"; };
 		EBE227CA2806A15C00DB9A39 /* ActivateFamilyTimeAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivateFamilyTimeAlert.swift; sourceTree = "<group>"; };
-		EBE812AC284F748F00B43E05 /* ThanksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThanksViewController.swift; sourceTree = "<group>"; };
 		EBF61E852934F0C4009BD598 /* AccountModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountModel.swift; sourceTree = "<group>"; };
 		EBFD244427A96D0A00B66B0C /* he */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = he; path = "he.lproj/LimitScreentimeActivatedPushViewController~iphone.strings"; sourceTree = "<group>"; };
 		EBFD244527A96D0A00B66B0C /* he */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = he; path = he.lproj/LimitScreentimeActivatedPushViewControllerIPAD.strings; sourceTree = "<group>"; };
@@ -2896,7 +2851,6 @@
 		0A288E302ADD0F5700B2A4D3 /* PopUpControllers */ = {
 			isa = PBXGroup;
 			children = (
-				0A288E312ADD0F9000B2A4D3 /* ChangePasscodeVC.swift */,
 				0A288E322ADD0F9000B2A4D3 /* ChangePasscodeVC.xib */,
 				0A288E372ADD460300B2A4D3 /* DeleteChildVC.swift */,
 				0A288E382ADD460300B2A4D3 /* DeleteChildVC.xib */,
@@ -3006,7 +2960,6 @@
 		0A8E91EF299112B800C3E269 /* Schems */ = {
 			isa = PBXGroup;
 			children = (
-				0A8E91F0299112CD00C3E269 /* ServiceConfig.swift */,
 			);
 			name = Schems;
 			sourceTree = "<group>";
@@ -3087,7 +3040,6 @@
 		0AA5FF6C2B2C553B00BB9CEF /* PopUpsInWebHistory */ = {
 			isa = PBXGroup;
 			children = (
-				0AA5FF6D2B2C557800BB9CEF /* BlockSuccesMessageVC.swift */,
 				0AA5FF6E2B2C557800BB9CEF /* BlockSuccesMessageVC.xib */,
 			);
 			path = PopUpsInWebHistory;
@@ -3144,7 +3096,6 @@
 		0AB1C4642B4E6E61003EBACA /* SpeedLimitNewPopUp */ = {
 			isa = PBXGroup;
 			children = (
-				0AB1C4652B4E6E89003EBACA /* SpeedLimitNewPopUP.swift */,
 				0AB1C4662B4E6E89003EBACA /* SpeedLimitNewPopUP.xib */,
 			);
 			path = SpeedLimitNewPopUp;
@@ -3153,9 +3104,6 @@
 		0AB7ADBC29360A4800A2510B /* TrialView */ = {
 			isa = PBXGroup;
 			children = (
-				0AB7ADBD29360A6100A2510B /* TrialFirstvc.swift */,
-				0AB7ADBF29360A7100A2510B /* TrialSecondVc.swift */,
-				0AB7ADC129360AFA00A2510B /* TrialPageVc.swift */,
 			);
 			path = TrialView;
 			sourceTree = "<group>";
@@ -3354,7 +3302,6 @@
 		0AF5A3CF2AEF9D1C00E5A333 /* BatteryLowPush */ = {
 			isa = PBXGroup;
 			children = (
-				0AF5A3D02AEF9D3C00E5A333 /* BatteryLowPopUp.swift */,
 				0AF5A3D12AEF9D3C00E5A333 /* BatteryLowPopUp.xib */,
 			);
 			name = BatteryLowPush;
@@ -3524,8 +3471,6 @@
 				4B6C022A1AF0B5A6000168C8 /* LeftSidesTableViewCell.h */,
 				4B6C022B1AF0B5A6000168C8 /* LeftSidesTableViewCell.m */,
 				E03559601F67D21B00DED982 /* LeftSidesTableViewCell.xib */,
-				4B8147BE1A231D11001243A3 /* LeftSideTableViewCell.h */,
-				4B8147BF1A231D11001243A3 /* LeftSideTableViewCell.m */,
 				E035595D1F67D21700DED982 /* LeftSideTableViewCell~iphone.xib */,
 				E035595A1F67D21300DED982 /* LeftSideTableViewCell~ipad.xib */,
 			);
@@ -3604,8 +3549,6 @@
 				4BEC7F531A382A650070E03A /* LocHistoryViewController.m */,
 				E03559F61F67D33700DED982 /* LocHistoryViewController~iphone.xib */,
 				E03559FC1F67D33F00DED982 /* LocHistoryViewController~ipad.xib */,
-				4B3D70AF1A494CB10087E796 /* GeoLocCell.h */,
-				4B3D70B01A494CB10087E796 /* GeoLocCell.m */,
 				E03559F91F67D33A00DED982 /* GeoLocCell~iphone.xib */,
 				E03559FF1F67D34400DED982 /* GeoLocCell~ipad.xib */,
 			);
@@ -4502,8 +4445,6 @@
 				A16839D51D538E020058B2E1 /* LimitScreenCell.m */,
 				A15299281D54DC07000B4DCD /* AddLimitScrenRule.h */,
 				A15299291D54DC07000B4DCD /* AddLimitScrenRule.m */,
-				0A4D32AC2692D54600579604 /* AddLimitScreenRuleiOS.h */,
-				0A4D32AD2692D5A000579604 /* AddLimitScreenRuleiOS.m */,
 			);
 			name = LimtScreen;
 			sourceTree = "<group>";
@@ -4903,7 +4844,6 @@
 			children = (
 				C5DF625C2451D45000FB5739 /* AppUsageCell.swift */,
 				C5DF625D2451D45000FB5739 /* ScheduleScreenCell.swift */,
-				C5DF625E2451D45000FB5739 /* IAPCell.swift */,
 				0A5D179226FA152700793717 /* FeedDetailCell.swift */,
 				0ADD97CC2930CD0400992CFF /* ThreeDayTrailCellCollectionViewCell.swift */,
 			);
@@ -4990,7 +4930,6 @@
 				0A97A668293F24B00001FA32 /* AppHistoryModel.swift */,
 				0AACAACE29433C07000CCFC7 /* NotificationFeedModel.swift */,
 				EB15CF3F295C5E8900797A46 /* DailyAppsData.swift */,
-				EBC7AEEB297936E600E37DAB /* ApproveAppNotification.swift */,
 				0AF4C9C72AD6713B00B40A43 /* ControlModel.swift */,
 				0A44D9872ADFCBAA00BFBE93 /* ControlAppsListModel.swift */,
 				0A04B68C2B551C9000D6D14C /* WebBlockerModel.swift */,
@@ -5147,7 +5086,6 @@
 				0AA5635A26F9E85600A4D1DD /* NotificationDetailViewController.swift */,
 				0A5D178E26FA145A00793717 /* NotificationsViewController.swift */,
 				EBE227CA2806A15C00DB9A39 /* ActivateFamilyTimeAlert.swift */,
-				EBE812AC284F748F00B43E05 /* ThanksViewController.swift */,
 				C5DF62B62451D45100FB5739 /* Childs */,
 				0AEC7950294219CA00C12190 /* HistoryBrowserVc.swift */,
 			);
@@ -5331,8 +5269,6 @@
 		E03320C41F97396C007E7819 /* Adddevice2 */ = {
 			isa = PBXGroup;
 			children = (
-				EB0E850B271990E700662783 /* AddDeviceNewViewController2.h */,
-				EB0E850C271990E700662783 /* AddDeviceNewViewController2.m */,
 			);
 			name = Adddevice2;
 			sourceTree = "<group>";
@@ -5340,8 +5276,6 @@
 		E03320C51F973975007E7819 /* Adddevice3 */ = {
 			isa = PBXGroup;
 			children = (
-				E03320C91F9739A0007E7819 /* AddDeviceNewViewController3.h */,
-				E03320CA1F9739A0007E7819 /* AddDeviceNewViewController3.m */,
 			);
 			name = Adddevice3;
 			sourceTree = "<group>";
@@ -5356,8 +5290,6 @@
 				E03B95F71FBC4DEB000563B9 /* ChatStyling.m */,
 				E049C0971FA73B750026C42F /* ClockViewController.swift */,
 				E03320BF1F9738B7007E7819 /* Add device module */,
-				E034E7671F8F636900618DE6 /* InstructionToChildViewController.h */,
-				E034E7681F8F636900618DE6 /* InstructionToChildViewController.m */,
 			);
 			name = InstructionVC;
 			sourceTree = "<group>";
@@ -5421,8 +5353,6 @@
 		E08E7CF62016115A00D8AAC9 /* NotSure */ = {
 			isa = PBXGroup;
 			children = (
-				E08E7CF72016117F00D8AAC9 /* NotSureAdddevice3ViewController.h */,
-				E08E7CF82016117F00D8AAC9 /* NotSureAdddevice3ViewController.m */,
 			);
 			name = NotSure;
 			sourceTree = "<group>";
@@ -5460,7 +5390,6 @@
 			isa = PBXGroup;
 			children = (
 				EB2919502975992D00799475 /* ApprovedAppPopupVc.swift */,
-				EB29194F2975992C00799475 /* AppStatusPopup.swift */,
 				EB7AF49A297AC13200F5C904 /* BlockAppStatusVcPopUp.swift */,
 				EB802A0A298D406C00B4CB85 /* ContactWatchListPopup.swift */,
 			);
@@ -6619,7 +6548,6 @@
 				0AE988322B1DA340005235E4 /* YoutubeSummaryCell.swift in Sources */,
 				EB2919522975992D00799475 /* ApprovedAppPopupVc.swift in Sources */,
 				C5DF63102451D45200FB5739 /* Package_features_DB.swift in Sources */,
-				EBC7AEEC297936E600E37DAB /* ApproveAppNotification.swift in Sources */,
 				C5DF62EB2451D45200FB5739 /* KeychainItem.swift in Sources */,
 				96E5C8F921A439D800EA5E5E /* CommonUtility.swift in Sources */,
 				4B64EBFB1AC178B300555BA6 /* CustomIOS7AlertView.m in Sources */,
@@ -6642,8 +6570,6 @@
 				0A8D5B3A2BCFA0B500A5C9F3 /* SyncSettingsViewController.swift in Sources */,
 				0AE9883A2B1DB685005235E4 /* YoutubeHistoryVM.swift in Sources */,
 				EBF61E862934F0C4009BD598 /* AccountModel.swift in Sources */,
-				0A4D32AE2692D5A000579604 /* AddLimitScreenRuleiOS.m in Sources */,
-				0A288E332ADD0F9000B2A4D3 /* ChangePasscodeVC.swift in Sources */,
 				96956DCC21A6906E00B06D55 /* FIRConstants.m in Sources */,
 				0A236C0D2CCA21C700CFC8D9 /* QRCodeScannerViewController.swift in Sources */,
 				4BD044781A7A06F800F03D7A /* LocationTracker.m in Sources */,
@@ -6701,7 +6627,6 @@
 				EB6E96672735621F00C6FC38 /* swiftFTUtils.swift in Sources */,
 				4B3D737A1A15E447006F8F8F /* JSONModel.m in Sources */,
 				A1B4F33F1C185C1E0025F11F /* WizardScreen2ViewController.m in Sources */,
-				4B8147C11A231D11001243A3 /* LeftSideTableViewCell.m in Sources */,
 				C5DF630A2451D45200FB5739 /* SwiftParamUtility.swift in Sources */,
 				0A6F9FE42B342070002ED75A /* WhatsappHistoryVC.swift in Sources */,
 				E036BD781F86848A005ADC14 /* ParentsViewControllerAll.m in Sources */,
@@ -6870,7 +6795,6 @@
 				E0D1CC901F8D074700769F34 /* IQDropDownTextField.m in Sources */,
 				EB65186F27185116001CD21C /* LocationHistoryViewController.swift in Sources */,
 				A1F70A5C1ECE083D00DB00FF /* Clock.swift in Sources */,
-				0AB7ADC029360A7100A2510B /* TrialSecondVc.swift in Sources */,
 				4BBF200D1A11F6E8000E4829 /* FamilyTime.xcdatamodeld in Sources */,
 				0AACAACF29433C07000CCFC7 /* NotificationFeedModel.swift in Sources */,
 				EB6059C72732B21A00C13E79 /* SwiftLimitScreenViewController.swift in Sources */,
@@ -6878,12 +6802,10 @@
 				E03B95FB1FBC57CB000563B9 /* ViewController.m in Sources */,
 				4B4D19081A2460180082AF4C /* AddPlacesViewController.m in Sources */,
 				A1DDAC8E1D6CA1AB00C38E25 /* TextMessageDetailsViewController.m in Sources */,
-				0AA5FF6F2B2C557800BB9CEF /* BlockSuccesMessageVC.swift in Sources */,
 				A1E95DCC1CA035DD0089AE09 /* UIImage+Scale.m in Sources */,
 				A1826F6D1EB39FD800B7E517 /* SingleLineTextField.m in Sources */,
 				966D72D121AD0A9300CED467 /* ApiManager.m in Sources */,
 				0AF4C9C82AD6713B00B40A43 /* ControlModel.swift in Sources */,
-				0AB7ADBE29360A6100A2510B /* TrialFirstvc.swift in Sources */,
 				C5DF63132451D45200FB5739 /* Device_info_DB.swift in Sources */,
 				A16839D61D538E020058B2E1 /* LimitScreenCell.m in Sources */,
 				EB0A23C527F2D7BA00C365B2 /* DetailedInstructionsScreenController.swift in Sources */,
@@ -6909,7 +6831,6 @@
 				4B4D923C1A42F3E200316D13 /* ContactViewController.m in Sources */,
 				EB66BC09272A694C0011896D /* SwiftTextMessageDetailsViewController.swift in Sources */,
 				0A9037282C50E72800914854 /* FamilyFeedTableViewCell.swift in Sources */,
-				0AF5A3D22AEF9D3C00E5A333 /* BatteryLowPopUp.swift in Sources */,
 				0A5FEEB42B57A99F00F5C613 /* RemoveURLVC.swift in Sources */,
 				C5DF62FD2451D45200FB5739 /* CommonPopupVC.swift in Sources */,
 				C5DF63342451D45300FB5739 /* DashboardVC.swift in Sources */,
@@ -6959,7 +6880,6 @@
 				A18D86711EE570E300AF4C7B /* SyncSettingsPopupController.m in Sources */,
 				A18270221EBB7ED900B7E517 /* Colors.swift in Sources */,
 				EB6349EC27142B240010EDF4 /* SwiftFamilyMapViewController.swift in Sources */,
-				E08E7CF92016117F00D8AAC9 /* NotSureAdddevice3ViewController.m in Sources */,
 				EB9524D727EDADD700B37365 /* WelcomeScreenController.swift in Sources */,
 				E0FC83C41F56B1D300462747 /* LimitScreentimeActivatedPushViewController.m in Sources */,
 				A12891421D7093C10052DD4A /* Message.m in Sources */,
@@ -6967,7 +6887,6 @@
 				EB651861271824E7001CD21C /* SwiftParentsAllViewController.swift in Sources */,
 				C5DF62EC2451D45200FB5739 /* HLApiManager.swift in Sources */,
 				EB802A0B298D406C00B4CB85 /* ContactWatchListPopup.swift in Sources */,
-				EB2919512975992D00799475 /* AppStatusPopup.swift in Sources */,
 				EB7276452738F6DC00206F6D /* SwiftSyncSettingsPopupController.swift in Sources */,
 				EB7ED7EF271D98D600980035 /* TextMessagesTableViewCell.swift in Sources */,
 				4B3D73801A15E447006F8F8F /* JSONHTTPClient.m in Sources */,
@@ -6983,7 +6902,6 @@
 				EB5034AB28CA0F02007B3E27 /* NibConstants.swift in Sources */,
 				EB65186D27184BF7001CD21C /* PlacesHistoryViewController.swift in Sources */,
 				A1B4F33A1C185C080025F11F /* WizardScreen1ViewController.m in Sources */,
-				4B3D70B21A494CB10087E796 /* GeoLocCell.m in Sources */,
 				A12DCCF61C230924008E03D7 /* UIView+VTSelectiveBorder.m in Sources */,
 				0A5316562ADE96D700C4F781 /* SetLimitCell.swift in Sources */,
 				0AA5635B26F9E85600A4D1DD /* NotificationDetailViewController.swift in Sources */,
@@ -6991,10 +6909,8 @@
 				EB73E9F0272834990068AFBB /* SwiftAddDeviceNewViewController3.swift in Sources */,
 				A1EFA0681CFDD13E00AA0B94 /* ContentFilterViewController.m in Sources */,
 				C5DF62F92451D45200FB5739 /* DeviceVC.swift in Sources */,
-				E034E7691F8F636900618DE6 /* InstructionToChildViewController.m in Sources */,
 				C5DF63182451D45200FB5739 /* Preferences.swift in Sources */,
 				0A5D178F26FA145A00793717 /* NotificationsViewController.swift in Sources */,
-				0A8E91F1299112CD00C3E269 /* ServiceConfig.swift in Sources */,
 				C5DF62ED2451D45200FB5739 /* HLAuthenticationManager.swift in Sources */,
 				0A17257F2AE2A10300E4AB5E /* ApplimitSuccessPopup.swift in Sources */,
 				0A53165E2ADEB25400C4F781 /* AppLimitPickerVC.swift in Sources */,
@@ -7016,7 +6932,6 @@
 				EB754EB1273013690033BED4 /* SettingTableViewCell.swift in Sources */,
 				0A5D179326FA152700793717 /* FeedDetailCell.swift in Sources */,
 				C5DF62EE2451D45200FB5739 /* HLStoryboardExt.swift in Sources */,
-				C5DF62E62451D45200FB5739 /* IAPCell.swift in Sources */,
 				C5DF62FF2451D45200FB5739 /* AddRuleVC.swift in Sources */,
 				D26A335B2FBC7D140011E840 /* MessageBubbleView.swift in Sources */,
 				0A931DC22C4E99D400D8910A /* FamilyFeedModel.swift in Sources */,
@@ -7031,7 +6946,6 @@
 				4B57AC5A1A43F35100F4232B /* BrowserLogsViewController.m in Sources */,
 				A1F70A5F1ECE083D00DB00FF /* DateExtensions.swift in Sources */,
 				C5DF62F72451D45200FB5739 /* SubscriptionDetailVC.swift in Sources */,
-				EB0E850D271990E800662783 /* AddDeviceNewViewController2.m in Sources */,
 				0A3599892AE1140600081965 /* SetLimitVm.swift in Sources */,
 				C5DF63062451D45200FB5739 /* NetworkActivityIndicatorManager.swift in Sources */,
 				0AF4C9CA2AD6724800B40A43 /* DBManager.swift in Sources */,
@@ -7052,7 +6966,6 @@
 				EB9524D927EDE1B100B37365 /* SelectChildDeviceScreenController.swift in Sources */,
 				0A97A669293F24B00001FA32 /* AppHistoryModel.swift in Sources */,
 				C5DF63142451D45200FB5739 /* Notifications_DB.swift in Sources */,
-				0AB7ADC229360AFA00A2510B /* TrialPageVc.swift in Sources */,
 				D26A33552FBC78560011E840 /* LiveChatService.swift in Sources */,
 				0A5FEEBB2B57B94500F5C613 /* WebBlockerPopUp.swift in Sources */,
 				EBBF514528925F3B005B2C42 /* Enums.swift in Sources */,
@@ -7061,14 +6974,11 @@
 				0A44D9882ADFCBAA00BFBE93 /* ControlAppsListModel.swift in Sources */,
 				C5DF631C2451D45300FB5739 /* Children_Model.swift in Sources */,
 				C5DF63192451D45200FB5739 /* Info.swift in Sources */,
-				0AB1C4672B4E6E89003EBACA /* SpeedLimitNewPopUP.swift in Sources */,
-				E03320CB1F9739A0007E7819 /* AddDeviceNewViewController3.m in Sources */,
 				C5DF63332451D45300FB5739 /* ContentFiltersVC.swift in Sources */,
 				0A91A56E2B5506BB00205753 /* AddURLVC.swift in Sources */,
 				4B3D737F1A15E447006F8F8F /* JSONAPI.m in Sources */,
 				D2DFA9482FD16A3700073494 /* CancelSubscriptionView.swift in Sources */,
 				EB557526291CE37C00E57149 /* QRCodeCell.swift in Sources */,
-				EBE812AD284F748F00B43E05 /* ThanksViewController.swift in Sources */,
 				0AEC7951294219CA00C12190 /* HistoryBrowserVc.swift in Sources */,
 				A11A2D251EBB99CC00AF5230 /* UITextField+fixCaretPosition.swift in Sources */,
 				D26A334E2FBC78190011E840 /* Visitor.swift in Sources */,
