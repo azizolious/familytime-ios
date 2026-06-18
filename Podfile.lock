@@ -27,7 +27,6 @@ PODS:
   - MBCircularProgressBar (0.3.5)
   - MBProgressHUD (0.9.2)
   - Motis (1.4.4)
-  - MSCellAccessory (1.1.2)
   - NewPopMenu (2.1.1)
   - RangeSeekSlider (1.8.0)
   - SwiftyJSON (5.0.2)
@@ -44,7 +43,6 @@ DEPENDENCIES:
   - MBCircularProgressBar
   - MBProgressHUD (~> 0.9.2)
   - Motis (~> 1.4.0)
-  - MSCellAccessory
   - NewPopMenu (~> 2.0)
   - RangeSeekSlider
   - SwiftyJSON
@@ -67,7 +65,6 @@ SPEC REPOS:
     - MBCircularProgressBar
     - MBProgressHUD
     - Motis
-    - MSCellAccessory
     - NewPopMenu
     - RangeSeekSlider
     - SwiftyJSON
@@ -89,12 +86,11 @@ SPEC CHECKSUMS:
   MBCircularProgressBar: 0b795b722a5eb5b0923822f90474e2576a1a7855
   MBProgressHUD: 1569cf7ace17a8bac47aabfbb8580a49690386d1
   Motis: a287ed10f130938ebc1390d1890ee2b7ebe85d4f
-  MSCellAccessory: 8265f3cd2386c1f372da00232472605ab11426e4
   NewPopMenu: 60d67846a401964dcaa51bffb792f04f6fe2fc76
   RangeSeekSlider: 650b11fa1edcb92e1e0ede797669d98622570fb5
   SwiftyJSON: f5b1bf1cd8dd53cd25887ac0eabcfd92301c6a5a
   Toast-Swift: e42a638589a2f95036b4bb7626cfbdde7daf0393
 
-PODFILE CHECKSUM: 29d5e17557a270a1805cf57383aa9868444f3d58
+PODFILE CHECKSUM: af4c5c0d37dd6ce310d1db8b2bdb2fb4d80412b8
 
 COCOAPODS: 1.16.2

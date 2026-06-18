@@ -7,28 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FA1100000000000000001B59 /* AppNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1100000000000000001771 /* AppNavigationView.swift */; };
-		FA1100000000000000001B5A /* SupportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1100000000000000001772 /* SupportView.swift */; };
-		FA1100000000000000001389 /* SettingsModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1100000000000000000FA1 /* SettingsModels.swift */; };
-		FA110000000000000000138A /* SettingsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1100000000000000000FA2 /* SettingsRepository.swift */; };
-		FA110000000000000000138B /* AccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1100000000000000000FA3 /* AccountViewModel.swift */; };
-		FA110000000000000000138C /* ChangePasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1100000000000000000FA4 /* ChangePasswordViewModel.swift */; };
-		FA110000000000000000138D /* CoParentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1100000000000000000FA5 /* CoParentViewModel.swift */; };
-		FA110000000000000000138E /* ChildManagementViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1100000000000000000FA6 /* ChildManagementViewModel.swift */; };
-		FA110000000000000000138F /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1100000000000000000FA7 /* SettingsViewModel.swift */; };
-		FA1100000000000000001390 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1100000000000000000FA8 /* SettingsView.swift */; };
-		FA1100000000000000001391 /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1100000000000000000FA9 /* AccountView.swift */; };
-		FA1100000000000000001392 /* ChangePasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1100000000000000000FAA /* ChangePasswordView.swift */; };
-		FA1100000000000000001393 /* CoParentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1100000000000000000FAB /* CoParentView.swift */; };
-		FA1100000000000000001394 /* ChildManagementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1100000000000000000FAC /* ChildManagementView.swift */; };
-		FA1100000000000000001395 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1100000000000000000FAD /* AboutView.swift */; };
-		FA1100000000000000000BB9 /* ReportModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA11000000000000000007D1 /* ReportModels.swift */; };
-		FA1100000000000000000BBA /* ReportRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA11000000000000000007D2 /* ReportRepository.swift */; };
-		FA1100000000000000000BBB /* ReportListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA11000000000000000007D3 /* ReportListViewModel.swift */; };
-		FA1100000000000000000BBC /* SocialReportViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA11000000000000000007D4 /* SocialReportViewModel.swift */; };
-		FA1100000000000000000BBD /* ReportsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA11000000000000000007D5 /* ReportsView.swift */; };
-		FA1100000000000000000BBE /* ReportListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA11000000000000000007D6 /* ReportListView.swift */; };
-		FA1100000000000000000BBF /* SocialReportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA11000000000000000007D7 /* SocialReportView.swift */; };
 		0A04B68D2B551C9000D6D14C /* WebBlockerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A04B68C2B551C9000D6D14C /* WebBlockerModel.swift */; };
 		0A04B68F2B55220B00D6D14C /* WebBlockerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A04B68E2B55220B00D6D14C /* WebBlockerViewModel.swift */; };
 		0A12EA8426942CFE00288B24 /* iappsFilled_4.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A12EA8026942CFD00288B24 /* iappsFilled_4.png */; };
@@ -1040,6 +1018,28 @@
 		FA1100000000000000000414 /* RuleEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA110000000000000000002C /* RuleEditorView.swift */; };
 		FA1100000000000000000415 /* ScreenTimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA110000000000000000002D /* ScreenTimeView.swift */; };
 		FA1100000000000000000416 /* SubscriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA110000000000000000002E /* SubscriptionView.swift */; };
+		FA1100000000000000000BB9 /* ReportModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA11000000000000000007D1 /* ReportModels.swift */; };
+		FA1100000000000000000BBA /* ReportRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA11000000000000000007D2 /* ReportRepository.swift */; };
+		FA1100000000000000000BBB /* ReportListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA11000000000000000007D3 /* ReportListViewModel.swift */; };
+		FA1100000000000000000BBC /* SocialReportViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA11000000000000000007D4 /* SocialReportViewModel.swift */; };
+		FA1100000000000000000BBD /* ReportsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA11000000000000000007D5 /* ReportsView.swift */; };
+		FA1100000000000000000BBE /* ReportListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA11000000000000000007D6 /* ReportListView.swift */; };
+		FA1100000000000000000BBF /* SocialReportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA11000000000000000007D7 /* SocialReportView.swift */; };
+		FA1100000000000000001389 /* SettingsModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1100000000000000000FA1 /* SettingsModels.swift */; };
+		FA110000000000000000138A /* SettingsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1100000000000000000FA2 /* SettingsRepository.swift */; };
+		FA110000000000000000138B /* AccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1100000000000000000FA3 /* AccountViewModel.swift */; };
+		FA110000000000000000138C /* ChangePasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1100000000000000000FA4 /* ChangePasswordViewModel.swift */; };
+		FA110000000000000000138D /* CoParentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1100000000000000000FA5 /* CoParentViewModel.swift */; };
+		FA110000000000000000138E /* ChildManagementViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1100000000000000000FA6 /* ChildManagementViewModel.swift */; };
+		FA110000000000000000138F /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1100000000000000000FA7 /* SettingsViewModel.swift */; };
+		FA1100000000000000001390 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1100000000000000000FA8 /* SettingsView.swift */; };
+		FA1100000000000000001391 /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1100000000000000000FA9 /* AccountView.swift */; };
+		FA1100000000000000001392 /* ChangePasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1100000000000000000FAA /* ChangePasswordView.swift */; };
+		FA1100000000000000001393 /* CoParentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1100000000000000000FAB /* CoParentView.swift */; };
+		FA1100000000000000001394 /* ChildManagementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1100000000000000000FAC /* ChildManagementView.swift */; };
+		FA1100000000000000001395 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1100000000000000000FAD /* AboutView.swift */; };
+		FA1100000000000000001B59 /* AppNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1100000000000000001771 /* AppNavigationView.swift */; };
+		FA1100000000000000001B5A /* SupportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1100000000000000001772 /* SupportView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -1053,28 +1053,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		FA1100000000000000001771 /* AppNavigationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "AppNavigationView.swift"; path = "FamilyTime/App/AppNavigationView.swift"; sourceTree = SOURCE_ROOT; };
-		FA1100000000000000001772 /* SupportView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "SupportView.swift"; path = "FamilyTime/Views/Support/SupportView.swift"; sourceTree = SOURCE_ROOT; };
-		FA1100000000000000000FA1 /* SettingsModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "SettingsModels.swift"; path = "FamilyTime/Views/Settings/SettingsModels.swift"; sourceTree = SOURCE_ROOT; };
-		FA1100000000000000000FA2 /* SettingsRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "SettingsRepository.swift"; path = "FamilyTime/Core/Persistence/SettingsRepository.swift"; sourceTree = SOURCE_ROOT; };
-		FA1100000000000000000FA3 /* AccountViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "AccountViewModel.swift"; path = "FamilyTime/ViewModels/AccountViewModel.swift"; sourceTree = SOURCE_ROOT; };
-		FA1100000000000000000FA4 /* ChangePasswordViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "ChangePasswordViewModel.swift"; path = "FamilyTime/ViewModels/ChangePasswordViewModel.swift"; sourceTree = SOURCE_ROOT; };
-		FA1100000000000000000FA5 /* CoParentViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "CoParentViewModel.swift"; path = "FamilyTime/ViewModels/CoParentViewModel.swift"; sourceTree = SOURCE_ROOT; };
-		FA1100000000000000000FA6 /* ChildManagementViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "ChildManagementViewModel.swift"; path = "FamilyTime/ViewModels/ChildManagementViewModel.swift"; sourceTree = SOURCE_ROOT; };
-		FA1100000000000000000FA7 /* SettingsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "SettingsViewModel.swift"; path = "FamilyTime/ViewModels/SettingsViewModel.swift"; sourceTree = SOURCE_ROOT; };
-		FA1100000000000000000FA8 /* SettingsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "SettingsView.swift"; path = "FamilyTime/Views/Settings/SettingsView.swift"; sourceTree = SOURCE_ROOT; };
-		FA1100000000000000000FA9 /* AccountView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "AccountView.swift"; path = "FamilyTime/Views/Settings/AccountView.swift"; sourceTree = SOURCE_ROOT; };
-		FA1100000000000000000FAA /* ChangePasswordView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "ChangePasswordView.swift"; path = "FamilyTime/Views/Settings/ChangePasswordView.swift"; sourceTree = SOURCE_ROOT; };
-		FA1100000000000000000FAB /* CoParentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "CoParentView.swift"; path = "FamilyTime/Views/Settings/CoParentView.swift"; sourceTree = SOURCE_ROOT; };
-		FA1100000000000000000FAC /* ChildManagementView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "ChildManagementView.swift"; path = "FamilyTime/Views/Settings/ChildManagementView.swift"; sourceTree = SOURCE_ROOT; };
-		FA1100000000000000000FAD /* AboutView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "AboutView.swift"; path = "FamilyTime/Views/Settings/AboutView.swift"; sourceTree = SOURCE_ROOT; };
-		FA11000000000000000007D1 /* ReportModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "ReportModels.swift"; path = "FamilyTime/Views/Reports/ReportModels.swift"; sourceTree = SOURCE_ROOT; };
-		FA11000000000000000007D2 /* ReportRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "ReportRepository.swift"; path = "FamilyTime/Core/Persistence/ReportRepository.swift"; sourceTree = SOURCE_ROOT; };
-		FA11000000000000000007D3 /* ReportListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "ReportListViewModel.swift"; path = "FamilyTime/ViewModels/ReportListViewModel.swift"; sourceTree = SOURCE_ROOT; };
-		FA11000000000000000007D4 /* SocialReportViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "SocialReportViewModel.swift"; path = "FamilyTime/ViewModels/SocialReportViewModel.swift"; sourceTree = SOURCE_ROOT; };
-		FA11000000000000000007D5 /* ReportsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "ReportsView.swift"; path = "FamilyTime/Views/Reports/ReportsView.swift"; sourceTree = SOURCE_ROOT; };
-		FA11000000000000000007D6 /* ReportListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "ReportListView.swift"; path = "FamilyTime/Views/Reports/ReportListView.swift"; sourceTree = SOURCE_ROOT; };
-		FA11000000000000000007D7 /* SocialReportView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "SocialReportView.swift"; path = "FamilyTime/Views/Reports/SocialReportView.swift"; sourceTree = SOURCE_ROOT; };
 		0A04B68C2B551C9000D6D14C /* WebBlockerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebBlockerModel.swift; sourceTree = "<group>"; };
 		0A04B68E2B55220B00D6D14C /* WebBlockerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebBlockerViewModel.swift; sourceTree = "<group>"; };
 		0A12EA8026942CFD00288B24 /* iappsFilled_4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iappsFilled_4.png; sourceTree = "<group>"; };
@@ -2809,6 +2787,28 @@
 		FA110000000000000000002C /* RuleEditorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RuleEditorView.swift; path = FamilyTime/Views/ScreenTime/RuleEditorView.swift; sourceTree = SOURCE_ROOT; };
 		FA110000000000000000002D /* ScreenTimeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ScreenTimeView.swift; path = FamilyTime/Views/ScreenTime/ScreenTimeView.swift; sourceTree = SOURCE_ROOT; };
 		FA110000000000000000002E /* SubscriptionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SubscriptionView.swift; path = FamilyTime/Views/Subscription/SubscriptionView.swift; sourceTree = SOURCE_ROOT; };
+		FA11000000000000000007D1 /* ReportModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReportModels.swift; path = FamilyTime/Views/Reports/ReportModels.swift; sourceTree = SOURCE_ROOT; };
+		FA11000000000000000007D2 /* ReportRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReportRepository.swift; path = FamilyTime/Core/Persistence/ReportRepository.swift; sourceTree = SOURCE_ROOT; };
+		FA11000000000000000007D3 /* ReportListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReportListViewModel.swift; path = FamilyTime/ViewModels/ReportListViewModel.swift; sourceTree = SOURCE_ROOT; };
+		FA11000000000000000007D4 /* SocialReportViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SocialReportViewModel.swift; path = FamilyTime/ViewModels/SocialReportViewModel.swift; sourceTree = SOURCE_ROOT; };
+		FA11000000000000000007D5 /* ReportsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReportsView.swift; path = FamilyTime/Views/Reports/ReportsView.swift; sourceTree = SOURCE_ROOT; };
+		FA11000000000000000007D6 /* ReportListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReportListView.swift; path = FamilyTime/Views/Reports/ReportListView.swift; sourceTree = SOURCE_ROOT; };
+		FA11000000000000000007D7 /* SocialReportView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SocialReportView.swift; path = FamilyTime/Views/Reports/SocialReportView.swift; sourceTree = SOURCE_ROOT; };
+		FA1100000000000000000FA1 /* SettingsModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingsModels.swift; path = FamilyTime/Views/Settings/SettingsModels.swift; sourceTree = SOURCE_ROOT; };
+		FA1100000000000000000FA2 /* SettingsRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingsRepository.swift; path = FamilyTime/Core/Persistence/SettingsRepository.swift; sourceTree = SOURCE_ROOT; };
+		FA1100000000000000000FA3 /* AccountViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AccountViewModel.swift; path = FamilyTime/ViewModels/AccountViewModel.swift; sourceTree = SOURCE_ROOT; };
+		FA1100000000000000000FA4 /* ChangePasswordViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChangePasswordViewModel.swift; path = FamilyTime/ViewModels/ChangePasswordViewModel.swift; sourceTree = SOURCE_ROOT; };
+		FA1100000000000000000FA5 /* CoParentViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CoParentViewModel.swift; path = FamilyTime/ViewModels/CoParentViewModel.swift; sourceTree = SOURCE_ROOT; };
+		FA1100000000000000000FA6 /* ChildManagementViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChildManagementViewModel.swift; path = FamilyTime/ViewModels/ChildManagementViewModel.swift; sourceTree = SOURCE_ROOT; };
+		FA1100000000000000000FA7 /* SettingsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingsViewModel.swift; path = FamilyTime/ViewModels/SettingsViewModel.swift; sourceTree = SOURCE_ROOT; };
+		FA1100000000000000000FA8 /* SettingsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingsView.swift; path = FamilyTime/Views/Settings/SettingsView.swift; sourceTree = SOURCE_ROOT; };
+		FA1100000000000000000FA9 /* AccountView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AccountView.swift; path = FamilyTime/Views/Settings/AccountView.swift; sourceTree = SOURCE_ROOT; };
+		FA1100000000000000000FAA /* ChangePasswordView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChangePasswordView.swift; path = FamilyTime/Views/Settings/ChangePasswordView.swift; sourceTree = SOURCE_ROOT; };
+		FA1100000000000000000FAB /* CoParentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CoParentView.swift; path = FamilyTime/Views/Settings/CoParentView.swift; sourceTree = SOURCE_ROOT; };
+		FA1100000000000000000FAC /* ChildManagementView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChildManagementView.swift; path = FamilyTime/Views/Settings/ChildManagementView.swift; sourceTree = SOURCE_ROOT; };
+		FA1100000000000000000FAD /* AboutView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AboutView.swift; path = FamilyTime/Views/Settings/AboutView.swift; sourceTree = SOURCE_ROOT; };
+		FA1100000000000000001771 /* AppNavigationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppNavigationView.swift; path = FamilyTime/App/AppNavigationView.swift; sourceTree = SOURCE_ROOT; };
+		FA1100000000000000001772 /* SupportView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SupportView.swift; path = FamilyTime/Views/Support/SupportView.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -5864,7 +5864,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 4BBF1FFC1A11F6E8000E4829 /* Build configuration list for PBXProject "FamilyTime - Dashboard" */;
+			buildConfigurationList = 4BBF1FFC1A11F6E8000E4829 /* Build configuration list for PBXProject "FamilyTime" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -6483,7 +6483,6 @@
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManager/IQKeyboardManager.framework",
 				"${BUILT_PRODUCTS_DIR}/MBCircularProgressBar/MBCircularProgressBar.framework",
 				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
-				"${BUILT_PRODUCTS_DIR}/MSCellAccessory/MSCellAccessory.framework",
 				"${BUILT_PRODUCTS_DIR}/Motis/Motis.framework",
 				"${BUILT_PRODUCTS_DIR}/NewPopMenu/PopMenu.framework",
 				"${BUILT_PRODUCTS_DIR}/RangeSeekSlider/RangeSeekSlider.framework",
@@ -6499,7 +6498,6 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManager.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBCircularProgressBar.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MSCellAccessory.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Motis.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PopMenu.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RangeSeekSlider.framework",
@@ -8620,7 +8618,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		4BBF1FFC1A11F6E8000E4829 /* Build configuration list for PBXProject "FamilyTime - Dashboard" */ = {
+		4BBF1FFC1A11F6E8000E4829 /* Build configuration list for PBXProject "FamilyTime" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4BBF20251A11F6E9000E4829 /* Debug */,

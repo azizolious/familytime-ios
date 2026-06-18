@@ -9,7 +9,6 @@ target 'FamilyTime' do
 pod 'GoogleMaps', '~> 8.4'
 pod 'MBProgressHUD', '~> 0.9.2'
 pod 'CCMPopup'
-pod 'MSCellAccessory'
 pod 'IQKeyboardManager'
 
 
