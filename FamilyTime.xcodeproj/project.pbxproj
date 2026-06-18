@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA110000000000000000B001 /* LocaleMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA110000000000000000A001 /* LocaleMapper.swift */; };
 		FA1100000000000000002329 /* OnboardingRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1100000000000000001F41 /* OnboardingRepository.swift */; };
 		FA110000000000000000232A /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1100000000000000001F42 /* OnboardingViewModel.swift */; };
 		FA110000000000000000232B /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1100000000000000001F43 /* OnboardingView.swift */; };
@@ -1066,6 +1067,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FA110000000000000000A001 /* LocaleMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "LocaleMapper.swift"; path = "FamilyTime/Core/Utilities/LocaleMapper.swift"; sourceTree = SOURCE_ROOT; };
 		FA1100000000000000001F41 /* OnboardingRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "OnboardingRepository.swift"; path = "FamilyTime/Core/Persistence/OnboardingRepository.swift"; sourceTree = SOURCE_ROOT; };
 		FA1100000000000000001F42 /* OnboardingViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "OnboardingViewModel.swift"; path = "FamilyTime/ViewModels/OnboardingViewModel.swift"; sourceTree = SOURCE_ROOT; };
 		FA1100000000000000001F43 /* OnboardingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "OnboardingView.swift"; path = "FamilyTime/Views/Onboarding/OnboardingView.swift"; sourceTree = SOURCE_ROOT; };
@@ -3178,6 +3180,7 @@
 			isa = PBXGroup;
 			children = (
 				0AC996AC2B510B9F0074A27E /* WebBlockerVC.swift */,
+				FA110000000000000000A001 /* LocaleMapper.swift */,
 				FA1100000000000000001F41 /* OnboardingRepository.swift */,
 				FA1100000000000000001F42 /* OnboardingViewModel.swift */,
 				FA1100000000000000001F43 /* OnboardingView.swift */,
@@ -6735,6 +6738,7 @@
 				A1EFA0A11CFF245500AA0B94 /* ContentFilterDetailsViewController.m in Sources */,
 				4BCE07B51A80F664007905AD /* ActivityAlertView.m in Sources */,
 				0AC996AE2B510B9F0074A27E /* WebBlockerVC.swift in Sources */,
+				FA110000000000000000B001 /* LocaleMapper.swift in Sources */,
 				FA1100000000000000002329 /* OnboardingRepository.swift in Sources */,
 				FA110000000000000000232A /* OnboardingViewModel.swift in Sources */,
 				FA110000000000000000232B /* OnboardingView.swift in Sources */,
