@@ -59,3 +59,13 @@ final class SessionManager {
         clearSession()
     }
 }
+
+extension SessionManager {
+    /// Nonisolated synchronous read of the persisted bearer token
+    /// (Keychain-backed, key `ft.session.token`). Safe to call from any actor
+    /// or thread. Use from nonisolated contexts where the `@MainActor`-isolated
+    /// `currentToken` cannot be read synchronously (e.g. LiveChat).
+    nonisolated static var persistedToken: String? {
+        KeychainService.load(key: "ft.session.token")
+    }
+}

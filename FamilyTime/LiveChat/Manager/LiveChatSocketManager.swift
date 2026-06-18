@@ -565,7 +565,7 @@ extension LiveChatSocketManager {
         request.httpMethod = "POST"
         
         let token =
-        UserDefaultsManager.bearerTokenCore2 ?? ""
+        SessionManager.persistedToken ?? ""
         
         print("TOKEN:", token)
         

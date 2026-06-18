@@ -15,7 +15,7 @@ final class LiveChatService {
     private init() {}
     
     private var token: String {
-        UserDefaultsManager.bearerTokenCore2 ?? ""
+        SessionManager.persistedToken ?? ""
     }
     
     private func makeRequest(
