@@ -21,7 +21,8 @@
 //#import "DashboardVC.h"
 #import <UserNotifications/UserNotifications.h>
 //@import GoogleSignIn;
-#import <GoogleSignIn/GoogleSignIn.h>
+// TODO: GoogleSignIn disabled temporarily — replace with GoogleSignIn 7.x via SPM when legacy Auth VCs are removed
+//#import <GoogleSignIn/GoogleSignIn.h>
 
 @import Firebase;
 @class SwiftParentDrawer;
@@ -30,7 +31,8 @@
 
 typedef void(^deviceTokenReceived)(NSString *token);
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate,CLLocationManagerDelegate, UNUserNotificationCenterDelegate, GIDSignInDelegate>
+// TODO: GoogleSignIn disabled temporarily — replace with GoogleSignIn 7.x via SPM when legacy Auth VCs are removed
+@interface AppDelegate : UIResponder <UIApplicationDelegate,CLLocationManagerDelegate, UNUserNotificationCenterDelegate>
 @property (strong, nonatomic) UIWindow *window;
 @property (readonly, strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 @property (readonly, strong, nonatomic) NSManagedObjectModel *managedObjectModel;

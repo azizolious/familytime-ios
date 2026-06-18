@@ -32,7 +32,8 @@ NSString *drawer_package_id = @"";
 NSString *drawer_package_name = @"";
 NSString *drawer_device = @"";
 AppDelegate *delegate;
-@interface ParentDrawer ()<UIAlertViewDelegate,GIDSignInUIDelegate>
+// TODO: GoogleSignIn disabled temporarily — replace with GoogleSignIn 7.x via SPM when legacy Auth VCs are removed
+@interface ParentDrawer ()<UIAlertViewDelegate>
 
 @end
 

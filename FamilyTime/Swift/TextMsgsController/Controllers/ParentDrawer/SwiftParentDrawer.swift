@@ -11,7 +11,8 @@ import SwiftUI
 import IQKeyboardManager
 import Combine
 
-class SwiftParentDrawer: BaseViewController, UITableViewDataSource, UITableViewDelegate, UIAlertViewDelegate, GIDSignInUIDelegate {
+// TODO: GoogleSignIn disabled temporarily — replace with GoogleSignIn 7.x via SPM when legacy Auth VCs are removed
+class SwiftParentDrawer: BaseViewController, UITableViewDataSource, UITableViewDelegate, UIAlertViewDelegate {
     
     //MARK: - IBOutlets
     @IBOutlet weak var parentImage: UIImageView?

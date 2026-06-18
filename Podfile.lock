@@ -2,26 +2,11 @@ PODS:
   - ActiveLabel (1.1.0)
   - CCMPopup (1.1.0)
   - DropDown (2.3.13)
-  - GoogleAppUtilities (1.1.2):
-    - GoogleSymbolUtilities (~> 1.1)
-  - GoogleAuthUtilities (2.0.2):
-    - GoogleNetworkingUtilities (~> 1.2)
-    - GoogleSymbolUtilities (~> 1.1)
   - GoogleMaps (8.4.0):
     - GoogleMaps/Maps (= 8.4.0)
   - GoogleMaps/Base (8.4.0)
   - GoogleMaps/Maps (8.4.0):
     - GoogleMaps/Base
-  - GoogleNetworkingUtilities (1.2.2):
-    - GoogleSymbolUtilities (~> 1.1)
-  - GoogleSignIn (3.0.0):
-    - GoogleAppUtilities (~> 1.0)
-    - GoogleAuthUtilities (~> 2.0)
-    - GoogleNetworkingUtilities (~> 1.0)
-    - GoogleUtilities (~> 1.0)
-  - GoogleSymbolUtilities (1.1.2)
-  - GoogleUtilities (1.3.2):
-    - GoogleSymbolUtilities (~> 1.1)
   - HGCircularSlider (2.0.0)
   - IQKeyboardManager (6.5.19)
   - MBCircularProgressBar (0.3.5)
@@ -37,7 +22,6 @@ DEPENDENCIES:
   - CCMPopup
   - DropDown
   - GoogleMaps (~> 8.4)
-  - GoogleSignIn (~> 3.0.0)
   - HGCircularSlider (~> 2.0.0)
   - IQKeyboardManager
   - MBCircularProgressBar
@@ -53,13 +37,7 @@ SPEC REPOS:
     - ActiveLabel
     - CCMPopup
     - DropDown
-    - GoogleAppUtilities
-    - GoogleAuthUtilities
     - GoogleMaps
-    - GoogleNetworkingUtilities
-    - GoogleSignIn
-    - GoogleSymbolUtilities
-    - GoogleUtilities
     - HGCircularSlider
     - IQKeyboardManager
     - MBCircularProgressBar
@@ -74,13 +52,7 @@ SPEC CHECKSUMS:
   ActiveLabel: 5e3f4de79a1952d4604b845a0610d4776e4b82b3
   CCMPopup: e41fad5b8a0823c9cddea8eab6d431670c9dabe5
   DropDown: 8a2116376c1981888557f72ec2ffc9a5e0e456ec
-  GoogleAppUtilities: a8a552aa74f6597f805e45b5a3962766c3134973
-  GoogleAuthUtilities: ccad2e0a9284699973ff57c0dd24c3893657fda4
   GoogleMaps: 8939898920281c649150e0af74aa291c60f2e77d
-  GoogleNetworkingUtilities: 3edd3a8161347494f2da60ea0deddc8a472d94cb
-  GoogleSignIn: 3d571172b8603be39dcb1705d8217146bb76fe62
-  GoogleSymbolUtilities: 631ee17048aa5e9ab133470d768ea997a5ef9b96
-  GoogleUtilities: 8bbc733218aad26306f9d4a253823986110e3358
   HGCircularSlider: 92e2ee098c814709f455b8f46cd9008147f6a869
   IQKeyboardManager: c8665b3396bd0b79402b4c573eac345a31c7d485
   MBCircularProgressBar: 0b795b722a5eb5b0923822f90474e2576a1a7855
@@ -91,6 +63,6 @@ SPEC CHECKSUMS:
   SwiftyJSON: f5b1bf1cd8dd53cd25887ac0eabcfd92301c6a5a
   Toast-Swift: e42a638589a2f95036b4bb7626cfbdde7daf0393
 
-PODFILE CHECKSUM: af4c5c0d37dd6ce310d1db8b2bdb2fb4d80412b8
+PODFILE CHECKSUM: d52a676442c811876885f85abb031ca8c647451d
 
 COCOAPODS: 1.16.2

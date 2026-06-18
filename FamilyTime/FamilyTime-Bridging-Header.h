@@ -10,7 +10,8 @@
 #import "AppDelegate.h"
 #import "AuthenticationService.h"
 
-#import <GoogleSignIn/GoogleSignIn.h>
+// TODO: GoogleSignIn disabled temporarily — replace with GoogleSignIn 7.x via SPM when legacy Auth VCs are removed
+//#import <GoogleSignIn/GoogleSignIn.h>
 #import "GMDCircleLoader.h"
 
 #import "DashboardInactiveCell.h"

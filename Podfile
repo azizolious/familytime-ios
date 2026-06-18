@@ -15,7 +15,7 @@ pod 'IQKeyboardManager'
 
 pod 'HGCircularSlider', '~> 2.0.0'
 pod 'Motis', '~>1.4.0'
-pod 'GoogleSignIn', '~>3.0.0'
+# pod 'GoogleSignIn', '~>3.0.0'  # disabled — replace w/ 7.x SPM when legacy Auth VCs removed
 pod 'SwiftyJSON'
 
 #---SANA PODS---//

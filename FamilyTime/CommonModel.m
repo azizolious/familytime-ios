@@ -863,7 +863,8 @@
     
     [[AppDelegate appDelegate] setDashboard:nil];
     
-    [[GIDSignIn sharedInstance] signOut];
+    // TODO: GoogleSignIn disabled temporarily — replace with GoogleSignIn 7.x via SPM when legacy Auth VCs are removed
+    //[[GIDSignIn sharedInstance] signOut];
     
     
     if (isPresentCont)

@@ -775,7 +775,8 @@ class CommonModel {
         print("The value of Login AuthToken is ",appDel?.userDefault.string(forKey: "LoginAuthToken") ?? "nil")
         
         
-        GIDSignIn.sharedInstance().signOut()
+        // TODO: GoogleSignIn disabled temporarily — replace with GoogleSignIn 7.x via SPM when legacy Auth VCs are removed
+        //GIDSignIn.sharedInstance().signOut()
         
         if isPresentCont {
             vc!.dismiss(animated: true)

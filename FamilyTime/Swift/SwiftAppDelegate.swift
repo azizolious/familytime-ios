@@ -42,7 +42,8 @@ class SwiftAppDelegate: UIResponder {
         UserDefaults.standard.set(kYES, forKey: kUpdateParentDataOnce)
         UserDefaults.standard.synchronize()
         
-        GIDSignIn.sharedInstance().clientID = "181235234645-bfr0co1kg4bn179g0rgec24tk1374v1t.apps.googleusercontent.com"
+        // TODO: GoogleSignIn disabled temporarily — replace with GoogleSignIn 7.x via SPM when legacy Auth VCs are removed
+//        GIDSignIn.sharedInstance().clientID = "181235234645-bfr0co1kg4bn179g0rgec24tk1374v1t.apps.googleusercontent.com"
 //        GIDSignIn.sharedInstance().delegate = self
         
         IQKeyboardManager.shared().isEnabled = true

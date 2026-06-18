@@ -56,7 +56,8 @@ class LoginViewController: UIViewController  {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        GIDSignIn.sharedInstance().uiDelegate = self
+        // TODO: GoogleSignIn disabled temporarily — replace with GoogleSignIn 7.x via SPM when legacy Auth VCs are removed
+        //GIDSignIn.sharedInstance().uiDelegate = self
         NotificationCenter.default.addObserver(self,selector: #selector(LoginViewController.receiveToggleAuthUINotification(_:)), name: NotificationKeys().GmailAuthentication,object: nil)
         
         if #available(iOS 13.0, *) {
@@ -528,12 +529,14 @@ class LoginViewController: UIViewController  {
         //Firebase Log Event
         CommonUtility.shared.setFirebaseEvents(eventName: "Login", screenTitle: "Login Screen", itemName: "Login with Google")
         removeObserver = false
-        GIDSignIn.sharedInstance().signIn()
+        // TODO: GoogleSignIn disabled temporarily — replace with GoogleSignIn 7.x via SPM when legacy Auth VCs are removed
+        //GIDSignIn.sharedInstance().signIn()
     }
-    
-    func signIn(signIn: GIDSignIn!, dismissViewController viewController: UIViewController!){
-        print("GoogleSignInDismiss")
-    }
+
+    // TODO: GoogleSignIn disabled temporarily — replace with GoogleSignIn 7.x via SPM when legacy Auth VCs are removed
+    //func signIn(signIn: GIDSignIn!, dismissViewController viewController: UIViewController!){
+    //    print("GoogleSignInDismiss")
+    //}
 }
 
 
@@ -613,12 +616,13 @@ extension LoginViewController {
 }
 
 //MARK: - Google SignIn Delegates
-extension LoginViewController: GIDSignInUIDelegate {
-    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error?){
-        
-    }
-    
-    func sign(_ signIn: GIDSignIn!, didDisconnectWith user: GIDGoogleUser!, withError error: Error!){
-        
-    }
-}
+// TODO: GoogleSignIn disabled temporarily — replace with GoogleSignIn 7.x via SPM when legacy Auth VCs are removed
+//extension LoginViewController: GIDSignInUIDelegate {
+//    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error?){
+//
+//    }
+//
+//    func sign(_ signIn: GIDSignIn!, didDisconnectWith user: GIDGoogleUser!, withError error: Error!){
+//
+//    }
+//}
