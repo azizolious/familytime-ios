@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA11000000000000000E0E01 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = FA11000000000000000E0E00 /* Localizable.xcstrings */; };
 		FA110000000000000000B001 /* LocaleMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA110000000000000000A001 /* LocaleMapper.swift */; };
 		FA1100000000000000002329 /* OnboardingRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1100000000000000001F41 /* OnboardingRepository.swift */; };
 		FA110000000000000000232A /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1100000000000000001F42 /* OnboardingViewModel.swift */; };
@@ -1067,6 +1068,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FA11000000000000000E0E00 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; name = Localizable.xcstrings; path = "FamilyTime/Localizable.xcstrings"; sourceTree = SOURCE_ROOT; };
 		FA110000000000000000A001 /* LocaleMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "LocaleMapper.swift"; path = "FamilyTime/Core/Utilities/LocaleMapper.swift"; sourceTree = SOURCE_ROOT; };
 		FA1100000000000000001F41 /* OnboardingRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "OnboardingRepository.swift"; path = "FamilyTime/Core/Persistence/OnboardingRepository.swift"; sourceTree = SOURCE_ROOT; };
 		FA1100000000000000001F42 /* OnboardingViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "OnboardingViewModel.swift"; path = "FamilyTime/ViewModels/OnboardingViewModel.swift"; sourceTree = SOURCE_ROOT; };
@@ -3180,6 +3182,7 @@
 			isa = PBXGroup;
 			children = (
 				0AC996AC2B510B9F0074A27E /* WebBlockerVC.swift */,
+				FA11000000000000000E0E00 /* Localizable.xcstrings */,
 				FA110000000000000000A001 /* LocaleMapper.swift */,
 				FA1100000000000000001F41 /* OnboardingRepository.swift */,
 				FA1100000000000000001F42 /* OnboardingViewModel.swift */,
@@ -5994,7 +5997,7 @@
 				A1EDA95F1C49521D00540151 /* ic_place2.png in Resources */,
 				A1EEF3301D354510003CD191 /* ipad_speed_meter_background@2x.png in Resources */,
 				4BC597771AC2846700D6C15A /* unlock_phone.png in Resources */,
-				E0355A031F67D36700DED982 /* Localizable.strings in Resources */,
+				FA11000000000000000E0E01 /* Localizable.xcstrings in Resources */,
 				A1EFA08C1CFDD8B000AA0B94 /* ipad_check.png in Resources */,
 				0AB178952ADE63DF00557DF8 /* SearchBarCell.xib in Resources */,
 				E03559341F67D1C600DED982 /* BListAppsViewController.xib in Resources */,
