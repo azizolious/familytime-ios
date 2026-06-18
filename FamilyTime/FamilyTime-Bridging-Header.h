@@ -1,41 +1,9 @@
 //
 //  FamilyTime-Bridging-Header.h
-//  FamilyTime - Dashboard
+//  FamilyTime
 //
-//  Created by Muhammad Ajmal on 02/05/2017.
-//  Copyright © 2017 SoraCode. All rights reserved.
+//  P3 (June 2026): trimmed to the only ObjC header the SwiftUI app needs
+//  (AppDelegate, for @UIApplicationDelegateAdaptor). All other legacy imports
+//  removed — they served the deleted legacy layer and created the #import cascade.
 //
-#import "FamilyTime-Bridging-Header.h"
-#import "ApiManager.h"
 #import "AppDelegate.h"
-#import "AuthenticationService.h"
-
-// TODO: GoogleSignIn disabled temporarily — replace with GoogleSignIn 7.x via SPM when legacy Auth VCs are removed
-//#import <GoogleSignIn/GoogleSignIn.h>
-#import "GMDCircleLoader.h"
-
-#import "DashboardInactiveCell.h"
-#import "FTD.h"
-
-#import "UIView+VTSelectiveBorder.h"
-
-#import "ChatStyling.h"
-#import "SplashView.h"
-#import "STBubbleTableViewCell.h"
-#import "Message.h"
-
-
-#import "CheckInOutAlertControllerViewController.h"
-#import "GMTTimezone.h"
-#import "TextMessageDetailsViewController.h"
-
-//---REMOVE FACEBOOK DUE TO MDM---//
-
-//#import <FBSDKCoreKit/FBSDKCoreKit.h>
-//#import <FBSDKLoginKit/FBSDKLoginKit.h>
-
-
-
-//#import "SkyFloatingLabelTextFieldWithIcon-Swift.h"
-
-
